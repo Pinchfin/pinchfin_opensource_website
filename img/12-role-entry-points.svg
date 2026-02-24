@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" fill="none">
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow-sm"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+    <filter id="shadow-md"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+    <filter id="glow-accent"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/></filter>
+    <filter id="glow-center"><feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#B8CCDB" flood-opacity="0.08"/></filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="850" rx="16" fill="#070B1A"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6">Role-Based Entry Points</text>
+  <text x="600" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#7c7f94">The system has 206 skills. You need these.</text>
+
+  <!-- ═══════ CENTER HUB: Skill Cloud ═══════ -->
+  <g filter="url(#glow-center)">
+    <circle cx="600" cy="420" r="110" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  </g>
+  <!-- Inner ring -->
+  <circle cx="600" cy="420" r="80" fill="none" stroke="#222228" stroke-width="1"/>
+  <circle cx="600" cy="420" r="50" fill="none" stroke="#222228" stroke-width="0.5"/>
+
+  <!-- Skill dots in center (206 skills represented as dots) -->
+  <!-- Ring 1 - inner (high density) -->
+  <circle cx="588" cy="400" r="2" fill="#B8CCDB" opacity="0.3"/><circle cx="612" cy="400" r="2" fill="#C44B68" opacity="0.3"/>
+  <circle cx="600" cy="388" r="2" fill="#d4a039" opacity="0.3"/><circle cx="600" cy="412" r="2" fill="#c44a4a" opacity="0.3"/>
+  <circle cx="580" cy="412" r="2" fill="#B85A30" opacity="0.3"/><circle cx="620" cy="412" r="2" fill="#4adaaa" opacity="0.3"/>
+  <circle cx="585" cy="428" r="2" fill="#da6a4a" opacity="0.3"/><circle cx="615" cy="428" r="2" fill="#6a9aaa" opacity="0.3"/>
+  <circle cx="575" cy="395" r="2" fill="#da6ada" opacity="0.3"/><circle cx="625" cy="395" r="2" fill="#6adada" opacity="0.3"/>
+  <circle cx="595" cy="440" r="2" fill="#9a9aba" opacity="0.3"/><circle cx="605" cy="375" r="2" fill="#B8CCDB" opacity="0.3"/>
+
+  <!-- Ring 2 - mid -->
+  <circle cx="560" cy="390" r="2" fill="#B8CCDB" opacity="0.25"/><circle cx="640" cy="390" r="2" fill="#C44B68" opacity="0.25"/>
+  <circle cx="555" cy="420" r="2" fill="#d4a039" opacity="0.25"/><circle cx="645" cy="420" r="2" fill="#c44a4a" opacity="0.25"/>
+  <circle cx="560" cy="450" r="2" fill="#B85A30" opacity="0.25"/><circle cx="640" cy="450" r="2" fill="#4adaaa" opacity="0.25"/>
+  <circle cx="575" cy="460" r="2" fill="#da6a4a" opacity="0.25"/><circle cx="625" cy="460" r="2" fill="#6a9aaa" opacity="0.25"/>
+  <circle cx="570" cy="375" r="2" fill="#da6ada" opacity="0.25"/><circle cx="630" cy="375" r="2" fill="#6adada" opacity="0.25"/>
+  <circle cx="600" cy="362" r="2" fill="#9a9aba" opacity="0.25"/><circle cx="600" cy="478" r="2" fill="#B8CCDB" opacity="0.25"/>
+  <circle cx="548" cy="405" r="2" fill="#C44B68" opacity="0.25"/><circle cx="652" cy="405" r="2" fill="#d4a039" opacity="0.25"/>
+  <circle cx="548" cy="435" r="2" fill="#c44a4a" opacity="0.25"/><circle cx="652" cy="435" r="2" fill="#B85A30" opacity="0.25"/>
+
+  <!-- Ring 3 - outer -->
+  <circle cx="530" cy="400" r="1.5" fill="#B8CCDB" opacity="0.15"/><circle cx="670" cy="400" r="1.5" fill="#C44B68" opacity="0.15"/>
+  <circle cx="525" cy="420" r="1.5" fill="#d4a039" opacity="0.15"/><circle cx="675" cy="420" r="1.5" fill="#c44a4a" opacity="0.15"/>
+  <circle cx="530" cy="440" r="1.5" fill="#B85A30" opacity="0.15"/><circle cx="670" cy="440" r="1.5" fill="#4adaaa" opacity="0.15"/>
+  <circle cx="540" cy="460" r="1.5" fill="#da6a4a" opacity="0.15"/><circle cx="660" cy="460" r="1.5" fill="#6a9aaa" opacity="0.15"/>
+  <circle cx="540" cy="380" r="1.5" fill="#da6ada" opacity="0.15"/><circle cx="660" cy="380" r="1.5" fill="#6adada" opacity="0.15"/>
+  <circle cx="560" cy="470" r="1.5" fill="#9a9aba" opacity="0.15"/><circle cx="640" cy="370" r="1.5" fill="#B8CCDB" opacity="0.15"/>
+  <circle cx="560" cy="370" r="1.5" fill="#C44B68" opacity="0.15"/><circle cx="640" cy="470" r="1.5" fill="#d4a039" opacity="0.15"/>
+  <circle cx="520" cy="410" r="1.5" fill="#c44a4a" opacity="0.15"/><circle cx="680" cy="410" r="1.5" fill="#B85A30" opacity="0.15"/>
+  <circle cx="520" cy="430" r="1.5" fill="#4adaaa" opacity="0.15"/><circle cx="680" cy="430" r="1.5" fill="#da6a4a" opacity="0.15"/>
+  <circle cx="535" cy="455" r="1.5" fill="#6a9aaa" opacity="0.15"/><circle cx="665" cy="455" r="1.5" fill="#da6ada" opacity="0.15"/>
+  <circle cx="535" cy="385" r="1.5" fill="#6adada" opacity="0.15"/><circle cx="665" cy="385" r="1.5" fill="#9a9aba" opacity="0.15"/>
+  <circle cx="590" cy="480" r="1.5" fill="#B8CCDB" opacity="0.15"/><circle cx="610" cy="360" r="1.5" fill="#C44B68" opacity="0.15"/>
+  <circle cx="590" cy="360" r="1.5" fill="#d4a039" opacity="0.15"/><circle cx="610" cy="480" r="1.5" fill="#c44a4a" opacity="0.15"/>
+
+  <!-- Center label -->
+  <text x="600" y="416" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="20" fill="#B8CCDB" opacity="0.5">206</text>
+  <text x="600" y="434" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">skills</text>
+
+  <!-- ═══════ ROLE CARDS (8 roles around perimeter) ═══════ -->
+
+  <!-- Connection lines from roles to center (drawn first, behind cards) -->
+  <!-- Top row -->
+  <path d="M 195 190 C 195 280, 500 340, 530 390" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <path d="M 600 190 C 600 280, 600 310, 600 340" stroke="#d4a039" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <path d="M 1005 190 C 1005 280, 700 340, 670 390" stroke="#da6a4a" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+
+  <!-- Middle row -->
+  <path d="M 170 440 C 280 440, 400 420, 490 420" stroke="#C44B68" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <path d="M 1030 440 C 920 440, 800 420, 710 420" stroke="#B85A30" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+
+  <!-- Bottom row -->
+  <path d="M 190 670 C 190 580, 500 500, 540 460" stroke="#da6ada" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <path d="M 600 650 C 600 570, 600 520, 600 500" stroke="#4adaaa" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <path d="M 1010 670 C 1010 580, 700 500, 660 460" stroke="#6a9aaa" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+
+  <!-- ── ROLE 1: Underwriting Analyst (top-left) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="88" width="310" height="108" rx="12" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <!-- Icon -->
+  <rect x="56" y="100" width="36" height="36" rx="8" fill="#B8CCDB" opacity="0.1"/>
+  <text x="74" y="123" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#B8CCDB">UW</text>
+  <!-- Title and subtitle -->
+  <text x="104" y="116" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Underwriting Analyst</text>
+  <text x="104" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Your daily toolkit</text>
+  <!-- Badge -->
+  <rect x="300" y="100" width="36" height="20" rx="10" fill="#B8CCDB" opacity="0.15"/>
+  <text x="318" y="114" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB">~25</text>
+  <!-- Skills list -->
+  <text x="58" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Rent Roll</text>
+  <text x="58" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">T-12 Analysis</text>
+  <text x="58" y="186" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Comp Analysis</text>
+  <text x="170" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Cash Flow</text>
+  <text x="170" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Loan Sizing</text>
+  <text x="170" y="186" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Market Analysis</text>
+
+  <!-- ── ROLE 2: Senior Underwriter / VP (top-center) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="440" y="88" width="320" height="108" rx="12" fill="#0D1229" stroke="#d4a039" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="456" y="100" width="36" height="36" rx="8" fill="#d4a039" opacity="0.1"/>
+  <text x="474" y="123" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#d4a039">VP</text>
+  <text x="504" y="116" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Senior Underwriter / VP</text>
+  <text x="504" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Review &amp; decision tools</text>
+  <rect x="710" y="100" width="36" height="20" rx="10" fill="#d4a039" opacity="0.15"/>
+  <text x="728" y="114" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#d4a039">~15</text>
+  <text x="458" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Risk Rating</text>
+  <text x="458" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">IC Memo</text>
+  <text x="458" y="186" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Sensitivity</text>
+  <text x="575" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Term Sheet Comp</text>
+  <text x="575" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Quick Review</text>
+
+  <!-- ── ROLE 3: Portfolio Manager (top-right) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="850" y="88" width="310" height="108" rx="12" fill="#0D1229" stroke="#da6a4a" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="866" y="100" width="36" height="36" rx="8" fill="#da6a4a" opacity="0.1"/>
+  <text x="884" y="123" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#da6a4a">PM</text>
+  <text x="914" y="116" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Portfolio Manager</text>
+  <text x="914" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Monitoring &amp; reporting</text>
+  <rect x="1110" y="100" width="36" height="20" rx="10" fill="#da6a4a" opacity="0.15"/>
+  <text x="1128" y="114" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#da6a4a">~12</text>
+  <text x="868" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Covenant Testing</text>
+  <text x="868" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Watch List</text>
+  <text x="868" y="186" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Portfolio Summary</text>
+  <text x="1000" y="158" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Operating Perf</text>
+  <text x="1000" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Maturity Report</text>
+
+  <!-- ── ROLE 4: Originator / Loan Officer (mid-left) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="30" y="376" width="270" height="126" rx="12" fill="#0D1229" stroke="#C44B68" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="46" y="388" width="36" height="36" rx="8" fill="#C44B68" opacity="0.1"/>
+  <text x="64" y="411" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#C44B68">LO</text>
+  <text x="94" y="404" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Originator</text>
+  <text x="94" y="420" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Pipeline &amp; quoting</text>
+  <rect x="252" y="388" width="36" height="20" rx="10" fill="#C44B68" opacity="0.15"/>
+  <text x="270" y="402" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#C44B68">~10</text>
+  <text x="48" y="450" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Deal Screening</text>
+  <text x="48" y="464" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Quick Quote</text>
+  <text x="48" y="478" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Pipeline Mgmt</text>
+  <text x="48" y="492" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Term Sheet Gen</text>
+
+  <!-- ── ROLE 5: Broker (mid-right) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="900" y="376" width="270" height="126" rx="12" fill="#0D1229" stroke="#B85A30" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="916" y="388" width="36" height="36" rx="8" fill="#B85A30" opacity="0.1"/>
+  <text x="934" y="411" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#B85A30">BR</text>
+  <text x="964" y="404" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Broker</text>
+  <text x="964" y="420" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Deal submission &amp; tracking</text>
+  <rect x="1122" y="388" width="36" height="20" rx="10" fill="#B85A30" opacity="0.15"/>
+  <text x="1140" y="402" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B85A30">~6</text>
+  <text x="918" y="450" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Deal Submission</text>
+  <text x="918" y="464" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Market Update</text>
+  <text x="918" y="478" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Commission Tracker</text>
+  <text x="918" y="492" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Status Reports</text>
+
+  <!-- ── ROLE 6: Fund Manager / MD (bottom-left) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="30" y="570" width="310" height="126" rx="12" fill="#0D1229" stroke="#da6ada" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="46" y="582" width="36" height="36" rx="8" fill="#da6ada" opacity="0.1"/>
+  <text x="64" y="605" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#da6ada">MD</text>
+  <text x="94" y="598" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Fund Manager / MD</text>
+  <text x="94" y="614" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Strategy &amp; control</text>
+  <rect x="292" y="582" width="36" height="20" rx="10" fill="#da6ada" opacity="0.15"/>
+  <text x="310" y="596" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#da6ada">~15</text>
+  <text x="48" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Credit Box Config</text>
+  <text x="48" y="658" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Portfolio Summary</text>
+  <text x="48" y="672" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Board Reporting</text>
+  <text x="48" y="686" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Capital Markets</text>
+  <text x="190" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Fund Pitch</text>
+  <text x="190" y="658" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Investor Comms</text>
+
+  <!-- ── ROLE 7: Asset Manager (bottom-center) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="420" y="570" width="360" height="126" rx="12" fill="#0D1229" stroke="#4adaaa" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="436" y="582" width="36" height="36" rx="8" fill="#4adaaa" opacity="0.1"/>
+  <text x="454" y="605" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#4adaaa">AM</text>
+  <text x="484" y="598" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Asset Manager</text>
+  <text x="484" y="614" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Property performance</text>
+  <rect x="732" y="582" width="36" height="20" rx="10" fill="#4adaaa" opacity="0.15"/>
+  <text x="750" y="596" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#4adaaa">~12</text>
+  <text x="438" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Operating Performance</text>
+  <text x="438" y="658" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Lease-Up Tracking</text>
+  <text x="438" y="672" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Renovation Progress</text>
+  <text x="620" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Reserve Tracking</text>
+  <text x="620" y="658" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Construction Draws</text>
+
+  <!-- ── ROLE 8: Closing Coordinator (bottom-right) ── -->
+  <g filter="url(#shadow-sm)">
+    <rect x="860" y="570" width="310" height="126" rx="12" fill="#0D1229" stroke="#6a9aaa" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+  <rect x="876" y="582" width="36" height="36" rx="8" fill="#6a9aaa" opacity="0.1"/>
+  <text x="894" y="605" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#6a9aaa">CC</text>
+  <text x="924" y="598" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#e2e2e6">Closing Coordinator</text>
+  <text x="924" y="614" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Execution</text>
+  <rect x="1122" y="582" width="36" height="20" rx="10" fill="#6a9aaa" opacity="0.15"/>
+  <text x="1140" y="596" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#6a9aaa">~8</text>
+  <text x="878" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Closing Checklist</text>
+  <text x="878" y="658" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Closing Conditions</text>
+  <text x="878" y="672" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Settlement Review</text>
+  <text x="878" y="686" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Wire Verification</text>
+  <text x="1028" y="644" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#a0a0a8">Post-Close Audit</text>
+
+  <!-- ═══════ BOTTOM TAGLINE ═══════ -->
+  <rect x="300" y="730" width="600" height="72" rx="12" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <text x="600" y="760" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="17" fill="#e2e2e6">The system has 206 skills.</text>
+  <text x="600" y="784" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="15" fill="#B8CCDB">You only see the ones you need.</text>
+
+  <!-- Bottom subtle branding -->
+  <text x="600" y="838" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#2a2a32">pinchfin.com</text>
+</svg>

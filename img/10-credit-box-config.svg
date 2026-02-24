@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" fill="none">
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="radial-pulse" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#B8CCDB" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow-sm"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+    <filter id="shadow-md"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+    <filter id="glow-accent"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/></filter>
+    <filter id="glow-strong"><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#B8CCDB" flood-opacity="0.25"/></filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="650" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle radial lines from center -->
+  <g opacity="0.06">
+    <line x1="600" y1="240" x2="155" y2="125" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="415" y2="105" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="785" y2="105" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="1045" y2="125" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="135" y2="370" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="395" y2="370" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="805" y2="370" stroke="#B8CCDB" stroke-width="1"/>
+    <line x1="600" y1="240" x2="1065" y2="370" stroke="#B8CCDB" stroke-width="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6">Credit Box Configuration</text>
+  <text x="600" y="66" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#7c7f94">Single source of truth for every constraint in the system</text>
+
+  <!-- CENTER: JSON Code Block -->
+  <g filter="url(#glow-strong)">
+    <rect x="390" y="95" width="420" height="195" rx="12" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5"/>
+  </g>
+  <!-- Code block header bar -->
+  <rect x="390" y="95" width="420" height="28" rx="12" fill="#222228"/>
+  <rect x="390" y="111" width="420" height="12" fill="#222228"/>
+  <!-- File icon dots -->
+  <circle cx="406" cy="109" r="4" fill="#c44a4a" opacity="0.7"/>
+  <circle cx="418" cy="109" r="4" fill="#d4a039" opacity="0.7"/>
+  <circle cx="430" cy="109" r="4" fill="#C44B68" opacity="0.7"/>
+  <text x="600" y="113" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#7c7f94">credit_box_config.json</text>
+
+  <!-- JSON content with syntax highlighting -->
+  <text x="410" y="144" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">{</text>
+  <text x="424" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"ltv_as_is"</text><text x="520" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="534" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">0.75</text><text x="570" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">,</text>
+  <text x="424" y="180" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"ltv_stabilized"</text><text x="558" y="180" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="572" y="180" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">0.75</text><text x="608" y="180" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">,</text>
+  <text x="424" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"dscr_stabilized"</text><text x="564" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="578" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">1.05</text><text x="614" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">,</text>
+  <text x="424" y="216" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"debt_yield"</text><text x="530" y="216" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="544" y="216" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">0.07</text><text x="580" y="216" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">,</text>
+  <text x="424" y="234" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"ltc"</text><text x="466" y="234" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="480" y="234" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">0.80</text><text x="516" y="234" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">,</text>
+  <text x="424" y="252" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#B8CCDB">"max_loan"</text><text x="508" y="252" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">:</text><text x="522" y="252" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#C44B68">100000000</text>
+  <text x="410" y="270" font-family="JetBrains Mono, monospace" font-weight="400" font-size="12.5" fill="#7c7f94">}</text>
+
+  <!-- CONNECTION LINES (from center to modules) -->
+  <!-- Top row connections -->
+  <path d="M 480 95 C 480 60, 175 60, 155 90" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 530 95 C 530 55, 435 55, 415 78" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 670 95 C 670 55, 765 55, 785 78" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 720 95 C 720 60, 1025 60, 1045 90" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Bottom row connections -->
+  <path d="M 480 290 C 480 330, 155 330, 135 345" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 530 290 C 530 335, 415 335, 395 345" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 670 290 C 670 335, 785 335, 805 345" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  <path d="M 720 290 C 720 330, 1045 330, 1065 345" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Animated pulse dots on connections -->
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M 480 95 C 480 60, 175 60, 155 90"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 530 95 C 530 55, 435 55, 415 78"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="2.8s" repeatCount="indefinite" path="M 670 95 C 670 55, 765 55, 785 78"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="3.2s" repeatCount="indefinite" path="M 720 95 C 720 60, 1025 60, 1045 90"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="2.7s" repeatCount="indefinite" path="M 480 290 C 480 330, 155 330, 135 345"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="3.1s" repeatCount="indefinite" path="M 530 290 C 530 335, 415 335, 395 345"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="2.9s" repeatCount="indefinite" path="M 670 290 C 670 335, 785 335, 805 345"/>
+  </circle>
+  <circle r="3" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="3.3s" repeatCount="indefinite" path="M 720 290 C 720 330, 1045 330, 1065 345"/>
+  </circle>
+
+  <!-- TOP ROW MODULES -->
+  <!-- Module 1: Loan Sizing -->
+  <g filter="url(#shadow-sm)">
+    <rect x="55" y="90" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="80" cy="112" r="10" fill="#B8CCDB" opacity="0.15"/>
+  <text x="80" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#B8CCDB">$</text>
+  <text x="100" y="116" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Loan Sizing</text>
+  <text x="74" y="140" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">LTV, DSCR, DY, LTC, Max</text>
+
+  <!-- Module 2: Cash Flow UW -->
+  <g filter="url(#shadow-sm)">
+    <rect x="315" y="78" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="340" cy="100" r="10" fill="#C44B68" opacity="0.15"/>
+  <text x="340" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#C44B68">CF</text>
+  <text x="360" y="104" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Cash Flow UW</text>
+  <text x="334" y="128" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">DSCR stress testing</text>
+
+  <!-- Module 3: Extension Analysis -->
+  <g filter="url(#shadow-sm)">
+    <rect x="685" y="78" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="710" cy="100" r="10" fill="#d4a039" opacity="0.15"/>
+  <text x="710" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#d4a039">EX</text>
+  <text x="730" y="104" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Extension Analysis</text>
+  <text x="704" y="128" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">DSCR extension tests</text>
+
+  <!-- Module 4: Cash Trap Analysis -->
+  <g filter="url(#shadow-sm)">
+    <rect x="945" y="90" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="970" cy="112" r="10" fill="#c44a4a" opacity="0.15"/>
+  <text x="970" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#c44a4a">CT</text>
+  <text x="990" y="116" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Cash Trap Analysis</text>
+  <text x="964" y="140" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">DSCR trap triggers</text>
+
+  <!-- BOTTOM ROW MODULES -->
+  <!-- Module 5: Covenant Testing -->
+  <g filter="url(#shadow-sm)">
+    <rect x="35" y="345" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="60" cy="367" r="10" fill="#B85A30" opacity="0.15"/>
+  <text x="60" y="371" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#B85A30">CV</text>
+  <text x="80" y="371" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Covenant Testing</text>
+  <text x="54" y="395" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">DSCR, LTV, DY compliance</text>
+
+  <!-- Module 6: Sensitivity Engine -->
+  <g filter="url(#shadow-sm)">
+    <rect x="295" y="345" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="320" cy="367" r="10" fill="#4adaaa" opacity="0.15"/>
+  <text x="320" y="371" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#4adaaa">SE</text>
+  <text x="340" y="371" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Sensitivity Engine</text>
+  <text x="314" y="395" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">All constraints, scenarios</text>
+
+  <!-- Module 7: IC Memo -->
+  <g filter="url(#shadow-sm)">
+    <rect x="705" y="345" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="730" cy="367" r="10" fill="#da6ada" opacity="0.15"/>
+  <text x="730" y="371" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#da6ada">IC</text>
+  <text x="750" y="371" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Credit Decision Memo</text>
+  <text x="724" y="395" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">All constraints, summaries</text>
+
+  <!-- Module 8: Portfolio Monitoring -->
+  <g filter="url(#shadow-sm)">
+    <rect x="965" y="345" width="200" height="68" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="1"/>
+  </g>
+  <circle cx="990" cy="367" r="10" fill="#da6a4a" opacity="0.15"/>
+  <text x="990" y="371" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#da6a4a">PM</text>
+  <text x="1010" y="371" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">Portfolio Monitoring</text>
+  <text x="984" y="395" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9.5" fill="#7c7f94">All constraints, watchlist</text>
+
+  <!-- ANNOTATION -->
+  <text x="600" y="448" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#a0a0a8" letter-spacing="0.5">6 numbers. Zero hardcoded thresholds. Change one value, the entire system adjusts automatically.</text>
+
+  <!-- BEFORE / AFTER SECTION -->
+  <!-- Divider line -->
+  <line x1="80" y1="475" x2="1120" y2="475" stroke="#2a2a32" stroke-width="1"/>
+
+  <!-- BEFORE (left) -->
+  <rect x="60" y="492" width="520" height="120" rx="10" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <rect x="60" y="492" width="520" height="30" rx="10" fill="#222228"/>
+  <rect x="60" y="512" width="520" height="10" fill="#222228"/>
+  <text x="80" y="513" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#c44a4a" opacity="0.7">BEFORE</text>
+  <text x="564" y="513" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94">legacy approach</text>
+
+  <text x="80" y="545" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94">Changing DSCR meant:</text>
+  <text x="80" y="565" font-family="Inter, sans-serif" font-weight="400" font-size="11.5" fill="#7c7f94">Update the model. Update the template. Update the memo.</text>
+  <text x="80" y="582" font-family="Inter, sans-serif" font-weight="400" font-size="11.5" fill="#7c7f94">Email the team. Hope everyone got the message.</text>
+  <text x="80" y="600" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#c44a4a" opacity="0.6">30 days later, someone is still using the old number.</text>
+
+  <!-- AFTER (right) -->
+  <rect x="620" y="492" width="520" height="120" rx="10" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="620" y="492" width="520" height="30" rx="10" fill="#222228"/>
+  <rect x="620" y="512" width="520" height="10" fill="#222228"/>
+  <text x="640" y="513" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#B8CCDB">AFTER</text>
+  <text x="1124" y="513" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" opacity="0.5">pinchfin</text>
+
+  <text x="640" y="548" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Change one number in one file.</text>
+  <text x="640" y="570" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6" font-weight="300">Done.</text>
+  <text x="640" y="596" font-family="Inter, sans-serif" font-weight="400" font-size="11.5" fill="#B8CCDB" opacity="0.7">Every analyst. Every report. Every test. Immediately.</text>
+
+  <!-- Bottom subtle branding -->
+  <text x="600" y="638" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#2a2a32">pinchfin.com</text>
+</svg>

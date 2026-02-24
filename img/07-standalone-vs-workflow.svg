@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" fill="none">
+  <title>Standalone vs. Workflow Execution</title>
+  <desc>Split-screen showing three modes of operation: Full 15-Phase Workflow, Skill Chains, and Standalone Skill execution. Demonstrates flexibility from comprehensive to single-skill use.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="glow-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B85A30" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#B85A30" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="banner-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#B8CCDB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0.06"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="shadow-md">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-green-f">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C44B68" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-purple-f">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#B85A30" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="650" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.015">
+    <line x1="100" y1="0" x2="100" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="650" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="38" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">Three Ways to Run</text>
+  <text x="600" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" text-anchor="middle" letter-spacing="2.5">USE AS LITTLE OR AS MUCH AS YOU NEED</text>
+
+  <!-- ============================================ -->
+  <!-- PANEL 1: Run the Full Machine (Left)         -->
+  <!-- ============================================ -->
+  <g transform="translate(32, 80)">
+    <!-- Card background -->
+    <rect width="365" height="470" rx="12" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1" filter="url(#shadow-md)"/>
+
+    <!-- Header bar -->
+    <rect x="0" y="0" width="365" height="48" rx="12" fill="#0D1229"/>
+    <rect x="0" y="36" width="365" height="12" fill="#0D1229"/>
+    <line x1="0" y1="48" x2="365" y2="48" stroke="#2a2a32" stroke-width="1"/>
+
+    <!-- Header content -->
+    <text x="182" y="23" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6" text-anchor="middle" letter-spacing="0.5">Run the Full Machine</text>
+    <text x="182" y="40" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="middle" letter-spacing="1">15-PHASE WORKFLOW</text>
+
+    <!-- Phase flow — condensed vertical -->
+    <g transform="translate(50, 65)">
+      <!-- Phase boxes -->
+      <rect x="0" y="0" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="17" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">01</text>
+      <text x="30" y="17" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Intake &amp; Context</text>
+      <text x="255" y="17" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">8 skills</text>
+
+      <line x1="132" y1="26" x2="132" y2="34" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="34" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="51" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">03</text>
+      <text x="30" y="51" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Sponsor Analysis</text>
+      <text x="255" y="51" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">6 skills</text>
+
+      <line x1="132" y1="60" x2="132" y2="68" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="68" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="85" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">04</text>
+      <text x="30" y="85" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Market &amp; Submarket</text>
+      <text x="255" y="85" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">12 skills</text>
+
+      <line x1="132" y1="94" x2="132" y2="102" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="102" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="119" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">06</text>
+      <text x="30" y="119" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Comp Analysis</text>
+      <text x="255" y="119" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">14 skills</text>
+
+      <line x1="132" y1="128" x2="132" y2="136" stroke="#1C2345" stroke-width="1"/>
+
+      <!-- Condensed phases 5-12 -->
+      <rect x="0" y="136" width="265" height="26" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <text x="132" y="153" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">Phases 5 - 12</text>
+      <text x="255" y="153" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">86 skills</text>
+
+      <line x1="132" y1="162" x2="132" y2="170" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="170" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="187" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">13</text>
+      <text x="30" y="187" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Risk Assessment</text>
+      <text x="255" y="187" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">18 skills</text>
+
+      <line x1="132" y1="196" x2="132" y2="204" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="204" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="221" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">14</text>
+      <text x="30" y="221" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Credit Decision</text>
+      <text x="255" y="221" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">10 skills</text>
+
+      <line x1="132" y1="230" x2="132" y2="238" stroke="#1C2345" stroke-width="1"/>
+
+      <rect x="0" y="238" width="265" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+      <text x="10" y="255" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">15</text>
+      <text x="30" y="255" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Due Diligence &amp; Closing</text>
+      <text x="255" y="255" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="end">14 skills</text>
+    </g>
+
+    <!-- Output arrow -->
+    <line x1="182" y1="368" x2="182" y2="382" stroke="#B8CCDB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- Output box -->
+    <rect x="40" y="386" width="285" height="68" rx="10" fill="#070B1A" stroke="#2a5a99" stroke-width="1" filter="url(#glow-accent)"/>
+    <rect x="40" y="386" width="285" height="68" rx="10" fill="url(#glow-blue)" opacity="0.5"/>
+    <text x="182" y="408" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle">8 Documents</text>
+    <text x="182" y="426" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">IC Memo + 7 Analysis Reports</text>
+    <g transform="translate(62, 436)">
+      <rect width="72" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="36" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle">4-6 hours</text>
+    </g>
+    <g transform="translate(148, 436)">
+      <rect width="90" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="45" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle">40-60 skills</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PANEL 2: String a Few Together (Center)      -->
+  <!-- ============================================ -->
+  <g transform="translate(417, 80)">
+    <!-- Card background -->
+    <rect width="365" height="470" rx="12" fill="url(#card-grad)" stroke="#B8CCDB" stroke-width="1" filter="url(#shadow-md)"/>
+    <rect width="365" height="470" rx="12" fill="url(#glow-blue)" opacity="0.3"/>
+
+    <!-- Header bar -->
+    <rect x="0" y="0" width="365" height="48" rx="12" fill="#0D1229"/>
+    <rect x="0" y="36" width="365" height="12" fill="#0D1229"/>
+    <line x1="0" y1="48" x2="365" y2="48" stroke="#2a5a99" stroke-width="1"/>
+
+    <!-- Header content -->
+    <text x="182" y="23" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6" text-anchor="middle" letter-spacing="0.5">String a Few Together</text>
+    <text x="182" y="40" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB" text-anchor="middle" letter-spacing="1">SKILL CHAINS</text>
+
+    <!-- Example 1: Screen This Deal -->
+    <text x="24" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8" letter-spacing="0.5">Example 1</text>
+    <text x="24" y="92" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">"Screen This Deal"</text>
+
+    <!-- Chain boxes -->
+    <g transform="translate(24, 104)">
+      <rect width="96" height="60" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="48" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" text-anchor="middle">01</text>
+      <text x="48" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Screening</text>
+
+      <!-- Arrow -->
+      <line x1="96" y1="30" x2="126" y2="30" stroke="#C44B68" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <rect x="130" y="0" width="96" height="60" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="178" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" text-anchor="middle">02</text>
+      <text x="178" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Market</text>
+
+      <!-- Arrow -->
+      <line x1="226" y1="30" x2="256" y2="30" stroke="#C44B68" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <rect x="260" y="0" width="72" height="60" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="296" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" text-anchor="middle">03</text>
+      <text x="296" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Comp</text>
+    </g>
+
+    <!-- Result -->
+    <g transform="translate(24, 176)">
+      <rect width="317" height="28" rx="8" fill="#070B1A" stroke="#C44B68" stroke-width="0.8" opacity="0.7"/>
+      <text x="158" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#C44B68" text-anchor="middle">Quick Screening Memo + Market Snapshot</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="24" y1="220" x2="341" y2="220" stroke="#2a2a32" stroke-width="0.8"/>
+
+    <!-- Example 2: Comp My Deal -->
+    <text x="24" y="244" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8" letter-spacing="0.5">Example 2</text>
+    <text x="24" y="262" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#e2e2e6">"Comp My Deal"</text>
+
+    <!-- Chain boxes -->
+    <g transform="translate(24, 274)">
+      <rect width="96" height="60" rx="8" fill="#0D1229" stroke="#B85A30" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="48" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30" text-anchor="middle">01</text>
+      <text x="48" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Comp</text>
+
+      <!-- Arrow -->
+      <line x1="96" y1="30" x2="126" y2="30" stroke="#B85A30" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <rect x="130" y="0" width="96" height="60" rx="8" fill="#0D1229" stroke="#B85A30" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="178" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30" text-anchor="middle">02</text>
+      <text x="178" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Valuation</text>
+
+      <!-- Arrow -->
+      <line x1="226" y1="30" x2="256" y2="30" stroke="#B85A30" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <rect x="260" y="0" width="72" height="60" rx="8" fill="#0D1229" stroke="#B85A30" stroke-width="1" filter="url(#shadow-sm)"/>
+      <text x="296" y="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30" text-anchor="middle">03</text>
+      <text x="296" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="middle">Report</text>
+    </g>
+
+    <!-- Result -->
+    <g transform="translate(24, 346)">
+      <rect width="317" height="28" rx="8" fill="#070B1A" stroke="#B85A30" stroke-width="0.8" opacity="0.7"/>
+      <text x="158" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#B85A30" text-anchor="middle">Comparable Analysis + Valuation Summary</text>
+    </g>
+
+    <!-- Stats -->
+    <g transform="translate(62, 400)">
+      <rect width="72" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="36" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle">15-45 min</text>
+    </g>
+    <g transform="translate(148, 400)">
+      <rect width="90" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="45" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle">2-5 skills</text>
+    </g>
+
+    <!-- "Most popular" badge -->
+    <g transform="translate(126, 428)">
+      <rect width="112" height="22" rx="11" fill="#2a5a99" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="56" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB" text-anchor="middle">Most Popular</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PANEL 3: Run One Skill (Right)               -->
+  <!-- ============================================ -->
+  <g transform="translate(802, 80)">
+    <!-- Card background -->
+    <rect width="365" height="470" rx="12" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1" filter="url(#shadow-md)"/>
+
+    <!-- Header bar -->
+    <rect x="0" y="0" width="365" height="48" rx="12" fill="#0D1229"/>
+    <rect x="0" y="36" width="365" height="12" fill="#0D1229"/>
+    <line x1="0" y1="48" x2="365" y2="48" stroke="#2a2a32" stroke-width="1"/>
+
+    <!-- Header content -->
+    <text x="182" y="23" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6" text-anchor="middle" letter-spacing="0.5">Run One Skill</text>
+    <text x="182" y="40" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="middle" letter-spacing="1">STANDALONE EXECUTION</text>
+
+    <!-- Single large skill card -->
+    <g transform="translate(40, 72)">
+      <rect width="285" height="220" rx="12" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" filter="url(#glow-accent)"/>
+      <rect width="285" height="220" rx="12" fill="url(#glow-blue)" opacity="0.4"/>
+
+      <!-- Skill icon (grid) -->
+      <g transform="translate(118, 30)">
+        <rect x="0" y="0" width="18" height="18" rx="4" fill="none" stroke="#B8CCDB" stroke-width="1.2"/>
+        <rect x="22" y="0" width="18" height="18" rx="4" fill="none" stroke="#B8CCDB" stroke-width="1.2"/>
+        <rect x="0" y="22" width="18" height="18" rx="4" fill="none" stroke="#B8CCDB" stroke-width="1.2"/>
+        <rect x="22" y="22" width="18" height="18" rx="4" fill="#B8CCDB" fill-opacity="0.2" stroke="#B8CCDB" stroke-width="1.2"/>
+        <circle cx="33" cy="33" r="3" fill="#B8CCDB" opacity="0.6"/>
+      </g>
+
+      <text x="142" y="95" font-family="Inter, sans-serif" font-weight="400" font-size="18" fill="#e2e2e6" text-anchor="middle">Rent Comp Analysis</text>
+
+      <line x1="50" y1="110" x2="235" y2="110" stroke="#2a2a32" stroke-width="0.8"/>
+
+      <!-- Skill details -->
+      <text x="50" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Input</text>
+      <text x="235" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="end">Property address + unit mix</text>
+
+      <text x="50" y="152" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Sources</text>
+      <text x="235" y="152" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="end">Data Providers, MCP</text>
+
+      <text x="50" y="172" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Output</text>
+      <text x="235" y="172" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="end">Rent comp grid + analysis</text>
+
+      <text x="50" y="192" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Format</text>
+      <text x="235" y="192" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8" text-anchor="end">V3.1 Elevated DOCX</text>
+    </g>
+
+    <!-- Stats -->
+    <g transform="translate(62, 320)">
+      <rect width="72" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="36" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle">5-10 min</text>
+    </g>
+    <g transform="translate(148, 320)">
+      <rect width="90" height="16" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+      <text x="45" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle">1 skill</text>
+    </g>
+
+    <!-- Just ask -->
+    <text x="182" y="370" font-family="Inter, sans-serif" font-weight="300" font-size="14" fill="#a0a0a8" text-anchor="middle" opacity="0.8">"Pull rent comps for</text>
+    <text x="182" y="390" font-family="Inter, sans-serif" font-weight="300" font-size="14" fill="#a0a0a8" text-anchor="middle" opacity="0.8">123 Main St, Dallas TX"</text>
+
+    <!-- Cursor blink indicator -->
+    <rect x="262" y="378" width="2" height="16" rx="1" fill="#B8CCDB" opacity="0.6"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM BANNER                                -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 568)">
+    <rect x="32" y="0" width="1136" height="60" rx="12" fill="url(#banner-grad)" stroke="#2a5a99" stroke-width="0.8"/>
+    <text x="600" y="28" font-family="Inter, sans-serif" font-weight="300" font-size="16" fill="#e2e2e6" text-anchor="middle" letter-spacing="0.5">Use as little or as much as you need.</text>
+    <text x="600" y="48" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" text-anchor="middle" letter-spacing="1">Every skill works alone. Every skill works better together.</text>
+  </g>
+
+</svg>

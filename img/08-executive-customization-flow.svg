@@ -1,0 +1,356 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <title>Executive Customization Flow</title>
+  <desc>Shows how a non-technical executive changes the entire underwriting system through natural language, with two examples of cascading configuration changes across all downstream skills and documents.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-blue-h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="engine-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="50%" stop-color="#151520"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="fan-grad-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="banner-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a039" stop-opacity="0.04"/>
+      <stop offset="50%" stop-color="#d4a039" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#d4a039" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="shadow-md">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-accent-strong">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#B8CCDB" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#C44B68"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.015">
+    <line x1="100" y1="0" x2="100" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="38" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">Executive Customization</text>
+  <text x="600" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" text-anchor="middle" letter-spacing="2.5">ONE CONVERSATION CHANGES EVERYTHING</text>
+
+  <!-- ============================================ -->
+  <!-- EXAMPLE 1 (Top Half)                         -->
+  <!-- ============================================ -->
+
+  <!-- Row label -->
+  <rect x="32" y="76" width="76" height="20" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  <text x="70" y="90" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" text-anchor="middle">Example 1</text>
+
+  <!-- EXECUTIVE INPUT -->
+  <g transform="translate(32, 104)">
+    <rect width="220" height="178" rx="12" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1" filter="url(#shadow-md)"/>
+
+    <!-- Silhouette icon -->
+    <g transform="translate(88, 18)">
+      <circle cx="22" cy="14" r="14" fill="#222228" stroke="#1C2345" stroke-width="1"/>
+      <circle cx="22" cy="11" r="7" fill="#1C2345"/>
+      <path d="M8,28 Q8,20 22,20 Q36,20 36,28" fill="#1C2345"/>
+    </g>
+
+    <text x="110" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">MD / SVP</text>
+
+    <!-- Speech bubble -->
+    <rect x="16" y="72" width="188" height="90" rx="10" fill="#222228" stroke="#1C2345" stroke-width="0.8"/>
+    <path d="M90,72 L100,62 L110,72" fill="#222228" stroke="#1C2345" stroke-width="0.8"/>
+    <path d="M91,72 L100,63 L109,72" fill="#222228"/>
+
+    <text x="110" y="96" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">"I want DSCR tests</text>
+    <text x="110" y="114" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">at 1.10x</text>
+    <text x="110" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">not 1.05x"</text>
+  </g>
+
+  <!-- Arrow: Input → Engine -->
+  <line x1="260" y1="193" x2="300" y2="193" stroke="#B8CCDB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- PINCHFIN ENGINE -->
+  <g transform="translate(308, 104)">
+    <rect width="260" height="178" rx="12" fill="url(#engine-grad)" stroke="#B8CCDB" stroke-width="1.2" filter="url(#glow-accent-strong)"/>
+    <rect width="260" height="178" rx="12" fill="url(#glow-blue)" opacity="0.4"/>
+
+    <!-- Engine header -->
+    <text x="130" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" text-anchor="middle" letter-spacing="1.5">PINCHFIN ENGINE</text>
+    <line x1="20" y1="34" x2="240" y2="34" stroke="#2a5a99" stroke-width="0.8"/>
+
+    <!-- Steps -->
+    <g transform="translate(20, 44)">
+      <circle cx="8" cy="8" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">1</text>
+      <text x="22" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Parses intent</text>
+
+      <circle cx="8" cy="30" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="34" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">2</text>
+      <text x="22" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Updates credit_box_config</text>
+
+      <circle cx="8" cy="52" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="56" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">3</text>
+      <text x="22" y="56" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Modifies downstream nodes</text>
+
+      <circle cx="8" cy="74" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="78" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">4</text>
+      <text x="22" y="78" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Cascades to all skills</text>
+
+      <circle cx="8" cy="96" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="100" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">5</text>
+      <text x="22" y="100" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Validates &amp; tests</text>
+    </g>
+  </g>
+
+  <!-- Arrow: Engine → Propagation -->
+  <line x1="576" y1="193" x2="616" y2="193" stroke="#C44B68" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- DOWNSTREAM PROPAGATION -->
+  <g transform="translate(624, 94)">
+    <text x="0" y="8" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" letter-spacing="1.5">DOWNSTREAM PROPAGATION</text>
+
+    <!-- Fanning items with green checkmarks -->
+    <g transform="translate(0, 20)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="15" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">credit_box_config</text>
+
+      <!-- Item 2 -->
+      <rect x="0" y="26" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="41" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="41" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">All sizing skills</text>
+
+      <!-- Item 3 -->
+      <rect x="0" y="52" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="67" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="67" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">All covenant tests</text>
+
+      <!-- Item 4 -->
+      <rect x="0" y="78" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="93" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="93" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">Extension analysis</text>
+
+      <!-- Item 5 -->
+      <rect x="0" y="104" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="119" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="119" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">Cash trap triggers</text>
+
+      <!-- Item 6 -->
+      <rect x="0" y="130" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="145" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="145" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">IC Memo templates</text>
+
+      <!-- Item 7 -->
+      <rect x="0" y="156" width="210" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="171" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="171" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">Portfolio monitors</text>
+    </g>
+  </g>
+
+  <!-- Propagation summary text -->
+  <g transform="translate(624, 296)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-weight="300" font-size="11" fill="#e2e2e6">EVERY analyst, EVERY report,</text>
+    <text x="0" y="16" font-family="Inter, sans-serif" font-weight="300" font-size="11" fill="#e2e2e6">EVERY decision — now uses 1.10x.</text>
+    <text x="0" y="36" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Automatically. No meetings. No retraining.</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Divider between examples                     -->
+  <!-- ============================================ -->
+  <line x1="60" y1="348" x2="1140" y2="348" stroke="#2a2a32" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- ============================================ -->
+  <!-- EXAMPLE 2 (Bottom Half)                      -->
+  <!-- ============================================ -->
+
+  <!-- Row label -->
+  <rect x="32" y="358" width="76" height="20" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  <text x="70" y="372" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" text-anchor="middle">Example 2</text>
+
+  <!-- EXECUTIVE INPUT -->
+  <g transform="translate(32, 386)">
+    <rect width="220" height="178" rx="12" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1" filter="url(#shadow-md)"/>
+
+    <!-- Silhouette icon -->
+    <g transform="translate(88, 18)">
+      <circle cx="22" cy="14" r="14" fill="#222228" stroke="#1C2345" stroke-width="1"/>
+      <circle cx="22" cy="11" r="7" fill="#1C2345"/>
+      <path d="M8,28 Q8,20 22,20 Q36,20 36,28" fill="#1C2345"/>
+    </g>
+
+    <text x="110" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">SVP</text>
+
+    <!-- Speech bubble -->
+    <rect x="16" y="72" width="188" height="90" rx="10" fill="#222228" stroke="#1C2345" stroke-width="0.8"/>
+    <path d="M90,72 L100,62 L110,72" fill="#222228" stroke="#1C2345" stroke-width="0.8"/>
+    <path d="M91,72 L100,63 L109,72" fill="#222228"/>
+
+    <text x="110" y="96" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">"Add seismic review</text>
+    <text x="110" y="114" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">to every deal</text>
+    <text x="110" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6" text-anchor="middle">in California"</text>
+  </g>
+
+  <!-- Arrow: Input → Engine -->
+  <line x1="260" y1="475" x2="300" y2="475" stroke="#B8CCDB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- PINCHFIN ENGINE -->
+  <g transform="translate(308, 386)">
+    <rect width="260" height="178" rx="12" fill="url(#engine-grad)" stroke="#B8CCDB" stroke-width="1.2" filter="url(#glow-accent-strong)"/>
+    <rect width="260" height="178" rx="12" fill="url(#glow-blue)" opacity="0.4"/>
+
+    <!-- Engine header -->
+    <text x="130" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" text-anchor="middle" letter-spacing="1.5">PINCHFIN ENGINE</text>
+    <line x1="20" y1="34" x2="240" y2="34" stroke="#2a5a99" stroke-width="0.8"/>
+
+    <!-- Steps -->
+    <g transform="translate(20, 44)">
+      <circle cx="8" cy="8" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">1</text>
+      <text x="22" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Creates new skill</text>
+
+      <circle cx="8" cy="30" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="34" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">2</text>
+      <text x="22" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Inserts into Phase 7</text>
+
+      <circle cx="8" cy="52" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="56" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">3</text>
+      <text x="22" y="56" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Adds conditional: state = CA</text>
+
+      <circle cx="8" cy="74" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="78" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">4</text>
+      <text x="22" y="78" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Updates workflow DAG</text>
+
+      <circle cx="8" cy="96" r="7" fill="none" stroke="#B8CCDB" stroke-width="0.8"/>
+      <text x="8" y="100" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">5</text>
+      <text x="22" y="100" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Validates &amp; tests</text>
+    </g>
+  </g>
+
+  <!-- Arrow: Engine → Propagation -->
+  <line x1="576" y1="475" x2="616" y2="475" stroke="#C44B68" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- DOWNSTREAM PROPAGATION -->
+  <g transform="translate(624, 378)">
+    <text x="0" y="8" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" letter-spacing="1.5">DOWNSTREAM PROPAGATION</text>
+
+    <!-- Fanning items with green checkmarks -->
+    <g transform="translate(0, 20)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="240" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="15" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">New skill created</text>
+
+      <!-- Item 2 -->
+      <rect x="0" y="26" width="240" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="41" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="41" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">Workflow DAG updated</text>
+
+      <!-- Item 3 -->
+      <rect x="0" y="52" width="240" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="67" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="67" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">DD checklist + seismic line</text>
+
+      <!-- Item 4 -->
+      <rect x="0" y="78" width="240" height="22" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="8" y="93" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">&#x2713;</text>
+      <text x="22" y="93" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">Only triggers for CA deals</text>
+
+      <!-- Conditional badge -->
+      <g transform="translate(0, 110)">
+        <rect width="130" height="20" rx="10" fill="#0D1229" stroke="#d4a039" stroke-width="0.8"/>
+        <text x="65" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle">if state === "CA"</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Propagation summary text -->
+  <g transform="translate(624, 528)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-weight="300" font-size="11" fill="#e2e2e6">New requirement, new skill, new workflow step.</text>
+    <text x="0" y="20" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Conditional. Automatic. Zero development time.</text>
+  </g>
+
+  <!-- Fan connection lines (subtle, from engine to each propagation item) -->
+  <!-- Example 1 fan -->
+  <g opacity="0.15">
+    <line x1="616" y1="140" x2="624" y2="124" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="155" x2="624" y2="150" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="175" x2="624" y2="176" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="195" x2="624" y2="202" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="210" x2="624" y2="228" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="225" x2="624" y2="254" stroke="#C44B68" stroke-width="0.8"/>
+    <line x1="616" y1="238" x2="624" y2="280" stroke="#C44B68" stroke-width="0.8"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM CALLOUT BANNER                        -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 576)">
+    <rect x="32" y="0" width="1136" height="56" rx="12" fill="url(#banner-grad)" stroke="#d4a039" stroke-width="0.6" opacity="0.9"/>
+
+    <text x="600" y="24" font-family="Inter, sans-serif" font-weight="300" font-size="15" fill="#e2e2e6" text-anchor="middle" letter-spacing="0.5">What used to take weeks of meetings and development sprints</text>
+    <text x="600" y="44" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#d4a039" text-anchor="middle" letter-spacing="0.5">now happens in one conversation.</text>
+  </g>
+
+  <!-- Corner detail — "simple input → complex output" contrast label -->
+  <g transform="translate(32, 648)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94" letter-spacing="0.5">Simple input</text>
+    <line x1="80" y1="-4" x2="130" y2="-4" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+    <text x="138" y="0" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB" letter-spacing="0.5">System-wide change</text>
+  </g>
+
+  <!-- Stat badges -->
+  <g transform="translate(900, 648)">
+    <rect width="100" height="20" rx="10" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+    <text x="50" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">Zero Code</text>
+  </g>
+  <g transform="translate(1010, 648)">
+    <rect width="100" height="20" rx="10" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8"/>
+    <text x="50" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">Zero Downtime</text>
+  </g>
+
+</svg>

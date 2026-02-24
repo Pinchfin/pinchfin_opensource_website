@@ -1,0 +1,654 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" fill="none">
+  <title>Complete Underwriting Workflow — 15 Phases + Context Brief + Phase 6A</title>
+  <desc>Full underwriting journey showing all phases from Operator Context Brief through Due Diligence &amp; Closing, aligned to the Canonical Workflow Resequencing (Feb 2026). Includes blocking gates, conditional branches, half-step 6A, skill counts, time estimates, and segment brackets.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#B8CCDB" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1000" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.015">
+    <line x1="100" y1="0" x2="100" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="1000" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="800" x2="1200" y2="800" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="900" x2="1200" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="38" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">Complete Underwriting Workflow</text>
+  <text x="600" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" text-anchor="middle" letter-spacing="2.5">CANONICAL SEQUENCE &#x2014; OPERATOR CONTEXT BRIEF THROUGH DUE DILIGENCE &amp; CLOSING</text>
+
+  <!-- Badge row -->
+  <g transform="translate(40, 26)">
+    <rect width="88" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="44" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">206 Skills</text>
+  </g>
+  <g transform="translate(136, 26)">
+    <rect width="88" height="26" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="1"/>
+    <text x="44" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">17 Phases</text>
+  </g>
+  <g transform="translate(232, 26)">
+    <rect width="80" height="26" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <text x="40" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">4 Gates</text>
+  </g>
+  <g transform="translate(320, 26)">
+    <rect width="104" height="26" rx="8" fill="#0D1229" stroke="#5a4420" stroke-width="1"/>
+    <text x="52" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039" text-anchor="middle" dominant-baseline="central">2 Conditional</text>
+  </g>
+
+  <!-- Right side: Total time comparison -->
+  <g transform="translate(1002, 22)">
+    <rect width="158" height="38" rx="10" fill="#0D1229" stroke="#1a4a2c" stroke-width="1" filter="url(#shadow-sm)"/>
+    <text x="79" y="14" font-family="Inter, sans-serif" font-weight="600" font-size="10" fill="#C44B68" text-anchor="middle" dominant-baseline="central">pinchfin: ~60 min</text>
+    <text x="79" y="30" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="middle" dominant-baseline="central">vs. 2-3 weeks traditional</text>
+  </g>
+
+  <!-- Column headers -->
+  <g transform="translate(0, 70)">
+    <rect x="40" y="0" width="1120" height="20" rx="4" fill="#08080a"/>
+    <text x="72" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">PHASE</text>
+    <text x="170" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">NAME</text>
+    <text x="530" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">KEY SKILLS &amp; OUTPUTS</text>
+    <text x="920" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">SKILLS</text>
+    <text x="988" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">TIME</text>
+    <text x="1080" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5">GATE</text>
+  </g>
+
+  <!-- Vertical spine -->
+  <line x1="60" y1="96" x2="60" y2="922" stroke="#2a2a32" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE -1: Operator Context Brief -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 96)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#6a9aaa"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#6a9aaa" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#6a9aaa" text-anchor="middle" dominant-baseline="central">-1</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Operator Context Brief</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Planning, deal parameters, nuance classification, scope &#x2014; sets deal framing</text>
+    <g transform="translate(490, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#6a9aaa" text-anchor="middle" dominant-baseline="central">context-brief</text>
+    </g>
+    <g transform="translate(598, 10)">
+      <rect width="114" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="57" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#6a9aaa" text-anchor="middle" dominant-baseline="central">planning-protocol</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#6a9aaa" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#6a9aaa" text-anchor="middle" dominant-baseline="central">2</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="138" x2="60" y2="145" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 1: Document Intake & Registry -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 145)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#B8CCDB"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">1</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Document Intake &amp; Registry</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Scan, classify, DD checklist &#x2014; organizes docs, NO Deal Book yet</text>
+    <g transform="translate(490, 10)">
+      <rect width="112" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="56" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">transaction-intake</text>
+    </g>
+    <g transform="translate(610, 10)">
+      <rect width="106" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="53" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">dd-doc-tracker</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">3</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">2 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="187" x2="60" y2="194" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 2: Data Infrastructure Pull & Deal Book -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 194)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a4a5a" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#4a9aaa"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#4a9aaa" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#4a9aaa" text-anchor="middle" dominant-baseline="central">2</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Data Infrastructure Pull &amp; Deal Book</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">HARD RULE: APIs fire first (FRED, Census, MCP), THEN Deal Book created with verified data</text>
+    <g transform="translate(490, 10)">
+      <rect width="128" height="20" rx="4" fill="#070B1A" stroke="#2a4a5a" stroke-width="0.6"/>
+      <text x="64" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#4a9aaa" text-anchor="middle" dominant-baseline="central">get_property_context</text>
+    </g>
+    <g transform="translate(626, 10)">
+      <rect width="130" height="20" rx="4" fill="#070B1A" stroke="#2a4a5a" stroke-width="0.6"/>
+      <text x="65" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#4a9aaa" text-anchor="middle" dominant-baseline="central">get_macro_indicators</text>
+    </g>
+    <g transform="translate(764, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#2a4a5a" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#4a9aaa" text-anchor="middle" dominant-baseline="central">deal-book</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#4a9aaa" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#4a9aaa" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">5 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="236" x2="60" y2="243" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 3: Sponsor & Counterparty Analysis (GATE) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 243)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <rect width="4" height="42" rx="2" fill="#c44a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">3</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Sponsor &amp; Counterparty Analysis</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#c44a4a">GATE &#x2014; if NO-GO, workflow stops | 30+ page DOCX</text>
+    <g transform="translate(490, 10)">
+      <rect width="108" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="54" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">sponsor-analysis</text>
+    </g>
+    <g transform="translate(606, 10)">
+      <rect width="92" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="46" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">track-record</text>
+    </g>
+    <g transform="translate(706, 10)">
+      <rect width="90" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="45" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">guarantor-nw</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">5</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">5 min</text>
+    <g transform="translate(1050, 10)">
+      <rect x="0" y="0" width="44" height="22" rx="6" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.8"/>
+      <rect x="14" y="6" width="10" height="8" rx="2" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <path d="M17 6 V4 a2.5 2.5 0 0 1 5 0 V6" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <circle cx="19.5" cy="11" r="1" fill="#c44a4a"/>
+      <text x="34" y="11" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">G</text>
+    </g>
+  </g>
+  <line x1="60" y1="285" x2="60" y2="292" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 4: Market & Submarket Analysis -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 292)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#B8CCDB"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Market &amp; Submarket Analysis</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">MSA data, supply pipeline, demand drivers, submarket | 30+ page DOCX</text>
+    <g transform="translate(490, 10)">
+      <rect width="112" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="56" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">market-submarket</text>
+    </g>
+    <g transform="translate(610, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">supply-pipeline</text>
+    </g>
+    <g transform="translate(718, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">demand-drv</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">3</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">5 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="334" x2="60" y2="341" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 5: Rent Roll Analysis -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 341)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#C44B68"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#C44B68" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#C44B68" text-anchor="middle" dominant-baseline="central">5</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Rent Roll Analysis</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">In-place rents, unit mix, occupancy, lease terms | 15+ page DOCX | MUST execute BEFORE Lender Rent</text>
+    <g transform="translate(490, 10)">
+      <rect width="110" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="55" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">rent-roll-analysis</text>
+    </g>
+    <g transform="translate(608, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">unit-mix</text>
+    </g>
+    <g transform="translate(698, 10)">
+      <rect width="98" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="49" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">vacancy-trend</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#C44B68" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">8</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="383" x2="60" y2="390" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 6: Comparable Analysis & Synthesis -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 390)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#B8CCDB"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">6</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Comparable Analysis &amp; Synthesis</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Rent comps, sales comps, market context | 30+ page DOCX | Feeds directly into 6A</text>
+    <g transform="translate(490, 10)">
+      <rect width="92" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="46" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">comp-analysis</text>
+    </g>
+    <g transform="translate(590, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">rent-comps</text>
+    </g>
+    <g transform="translate(684, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">sales-comps</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">1</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="432" x2="60" y2="439" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 6A: Lender Underwritten Rent (CRITICAL GATE) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 439)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <rect width="4" height="42" rx="2" fill="#c44a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">6A</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Lender Underwritten Rent</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#c44a4a">CRITICAL GATE &#x2014; requires Phase 4 (market) + 5 (rent roll) + 6 (comps) complete</text>
+    <g transform="translate(490, 10)">
+      <rect width="96" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="48" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">lender-rent-uw</text>
+    </g>
+    <g transform="translate(594, 10)">
+      <rect width="96" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="48" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">concession-adj</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">1</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">2 min</text>
+    <g transform="translate(1050, 10)">
+      <rect x="0" y="0" width="44" height="22" rx="6" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.8"/>
+      <rect x="14" y="6" width="10" height="8" rx="2" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <path d="M17 6 V4 a2.5 2.5 0 0 1 5 0 V6" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <circle cx="19.5" cy="11" r="1" fill="#c44a4a"/>
+      <text x="34" y="11" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">G</text>
+    </g>
+  </g>
+  <line x1="60" y1="481" x2="60" y2="488" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 7: Expense Normalization Analysis (GATE) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 488)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <rect width="4" height="42" rx="2" fill="#c44a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">7</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Expense Normalization Analysis</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#c44a4a">GATE &#x2014; T-12 cleaning, standardization, line-item benchmarking | 15+ page DOCX</text>
+    <g transform="translate(490, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">t12-analysis</text>
+    </g>
+    <g transform="translate(580, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">expense-uw</text>
+    </g>
+    <g transform="translate(674, 10)">
+      <rect width="98" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="49" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">op-stmt-norm</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">8</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <g transform="translate(1050, 10)">
+      <rect x="0" y="0" width="44" height="22" rx="6" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.8"/>
+      <rect x="14" y="6" width="10" height="8" rx="2" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <path d="M17 6 V4 a2.5 2.5 0 0 1 5 0 V6" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <circle cx="19.5" cy="11" r="1" fill="#c44a4a"/>
+      <text x="34" y="11" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">G</text>
+    </g>
+  </g>
+  <line x1="60" y1="530" x2="60" y2="537" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 8: Business Plan / Capex (CONDITIONAL) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 537)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="1" stroke-dasharray="8,4"/>
+    <rect width="4" height="42" rx="2" fill="#d4a039" opacity="0.5"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#d4a039" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">8</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#a0a0a8">Business Plan / Capex</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Conditional &#x2014; value-add / lease-up renovation &amp; capex assessment; stabilized &#x2192; skip</text>
+    <g transform="translate(490, 10)">
+      <rect width="110" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="55" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">business-plan-feas</text>
+    </g>
+    <g transform="translate(608, 10)">
+      <rect width="92" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="46" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">rent-premium</text>
+    </g>
+    <g transform="translate(708, 10)">
+      <rect width="90" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="45" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">lease-up-proj</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#d4a039" stroke-width="0.6" stroke-dasharray="4,2"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#d4a039" text-anchor="middle" dominant-baseline="central">10</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">3 min</text>
+    <text x="1050" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">cond.</text>
+  </g>
+  <line x1="60" y1="579" x2="60" y2="586" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 9: Nuance Gates (CONDITIONAL) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 586)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#1C2345" stroke-width="1" stroke-dasharray="8,4"/>
+    <rect width="4" height="42" rx="2" fill="#d4a039" opacity="0.5"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#d4a039" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">9</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#a0a0a8">Nuance Gates</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Conditional &#x2014; quality checkpoint after analytical block (5-8), before cash flow synthesis</text>
+    <g transform="translate(490, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">nuance-gate</text>
+    </g>
+    <g transform="translate(598, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">nuance-registry</text>
+    </g>
+    <g transform="translate(706, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6" stroke-dasharray="4,2"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">rent-control</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#d4a039" stroke-width="0.6" stroke-dasharray="4,2"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#d4a039" text-anchor="middle" dominant-baseline="central">5</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">2 min</text>
+    <text x="1050" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">cond.</text>
+  </g>
+  <line x1="60" y1="628" x2="60" y2="635" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 10: Cash Flow Underwriting -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 635)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#B8CCDB"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">10</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Cash Flow Underwriting</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">THE synthesis step &#x2014; Phase 6A (lender rent) + Phase 7 (expenses) + Phase 8 (capex) | Dual scenario</text>
+    <g transform="translate(490, 10)">
+      <rect width="108" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="54" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">cash-flow-modeling</text>
+    </g>
+    <g transform="translate(606, 10)">
+      <rect width="78" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="39" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">noi-build</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#B8CCDB" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">5 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="677" x2="60" y2="684" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 11: Valuation & Third-Party Reviews -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 684)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#B85A30"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#B85A30" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#B85A30" text-anchor="middle" dominant-baseline="central">11</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Valuation &amp; Third-Party Reviews</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Appraisal, PCA, Phase I ESA, engineering reports, valuation reconciliation</text>
+    <g transform="translate(490, 10)">
+      <rect width="90" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="45" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B85A30" text-anchor="middle" dominant-baseline="central">appraisal-rev</text>
+    </g>
+    <g transform="translate(588, 10)">
+      <rect width="72" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="36" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B85A30" text-anchor="middle" dominant-baseline="central">pca-rev</text>
+    </g>
+    <g transform="translate(668, 10)">
+      <rect width="92" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="46" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B85A30" text-anchor="middle" dominant-baseline="central">floor-analysis</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#B85A30" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#B85A30" text-anchor="middle" dominant-baseline="central">10</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="726" x2="60" y2="733" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 12: Loan Sizing & Deal Structuring (GATE) -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 733)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <rect width="4" height="42" rx="2" fill="#c44a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">12</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Loan Sizing &amp; Deal Structuring &#x2014; 6-Constraint Waterfall</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#c44a4a">GATE &#x2014; Lender Sizer (loan_sizer.py) fires FIRST, then structuring consumes output</text>
+    <g transform="translate(490, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">loan-sizing</text>
+    </g>
+    <g transform="translate(580, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">lender-sizer</text>
+    </g>
+    <g transform="translate(674, 10)">
+      <rect width="112" height="20" rx="4" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="56" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">extension-analysis</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">15</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">5 min</text>
+    <g transform="translate(1050, 10)">
+      <rect x="0" y="0" width="44" height="22" rx="6" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.8"/>
+      <rect x="14" y="6" width="10" height="8" rx="2" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <path d="M17 6 V4 a2.5 2.5 0 0 1 5 0 V6" fill="none" stroke="#c44a4a" stroke-width="0.8"/>
+      <circle cx="19.5" cy="11" r="1" fill="#c44a4a"/>
+      <text x="34" y="11" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">G</text>
+    </g>
+  </g>
+  <line x1="60" y1="775" x2="60" y2="782" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 13: Risk Analysis & Sensitivities -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 782)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#c44a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">13</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Risk Analysis &amp; Sensitivities</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Carries sensitivity from Phase 12 &#x2014; stress tests, risk rating, levered/unlevered returns</text>
+    <g transform="translate(490, 10)">
+      <rect width="104" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="52" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">returns-analysis</text>
+    </g>
+    <g transform="translate(602, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">risk-rating</text>
+    </g>
+    <g transform="translate(692, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">mitigant-analysis</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#c44a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="824" x2="60" y2="831" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 14: Credit Decision & Recommendation Memo -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 831)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <rect width="4" height="42" rx="2" fill="#da6a4a"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#da6a4a" stroke-width="1"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#da6a4a" text-anchor="middle" dominant-baseline="central">14</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Credit Decision &amp; Recommendation Memo</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">20+ page capstone IC memorandum referencing all prior analysis documents</text>
+    <g transform="translate(490, 10)">
+      <rect width="86" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#da6a4a" text-anchor="middle" dominant-baseline="central">credit-memo</text>
+    </g>
+    <g transform="translate(584, 10)">
+      <rect width="96" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="48" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#da6a4a" text-anchor="middle" dominant-baseline="central">short-form-memo</text>
+    </g>
+    <g transform="translate(688, 10)">
+      <rect width="82" height="20" rx="4" fill="#070B1A" stroke="#2a2a32" stroke-width="0.6"/>
+      <text x="41" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#da6a4a" text-anchor="middle" dominant-baseline="central">go-no-go-memo</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#da6a4a" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#da6a4a" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">3 min</text>
+    <text x="1060" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345">&#x2014;</text>
+  </g>
+  <line x1="60" y1="873" x2="60" y2="880" stroke="#1C2345" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- PHASE 15: Due Diligence & Closing -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 880)" filter="url(#shadow-sm)">
+    <rect width="1120" height="42" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="1"/>
+    <rect width="4" height="42" rx="2" fill="#C44B68"/>
+    <rect x="14" y="8" width="36" height="26" rx="6" fill="#070B1A" stroke="#C44B68" stroke-width="1.2" filter="url(#glow-accent)"/>
+    <text x="32" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#C44B68" text-anchor="middle" dominant-baseline="central">15</text>
+    <text x="130" y="18" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="#e2e2e6">Due Diligence &amp; Closing</text>
+    <text x="130" y="34" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#C44B68">DD package, third-party reports, settlement, funding authorization</text>
+    <g transform="translate(490, 10)">
+      <rect width="104" height="20" rx="4" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.6"/>
+      <text x="52" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">closing-checklist</text>
+    </g>
+    <g transform="translate(602, 10)">
+      <rect width="100" height="20" rx="4" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.6"/>
+      <text x="50" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">settlement-rev</text>
+    </g>
+    <g transform="translate(710, 10)">
+      <rect width="90" height="20" rx="4" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.6"/>
+      <text x="45" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">funding-auth</text>
+    </g>
+    <rect x="876" y="10" width="42" height="22" rx="6" fill="#070B1A" stroke="#C44B68" stroke-width="0.6"/>
+    <text x="897" y="22" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">15</text>
+    <text x="952" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8">2 min</text>
+    <!-- Checkmark -->
+    <g transform="translate(1050, 10)">
+      <rect x="0" y="0" width="44" height="22" rx="6" fill="#1a4a2c" stroke="#C44B68" stroke-width="0.8"/>
+      <text x="22" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#C44B68" text-anchor="middle" dominant-baseline="central">&#x2713;</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- RIGHT MARGIN — Segment Brackets -->
+  <!-- ============================================ -->
+
+  <!-- Segment 1 bracket: Phases -1 through 4 -->
+  <g transform="translate(1170, 96)">
+    <line x1="0" y1="0" x2="14" y2="0" stroke="#2a5a99" stroke-width="1"/>
+    <line x1="14" y1="0" x2="14" y2="238" stroke="#2a5a99" stroke-width="1"/>
+    <line x1="0" y1="238" x2="14" y2="238" stroke="#2a5a99" stroke-width="1"/>
+    <text x="20" y="115" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#B8CCDB" transform="rotate(90, 20, 115)" text-anchor="middle">SEG 1</text>
+  </g>
+
+  <!-- Segment 2 bracket: Phases 5 through 9 -->
+  <g transform="translate(1170, 341)">
+    <line x1="0" y1="0" x2="14" y2="0" stroke="#1a4a2c" stroke-width="1"/>
+    <line x1="14" y1="0" x2="14" y2="287" stroke="#1a4a2c" stroke-width="1"/>
+    <line x1="0" y1="287" x2="14" y2="287" stroke="#1a4a2c" stroke-width="1"/>
+    <text x="20" y="140" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#C44B68" transform="rotate(90, 20, 140)" text-anchor="middle">SEG 2</text>
+  </g>
+
+  <!-- Segment 3 bracket: Phases 10 through 12 -->
+  <g transform="translate(1170, 635)">
+    <line x1="0" y1="0" x2="14" y2="0" stroke="#5a4420" stroke-width="1"/>
+    <line x1="14" y1="0" x2="14" y2="140" stroke="#5a4420" stroke-width="1"/>
+    <line x1="0" y1="140" x2="14" y2="140" stroke="#5a4420" stroke-width="1"/>
+    <text x="20" y="66" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#d4a039" transform="rotate(90, 20, 66)" text-anchor="middle">SEG 3</text>
+  </g>
+
+  <!-- Segment 4 bracket: Phases 13 through 15 -->
+  <g transform="translate(1170, 782)">
+    <line x1="0" y1="0" x2="14" y2="0" stroke="#3a2a66" stroke-width="1"/>
+    <line x1="14" y1="0" x2="14" y2="140" stroke="#3a2a66" stroke-width="1"/>
+    <line x1="0" y1="140" x2="14" y2="140" stroke="#3a2a66" stroke-width="1"/>
+    <text x="20" y="66" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#B85A30" transform="rotate(90, 20, 66)" text-anchor="middle">SEG 4</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM SUMMARY BAR -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 940)">
+    <rect width="790" height="18" rx="4" fill="#08080a"/>
+    <text x="12" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94" dominant-baseline="central">
+      <tspan fill="#c44a4a">&#x25CF;</tspan> GATE (blocking)
+      <tspan dx="16" fill="#d4a039">&#x25CB;</tspan> Conditional (dashed)
+      <tspan dx="16" fill="#4a9aaa">&#x25CF;</tspan> Half-step (6A)
+      <tspan dx="16" fill="#C44B68">&#x25CF;</tspan> Standard flow
+      <tspan dx="24" fill="#a0a0a8">17 phases | 4 gates | 2 conditional</tspan>
+    </text>
+  </g>
+
+  <!-- Total time badge bottom right -->
+  <g transform="translate(940, 938)">
+    <rect width="220" height="20" rx="6" fill="#1a4a2c" stroke="#C44B68" stroke-width="0.8"/>
+    <text x="110" y="11" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">TOTAL: ~60 min vs. 2-3 weeks</text>
+  </g>
+
+  <!-- Source reference -->
+  <text x="600" y="982" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#1C2345" text-anchor="middle">Source: Canonical Workflow Resequencing (Feb 2026) &#x2014; pinchfin.com</text>
+
+</svg>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operations | pinchfin</title>
+  <meta name="description" content="pinchfin operational capabilities: document processing, analytical engines, knowledge retrieval, workflow automation, quality assurance, and deployment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pinchfin.com/operations.html">
+  <meta property="og:title" content="Operations">
+  <meta property="og:description" content="pinchfin operational capabilities: document processing, analytical engines, knowledge retrieval, workflow automation, quality assurance, and deployment.">
+  <meta property="og:image" content="https://pinchfin.com/img/og-image.png">
+  <meta property="og:site_name" content="pinchfin">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operations">
+  <meta name="twitter:description" content="pinchfin operational capabilities: document processing, analytical engines, knowledge retrieval, workflow automation, quality assurance, and deployment.">
+  <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <a href="#main-content" class="u-sr-only">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav-fixed" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="nav-brand__text"><strong>pinch</strong>fin</span></a>
+      <div class="nav-links">
+        <a href="platform.html" class="nav-links__item">Platform</a>
+        <a href="architecture.html" class="nav-links__item">Architecture</a>
+        <a href="workflow.html" class="nav-links__item">Workflow</a>
+        <a href="operations.html" class="nav-links__item nav-links__item--active" aria-current="page">Operations</a>
+        <a href="community.html" class="nav-links__item">Community</a>
+        <a href="https://github.com/pinchfin/pinchfin" class="nav-links__cta" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Toggle navigation" data-mobile-toggle><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span></button>
+    </div>
+  </nav>
+  <div class="nav-mobile" data-mobile-nav aria-hidden="true">
+    <a href="platform.html" class="nav-mobile__item">Platform</a>
+    <a href="architecture.html" class="nav-mobile__item">Architecture</a>
+    <a href="workflow.html" class="nav-mobile__item">Workflow</a>
+    <a href="operations.html" class="nav-mobile__item">Operations</a>
+    <a href="community.html" class="nav-mobile__item">Community</a>
+    <a href="https://github.com/pinchfin/pinchfin" class="nav-mobile__item" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <main id="main-content">
+    <div class="page-spacer"></div>
+    <div class="section--white" style="padding:0;">
+      <div class="container" style="padding:0 var(--space-8);">
+        <nav class="nav-sub" role="tablist" aria-label="Operations sections">
+          <button class="nav-sub__item nav-sub__item--active" data-tab="features" role="tab" aria-selected="true" tabindex="0">Features</button>
+          <button class="nav-sub__item" data-tab="intelligence" role="tab" aria-selected="false" tabindex="-1">Intelligence Engine</button>
+          <button class="nav-sub__item" data-tab="qa" role="tab" aria-selected="false" tabindex="-1">Quality Assurance</button>
+          <button class="nav-sub__item" data-tab="deployment" role="tab" aria-selected="false" tabindex="-1">Deployment</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ═══════════ TAB: FEATURES ═══════════ -->
+    <div data-panel="features">
+
+      <!-- Document Processing -->
+      <section class="section section--white" style="padding-top: var(--space-16);">
+        <div class="container">
+          <p class="section-header__eyebrow">Document Processing</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Intake, parse, and normalize deal documents.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">Offering Memo Parser</h3><p class="feature-card__text">Extracts structured data from PDF/Word offering memoranda: property details, financial summaries, sponsor information, and market context.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Rent Roll Normalizer</h3><p class="feature-card__text">Ingests rent rolls in any format, normalizes unit types, identifies concessions, flags anomalies, and produces standardized unit-level data.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">T12 Expense Processor</h3><p class="feature-card__text">Parses trailing twelve-month operating statements, categorizes line items, calculates per-unit metrics, and flags material variances.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Third-Party Report Indexer</h3><p class="feature-card__text">Indexes appraisals, environmental reports, PCAs, and surveys into the deal record for cross-reference during analysis.</p></div>
+          </div>
+          <p class="section-footnote">Industry benchmarks in OCR and data extraction are improving rapidly. Consult your IT department for enterprise options. The intake process includes a QA process with multiple agents and multiple reviews before finalizing the deal book.</p>
+        </div>
+      </section>
+
+      <!-- Analytical Engine -->
+      <section class="section section--fog">
+        <div class="container">
+          <p class="section-header__eyebrow">Analytical Engine</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Deterministic computation. No generative drift.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">Constraint Waterfall</h3><p class="feature-card__text">Five-constraint sizing engine: LTV As-Is, LTV Stabilized, DSCR, Debt Yield, and LTC. Runs all constraints and identifies the binding factor automatically.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Cash Flow Projector</h3><p class="feature-card__text">Multi-year pro forma generation with dual-scenario modeling (base case and downside), revenue growth assumptions, and expense escalation.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Sensitivity Engine</h3><p class="feature-card__text">Rate sensitivity, cap rate sensitivity, NOI stress testing, and scenario matrix generation with visual output tables.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Return Calculator</h3><p class="feature-card__text">Levered and unlevered IRR, equity multiple, cash-on-cash return, and sponsor waterfall distribution analysis.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Reserve Sizer</h3><p class="feature-card__text">Tax and insurance escrow calculation, replacement reserve sizing, and interest reserve determination based on business plan timeline.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Lender Sizer</h3><p class="feature-card__text">Auto-generated lender sizing with live rate pulls from FRED, spread application, constraint waterfall execution, and term sheet structuring. Produces loan pricing summaries with binding constraint identification.</p></div>
+          </div>
+          <p class="section-footnote">You must still check, verify, and validate all math, calculations, and formulae.</p>
+        </div>
+      </section>
+
+      <!-- Knowledge & Retrieval -->
+      <section class="section section--white">
+        <div class="container">
+          <p class="section-header__eyebrow">Knowledge &amp; Retrieval</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">5,900+ documents. Structured retrieval.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">RAG Corpus</h3><p class="feature-card__text">14-source knowledge base covering market data, regulatory guidance, industry reports, comparable transactions, and institutional research.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Market Intelligence</h3><p class="feature-card__text">Submarket-level data retrieval: demographics, employment trends, supply pipeline, absorption rates, and rent growth trajectories.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Comp Database</h3><p class="feature-card__text">Comparable property database with distance-weighted matching, vintage adjustments, and data source attribution.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Regulatory Reference</h3><p class="feature-card__text">Indexed regulatory guidance from FDIC, OCC, NCUA, and state-level lending authorities for compliance context.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Master Repository</h3><p class="feature-card__text">Centralized data store for markets, comps, expenses, deal records, and benchmarking indexes with 60-day shelf life enforcement.</p></div>
+          </div>
+          <p class="section-footnote">All companies maintain their own internal knowledge base. Supplement it with best-in-class industry resources and education. All industry-related RAG content is collected through regular-way business, sourced directly, and handled with appropriate care.</p>
+        </div>
+      </section>
+
+      <!-- Workflow & Automation -->
+      <section class="section section--fog">
+        <div class="container">
+          <p class="section-header__eyebrow">Workflow &amp; Automation</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Phase-gated execution with blocking controls.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">Execution Framework</h3><p class="feature-card__text">17-phase execution sequence from Context Brief through Due Diligence &amp; Closing, with 4 blocking gates and cross-phase dependency enforcement.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Skill Chain Orchestration</h3><p class="feature-card__text">206 skills mapped to execution points with parallel/serial execution, conditional branching, and mandatory logging at every step.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">State Management</h3><p class="feature-card__text">Multi-session execution support with segment output files, workflow state persistence, and cross-segment handoff validation.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Blocking Gates</h3><p class="feature-card__text">Four mandatory checkpoints: Sponsor GO/NO-GO, Lender Rent determination, Expense Baseline establishment, and Sizing Waterfall completion.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Audit Trail</h3><p class="feature-card__text">Every skill execution is logged with inputs, outputs, timestamp, and configuration state. Full reproducibility from intake to credit decision.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Output & Deliverables -->
+      <section class="section section--white">
+        <div class="container">
+          <p class="section-header__eyebrow">Output &amp; Deliverables</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Eight-document model per deal.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">DOCX Report Generation</h3><p class="feature-card__text">Institutional-quality Word documents with branded formatting, structured sections, and professional typography via the Elevated Design System.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Excel Workbook Export</h3><p class="feature-card__text">Deterministic Excel models with cash flow projections, sensitivity tables, sizing waterfalls, and fully linked formulae.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">JSON Intermediate Format</h3><p class="feature-card__text">All analytical outputs are produced in structured JSON before document generation. JSON is the intermediate format; DOCX is the deliverable.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">IC Memo Assembly</h3><p class="feature-card__text">20+ page capstone document that references all seven prior analytical documents, providing a complete investment committee package.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Version Control</h3><p class="feature-card__text">Every generated document is versioned with timestamp, configuration hash, and deal state. Historical outputs are preserved for audit comparison.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CRM & Pipeline -->
+      <section class="section section--fog">
+        <div class="container">
+          <p class="section-header__eyebrow">CRM &amp; Pipeline</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Deal flow management and relationship tracking.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">Pipeline Dashboard</h3><p class="feature-card__text">Visual pipeline tracking with deal status, phase progression, and key metric summaries across the active deal book.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Borrower Profiles</h3><p class="feature-card__text">Sponsor relationship management with track record history, entity structure mapping, and cross-deal performance tracking.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Deal Records</h3><p class="feature-card__text">Standardized JSON+MD deal records with unique identifiers (VUL-YYYY-NNN), structured metadata, and full document linkage.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Quick Review</h3><p class="feature-card__text">10-phase, approximately 10-minute screening process that produces a one-page credit memo for rapid deal triage.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Notification System</h3><p class="feature-card__text">Event-driven notifications for gate completions, constraint binding changes, QA findings, and workflow state transitions.</p></div>
+          </div>
+          <p class="section-footnote">CRM, borrower, broker, and investor portal logic included. Build a simple dashboard or use logic and business rules directly in your folder system.</p>
+        </div>
+      </section>
+
+      <!-- Marketing & Communications -->
+      <section class="section section--white">
+        <div class="container">
+          <p class="section-header__eyebrow">Marketing &amp; Communications</p>
+          <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Investor and market-facing materials.</h2>
+          <div class="card-grid">
+            <div class="feature-card"><h3 class="feature-card__title">Investor Memos</h3><p class="feature-card__text">Structured investor communications with deal highlights, market context, and return projections formatted for institutional distribution.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Deal Marketing Packages</h3><p class="feature-card__text">Comprehensive marketing materials for loan origination, including teasers, information memoranda, and data room organization.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Portfolio Reporting</h3><p class="feature-card__text">Periodic portfolio performance reports with asset-level metrics, covenant compliance summaries, and trend analysis.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Template Library</h3><p class="feature-card__text">Pre-built communication templates for common workflows: term sheet distribution, closing checklists, and status updates.</p></div>
+          </div>
+          <p class="section-footnote">Design template updates ongoing. The system includes a research, review, rewrite, and format node that produces well-resourced, well-written marketing and research commentary for your clients and colleagues.</p>
+        </div>
+      </section>
+    </div><!-- /features panel -->
+
+    <!-- ═══════════ TAB: INTELLIGENCE ENGINE ═══════════ -->
+    <div data-panel="intelligence" style="display:none;" aria-hidden="true">
+      <section class="section section--white" style="padding-top: var(--space-16);">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Intelligence Engine</p>
+            <h2 class="section-header__title">RAG-augmented analysis with structured retrieval.</h2>
+            <p class="section-header__subtitle">The intelligence engine combines a 5,900+ document corpus with structured retrieval methodology, learning loops, and multi-level anomaly detection.</p>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">RAG Corpus</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-6);">The knowledge base draws from 14 distinct sources, each indexed and categorized for retrieval precision.</p>
+
+          <div class="config-block" style="margin-bottom: var(--space-12);">
+            <div class="config-block__header">
+              <span class="config-block__filename">rag_sources.json</span>
+              <span class="config-block__language">14 sources</span>
+            </div>
+            <div class="config-block__body">
+              <pre><code>Source                    Documents    Category
+------------------------------------------------------
+FRED Economic Data           800+     Macro / Rates
+Census / ACS                 600+     Demographics
+Data Providers               500+     Comps / Market
+FEMA / EPA                   400+     Environmental
+HUD / FMR                    300+     Housing
+BLS Employment               350+     Labor Markets
+Industry Research            500+     Institutional
+Regulatory Guidance          400+     Compliance
+Historical Deals             300+     Precedent
+Appraisal Standards          200+     Methodology
+Lending Guidelines           250+     Credit Policy
+Market Reports               500+     Analytics
+Academic Research            300+     Theory
+Internal Knowledge Base      400+     Proprietary
+------------------------------------------------------
+Total                      5,900+</code></pre>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Retrieval Methodology</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Documents are retrieved using semantic similarity with metadata filtering. Each retrieval is logged with source attribution, relevance score, and citation context. The system prioritizes recency (60-day shelf life for market data) and source authority.</p>
+
+          <h3 style="margin-bottom: var(--space-6);">Red Flag Detection (L1-L4)</h3>
+          <div class="card-grid" style="margin-bottom: var(--space-8);">
+            <div class="card"><p class="card__meta">LEVEL 1</p><h3 class="card__title">Data Anomalies</h3><p class="card__description">Missing fields, format inconsistencies, calculation mismatches between documents, and data freshness violations.</p></div>
+            <div class="card"><p class="card__meta">LEVEL 2</p><h3 class="card__title">Analytical Flags</h3><p class="card__description">Metrics outside expected ranges, trend reversals, comparable mismatches, and assumption conflicts across phases.</p></div>
+            <div class="card"><p class="card__meta">LEVEL 3</p><h3 class="card__title">Structural Concerns</h3><p class="card__description">Sponsor concentration risk, market deterioration signals, regulatory exposure, and environmental contamination indicators.</p></div>
+            <div class="card"><p class="card__meta">LEVEL 4</p><h3 class="card__title">Critical Alerts</h3><p class="card__description">Deal-breaking findings: fraud indicators, material misrepresentation, constraint waterfall failures, and policy violations.</p></div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Learning &amp; Improvement</h3>
+          <p style="color: var(--color-graphite);">The QA improvement loop captures findings from every deal. The Producer agent reads the last 5 improvement log entries before each new deal, ensuring error patterns are not repeated. Version control tracks every corpus update, retrieval methodology change, and detection threshold adjustment.</p>
+        </div>
+      </section>
+    </div><!-- /intelligence panel -->
+
+    <!-- ═══════════ TAB: QUALITY ASSURANCE ═══════════ -->
+    <div data-panel="qa" style="display:none;" aria-hidden="true">
+      <section class="section section--white" style="padding-top: var(--space-16);">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Quality Assurance</p>
+            <h2 class="section-header__title">Three-Agent QA system. Every output verified.</h2>
+            <p class="section-header__subtitle">The Triple-Agent QA system uses three independent roles &mdash; Producer, Checker, and Resolver &mdash; to ensure analytical accuracy, arithmetic correctness, and internal consistency.</p>
+          </div>
+
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <p class="card__meta">AGENT 1</p>
+              <h3 class="card__title">Producer</h3>
+              <p class="card__description">Executes the analytical workflow. Generates all outputs, calculations, and narrative content. Reads the last 5 QA improvement log entries before starting each deal to avoid known error patterns.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">AGENT 2</p>
+              <h3 class="card__title">Checker</h3>
+              <p class="card__description">Independent review of all Producer outputs. Verifies arithmetic, cross-references data sources, checks constraint waterfall logic, validates assumption consistency, and flags discrepancies.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">AGENT 3</p>
+              <h3 class="card__title">Resolver</h3>
+              <p class="card__description">Arbitrates disputes between Producer and Checker. Makes final determinations on flagged items, documents resolutions, and updates the improvement log with learnings.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Deployment Intensity</h3>
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <h3 class="card__title">TRIPLE</h3>
+              <p class="card__description">All three agents active. Full Producer &rarr; Checker &rarr; Resolver cycle. Used for IC-ready deliverables, final credit decisions, and high-stakes outputs.</p>
+              <span class="badge badge--positive" style="margin-top: var(--space-3);">RECOMMENDED</span>
+            </div>
+            <div class="card">
+              <h3 class="card__title">DOUBLE</h3>
+              <p class="card__description">Producer + Checker only. No Resolver arbitration. Used for intermediate outputs, draft analysis, and pipeline screening where speed matters.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">SINGLE</h3>
+              <p class="card__description">Producer only. No QA review. Used only for exploratory analysis, rapid triage, and non-deliverable work product.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Quality Gates</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Every phase output passes through quality gates before downstream consumption. Gates verify: arithmetic correctness (recalculation from raw inputs), internal consistency (cross-reference between sections), source attribution (every claim traced to data), and constraint compliance (no policy violations).</p>
+
+          <h3 style="margin-bottom: var(--space-6);">Audit Trail</h3>
+          <p style="color: var(--color-graphite);">The skill chain audit system produces a mandatory execution log for every run. Logs capture: skill name, execution timestamp, input parameters, output summary, QA findings, and resolution status. Logs are stored in <code>/skill_chain_logs/</code> and are immutable once written.</p>
+        </div>
+      </section>
+    </div><!-- /qa panel -->
+
+    <!-- ═══════════ TAB: DEPLOYMENT ═══════════ -->
+    <div data-panel="deployment" style="display:none;" aria-hidden="true">
+      <section class="section section--white" style="padding-top: var(--space-16);">
+        <div class="container container--narrow">
+          <div class="section-header" style="text-align: left;">
+            <p class="section-header__eyebrow" style="text-align: left;">Deployment</p>
+            <h2 class="section-header__title" style="text-align: left;">Get running in five steps.</h2>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Technical Requirements</h3>
+          <ul style="padding-left: var(--space-6); margin-bottom: var(--space-10);">
+            <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">Claude Code CLI (Anthropic) with active API key</li>
+            <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">Node.js 18+ for MCP data services</li>
+            <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">Python 3.10+ for report generation engine</li>
+            <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">API keys: Google Maps, Census, FRED, BLS, HUD, Walk Score</li>
+            <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">Windows, macOS, or Linux</li>
+          </ul>
+
+          <h3 style="margin-bottom: var(--space-6);">Installation Steps</h3>
+          <div class="timeline" style="margin-bottom: var(--space-12);">
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <p class="timeline__label">STEP 1</p>
+              <p class="timeline__title">Clone the repository</p>
+              <p class="timeline__text">Clone from GitHub and install dependencies. The repo includes all skills, engines, templates, and configuration files.</p>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <p class="timeline__label">STEP 2</p>
+              <p class="timeline__title">Configure API keys</p>
+              <p class="timeline__text">Set up your <code>.env</code> file with API keys for data services: Google Maps, Census, FRED, BLS, HUD, and Walk Score.</p>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <p class="timeline__label">STEP 3</p>
+              <p class="timeline__title">Initialize your credit box</p>
+              <p class="timeline__text">Edit <code>credit_box_config.json</code> to reflect your firm's constraint thresholds, sizing parameters, and credit philosophy.</p>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <p class="timeline__label">STEP 4</p>
+              <p class="timeline__title">Register MCP server</p>
+              <p class="timeline__text">Register the valeri-data MCP server in your Claude configuration for integrated data service access during analysis.</p>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <p class="timeline__label">STEP 5</p>
+              <p class="timeline__title">Run your first deal</p>
+              <p class="timeline__text">Start with the Context Brief (Phase -1) and progress through the execution framework. The system guides you through each phase.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Credit Box Configuration</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-6);">The credit box is the central configuration file that governs all constraint thresholds and sizing parameters. Here is a representative example:</p>
+
+          <div class="config-block" style="margin-bottom: var(--space-12);">
+            <div class="config-block__header">
+              <span class="config-block__filename">credit_box_config.json</span>
+              <span class="config-block__language">JSON</span>
+            </div>
+            <div class="config-block__body">
+              <pre><code>{
+  "version": "3.0",
+  "constraints": {
+    "ltv_as_is":        { "max": 0.75, "type": "hard_ceiling" },
+    "ltv_stabilized":   { "max": 0.75, "type": "hard_ceiling" },
+    "dscr_stabilized":  { "min": 1.05, "type": "hard_floor"   },
+    "dy_stabilized":    { "min": 0.07, "type": "hard_floor"   },
+    "ltc":              { "max": 0.80, "type": "hard_ceiling" },
+    "max_loan_amount":  100000000
+  },
+  "sizing": {
+    "method": "constraint_waterfall",
+    "binding_constraint": "minimum_of_all"
+  }
+}</code></pre>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Environment Considerations</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-4);">pinchfin is designed for local execution. All data processing occurs on your machine. No deal data is transmitted to external servers beyond the API calls you configure. The system operates with full data sovereignty.</p>
+          <p style="color: var(--color-graphite);">For production deployment at scale, consider: API rate limiting configuration, concurrent session management, storage allocation for deal records and generated documents, and backup procedures for the master repository.</p>
+        </div>
+      </section>
+    </div><!-- /deployment panel -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand"><img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);"><p class="footer__brand-name"><strong>pinch</strong>fin</p><p class="footer__brand-desc">Open source credit operating system for commercial real estate. MIT licensed.</p></div>
+        <div class="footer-links">
+          <div class="footer-links__group"><p class="footer-links__heading">Platform</p><a href="platform.html" class="footer-links__item">Overview</a><a href="platform.html#modules" class="footer-links__item">Modules</a><a href="operations.html" class="footer-links__item">Operations</a><a href="docs.html" class="footer-links__item">Documentation</a></div>
+          <div class="footer-links__group"><p class="footer-links__heading">Community</p><a href="community.html" class="footer-links__item">Use Cases</a><a href="letter.html" class="footer-links__item">Letter from Builder</a><a href="manual.html" class="footer-links__item">User Manual</a><a href="changelog.html" class="footer-links__item">Changelog</a></div>
+          <div class="footer-links__group"><p class="footer-links__heading">Legal</p><a href="terms.html" class="footer-links__item">Terms of Service</a><a href="conduct.html" class="footer-links__item">Code of Conduct</a><a href="https://github.com/pinchfin/pinchfin" class="footer-links__item">GitHub</a></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. MIT License.</p>
+        <div class="footer__bottom-links"><a href="terms.html">Terms</a><a href="conduct.html">Conduct</a><a href="mailto:bmurphy@veletacapital.com">Contact</a><a href="https://x.com/toplender" target="_blank" rel="noopener noreferrer">@toplender</a></div>
+      </div>
+      <p style="font-size: var(--size-xs); color: var(--color-navy-dim); line-height: 1.7; margin-top: var(--space-6); opacity: 0.7;">pinchfin is an analytical tool and does not constitute financial advice. All outputs require independent verification by qualified professionals. No warranty is provided, express or implied. Users assume full responsibility for any decisions made using this software.</p>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>

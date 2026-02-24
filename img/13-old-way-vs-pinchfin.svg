@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="banner-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a5a99" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#B8CCDB" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#2a5a99" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="shadow-sm"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+    <filter id="shadow-md"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+    <filter id="glow-accent"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/></filter>
+    <filter id="glow-green-f"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C44B68" flood-opacity="0.2"/></filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" rx="16" fill="#070B1A"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6">The Old Way vs. pinchfin</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCENARIO 1: Change DSCR threshold -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <text x="600" y="78" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#a0a0a8">Scenario 1</text>
+  <text x="600" y="97" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="13" fill="#e2e2e6">"Change DSCR threshold from 1.05x to 1.10x"</text>
+
+  <!-- LEFT: THE OLD WAY -->
+  <rect x="40" y="114" width="545" height="230" rx="12" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+
+  <!-- Header bar -->
+  <rect x="40" y="114" width="545" height="30" rx="12" fill="#222228"/>
+  <rect x="40" y="132" width="545" height="12" fill="#222228"/>
+  <!-- Red X icon -->
+  <circle cx="62" cy="129" r="8" fill="#4a1a1a"/>
+  <path d="M 58 125 L 66 133 M 66 125 L 58 133" stroke="#c44a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="80" y="133" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#c44a4a">THE OLD WAY</text>
+
+  <!-- Timeline bar background -->
+  <rect x="60" y="156" width="505" height="6" rx="3" fill="#222228"/>
+
+  <!-- Timeline dots and labels (30 days compressed) -->
+  <!-- Day 1 -->
+  <circle cx="72" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="72" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D1</text>
+  <text x="72" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Email IT</text>
+
+  <!-- Day 3 -->
+  <circle cx="122" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="122" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D3</text>
+  <text x="122" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Scope</text>
+
+  <!-- Day 5 -->
+  <circle cx="172" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="172" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D5</text>
+  <text x="172" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Change order</text>
+
+  <!-- Day 8 -->
+  <circle cx="238" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="238" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D8</text>
+  <text x="238" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Dev begins</text>
+
+  <!-- Day 15 -->
+  <circle cx="350" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="350" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D15</text>
+  <text x="350" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Testing</text>
+
+  <!-- Day 18 -->
+  <circle cx="400" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="400" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D18</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">UAT</text>
+
+  <!-- Day 22 -->
+  <circle cx="460" cy="159" r="4" fill="#c44a4a" opacity="0.4"/>
+  <text x="460" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">D22</text>
+  <text x="460" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Deploy</text>
+
+  <!-- Day 30 -->
+  <circle cx="548" cy="159" r="5" fill="#c44a4a" opacity="0.6"/>
+  <text x="548" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a">D30</text>
+  <text x="548" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#c44a4a">Still wrong</text>
+
+  <!-- Progress bar fill (red-tinted) -->
+  <rect x="60" y="156" width="490" height="6" rx="3" fill="#c44a4a" opacity="0.15"/>
+
+  <!-- Pain callout -->
+  <text x="60" y="218" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Someone is still using 1.05x on Day 30.</text>
+  <text x="60" y="234" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">No one noticed until the IC presentation.</text>
+
+  <!-- Stats bar -->
+  <rect x="60" y="308" width="505" height="28" rx="8" fill="#222228"/>
+  <text x="130" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">30 days</text>
+  <line x1="210" y1="314" x2="210" y2="332" stroke="#2a2a32" stroke-width="1"/>
+  <text x="290" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">8 people</text>
+  <line x1="370" y1="314" x2="370" y2="332" stroke="#2a2a32" stroke-width="1"/>
+  <text x="470" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">$$$ vendor fees</text>
+
+  <!-- RIGHT: PINCHFIN -->
+  <g filter="url(#glow-accent)">
+    <rect x="615" y="114" width="545" height="230" rx="12" fill="#070B1A" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Header bar -->
+  <rect x="615" y="114" width="545" height="30" rx="12" fill="#0D1229"/>
+  <rect x="615" y="132" width="545" height="12" fill="#0D1229"/>
+  <!-- Green check icon -->
+  <circle cx="637" cy="129" r="8" fill="#1a4a2c"/>
+  <path d="M 633 129 L 636 132 L 641 126" stroke="#C44B68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="655" y="133" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#B8CCDB">PINCHFIN</text>
+
+  <!-- Single timeline dot -->
+  <rect x="635" y="156" width="505" height="6" rx="3" fill="#222228"/>
+  <rect x="635" y="156" width="8" height="6" rx="3" fill="#B8CCDB" opacity="0.6"/>
+  <circle cx="639" cy="159" r="5" fill="#B8CCDB" opacity="0.8"/>
+
+  <!-- 3-step instant process -->
+  <g transform="translate(635, 180)">
+    <!-- Step 1 -->
+    <rect x="0" y="0" width="160" height="32" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <text x="12" y="20" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">0:00</text>
+    <text x="48" y="20" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Open config file</text>
+
+    <!-- Arrow -->
+    <path d="M 168 16 L 186 16" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+
+    <!-- Step 2 -->
+    <rect x="194" y="0" width="160" height="32" rx="8" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="206" y="20" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">0:01</text>
+    <text x="242" y="20" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">1.05 → 1.10</text>
+
+    <!-- Arrow -->
+    <path d="M 362 16 L 380 16" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+
+    <!-- Step 3 -->
+    <rect x="388" y="0" width="116" height="32" rx="8" fill="#0D1229" stroke="#C44B68" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="400" y="20" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">0:01</text>
+    <text x="436" y="20" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#C44B68">Save. Done.</text>
+  </g>
+
+  <!-- Impact text -->
+  <text x="635" y="240" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Every skill. Every node. Every report.</text>
+  <text x="635" y="258" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Every analyst. Every decision.</text>
+  <text x="635" y="278" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#B8CCDB" opacity="0.8">Immediately. Automatically. Consistently.</text>
+
+  <!-- Stats bar -->
+  <rect x="635" y="308" width="505" height="28" rx="8" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="720" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">1 minute</text>
+  <line x1="800" y1="314" x2="800" y2="332" stroke="#2a2a32" stroke-width="1"/>
+  <text x="860" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">1 person</text>
+  <line x1="920" y1="314" x2="920" y2="332" stroke="#2a2a32" stroke-width="1"/>
+  <text x="1010" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">$0</text>
+
+  <!-- Divider between scenarios -->
+  <line x1="80" y1="362" x2="1120" y2="362" stroke="#222228" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCENARIO 2: Add environmental review -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <text x="600" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#a0a0a8">Scenario 2</text>
+  <text x="600" y="409" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="13" fill="#e2e2e6">"Add environmental review for California deals"</text>
+
+  <!-- LEFT: THE OLD WAY -->
+  <rect x="40" y="424" width="545" height="186" rx="12" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <rect x="40" y="424" width="545" height="30" rx="12" fill="#222228"/>
+  <rect x="40" y="442" width="545" height="12" fill="#222228"/>
+  <circle cx="62" cy="439" r="8" fill="#4a1a1a"/>
+  <path d="M 58 435 L 66 443 M 66 435 L 58 443" stroke="#c44a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="80" y="443" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#c44a4a">THE OLD WAY</text>
+
+  <!-- Week timeline -->
+  <rect x="60" y="466" width="505" height="6" rx="3" fill="#222228"/>
+  <rect x="60" y="466" width="505" height="6" rx="3" fill="#c44a4a" opacity="0.1"/>
+
+  <!-- Week markers -->
+  <circle cx="68" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="68" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W1</text>
+  <text x="68" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Committee</text>
+
+  <circle cx="131" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="131" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W2</text>
+  <text x="131" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Vendor eval</text>
+
+  <circle cx="194" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="194" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W3</text>
+  <text x="194" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Contract</text>
+
+  <circle cx="257" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="257" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W4</text>
+  <text x="257" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Dev start</text>
+
+  <circle cx="350" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="350" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W5-6</text>
+  <text x="350" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Development</text>
+
+  <circle cx="443" cy="469" r="3.5" fill="#c44a4a" opacity="0.3"/>
+  <text x="443" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94">W7</text>
+  <text x="443" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#7c7f94">Testing</text>
+
+  <circle cx="548" cy="469" r="4" fill="#c44a4a" opacity="0.5"/>
+  <text x="548" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a">W8</text>
+  <text x="548" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#c44a4a">Deploy</text>
+
+  <text x="60" y="530" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Report format doesn't match your standards.</text>
+  <text x="60" y="546" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">Another 3 weeks to fix. Everyone is frustrated.</text>
+
+  <!-- Stats bar -->
+  <rect x="60" y="568" width="505" height="28" rx="8" fill="#222228"/>
+  <text x="140" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">8 weeks</text>
+  <line x1="220" y1="574" x2="220" y2="592" stroke="#2a2a32" stroke-width="1"/>
+  <text x="300" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">12+ people</text>
+  <line x1="380" y1="574" x2="380" y2="592" stroke="#2a2a32" stroke-width="1"/>
+  <text x="478" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">$$$$ consulting</text>
+
+  <!-- RIGHT: PINCHFIN -->
+  <g filter="url(#glow-accent)">
+    <rect x="615" y="424" width="545" height="186" rx="12" fill="#070B1A" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <rect x="615" y="424" width="545" height="30" rx="12" fill="#0D1229"/>
+  <rect x="615" y="442" width="545" height="12" fill="#0D1229"/>
+  <circle cx="637" cy="439" r="8" fill="#1a4a2c"/>
+  <path d="M 633 439 L 636 442 L 641 436" stroke="#C44B68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="655" y="443" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#B8CCDB">PINCHFIN</text>
+
+  <!-- Natural language instruction -->
+  <rect x="635" y="466" width="505" height="36" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <text x="647" y="488" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" opacity="0.5">$</text>
+  <text x="662" y="488" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#a0a0a8">"Add environmental review skill, CA deals only"</text>
+
+  <!-- Result cascade -->
+  <g transform="translate(635, 516)">
+    <!-- Check 1 -->
+    <circle cx="14" cy="10" r="7" fill="#1a4a2c" opacity="0.5"/>
+    <path d="M 10 10 L 13 13 L 18 7" stroke="#C44B68" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="30" y="14" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Skill created with EPA ECHO data integration</text>
+
+    <!-- Check 2 -->
+    <circle cx="14" cy="32" r="7" fill="#1a4a2c" opacity="0.5"/>
+    <path d="M 10 32 L 13 35 L 18 29" stroke="#C44B68" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="30" y="36" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Workflow updated with conditional: state = CA</text>
+
+    <!-- Check 3 -->
+    <circle cx="14" cy="54" r="7" fill="#1a4a2c" opacity="0.5"/>
+    <path d="M 10 54 L 13 57 L 18 51" stroke="#C44B68" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="30" y="58" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">DD checklist auto-includes environmental section</text>
+
+    <!-- Check 4 -->
+    <circle cx="14" cy="76" r="7" fill="#1a4a2c" opacity="0.5"/>
+    <path d="M 10 76 L 13 79 L 18 73" stroke="#C44B68" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="30" y="80" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Reports match your exact design standard</text>
+  </g>
+
+  <!-- Stats bar -->
+  <rect x="635" y="568" width="505" height="28" rx="8" fill="#0D1229" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="720" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">10 minutes</text>
+  <line x1="800" y1="574" x2="800" y2="592" stroke="#2a2a32" stroke-width="1"/>
+  <text x="860" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">1 person</text>
+  <line x1="920" y1="574" x2="920" y2="592" stroke="#2a2a32" stroke-width="1"/>
+  <text x="1010" y="586" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">$0</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM BANNER -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <rect x="40" y="630" width="1120" height="52" rx="12" fill="url(#banner-grad)" stroke="#B8CCDB" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Subtle inner glow line -->
+  <rect x="40" y="630" width="1120" height="1" fill="#B8CCDB" opacity="0.08" rx="1"/>
+
+  <text x="600" y="661" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#e2e2e6">Your rules. Your process. Your system. </text>
+  <text x="600" y="676" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#B8CCDB" opacity="0.8">Changed in minutes, not months.</text>
+
+  <!-- Bottom subtle branding -->
+  <text x="600" y="696" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#2a2a32">pinchfin.com</text>
+</svg>

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a039" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#d4a039" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B85A30" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B85A30" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-green-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow-sm"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+    <filter id="shadow-md"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+    <filter id="glow-accent"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/></filter>
+    <filter id="glow-green-f"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#C44B68" flood-opacity="0.2"/></filter>
+    <filter id="glow-purple-f"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B85A30" flood-opacity="0.15"/></filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#d4a039"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B85A30"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" rx="16" fill="#070B1A"/>
+
+  <!-- Title -->
+  <text x="420" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6">3-Agent Quality System</text>
+  <text x="420" y="66" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#7c7f94">Triple-agent review ensures institutional-grade output on every deal</text>
+
+  <!-- ═══════════ MAIN FLOW (left 60%) ═══════════ -->
+
+  <!-- STEP 1: PRODUCER -->
+  <g filter="url(#glow-accent)">
+    <rect x="285" y="92" width="270" height="62" rx="12" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5"/>
+  </g>
+  <!-- Producer icon -->
+  <rect x="305" y="106" width="34" height="34" rx="8" fill="#B8CCDB" opacity="0.12"/>
+  <text x="322" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#B8CCDB">P</text>
+  <text x="352" y="120" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6">Producer</text>
+  <text x="352" y="138" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Creates the analysis</text>
+  <!-- Step number -->
+  <circle cx="296" cy="98" r="10" fill="#B8CCDB" opacity="0.2"/>
+  <text x="296" y="102" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">1</text>
+
+  <!-- Arrow Producer → Checker -->
+  <line x1="420" y1="154" x2="420" y2="192" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- STEP 2: CHECKER -->
+  <g filter="url(#shadow-md)">
+    <rect x="285" y="198" width="270" height="62" rx="12" fill="#0D1229" stroke="#d4a039" stroke-width="1.5"/>
+  </g>
+  <rect x="305" y="212" width="34" height="34" rx="8" fill="#d4a039" opacity="0.12"/>
+  <text x="322" y="234" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#d4a039">C</text>
+  <text x="352" y="226" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6">Checker</text>
+  <text x="352" y="244" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Reviews accuracy &amp; completeness</text>
+  <circle cx="296" cy="204" r="10" fill="#d4a039" opacity="0.2"/>
+  <text x="296" y="208" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039">2</text>
+
+  <!-- Checker branches out to 3 severity levels -->
+  <!-- Branch lines -->
+  <path d="M 420 260 L 420 280 L 185 280 L 185 300" stroke="#C44B68" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <line x1="420" y1="260" x2="420" y2="300" stroke="#d4a039" stroke-width="1.2" marker-end="url(#arrow-amber)"/>
+  <path d="M 420 260 L 420 280 L 655 280 L 655 300" stroke="#c44a4a" stroke-width="1.2" fill="none"/>
+  <line x1="655" y1="293" x2="655" y2="300" stroke="#c44a4a" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- L1 Minor (Green) -->
+  <rect x="100" y="306" width="170" height="80" rx="10" fill="#0D1229" stroke="#C44B68" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="100" y="306" width="170" height="26" rx="10" fill="#1a4a2c" opacity="0.4"/>
+  <rect x="100" y="322" width="170" height="10" fill="#1a4a2c" opacity="0.4"/>
+  <text x="185" y="323" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#C44B68">L1  MINOR</text>
+  <text x="115" y="348" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Formatting fixes</text>
+  <text x="115" y="363" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Minor recalculations</text>
+  <text x="115" y="378" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Label corrections</text>
+
+  <!-- L2 Major (Amber) -->
+  <rect x="335" y="306" width="170" height="80" rx="10" fill="#0D1229" stroke="#d4a039" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="335" y="306" width="170" height="26" rx="10" fill="#5a4420" opacity="0.4"/>
+  <rect x="335" y="322" width="170" height="10" fill="#5a4420" opacity="0.4"/>
+  <text x="420" y="323" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#d4a039">L2  MAJOR</text>
+  <text x="350" y="348" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Methodology issues</text>
+  <text x="350" y="363" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Missing analysis</text>
+  <text x="350" y="378" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Incorrect assumptions</text>
+
+  <!-- L3 Critical (Red) -->
+  <rect x="570" y="306" width="170" height="80" rx="10" fill="#0D1229" stroke="#c44a4a" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="570" y="306" width="170" height="26" rx="10" fill="#4a1a1a" opacity="0.4"/>
+  <rect x="570" y="322" width="170" height="10" fill="#4a1a1a" opacity="0.4"/>
+  <text x="655" y="323" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#c44a4a">L3  CRITICAL</text>
+  <text x="585" y="348" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Fundamental errors</text>
+  <text x="585" y="363" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Wrong conclusions</text>
+  <text x="585" y="378" font-family="Inter, sans-serif" font-weight="400" font-size="10.5" fill="#a0a0a8">Blocking issues</text>
+
+  <!-- All three feed into Resolver -->
+  <path d="M 185 386 L 185 412 L 420 412 L 420 420" stroke="#B85A30" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <line x1="420" y1="386" x2="420" y2="420" stroke="#B85A30" stroke-width="1" stroke-opacity="0.5"/>
+  <path d="M 655 386 L 655 412 L 420 412 L 420 420" stroke="#B85A30" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <!-- Arrow tip at resolver -->
+  <line x1="420" y1="415" x2="420" y2="428" stroke="#B85A30" stroke-width="1.2" marker-end="url(#arrow-purple)"/>
+
+  <!-- STEP 3: RESOLVER -->
+  <g filter="url(#glow-purple-f)">
+    <rect x="285" y="434" width="270" height="62" rx="12" fill="#0D1229" stroke="#B85A30" stroke-width="1.5"/>
+  </g>
+  <rect x="305" y="448" width="34" height="34" rx="8" fill="#B85A30" opacity="0.12"/>
+  <text x="322" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#B85A30">R</text>
+  <text x="352" y="462" font-family="Inter, sans-serif" font-weight="400" font-size="16" fill="#e2e2e6">Resolver</text>
+  <text x="352" y="480" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Fixes all issues, re-validates</text>
+  <circle cx="296" cy="440" r="10" fill="#B85A30" opacity="0.2"/>
+  <text x="296" y="444" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30">3</text>
+
+  <!-- Loop arrow: Resolver back to Checker -->
+  <path d="M 555 465 C 610 465, 620 350, 620 229 C 620 205, 580 200, 555 205" stroke="#B85A30" stroke-width="1.2" stroke-dasharray="6 3" fill="none" marker-end="url(#arrow-purple)" opacity="0.6"/>
+  <text x="632" y="335" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30" opacity="0.6" transform="rotate(90, 632, 335)">re-check</text>
+
+  <!-- STEP 4: APPROVED OUTPUT -->
+  <line x1="420" y1="496" x2="420" y2="520" stroke="#C44B68" stroke-width="1.5"/>
+  <g filter="url(#glow-green-f)">
+    <rect x="310" y="524" width="220" height="48" rx="10" fill="#0D1229" stroke="#C44B68" stroke-width="1.5"/>
+  </g>
+  <!-- Green check icon -->
+  <circle cx="336" cy="548" r="11" fill="#C44B68" opacity="0.2"/>
+  <path d="M 330 548 L 334 552 L 342 544" stroke="#C44B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="354" y="544" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Approved Output</text>
+  <text x="354" y="560" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#C44B68">Institutional quality. Every time.</text>
+
+  <!-- ═══════════ RIGHT SIDE CALLOUT ═══════════ -->
+
+  <!-- QA Improvement Loop callout -->
+  <rect x="810" y="92" width="340" height="220" rx="12" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+
+  <!-- Callout header -->
+  <rect x="810" y="92" width="340" height="34" rx="12" fill="#222228"/>
+  <rect x="810" y="114" width="340" height="12" fill="#222228"/>
+  <!-- Icon -->
+  <circle cx="836" cy="109" r="10" fill="#d4a039" opacity="0.15"/>
+  <path d="M 831 109 C 831 104, 841 104, 841 109 C 841 114, 831 114, 831 109" stroke="#d4a039" stroke-width="1.2" fill="none"/>
+  <path d="M 836 104 L 836 100" stroke="#d4a039" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="856" y="113" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#d4a039">QA Improvement Loop</text>
+
+  <!-- Cycle visualization -->
+  <g transform="translate(980, 186)">
+    <!-- Circular arrow -->
+    <circle cx="0" cy="0" r="36" stroke="#2a2a32" stroke-width="1" fill="none"/>
+    <path d="M 0 -36 A 36 36 0 1 1 -34 10" stroke="#B8CCDB" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M -38 4 L -34 10 L -28 6" stroke="#B8CCDB" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Inner labels -->
+    <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB">learn</text>
+    <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#a0a0a8">apply</text>
+    <text x="0" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68">improve</text>
+  </g>
+
+  <!-- Callout text -->
+  <text x="835" y="154" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Every correction writes to</text>
+  <text x="835" y="172" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB">lessons.md</text>
+
+  <text x="835" y="200" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">The Producer reads the last</text>
+  <text x="835" y="218" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">5 entries before every new deal.</text>
+
+  <line x1="835" y1="235" x2="1125" y2="235" stroke="#2a2a32" stroke-width="1"/>
+
+  <text x="835" y="258" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#a0a0a8">Mistakes don't repeat.</text>
+  <text x="835" y="278" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#a0a0a8">The system gets smarter</text>
+  <text x="835" y="296" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#a0a0a8">with every deal.</text>
+
+  <!-- Stats row at bottom right -->
+  <rect x="810" y="340" width="340" height="88" rx="12" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <!-- 3 stat boxes -->
+  <g>
+    <text x="873" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="22" fill="#B8CCDB">3</text>
+    <text x="873" y="388" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Agents</text>
+    <text x="873" y="406" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">per review</text>
+  </g>
+  <line x1="923" y1="355" x2="923" y2="415" stroke="#2a2a32" stroke-width="1"/>
+  <g>
+    <text x="980" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="22" fill="#d4a039">3</text>
+    <text x="980" y="388" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Severity</text>
+    <text x="980" y="406" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">levels</text>
+  </g>
+  <line x1="1037" y1="355" x2="1037" y2="415" stroke="#2a2a32" stroke-width="1"/>
+  <g>
+    <text x="1094" y="370" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="22" fill="#C44B68">0</text>
+    <text x="1094" y="388" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Repeated</text>
+    <text x="1094" y="406" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">mistakes</text>
+  </g>
+
+  <!-- Bottom subtle branding -->
+  <text x="600" y="588" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#2a2a32">pinchfin.com</text>
+</svg>

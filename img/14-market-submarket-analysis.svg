@@ -1,0 +1,487 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <title>Market &amp; Submarket Analysis — Phase 4 Deep Dive</title>
+  <desc>Institutional-grade market intelligence workflow showing six data source categories feeding into four analysis layers that produce comprehensive market conclusions. Demonstrates the extraordinary depth of research in Phase 4 of the pinchfin underwriting workflow.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="layer1-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="layer2-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="layer3-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a039" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#d4a039" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="layer4-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B85A30" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#B85A30" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="output-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="api-glow-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="shadow-sm"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+    <filter id="shadow-md"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+    <filter id="glow-accent"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/></filter>
+    <filter id="glow-strong"><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#B8CCDB" flood-opacity="0.25"/></filter>
+    <filter id="glow-green-f"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C44B68" flood-opacity="0.2"/></filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#C44B68"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.012">
+    <line x1="100" y1="0" x2="100" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="900" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="800" x2="1200" y2="800" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" letter-spacing="0.5">Market &amp; Submarket Analysis</text>
+  <text x="600" y="60" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" letter-spacing="2.5">PHASE 4 DEEP DIVE — INSTITUTIONAL-GRADE MARKET INTELLIGENCE</text>
+
+  <!-- Badges -->
+  <g transform="translate(40, 26)">
+    <rect width="94" height="26" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="47" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">6 Sources</text>
+  </g>
+  <g transform="translate(142, 26)">
+    <rect width="98" height="26" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="1"/>
+    <text x="49" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">4 Layers</text>
+  </g>
+  <g transform="translate(248, 26)">
+    <rect width="98" height="26" rx="8" fill="#0D1229" stroke="#5a4420" stroke-width="1"/>
+    <text x="49" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039" text-anchor="middle" dominant-baseline="central">5 Outputs</text>
+  </g>
+
+  <!-- Right badge: Phase marker -->
+  <g transform="translate(1060, 22)">
+    <rect width="100" height="38" rx="10" fill="#0D1229" stroke="#2a5a99" stroke-width="1" filter="url(#shadow-sm)"/>
+    <text x="50" y="14" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">Phase 4</text>
+    <text x="50" y="30" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94" text-anchor="middle" dominant-baseline="central">Segment 1</text>
+  </g>
+
+  <!-- Column headers -->
+  <g transform="translate(0, 72)">
+    <rect x="40" y="0" width="200" height="20" rx="4" fill="#08080a"/>
+    <text x="140" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5" text-anchor="middle">DATA SOURCES</text>
+    <rect x="260" y="0" width="660" height="20" rx="4" fill="#08080a"/>
+    <text x="590" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5" text-anchor="middle">ANALYSIS LAYERS</text>
+    <rect x="940" y="0" width="220" height="20" rx="4" fill="#08080a"/>
+    <text x="1050" y="13" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#7c7f94" letter-spacing="1.5" text-anchor="middle">OUTPUTS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- LEFT SECTION: Data Sources                  -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Source 1: Data Services API — BLUE GLOW (featured) -->
+  <g filter="url(#glow-accent)">
+    <rect x="40" y="104" width="200" height="88" rx="10" fill="url(#api-glow-grad)" stroke="#B8CCDB" stroke-width="1.5"/>
+  </g>
+  <!-- API icon -->
+  <rect x="54" y="114" width="28" height="28" rx="6" fill="#2a5a99" opacity="0.3"/>
+  <text x="68" y="132" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="12" fill="#B8CCDB">API</text>
+  <text x="92" y="125" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Data Services</text>
+  <text x="92" y="139" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">pinchfin API — 11 tools</text>
+  <text x="56" y="160" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Demographics, employment, macro</text>
+  <text x="56" y="173" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">indicators, flood, enviro, HUD FMR</text>
+  <!-- Animated pulse on API card -->
+  <circle cx="230" cy="115" r="4" fill="#B8CCDB" opacity="0.4">
+    <animate attributeName="r" values="3;6;3" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.15;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Source 2: Public Records -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="204" width="200" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="54" y="214" width="28" height="28" rx="6" fill="#222228"/>
+  <text x="68" y="233" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#B85A30">&#x1F3DB;</text>
+  <text x="92" y="228" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Public Records</text>
+  <text x="56" y="251" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">County assessor, tax records,</text>
+  <text x="56" y="264" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">zoning maps, entitlements</text>
+
+  <!-- Source 3: Market Reports -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="292" width="200" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="54" y="302" width="28" height="28" rx="6" fill="#222228"/>
+  <text x="68" y="321" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#C44B68">&#x1F4CA;</text>
+  <text x="92" y="316" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Market Reports</text>
+  <text x="56" y="339" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">CBRE, JLL, Cushman, Marcus &amp;</text>
+  <text x="56" y="352" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Millichap quarterly reports</text>
+
+  <!-- Source 4: Economic Data -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="380" width="200" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="54" y="390" width="28" height="28" rx="6" fill="#222228"/>
+  <text x="68" y="409" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#d4a039">&#x1F4C8;</text>
+  <text x="92" y="404" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Economic Data</text>
+  <text x="56" y="427" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">BLS employment, FRED macro,</text>
+  <text x="56" y="440" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Census ACS demographics</text>
+
+  <!-- Source 5: Supply Pipeline -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="468" width="200" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="54" y="478" width="28" height="28" rx="6" fill="#222228"/>
+  <text x="68" y="497" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#c44a4a">&#x1F3D7;</text>
+  <text x="92" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Supply Pipeline</text>
+  <text x="56" y="515" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Permits filed, construction starts,</text>
+  <text x="56" y="528" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">planned deliveries, absorption</text>
+
+  <!-- Source 6: Demand Drivers -->
+  <g filter="url(#shadow-sm)">
+    <rect x="40" y="556" width="200" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="54" y="566" width="28" height="28" rx="6" fill="#222228"/>
+  <text x="68" y="585" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#4adaaa">&#x1F4C9;</text>
+  <text x="92" y="580" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#e2e2e6">Demand Drivers</text>
+  <text x="56" y="603" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Major employers, infrastructure,</text>
+  <text x="56" y="616" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">population &amp; migration trends</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONNECTION LINES: Sources → Analysis Layers -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Animated flow lines from sources to center -->
+  <path d="M 240 148 C 252 148, 258 165, 270 165" stroke="#B8CCDB" stroke-width="1.2" stroke-opacity="0.5" fill="none"/>
+  <path d="M 240 242 C 252 242, 258 245, 270 245" stroke="#1C2345" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+  <path d="M 240 330 C 252 330, 258 325, 270 325" stroke="#1C2345" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+  <path d="M 240 418 C 252 418, 258 405, 270 405" stroke="#1C2345" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+  <path d="M 240 506 C 252 506, 258 485, 270 485" stroke="#1C2345" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+  <path d="M 240 594 C 252 594, 258 565, 270 565" stroke="#1C2345" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Animated data flow pulses -->
+  <circle r="2.5" fill="#B8CCDB" opacity="0.6">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M 240 148 C 252 148, 258 165, 270 165"/>
+  </circle>
+  <circle r="2" fill="#a0a0a8" opacity="0.4">
+    <animateMotion dur="2.4s" repeatCount="indefinite" path="M 240 242 C 252 242, 258 245, 270 245"/>
+  </circle>
+  <circle r="2" fill="#a0a0a8" opacity="0.4">
+    <animateMotion dur="2.8s" repeatCount="indefinite" path="M 240 330 C 252 330, 258 325, 270 325"/>
+  </circle>
+  <circle r="2" fill="#a0a0a8" opacity="0.4">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M 240 418 C 252 418, 258 405, 270 405"/>
+  </circle>
+  <circle r="2" fill="#a0a0a8" opacity="0.4">
+    <animateMotion dur="2.6s" repeatCount="indefinite" path="M 240 506 C 252 506, 258 485, 270 485"/>
+  </circle>
+  <circle r="2" fill="#a0a0a8" opacity="0.4">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M 240 594 C 252 594, 258 565, 270 565"/>
+  </circle>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CENTER SECTION: Analysis Layers             -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- LAYER 1: MSA-Level Analysis (Blue accent) -->
+  <rect x="270" y="104" width="650" height="120" rx="10" fill="url(#layer1-grad)" stroke="#2a5a99" stroke-width="0.8"/>
+  <!-- Layer label bar -->
+  <rect x="280" y="110" width="150" height="22" rx="6" fill="#2a5a99" opacity="0.25"/>
+  <text x="294" y="124" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#B8CCDB" letter-spacing="1">LAYER 1</text>
+  <text x="350" y="124" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">MSA-Level</text>
+
+  <!-- Layer 1 content cards -->
+  <rect x="286" y="140" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="296" y="155" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Population &amp; HH Growth</text>
+  <text x="296" y="170" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">5yr, 10yr trend lines</text>
+
+  <rect x="442" y="140" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="452" y="155" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Employment Composition</text>
+  <text x="452" y="170" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Concentration risk</text>
+
+  <rect x="598" y="140" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="608" y="155" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Income vs. Rent Growth</text>
+  <text x="608" y="170" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Correlation analysis</text>
+
+  <rect x="754" y="140" width="156" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="764" y="155" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Supply / Demand Balance</text>
+  <text x="764" y="170" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Metro-level equilibrium</text>
+
+  <!-- Vertical connector: Layer 1 → Layer 2 -->
+  <line x1="595" y1="224" x2="595" y2="236" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 2: Submarket Drill-Down (Green accent) -->
+  <rect x="270" y="236" width="650" height="120" rx="10" fill="url(#layer2-grad)" stroke="#1a4a2c" stroke-width="0.8"/>
+  <rect x="280" y="242" width="186" height="22" rx="6" fill="#1a4a2c" opacity="0.25"/>
+  <text x="294" y="256" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#C44B68" letter-spacing="1">LAYER 2</text>
+  <text x="350" y="256" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Submarket Drill-Down</text>
+
+  <rect x="286" y="272" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="296" y="287" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Boundary Definition</text>
+  <text x="296" y="302" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Justified delineation</text>
+
+  <rect x="442" y="272" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="452" y="287" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Competitive Set ID</text>
+  <text x="452" y="302" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Radius, vintage, class</text>
+
+  <rect x="598" y="272" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="608" y="287" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Vacancy &amp; Absorption</text>
+  <text x="608" y="302" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Submarket trends</text>
+
+  <rect x="754" y="272" width="156" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="764" y="287" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">New Supply Pipeline</text>
+  <text x="764" y="302" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Next 24-month deliveries</text>
+
+  <!-- Vertical connector: Layer 2 → Layer 3 -->
+  <line x1="595" y1="356" x2="595" y2="368" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 3: Micro-Location Assessment (Amber accent) -->
+  <rect x="270" y="368" width="650" height="120" rx="10" fill="url(#layer3-grad)" stroke="#5a4420" stroke-width="0.8"/>
+  <rect x="280" y="374" width="210" height="22" rx="6" fill="#5a4420" opacity="0.25"/>
+  <text x="294" y="388" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#d4a039" letter-spacing="1">LAYER 3</text>
+  <text x="350" y="388" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Micro-Location Assessment</text>
+
+  <rect x="286" y="404" width="120" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="296" y="419" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Walk / Transit</text>
+  <text x="296" y="434" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Score analysis</text>
+
+  <rect x="414" y="404" width="120" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="424" y="419" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Flood Zone</text>
+  <text x="424" y="434" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">FEMA NFHL class</text>
+
+  <rect x="542" y="404" width="120" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="552" y="419" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Environmental</text>
+  <text x="552" y="434" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">EPA ECHO screen</text>
+
+  <rect x="670" y="404" width="120" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="680" y="419" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Schools &amp; Crime</text>
+  <text x="680" y="434" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Amenity proximity</text>
+
+  <rect x="798" y="404" width="112" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="808" y="419" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Employment</text>
+  <text x="808" y="434" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Drive-time access</text>
+
+  <!-- Mini API indicator on Layer 3 — shows automated data -->
+  <rect x="454" y="375" width="54" height="18" rx="4" fill="#2a5a99" opacity="0.2"/>
+  <text x="481" y="387" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">MCP</text>
+
+  <!-- Vertical connector: Layer 3 → Layer 4 -->
+  <line x1="595" y1="488" x2="595" y2="500" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 4: Rent Trend Analysis (Purple accent) -->
+  <rect x="270" y="500" width="650" height="120" rx="10" fill="url(#layer4-grad)" stroke="#3a2a66" stroke-width="0.8"/>
+  <rect x="280" y="506" width="194" height="22" rx="6" fill="#3a2a66" opacity="0.25"/>
+  <text x="294" y="520" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#B85A30" letter-spacing="1">LAYER 4</text>
+  <text x="350" y="520" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Rent Trend Analysis</text>
+
+  <rect x="286" y="536" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="296" y="551" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Historical Rent Growth</text>
+  <text x="296" y="566" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">3yr, 5yr, 10yr trends</text>
+
+  <rect x="442" y="536" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="452" y="551" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Rent-to-Income Ratio</text>
+  <text x="452" y="566" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Affordability analysis</text>
+
+  <rect x="598" y="536" width="148" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="608" y="551" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Concession Trends</text>
+  <text x="608" y="566" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Net effective vs. asking</text>
+
+  <rect x="754" y="536" width="156" height="38" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <text x="764" y="551" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#e2e2e6">Seasonal Patterns</text>
+  <text x="764" y="566" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8.5" fill="#7c7f94">Lease-up velocity bench.</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- VERTICAL FLOW SPINE (between layers)        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Subtle depth indicator on far left -->
+  <rect x="256" y="104" width="8" height="516" rx="4" fill="#0D1229" stroke="#2a2a32" stroke-width="0.5"/>
+  <rect x="257" y="110" width="6" height="110" rx="3" fill="#2a5a99" opacity="0.2"/>
+  <rect x="257" y="242" width="6" height="110" rx="3" fill="#1a4a2c" opacity="0.2"/>
+  <rect x="257" y="374" width="6" height="110" rx="3" fill="#5a4420" opacity="0.2"/>
+  <rect x="257" y="506" width="6" height="110" rx="3" fill="#3a2a66" opacity="0.2"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONNECTION LINES: Analysis → Outputs        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <path d="M 920 165 C 932 165, 936 148, 948 148" stroke="#1C2345" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <path d="M 920 296 C 932 296, 936 265, 948 265" stroke="#1C2345" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <path d="M 920 428 C 932 428, 936 378, 948 378" stroke="#1C2345" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <path d="M 920 560 C 932 560, 936 488, 948 488" stroke="#1C2345" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  <path d="M 920 560 C 932 560, 936 588, 948 588" stroke="#1C2345" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- RIGHT SECTION: Outputs                      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Output 1: Market Analysis Report (featured) -->
+  <g filter="url(#glow-green-f)">
+    <rect x="940" y="104" width="220" height="86" rx="10" fill="#0D1229" stroke="#C44B68" stroke-width="1.2"/>
+  </g>
+  <!-- Doc icon -->
+  <rect x="954" y="114" width="22" height="28" rx="4" fill="#1a4a2c" opacity="0.4"/>
+  <rect x="958" y="122" width="14" height="2" rx="1" fill="#C44B68" opacity="0.6"/>
+  <rect x="958" y="127" width="10" height="2" rx="1" fill="#C44B68" opacity="0.4"/>
+  <rect x="958" y="132" width="12" height="2" rx="1" fill="#C44B68" opacity="0.3"/>
+  <text x="984" y="126" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Market Analysis</text>
+  <text x="984" y="140" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Report</text>
+  <text x="956" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">30+ pages</text>
+  <text x="1018" y="162" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">DOCX</text>
+  <text x="956" y="178" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">V3.1 Elevated Design</text>
+
+  <!-- Output 2: Market Risk Score -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="204" width="220" height="58" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="954" y="214" width="22" height="22" rx="6" fill="#222228"/>
+  <text x="965" y="229" font-family="Inter, sans-serif" font-weight="700" font-size="11" fill="#d4a039" text-anchor="middle">!</text>
+  <text x="984" y="230" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Market Risk Score</text>
+  <text x="956" y="250" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Quantified composite rating</text>
+
+  <!-- Output 3: Supply/Demand Matrix -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="274" width="220" height="58" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="954" y="284" width="22" height="22" rx="6" fill="#222228"/>
+  <text x="965" y="299" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#B8CCDB" text-anchor="middle">#</text>
+  <text x="984" y="298" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Supply / Demand Matrix</text>
+  <text x="956" y="320" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Submarket equilibrium analysis</text>
+
+  <!-- Output 4: Rent Growth Forecast -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="344" width="220" height="76" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="954" y="354" width="22" height="22" rx="6" fill="#222228"/>
+  <text x="965" y="369" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#C44B68" text-anchor="middle">%</text>
+  <text x="984" y="369" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Rent Growth Forecast</text>
+  <text x="956" y="392" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Three scenarios modeled:</text>
+  <g transform="translate(956, 402)">
+    <rect width="44" height="14" rx="3" fill="#1a4a2c" opacity="0.3"/>
+    <text x="22" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle">Base</text>
+    <rect x="50" width="52" height="14" rx="3" fill="#2a5a99" opacity="0.2"/>
+    <text x="76" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle">Upside</text>
+    <rect x="108" width="50" height="14" rx="3" fill="#4a1a1a" opacity="0.3"/>
+    <text x="133" y="10" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle">Stress</text>
+  </g>
+
+  <!-- Output 5: Key Risk Factors -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="432" width="220" height="58" rx="10" fill="#0D1229" stroke="#1C2345" stroke-width="0.8"/>
+  </g>
+  <rect x="954" y="442" width="22" height="22" rx="6" fill="#222228"/>
+  <text x="965" y="457" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="#c44a4a" text-anchor="middle">R</text>
+  <text x="984" y="456" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#e2e2e6">Risk Factors &amp; Mitigants</text>
+  <text x="956" y="478" font-family="Inter, sans-serif" font-weight="400" font-size="9.5" fill="#a0a0a8">Narrative with quantified support</text>
+
+  <!-- Phase connection callout: feeds Phase 6 -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="510" width="220" height="42" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="0.8" stroke-dasharray="4 3"/>
+  </g>
+  <text x="964" y="528" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#B8CCDB">Feeds</text>
+  <text x="998" y="528" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8">Phase 6: Comparable Analysis &amp; Synthesis</text>
+  <text x="964" y="543" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Market context informs comp selection</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM DATA HIGHLIGHTS                      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Horizontal separator -->
+  <line x1="40" y1="648" x2="1160" y2="648" stroke="#2a2a32" stroke-width="0.5"/>
+
+  <!-- Depth metrics row -->
+  <g transform="translate(40, 665)">
+    <!-- Metric 1 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#B8CCDB" text-anchor="middle">11</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Automated Data Feeds</text>
+  </g>
+  <g transform="translate(226, 665)">
+    <!-- Metric 2 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#C44B68" text-anchor="middle">30+</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Pages of Analysis</text>
+  </g>
+  <g transform="translate(412, 665)">
+    <!-- Metric 3 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#d4a039" text-anchor="middle">4</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Analytical Layers</text>
+  </g>
+  <g transform="translate(598, 665)">
+    <!-- Metric 4 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#B85A30" text-anchor="middle">3</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Rent Growth Scenarios</text>
+  </g>
+  <g transform="translate(784, 665)">
+    <!-- Metric 5 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#4adaaa" text-anchor="middle">6</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Source Categories</text>
+  </g>
+  <g transform="translate(970, 665)">
+    <!-- Metric 6 -->
+    <rect width="170" height="52" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+    <text x="85" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#c44a4a" text-anchor="middle">24mo</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Supply Pipeline Horizon</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM ANNOTATION                           -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Annotation bar -->
+  <rect x="40" y="740" width="1120" height="60" rx="10" fill="#0D1229" stroke="#2a2a32" stroke-width="0.6"/>
+  <rect x="40" y="740" width="4" height="60" rx="2" fill="#B8CCDB"/>
+  <text x="60" y="766" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8">Phase 4 produces institutional-grade market intelligence. Every conclusion is sourced, every trend is quantified,</text>
+  <text x="60" y="786" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8">every risk is identified before a single dollar of cash flow is modeled.</text>
+
+  <!-- How data flows callout -->
+  <rect x="40" y="815" width="1120" height="44" rx="10" fill="#070B1A" stroke="#2a5a99" stroke-width="0.6" stroke-dasharray="4 3"/>
+  <text x="60" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#B8CCDB">Data Flow:</text>
+  <text x="135" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">6 Source Categories</text>
+  <text x="290" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#1C2345">&#x2192;</text>
+  <text x="310" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">4 Analysis Layers (macro &#x2192; micro)</text>
+  <text x="555" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#1C2345">&#x2192;</text>
+  <text x="575" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94">5 Deliverables (30+ page report + risk score + forecast)</text>
+  <text x="960" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#1C2345">&#x2192;</text>
+  <text x="980" y="838" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#C44B68">Phase 6</text>
+
+  <!-- Micro footer -->
+  <text x="600" y="882" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345" text-anchor="middle">pinchfin / Phase 4 / Market &amp; Submarket Analysis</text>
+
+</svg>

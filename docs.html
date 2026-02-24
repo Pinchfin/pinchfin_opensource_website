@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | pinchfin</title>
+  <meta name="description" content="pinchfin documentation hub. Getting started, architecture reference, configuration, API & data services, workflow, and quality assurance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pinchfin.com/docs.html">
+  <meta property="og:title" content="Documentation">
+  <meta property="og:description" content="pinchfin documentation hub. Getting started, architecture reference, configuration, API & data services, workflow, and quality assurance.">
+  <meta property="og:image" content="https://pinchfin.com/img/og-image.png">
+  <meta property="og:site_name" content="pinchfin">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Documentation">
+  <meta name="twitter:description" content="pinchfin documentation hub. Getting started, architecture reference, configuration, API & data services, workflow, and quality assurance.">
+  <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="u-sr-only">Skip to content</a>
+  <nav class="nav-fixed" role="navigation" aria-label="Main navigation"><div class="nav-inner"><a href="index.html" class="nav-brand"><span class="nav-brand__text"><strong>pinch</strong>fin</span></a><div class="nav-links"><a href="platform.html" class="nav-links__item">Platform</a><a href="architecture.html" class="nav-links__item">Architecture</a><a href="workflow.html" class="nav-links__item">Workflow</a><a href="operations.html" class="nav-links__item">Operations</a><a href="community.html" class="nav-links__item">Community</a><a href="https://github.com/pinchfin/pinchfin" class="nav-links__cta" target="_blank" rel="noopener noreferrer">GitHub</a></div><button class="nav-hamburger" aria-label="Toggle navigation" data-mobile-toggle><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span></button></div></nav>
+  <div class="nav-mobile" data-mobile-nav aria-hidden="true"><a href="platform.html" class="nav-mobile__item">Platform</a><a href="architecture.html" class="nav-mobile__item">Architecture</a><a href="workflow.html" class="nav-mobile__item">Workflow</a><a href="operations.html" class="nav-mobile__item">Operations</a><a href="community.html" class="nav-mobile__item">Community</a><a href="https://github.com/pinchfin/pinchfin" class="nav-mobile__item" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+
+  <main id="main-content" class="page-prose page-docs">
+    <div class="container container--narrow" style="padding: 0 var(--space-8);">
+      <div class="page-prose__header" style="text-align: left;">
+        <p style="font-family: var(--font-mono); font-size: var(--size-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-4);">Reference</p>
+        <h1 class="page-prose__title" style="text-align: left;">pinchfin Documentation</h1>
+        <p style="font-size: var(--size-lg); color: var(--color-slate); margin-top: var(--space-4); max-width: 640px;">Technical reference, configuration guides, and operational documentation for the pinchfin credit operating system.</p>
+      </div>
+
+      <div class="page-prose__body">
+
+        <!-- Section 1: Getting Started -->
+        <h2>Getting Started</h2>
+        <p>Installation, prerequisites, and initial configuration for running pinchfin in your environment.</p>
+        <ul>
+          <li><strong>Prerequisites</strong> &mdash; Claude Code CLI with active Anthropic API key, Node.js 18+, Python 3.10+, Git</li>
+          <li><strong>Installation</strong> &mdash; Repository cloning, dependency installation, environment setup</li>
+          <li><strong>First Run</strong> &mdash; System validation, data service connectivity checks, initial configuration</li>
+          <li><strong>Quick Start</strong> &mdash; Running your first deal analysis in under 30 minutes</li>
+        </ul>
+        <p><a href="manual.html" style="color: var(--color-orange);">View the full User Manual &rarr;</a></p>
+        <p style="margin-top: var(--space-4);"><a href="White Paper - AI Safety & Security - pinchfin.docx" style="color: var(--color-orange);" download>Download the AI White Paper (DOCX) &rarr;</a></p>
+        <p style="margin-top: var(--space-2);"><a href="Pinchfin User Manual.docx" style="color: var(--color-orange);" download>Download the User Manual (DOCX) &rarr;</a></p>
+
+        <hr>
+
+        <!-- Section 2: Architecture Reference -->
+        <h2>Architecture Reference</h2>
+        <p>System design, module organization, and technical architecture of the pinchfin platform.</p>
+        <ul>
+          <li><strong>System Overview</strong> &mdash; 23+ interconnected modules, 200+ skills, execution framework</li>
+          <li><strong>Module Registry</strong> &mdash; Complete listing of all modules with status, dependencies, and skill counts</li>
+          <li><strong>Skill Architecture</strong> &mdash; Skill definition format, hub dispatcher pattern, invocation conventions</li>
+          <li><strong>Data Flow</strong> &mdash; Input/output schemas, cross-phase data threads, segment handoff protocols</li>
+          <li><strong>Execution DAG</strong> &mdash; Deterministic wiring layer: execution order, parallel/serial paths, conditional branches</li>
+        </ul>
+
+        <hr>
+
+        <!-- Section 3: Configuration -->
+        <h2>Configuration</h2>
+        <p>Credit box parameters, system settings, and customization options.</p>
+        <ul>
+          <li><strong>Credit Box Configuration</strong> &mdash; <code>credit_box_config.json</code> structure, constraint thresholds, sizing parameters, policy overrides</li>
+          <li><strong>Credit Soul</strong> &mdash; Institutional credit philosophy capture, the 4-step transcript exercise, configuration integration</li>
+          <li><strong>Environment Variables</strong> &mdash; API keys, service endpoints, feature flags</li>
+          <li><strong>Module Activation</strong> &mdash; Enabling, disabling, and configuring individual modules</li>
+          <li><strong>Report Templates</strong> &mdash; Branding configuration, output formatting, template customization</li>
+        </ul>
+
+        <hr>
+
+        <!-- Section 4: API & Data Services -->
+        <h2>API &amp; Data Services</h2>
+        <p>External data integrations, MCP server configuration, and data source reference.</p>
+        <ul>
+          <li><strong>MCP Server Setup</strong> &mdash; Registration, tool discovery, connection management</li>
+          <li><strong>Data Tools</strong> &mdash; 11 tools across 10 services: property context, demographics, employment, macro indicators, flood zone, environmental, HUD data, walk score, geocoding, address validation, geography resolution</li>
+          <li><strong>API Key Management</strong> &mdash; Obtaining, configuring, and rotating API keys for Google Maps, Census, FRED, BLS, HUD, Walk Score</li>
+          <li><strong>Rate Limits &amp; Quotas</strong> &mdash; Service-specific rate limits, caching strategies, fallback behavior</li>
+          <li><strong>No-Key APIs</strong> &mdash; FCC, FEMA, and EPA ECHO services that require no authentication</li>
+        </ul>
+        <p class="section-footnote">Use your existing APIs to plug in and improve your data quality immediately. The APIs listed are a short representation of available resources. Additional APIs should be added for improved data quality.</p>
+
+        <hr>
+
+        <!-- Section 5: Workflow -->
+        <h2>Workflow</h2>
+        <p>The 17-phase execution framework, segment model, and multi-session execution patterns.</p>
+        <ul>
+          <li><strong>Phase Reference</strong> &mdash; All 17 execution points from Context Brief (Phase -1) through DD &amp; Closing (Phase 15)</li>
+          <li><strong>Blocking Gates</strong> &mdash; 4 mandatory gates: Sponsor GO/NO-GO, Lender Rent, Expense Baseline, Sizing Waterfall</li>
+          <li><strong>Segment Model</strong> &mdash; 4-segment execution for multi-session workflows with state persistence</li>
+          <li><strong>8-Document Model</strong> &mdash; Sponsor Analysis, Market Analysis, Comparable Analysis, Rent Roll Analysis, T12 Expense Analysis, Business Plan Analysis, Cash Flow Underwriting Analysis, IC Memo</li>
+          <li><strong>Cross-Phase Data Threads</strong> &mdash; 5 data threads that flow across phase boundaries</li>
+        </ul>
+
+        <hr>
+
+        <!-- Section 6: Quality Assurance -->
+        <h2>Quality Assurance</h2>
+        <p>Triple-Agent QA system, audit trails, and continuous improvement processes.</p>
+        <ul>
+          <li><strong>Triple-Agent System</strong> &mdash; Producer, Checker, and Resolver roles with structured review protocols</li>
+          <li><strong>Deployment Intensity</strong> &mdash; TRIPLE (full 3-agent), DOUBLE (2-agent), and SINGLE (self-review) configurations</li>
+          <li><strong>Quality Gates</strong> &mdash; Mandatory checkpoints at each phase boundary</li>
+          <li><strong>Improvement Log</strong> &mdash; Continuous learning from QA findings, error patterns, and resolution strategies</li>
+          <li><strong>Audit Trail</strong> &mdash; Skill chain logging, execution timestamps, decision documentation</li>
+        </ul>
+
+        <hr>
+
+        <p style="color: var(--color-slate); font-style: italic; margin-top: var(--space-8);">[Full documentation content to be developed. Each section will include detailed technical reference, configuration examples, annotated code samples, and operational guides.]</p>
+
+        <div style="display: flex; gap: var(--space-4); margin-top: var(--space-8); flex-wrap: wrap;">
+          <a href="manual.html" class="btn btn--outline" style="display: inline-block; padding: var(--space-3) var(--space-6); border: 1px solid var(--color-orange); color: var(--color-orange); border-radius: var(--radius-md); text-decoration: none; font-size: var(--size-sm); font-weight: 500;">User Manual</a>
+          <a href="https://github.com/pinchfin/pinchfin" class="btn btn--outline" style="display: inline-block; padding: var(--space-3) var(--space-6); border: 1px solid var(--color-orange); color: var(--color-orange); border-radius: var(--radius-md); text-decoration: none; font-size: var(--size-sm); font-weight: 500;">GitHub Repository</a>
+          <a href="changelog.html" class="btn btn--outline" style="display: inline-block; padding: var(--space-3) var(--space-6); border: 1px solid var(--color-orange); color: var(--color-orange); border-radius: var(--radius-md); text-decoration: none; font-size: var(--size-sm); font-weight: 500;">Changelog</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo"><div class="footer__inner"><div class="footer__top"><div class="footer__brand"><img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);"><p class="footer__brand-name"><strong>pinch</strong>fin</p><p class="footer__brand-desc">Open source credit operating system for commercial real estate. MIT licensed.</p></div><div class="footer-links"><div class="footer-links__group"><p class="footer-links__heading">Platform</p><a href="platform.html" class="footer-links__item">Overview</a><a href="operations.html" class="footer-links__item">Operations</a><a href="docs.html" class="footer-links__item">Documentation</a></div><div class="footer-links__group"><p class="footer-links__heading">Community</p><a href="community.html" class="footer-links__item">Use Cases</a><a href="letter.html" class="footer-links__item">Letter from Builder</a><a href="changelog.html" class="footer-links__item">Changelog</a></div><div class="footer-links__group"><p class="footer-links__heading">Legal</p><a href="terms.html" class="footer-links__item">Terms of Service</a><a href="conduct.html" class="footer-links__item">Code of Conduct</a><a href="https://github.com/pinchfin/pinchfin" class="footer-links__item">GitHub</a></div></div></div><div class="footer__bottom"><p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. MIT License.</p><div class="footer__bottom-links"><a href="terms.html">Terms</a><a href="conduct.html">Conduct</a><a href="mailto:bmurphy@veletacapital.com">Contact</a><a href="https://x.com/toplender" target="_blank" rel="noopener noreferrer">@toplender</a></div></div><p style="font-size: var(--size-xs); color: var(--color-navy-dim); line-height: 1.7; margin-top: var(--space-6); opacity: 0.7;">pinchfin is an analytical tool and does not constitute financial advice. All outputs require independent verification by qualified professionals. No warranty is provided, express or implied. Users assume full responsibility for any decisions made using this software.</p></div></footer>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>

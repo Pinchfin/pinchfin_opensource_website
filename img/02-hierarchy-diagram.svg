@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <title>Module - Node - Skill Hierarchy</title>
+  <desc>Three-tier governance architecture showing how Modules contain Nodes that govern Skills. One fully expanded example (Rent Roll Analysis) with collapsed modules demonstrating the pattern.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="node-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="tier-glow-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B8CCDB" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tier-glow-2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B85A30" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B85A30" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#B85A30" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tier-glow-3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C44B68" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="shadow-md">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-purple">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#B85A30" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.02">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">Governance Hierarchy</text>
+  <text x="600" y="72" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#7c7f94" text-anchor="middle" letter-spacing="2">MODULE  /  NODE  /  SKILL</text>
+
+  <!-- ====== TIER BACKGROUNDS (subtle horizontal bands) ====== -->
+  <rect x="140" y="96" width="1020" height="120" rx="12" fill="url(#tier-glow-1)"/>
+  <rect x="140" y="236" width="1020" height="160" rx="12" fill="url(#tier-glow-2)"/>
+  <rect x="140" y="416" width="1020" height="200" rx="12" fill="url(#tier-glow-3)"/>
+
+  <!-- ====== LEFT SIDE TIER ANNOTATIONS ====== -->
+
+  <!-- Tier 1 label -->
+  <g transform="translate(42, 156)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#B8CCDB" text-anchor="start">TIER 1</text>
+    <text x="0" y="18" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#e2e2e6" text-anchor="start">Modules</text>
+    <text x="0" y="36" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Analytical domains</text>
+    <text x="0" y="50" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Category-colored</text>
+  </g>
+
+  <!-- Tier 2 label -->
+  <g transform="translate(42, 302)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#B85A30" text-anchor="start">TIER 2</text>
+    <text x="0" y="18" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#e2e2e6" text-anchor="start">Nodes</text>
+    <text x="0" y="36" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Operating manuals</text>
+    <text x="0" y="50" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Standards + methods</text>
+  </g>
+
+  <!-- Tier 3 label -->
+  <g transform="translate(42, 490)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#C44B68" text-anchor="start">TIER 3</text>
+    <text x="0" y="18" font-family="Inter, sans-serif" font-weight="300" font-size="18" fill="#e2e2e6" text-anchor="start">Skills</text>
+    <text x="0" y="36" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Standalone tasks</text>
+    <text x="0" y="50" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="start">Chain or run solo</text>
+  </g>
+
+  <!-- Divider lines for left labels -->
+  <line x1="132" y1="110" x2="132" y2="630" stroke="#2a2a32" stroke-width="1"/>
+
+  <!-- ====== TIER 1 — EXPANDED MODULE: Rent Roll Analysis ====== -->
+  <g filter="url(#shadow-md)">
+    <rect x="160" y="108" width="480" height="96" rx="10" fill="url(#card-grad)" stroke="#1a4a2c" stroke-width="1.5"/>
+    <rect x="160" y="108" width="5" height="96" rx="2.5" fill="#C44B68"/>
+
+    <!-- Module icon area -->
+    <rect x="180" y="122" width="36" height="36" rx="8" fill="#1a4a2c"/>
+    <text x="198" y="144" font-family="Inter, sans-serif" font-weight="500" font-size="16" fill="#C44B68" text-anchor="middle" dominant-baseline="central">R</text>
+
+    <text x="228" y="140" font-family="Inter, sans-serif" font-weight="500" font-size="16" fill="#e2e2e6">Rent Roll Analysis</text>
+    <text x="228" y="162" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8">Analytical Engine  /  Phase 5A: Rent Roll Validation</text>
+
+    <!-- Stats row -->
+    <rect x="228" y="174" width="68" height="20" rx="4" fill="#0D1229" stroke="#2a2a32" stroke-width="0.5"/>
+    <text x="262" y="188" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#C44B68" text-anchor="middle">13 skills</text>
+
+    <rect x="304" y="174" width="100" height="20" rx="4" fill="#0D1229" stroke="#2a2a32" stroke-width="0.5"/>
+    <text x="354" y="188" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B85A30" text-anchor="middle">1 gov. node</text>
+
+    <rect x="412" y="174" width="78" height="20" rx="4" fill="#0D1229" stroke="#2a2a32" stroke-width="0.5"/>
+    <text x="451" y="188" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">4 outputs</text>
+
+    <!-- Expand indicator -->
+    <text x="614" y="158" font-family="Inter, sans-serif" font-weight="400" font-size="20" fill="#1C2345" text-anchor="middle">&#9660;</text>
+  </g>
+
+  <!-- ====== TIER 1 — COLLAPSED MODULES ====== -->
+
+  <!-- Deal Structuring -->
+  <g filter="url(#shadow-sm)">
+    <rect x="660" y="108" width="232" height="44" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="660" y="108" width="4" height="44" rx="2" fill="#4adaaa"/>
+    <text x="678" y="128" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#e2e2e6">Deal Structuring</text>
+    <text x="678" y="144" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94">15 skills, 1 node</text>
+    <text x="872" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#1C2345" text-anchor="middle">&#9654;</text>
+  </g>
+
+  <!-- Due Diligence -->
+  <g filter="url(#shadow-sm)">
+    <rect x="660" y="162" width="232" height="44" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="660" y="162" width="4" height="44" rx="2" fill="#B85A30"/>
+    <text x="678" y="182" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#e2e2e6">Due Diligence</text>
+    <text x="678" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94">14 skills, 1 node</text>
+    <text x="872" y="186" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#1C2345" text-anchor="middle">&#9654;</text>
+  </g>
+
+  <!-- Portfolio Mgmt -->
+  <g filter="url(#shadow-sm)">
+    <rect x="912" y="108" width="232" height="44" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="912" y="108" width="4" height="44" rx="2" fill="#da6a4a"/>
+    <text x="930" y="128" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#e2e2e6">Portfolio Management</text>
+    <text x="930" y="144" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94">13 skills, 1 node</text>
+    <text x="1124" y="132" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#1C2345" text-anchor="middle">&#9654;</text>
+  </g>
+
+  <!-- Risk & Sensitivity -->
+  <g filter="url(#shadow-sm)">
+    <rect x="912" y="162" width="232" height="44" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="912" y="162" width="4" height="44" rx="2" fill="#c44a4a"/>
+    <text x="930" y="182" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#e2e2e6">Risk &amp; Sensitivity</text>
+    <text x="930" y="198" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#7c7f94">18 skills, 2 nodes</text>
+    <text x="1124" y="186" font-family="Inter, sans-serif" font-weight="400" font-size="14" fill="#1C2345" text-anchor="middle">&#9654;</text>
+  </g>
+
+  <!-- ====== CONNECTION: Module to Node ====== -->
+  <line x1="400" y1="204" x2="400" y2="252" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="414" y="234" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" font-style="italic">governs</text>
+
+  <!-- ====== TIER 2 — NODE: Rent Roll Analysis v3 ====== -->
+  <g filter="url(#shadow-md)">
+    <rect x="200" y="256" width="440" height="120" rx="10" fill="url(#node-grad)" stroke="#3a2a66" stroke-width="1" stroke-dasharray="6 3" filter="url(#glow-purple)"/>
+
+    <!-- Lock icon -->
+    <g transform="translate(220, 272)">
+      <rect x="3" y="8" width="14" height="11" rx="2" fill="none" stroke="#B85A30" stroke-width="1.2"/>
+      <path d="M 6 8 L 6 4 C 6 1 14 1 14 4 L 14 8" fill="none" stroke="#B85A30" stroke-width="1.2"/>
+      <circle cx="10" cy="14" r="1.5" fill="#B85A30"/>
+    </g>
+
+    <text x="248" y="286" font-family="Inter, sans-serif" font-weight="500" font-size="15" fill="#e2e2e6">Rent Roll Analysis v3</text>
+    <rect x="466" y="273" width="28" height="16" rx="4" fill="#3a2a66"/>
+    <text x="480" y="285" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30" text-anchor="middle">v3</text>
+
+    <text x="220" y="310" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8">The Department's Operating Manual</text>
+
+    <!-- Standards badges -->
+    <text x="220" y="334" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Standards:</text>
+    <g>
+      <rect x="282" y="323" width="72" height="18" rx="4" fill="#222228"/>
+      <text x="318" y="336" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" text-anchor="middle">FNMA</text>
+    </g>
+    <g>
+      <rect x="362" y="323" width="46" height="18" rx="4" fill="#222228"/>
+      <text x="385" y="336" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" text-anchor="middle">IREM</text>
+    </g>
+    <g>
+      <rect x="416" y="323" width="38" height="18" rx="4" fill="#222228"/>
+      <text x="435" y="336" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" text-anchor="middle">CFA</text>
+    </g>
+    <g>
+      <rect x="462" y="323" width="46" height="18" rx="4" fill="#222228"/>
+      <text x="485" y="336" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" text-anchor="middle">CCIM</text>
+    </g>
+
+    <!-- Methodology -->
+    <text x="220" y="360" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Methodology: Dual-scenario analysis, market-derived rents, loss-to-lease quantification</text>
+  </g>
+
+  <!-- ====== ANNOTATION for Node ====== -->
+  <g>
+    <line x1="640" y1="316" x2="710" y2="316" stroke="#3a2a66" stroke-width="1" stroke-dasharray="3 2"/>
+    <rect x="714" y="264" width="420" height="106" rx="8" fill="#0D1229" stroke="#3a2a66" stroke-width="0.5"/>
+    <text x="730" y="286" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#B85A30">What a Node Does</text>
+    <text x="730" y="306" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Sets methodology, quality gates, and professional standards</text>
+    <text x="730" y="324" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">that ALL skills in the module must follow. One node per</text>
+    <text x="730" y="342" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">module. References industry frameworks (FNMA, IREM,</text>
+    <text x="730" y="360" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">CFA, CCIM). Skills cannot override node-level rules.</text>
+  </g>
+
+  <!-- ====== CONNECTION: Node to Skills ====== -->
+  <line x1="400" y1="376" x2="400" y2="424" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="414" y="408" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" font-style="italic">executes</text>
+
+  <!-- ====== TIER 3 — SKILLS (6 shown in 2 rows of 3) ====== -->
+
+  <!-- Row 1 -->
+  <!-- Skill 1: Lender Rent Derivation -->
+  <g filter="url(#shadow-sm)">
+    <rect x="160" y="432" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="176" cy="448" r="4" fill="#C44B68"/>
+    <text x="186" y="452" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Lender Rent Deriv.</text>
+    <text x="176" y="470" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">lender-rent-derivation</text>
+    <text x="176" y="486" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">Market rent vs. in-place</text>
+  </g>
+
+  <!-- Skill 2: Loss to Lease -->
+  <g filter="url(#shadow-sm)">
+    <rect x="328" y="432" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="344" cy="448" r="4" fill="#C44B68"/>
+    <text x="354" y="452" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Loss to Lease</text>
+    <text x="344" y="470" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">loss-to-lease</text>
+    <text x="344" y="486" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">Revenue gap analysis</text>
+  </g>
+
+  <!-- Skill 3: Concession Analysis -->
+  <g filter="url(#shadow-sm)">
+    <rect x="496" y="432" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="512" cy="448" r="4" fill="#C44B68"/>
+    <text x="522" y="452" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Concession Anlys.</text>
+    <text x="512" y="470" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">concession-analysis</text>
+    <text x="512" y="486" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">Free rent, discounts</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- Skill 4: Unit Mix Analysis -->
+  <g filter="url(#shadow-sm)">
+    <rect x="160" y="508" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="176" cy="524" r="4" fill="#C44B68"/>
+    <text x="186" y="528" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Unit Mix Analysis</text>
+    <text x="176" y="546" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">unit-mix-analysis</text>
+    <text x="176" y="562" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">BR/BA distribution</text>
+  </g>
+
+  <!-- Skill 5: Vacancy Trend -->
+  <g filter="url(#shadow-sm)">
+    <rect x="328" y="508" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="344" cy="524" r="4" fill="#C44B68"/>
+    <text x="354" y="528" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Vacancy Trend</text>
+    <text x="344" y="546" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">vacancy-trend-analysis</text>
+    <text x="344" y="562" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">Historical occupancy</text>
+  </g>
+
+  <!-- Skill 6: Lease-Up Projection -->
+  <g filter="url(#shadow-sm)">
+    <rect x="496" y="508" width="158" height="64" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+    <circle cx="512" cy="524" r="4" fill="#C44B68"/>
+    <text x="522" y="528" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Lease-Up Proj.</text>
+    <text x="512" y="546" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">lease-up-projection</text>
+    <text x="512" y="562" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#a0a0a8">Absorption schedule</text>
+  </g>
+
+  <!-- "+7 more skills" indicator -->
+  <g>
+    <rect x="496" y="582" width="158" height="28" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="0.5" stroke-dasharray="4 2"/>
+    <text x="575" y="600" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">+ 7 more skills</text>
+  </g>
+
+  <!-- ====== ANNOTATION for Skills ====== -->
+  <g>
+    <line x1="654" y1="496" x2="710" y2="496" stroke="#1a4a2c" stroke-width="1" stroke-dasharray="3 2"/>
+    <rect x="714" y="432" width="420" height="82" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="0.5"/>
+    <text x="730" y="454" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#C44B68">What Skills Do</text>
+    <text x="730" y="474" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Each skill is a standalone analytical task with defined inputs,</text>
+    <text x="730" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">outputs, and methodology. Skills can execute independently</text>
+    <text x="730" y="510" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">or chain together within the module's execution graph.</text>
+  </g>
+
+  <!-- ====== BOTTOM BAR: System-Wide Rules ====== -->
+  <rect x="60" y="648" width="1080" height="80" rx="10" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+
+  <text x="600" y="672" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#a0a0a8" text-anchor="middle" letter-spacing="2">SYSTEM-WIDE RULES  —  Apply to ALL tiers</text>
+
+  <!-- Rule badges -->
+  <g transform="translate(120, 686)">
+    <rect x="0" y="0" width="130" height="28" rx="6" fill="#222228" stroke="#2a5a99" stroke-width="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#B8CCDB"/>
+    <text x="28" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Format Enforcer</text>
+  </g>
+
+  <g transform="translate(270, 686)">
+    <rect x="0" y="0" width="160" height="28" rx="6" fill="#222228" stroke="#4a1a1a" stroke-width="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#c44a4a"/>
+    <text x="28" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Credit Box Config</text>
+  </g>
+
+  <g transform="translate(450, 686)">
+    <rect x="0" y="0" width="138" height="28" rx="6" fill="#222228" stroke="#3a2a66" stroke-width="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#B85A30"/>
+    <text x="28" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">QA Triple-Agent</text>
+  </g>
+
+  <g transform="translate(608, 686)">
+    <rect x="0" y="0" width="154" height="28" rx="6" fill="#222228" stroke="#1a4a2c" stroke-width="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#C44B68"/>
+    <text x="28" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Skill Chain Audit</text>
+  </g>
+
+  <g transform="translate(782, 686)">
+    <rect x="0" y="0" width="168" height="28" rx="6" fill="#222228" stroke="#5a4420" stroke-width="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#d4a039"/>
+    <text x="28" y="18" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#e2e2e6">Constraint Waterfall</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="758" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">Every module follows the same three-tier pattern. Nodes enforce standards. Skills do the work. System rules bind everything.</text>
+
+  <!-- Corner branding -->
+  <text x="1156" y="784" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345" text-anchor="end">pinchfin.com</text>
+</svg>

@@ -1,0 +1,382 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <title>Anatomy of a Skill — Lender Underwritten Rent</title>
+  <desc>Horizontal pipeline diagram showing the 5 stages of the Lender Underwritten Rent skill: Input, Methodology, Calculation, Output, and Review, with credit box config and blocking gate annotations.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <linearGradient id="pipeline-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0"/>
+      <stop offset="10%" stop-color="#B8CCDB" stop-opacity="0.04"/>
+      <stop offset="90%" stop-color="#C44B68" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stage-1-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#141417"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="shadow-md">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-green">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C44B68" flood-opacity="0.12"/>
+    </filter>
+    <filter id="glow-red">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#c44a4a" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#C44B68"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#c44a4a"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#d4a039"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.02">
+    <line x1="100" y1="0" x2="100" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Inter, sans-serif" font-weight="300" font-size="28" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">Anatomy of a Skill</text>
+  <text x="600" y="64" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#7c7f94" text-anchor="middle" letter-spacing="2.5">LENDER UNDERWRITTEN RENT — SKILL PIPELINE</text>
+
+  <!-- Badge row -->
+  <g transform="translate(40, 28)">
+    <rect width="82" height="28" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="41" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">SKILL.md</text>
+  </g>
+  <g transform="translate(130, 28)">
+    <rect width="80" height="28" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="1"/>
+    <text x="40" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#C44B68" text-anchor="middle" dominant-baseline="central">5 Stages</text>
+  </g>
+  <g transform="translate(1040, 28)">
+    <rect width="120" height="28" rx="8" fill="#0D1229" stroke="#5a4420" stroke-width="1"/>
+    <text x="60" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#d4a039" text-anchor="middle" dominant-baseline="central">Phase 6A Skill</text>
+  </g>
+
+  <!-- Pipeline background band -->
+  <rect x="28" y="88" width="1144" height="240" rx="12" fill="url(#pipeline-glow)"/>
+
+  <!-- ============================================ -->
+  <!-- STAGE 1: INPUT -->
+  <!-- ============================================ -->
+  <g transform="translate(36, 94)" filter="url(#shadow-md)">
+    <rect width="196" height="228" rx="10" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <!-- Top accent bar -->
+    <rect width="196" height="4" rx="2" fill="#B8CCDB" opacity="0.4"/>
+    <!-- Stage number -->
+    <circle cx="98" cy="28" r="14" fill="#070B1A" stroke="#B8CCDB" stroke-width="1.5" filter="url(#glow-accent)"/>
+    <text x="98" y="29" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">1</text>
+    <text x="98" y="56" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">INPUT</text>
+    <text x="98" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Structured Data Intake</text>
+
+    <!-- Input items -->
+    <g transform="translate(14, 90)">
+      <rect width="168" height="26" rx="6" fill="#070B1A" stroke="#2a5a99" stroke-width="0.8"/>
+      <circle cx="14" cy="13" r="4" fill="#B8CCDB" opacity="0.4"/>
+      <text x="28" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" dominant-baseline="central">Rent Roll</text>
+    </g>
+    <g transform="translate(14, 122)">
+      <rect width="168" height="26" rx="6" fill="#070B1A" stroke="#2a5a99" stroke-width="0.8"/>
+      <circle cx="14" cy="13" r="4" fill="#B8CCDB" opacity="0.4"/>
+      <text x="28" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" dominant-baseline="central">Market Comps</text>
+    </g>
+    <g transform="translate(14, 154)">
+      <rect width="168" height="26" rx="6" fill="#070B1A" stroke="#2a5a99" stroke-width="0.8"/>
+      <circle cx="14" cy="13" r="4" fill="#B8CCDB" opacity="0.4"/>
+      <text x="28" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" dominant-baseline="central">T-12 Operating Stmt</text>
+    </g>
+    <g transform="translate(14, 186)">
+      <rect width="168" height="26" rx="6" fill="#070B1A" stroke="#2a5a99" stroke-width="0.8"/>
+      <circle cx="14" cy="13" r="4" fill="#B8CCDB" opacity="0.4"/>
+      <text x="28" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#a0a0a8" dominant-baseline="central">Concession Schedule</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="236" y1="208" x2="254" y2="208" stroke="#B8CCDB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- ============================================ -->
+  <!-- STAGE 2: METHODOLOGY -->
+  <!-- ============================================ -->
+  <g transform="translate(258, 94)" filter="url(#shadow-md)">
+    <rect width="210" height="228" rx="10" fill="#0D1229" stroke="#5a4420" stroke-width="1"/>
+    <rect width="210" height="4" rx="2" fill="#d4a039" opacity="0.4"/>
+    <circle cx="105" cy="28" r="14" fill="#070B1A" stroke="#d4a039" stroke-width="1.5" filter="url(#glow-amber)"/>
+    <text x="105" y="29" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">2</text>
+    <text x="105" y="56" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">METHODOLOGY</text>
+    <text x="105" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">5-Step Derivation Framework</text>
+
+    <!-- 5 steps -->
+    <g transform="translate(14, 90)">
+      <rect width="182" height="22" rx="5" fill="#070B1A" stroke="#5a4420" stroke-width="0.8"/>
+      <text x="10" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#d4a039" dominant-baseline="central">01</text>
+      <text x="30" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">In-Place Rent Analysis</text>
+    </g>
+    <g transform="translate(14, 118)">
+      <rect width="182" height="22" rx="5" fill="#070B1A" stroke="#5a4420" stroke-width="0.8"/>
+      <text x="10" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#d4a039" dominant-baseline="central">02</text>
+      <text x="30" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Market Rent Derivation</text>
+    </g>
+    <g transform="translate(14, 146)">
+      <rect width="182" height="22" rx="5" fill="#070B1A" stroke="#5a4420" stroke-width="0.8"/>
+      <text x="10" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#d4a039" dominant-baseline="central">03</text>
+      <text x="30" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Concession Adjustment</text>
+    </g>
+    <g transform="translate(14, 174)">
+      <rect width="182" height="22" rx="5" fill="#070B1A" stroke="#5a4420" stroke-width="0.8"/>
+      <text x="10" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#d4a039" dominant-baseline="central">04</text>
+      <text x="30" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Stabilized Rent Projection</text>
+    </g>
+    <g transform="translate(14, 202)">
+      <rect width="182" height="22" rx="5" fill="#070B1A" stroke="#5a4420" stroke-width="0.8"/>
+      <text x="10" y="12" font-family="JetBrains Mono, monospace" font-weight="700" font-size="8" fill="#d4a039" dominant-baseline="central">05</text>
+      <text x="30" y="12" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Validate &amp; Cross-Check</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="472" y1="208" x2="490" y2="208" stroke="#d4a039" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+  <!-- ============================================ -->
+  <!-- STAGE 3: CALCULATION -->
+  <!-- ============================================ -->
+  <g transform="translate(494, 94)" filter="url(#shadow-md)">
+    <rect width="210" height="228" rx="10" fill="#0D1229" stroke="#4a1a1a" stroke-width="1"/>
+    <rect width="210" height="4" rx="2" fill="#c44a4a" opacity="0.4"/>
+    <circle cx="105" cy="28" r="14" fill="#070B1A" stroke="#c44a4a" stroke-width="1.5" filter="url(#glow-red)"/>
+    <text x="105" y="29" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">3</text>
+    <text x="105" y="56" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">CALCULATION</text>
+    <text x="105" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Deterministic Engine</text>
+
+    <!-- Threshold boxes -->
+    <g transform="translate(14, 92)">
+      <rect width="182" height="36" rx="6" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.8"/>
+      <text x="10" y="13" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Variance &gt;3%</text>
+      <rect x="100" y="6" width="72" height="22" rx="4" fill="#5a4420" stroke="#d4a039" stroke-width="0.6"/>
+      <text x="136" y="18" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#d4a039" text-anchor="middle" dominant-baseline="central">FLAG</text>
+    </g>
+    <g transform="translate(14, 134)">
+      <rect width="182" height="36" rx="6" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.8"/>
+      <text x="10" y="13" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Variance &gt;10%</text>
+      <rect x="100" y="6" width="72" height="22" rx="4" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.6"/>
+      <text x="136" y="18" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">MAJOR</text>
+    </g>
+    <g transform="translate(14, 176)">
+      <rect width="182" height="36" rx="6" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.8"/>
+      <text x="10" y="13" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8" dominant-baseline="central">Comp Coverage</text>
+      <rect x="100" y="6" width="72" height="22" rx="4" fill="#070B1A" stroke="#1C2345" stroke-width="0.6"/>
+      <text x="136" y="18" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#a0a0a8" text-anchor="middle" dominant-baseline="central">Min 3</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="708" y1="208" x2="726" y2="208" stroke="#c44a4a" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <!-- ============================================ -->
+  <!-- STAGE 4: OUTPUT -->
+  <!-- ============================================ -->
+  <g transform="translate(730, 94)" filter="url(#shadow-md)">
+    <rect width="196" height="228" rx="10" fill="#0D1229" stroke="#1a4a2c" stroke-width="1"/>
+    <rect width="196" height="4" rx="2" fill="#C44B68" opacity="0.4"/>
+    <circle cx="98" cy="28" r="14" fill="#070B1A" stroke="#C44B68" stroke-width="1.5" filter="url(#glow-green)"/>
+    <text x="98" y="29" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#C44B68" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="98" y="56" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">OUTPUT</text>
+    <text x="98" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">Lender Rent Report</text>
+
+    <!-- Output items -->
+    <g transform="translate(14, 90)">
+      <rect width="168" height="30" rx="6" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.8"/>
+      <text x="14" y="10" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="#C44B68" dominant-baseline="central">Per-Unit Rent Schedule</text>
+      <text x="14" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">unit_type, in_place, lender, delta</text>
+    </g>
+    <g transform="translate(14, 126)">
+      <rect width="168" height="30" rx="6" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.8"/>
+      <text x="14" y="10" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="#C44B68" dominant-baseline="central">Gap Analysis Matrix</text>
+      <text x="14" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">comp_vs_inplace, variance_%</text>
+    </g>
+    <g transform="translate(14, 162)">
+      <rect width="168" height="30" rx="6" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.8"/>
+      <text x="14" y="10" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="#C44B68" dominant-baseline="central">Narrative Analysis</text>
+      <text x="14" y="24" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">methodology_narrative, flags[]</text>
+    </g>
+    <g transform="translate(14, 198)">
+      <rect width="168" height="24" rx="6" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.8"/>
+      <text x="14" y="12" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68" dominant-baseline="central">JSON + DOCX output</text>
+    </g>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <line x1="930" y1="208" x2="948" y2="208" stroke="#C44B68" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- ============================================ -->
+  <!-- STAGE 5: REVIEW -->
+  <!-- ============================================ -->
+  <g transform="translate(952, 94)" filter="url(#shadow-md)">
+    <rect width="210" height="228" rx="10" fill="#0D1229" stroke="#3a2a66" stroke-width="1"/>
+    <rect width="210" height="4" rx="2" fill="#B85A30" opacity="0.4"/>
+    <circle cx="105" cy="28" r="14" fill="#070B1A" stroke="#B85A30" stroke-width="1.5"/>
+    <text x="105" y="29" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#B85A30" text-anchor="middle" dominant-baseline="central">5</text>
+    <text x="105" y="56" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">REVIEW</text>
+    <text x="105" y="74" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94" text-anchor="middle">QA Triple Agent Review</text>
+
+    <!-- Triple agent -->
+    <g transform="translate(14, 90)">
+      <rect width="182" height="34" rx="6" fill="#070B1A" stroke="#3a2a66" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="6" fill="#3a2a66"/>
+      <text x="16" y="17" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#B85A30" text-anchor="middle" dominant-baseline="central">P</text>
+      <text x="32" y="12" font-family="Inter, sans-serif" font-weight="600" font-size="10" fill="#a0a0a8" dominant-baseline="central">Producer</text>
+      <text x="32" y="26" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">Generates the output</text>
+    </g>
+    <g transform="translate(14, 130)">
+      <rect width="182" height="34" rx="6" fill="#070B1A" stroke="#3a2a66" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="6" fill="#3a2a66"/>
+      <text x="16" y="17" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#B85A30" text-anchor="middle" dominant-baseline="central">C</text>
+      <text x="32" y="12" font-family="Inter, sans-serif" font-weight="600" font-size="10" fill="#a0a0a8" dominant-baseline="central">Checker</text>
+      <text x="32" y="26" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">Validates against standards</text>
+    </g>
+    <g transform="translate(14, 170)">
+      <rect width="182" height="34" rx="6" fill="#070B1A" stroke="#3a2a66" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="6" fill="#3a2a66"/>
+      <text x="16" y="17" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#B85A30" text-anchor="middle" dominant-baseline="central">R</text>
+      <text x="32" y="12" font-family="Inter, sans-serif" font-weight="600" font-size="10" fill="#a0a0a8" dominant-baseline="central">Resolver</text>
+      <text x="32" y="26" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#7c7f94" dominant-baseline="central">Arbitrates disagreements</text>
+    </g>
+
+    <!-- Pass/Fail -->
+    <g transform="translate(14, 210)">
+      <rect x="0" y="0" width="86" height="18" rx="4" fill="#1a4a2c" stroke="#C44B68" stroke-width="0.6"/>
+      <text x="43" y="10" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#C44B68" text-anchor="middle" dominant-baseline="central">PASS &#x2713;</text>
+      <rect x="96" y="0" width="86" height="18" rx="4" fill="#4a1a1a" stroke="#c44a4a" stroke-width="0.6"/>
+      <text x="139" y="10" font-family="JetBrains Mono, monospace" font-weight="700" font-size="9" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">FAIL &#x21BB;</text>
+    </g>
+  </g>
+
+  <!-- Loop-back arrow on FAIL (from stage 5 back to stage 2) -->
+  <path d="M 1092 322 L 1092 346 Q 1092 356 1082 356 L 368 356 Q 358 356 358 346 L 358 326" stroke="#c44a4a" stroke-width="1" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="710" y="352" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a" text-anchor="middle">Fail: loop back to methodology</text>
+
+  <!-- ============================================ -->
+  <!-- CREDIT BOX CONFIG — below Methodology -->
+  <!-- ============================================ -->
+  <g transform="translate(258, 376)" filter="url(#shadow-sm)">
+    <rect width="210" height="72" rx="10" fill="#0D1229" stroke="#5a4420" stroke-width="1" stroke-dasharray="6,3"/>
+    <rect width="4" height="72" rx="2" fill="#d4a039"/>
+    <text x="18" y="20" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10" fill="#d4a039">credit_box_config.json</text>
+    <text x="18" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8">Governs ALL thresholds</text>
+    <text x="18" y="54" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Change config = every skill adjusts</text>
+    <!-- Upward arrow to Methodology -->
+    <line x1="105" y1="0" x2="105" y2="-18" stroke="#d4a039" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-amber)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BLOCKING GATE — below Review -->
+  <!-- ============================================ -->
+  <g transform="translate(952, 376)" filter="url(#shadow-sm)">
+    <rect width="210" height="72" rx="10" fill="#0D1229" stroke="#4a1a1a" stroke-width="1.2"/>
+    <rect width="4" height="72" rx="2" fill="#c44a4a"/>
+    <!-- Lock icon -->
+    <g transform="translate(172, 12)">
+      <rect x="4" y="6" width="14" height="11" rx="2" fill="none" stroke="#c44a4a" stroke-width="1"/>
+      <path d="M7 6 V4 a4 4 0 0 1 8 0 V6" fill="none" stroke="#c44a4a" stroke-width="1"/>
+      <circle cx="11" cy="12" r="1.2" fill="#c44a4a"/>
+    </g>
+    <text x="18" y="20" font-family="Inter, sans-serif" font-weight="700" font-size="11" fill="#c44a4a" letter-spacing="1">BLOCKING GATE</text>
+    <text x="18" y="38" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#a0a0a8">Must pass before cash flow</text>
+    <text x="18" y="54" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Phase 10 cannot start until cleared</text>
+    <!-- Upward arrow to Review -->
+    <line x1="105" y1="0" x2="105" y2="-18" stroke="#c44a4a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ANNOTATION BAR — Pattern Description -->
+  <!-- ============================================ -->
+  <g transform="translate(36, 470)">
+    <rect width="1128" height="56" rx="10" fill="#08080a" stroke="#2a2a32" stroke-width="1"/>
+    <text x="564" y="22" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8" text-anchor="middle">Every skill follows this pattern: structured input  &#x2192;  governed methodology  &#x2192;  deterministic calculation  &#x2192;  institutional output  &#x2192;  quality review</text>
+    <text x="564" y="42" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#a0a0a8" text-anchor="middle">The credit box config feeds thresholds to every skill. Change the config, every skill adjusts automatically.</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM BADGE -->
+  <!-- ============================================ -->
+  <g transform="translate(380, 548)">
+    <rect width="440" height="52" rx="12" fill="#0D1229" stroke="#2a5a99" stroke-width="1" filter="url(#shadow-md)"/>
+    <rect width="440" height="3" rx="2" fill="#B8CCDB" opacity="0.25"/>
+    <text x="220" y="24" font-family="Inter, sans-serif" font-weight="600" font-size="13" fill="#e2e2e6" text-anchor="middle">This is ONE of 206 skills.</text>
+    <text x="220" y="42" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle">Each follows this same disciplined pattern.</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM ANNOTATION — Horizontal Context Strip -->
+  <!-- ============================================ -->
+  <g transform="translate(36, 622)">
+    <rect width="1128" height="54" rx="10" fill="#0D1229" stroke="#2a2a32" stroke-width="0.8"/>
+    <!-- 5 micro-labels showing the universal pattern -->
+    <g transform="translate(50, 14)">
+      <rect width="160" height="26" rx="6" fill="#070B1A" stroke="#2a5a99" stroke-width="0.6"/>
+      <text x="80" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">Structured Input</text>
+    </g>
+    <line x1="216" y1="27" x2="236" y2="27" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+    <g transform="translate(240, 14)">
+      <rect width="170" height="26" rx="6" fill="#070B1A" stroke="#5a4420" stroke-width="0.6"/>
+      <text x="85" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#d4a039" text-anchor="middle" dominant-baseline="central">Governed Methodology</text>
+    </g>
+    <line x1="416" y1="27" x2="436" y2="27" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+    <g transform="translate(440, 14)">
+      <rect width="170" height="26" rx="6" fill="#070B1A" stroke="#4a1a1a" stroke-width="0.6"/>
+      <text x="85" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">Deterministic Calc</text>
+    </g>
+    <line x1="616" y1="27" x2="636" y2="27" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+    <g transform="translate(640, 14)">
+      <rect width="170" height="26" rx="6" fill="#070B1A" stroke="#1a4a2c" stroke-width="0.6"/>
+      <text x="85" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#C44B68" text-anchor="middle" dominant-baseline="central">Institutional Output</text>
+    </g>
+    <line x1="816" y1="27" x2="836" y2="27" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow)"/>
+    <g transform="translate(840, 14)">
+      <rect width="170" height="26" rx="6" fill="#070B1A" stroke="#3a2a66" stroke-width="0.6"/>
+      <text x="85" y="14" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#B85A30" text-anchor="middle" dominant-baseline="central">Quality Review</text>
+    </g>
+  </g>
+
+</svg>

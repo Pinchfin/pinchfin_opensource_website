@@ -1,0 +1,1202 @@
+/* ==========================================================================
+   PINCHFIN RESPONSIVE — responsive.css
+   All breakpoints and responsive overrides
+   Version: 2.0.0
+   ========================================================================== */
+
+
+/* ==========================================================================
+   LARGE DESKTOP — max-width: 1440px
+   Subtle adjustments for non-ultra-wide screens
+   ========================================================================== */
+
+@media (max-width: 1440px) {
+
+  /* Slightly reduce max spacing */
+  :root {
+    --space-32: 7rem;
+  }
+
+  /* Reduce hero title scale slightly */
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .page-home .hero__title {
+    font-size: 3.5rem;
+  }
+
+  /* Footer link groups tighten */
+  .footer-links {
+    gap: var(--space-10);
+  }
+
+  /* Demo sidebar slightly narrower */
+  .page-demo__layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   TABLET LANDSCAPE — max-width: 1024px
+   Two-column grids begin tightening, navigation compresses
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+  /* --------------------------------------------------------------------------
+     Typography Scale Down
+     -------------------------------------------------------------------------- */
+  h1 {
+    font-size: var(--size-3xl);
+  }
+
+  h2 {
+    font-size: var(--size-2xl);
+  }
+
+  h3 {
+    font-size: var(--size-xl);
+  }
+
+  .hero__title {
+    font-size: var(--size-3xl);
+  }
+
+  .page-home .hero__title {
+    font-size: var(--size-3xl);
+  }
+
+  /* --------------------------------------------------------------------------
+     Sections — Reduce vertical padding
+     -------------------------------------------------------------------------- */
+  .section {
+    padding: var(--space-16) var(--space-6);
+  }
+
+  .section--generous {
+    padding: var(--space-20) var(--space-6);
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: var(--space-24) var(--space-6);
+  }
+
+  .page-home .hero {
+    min-height: 80vh;
+  }
+
+  /* --------------------------------------------------------------------------
+     Navigation — Tighten spacing
+     -------------------------------------------------------------------------- */
+  .nav-fixed {
+    padding: 0 var(--space-6);
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links__item {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--size-xs);
+  }
+
+  .nav-links__cta {
+    margin-left: var(--space-3);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Card Grid — Tighten gaps
+     -------------------------------------------------------------------------- */
+  .card-grid {
+    gap: var(--space-6);
+  }
+
+  .page-operations__features,
+  .page-community__segments,
+  .page-home__features,
+  .page-home__use-cases,
+  .page-skills__catalog,
+  .page-community__contribute-grid {
+    gap: var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Home Split — Tighten gap
+     -------------------------------------------------------------------------- */
+  .page-home__split {
+    gap: var(--space-10);
+  }
+
+  /* --------------------------------------------------------------------------
+     Card Grid 3-col — Reduce to 2-col
+     -------------------------------------------------------------------------- */
+  .card-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --------------------------------------------------------------------------
+     Architecture Page — Stack overview
+     -------------------------------------------------------------------------- */
+  .page-architecture__overview {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .page-architecture__overview-text {
+    padding-right: 0;
+  }
+
+  .page-architecture__flow {
+    grid-template-columns: 1fr;
+  }
+
+  /* --------------------------------------------------------------------------
+     Workflow Page — Tighten phase detail
+     -------------------------------------------------------------------------- */
+  .page-workflow__phase-detail {
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Operations Page — Tighten grids
+     -------------------------------------------------------------------------- */
+  .page-operations__metrics {
+    gap: var(--space-4);
+  }
+
+  .page-operations__integrations {
+    gap: var(--space-3);
+  }
+
+  /* --------------------------------------------------------------------------
+     Demo Page — Narrower sidebar
+     -------------------------------------------------------------------------- */
+  .page-demo__layout {
+    grid-template-columns: 260px 1fr;
+  }
+
+  /* --------------------------------------------------------------------------
+     Docs Page — Narrower sidebar
+     -------------------------------------------------------------------------- */
+  .page-docs__layout {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-8);
+  }
+
+  /* --------------------------------------------------------------------------
+     Footer — Tighten
+     -------------------------------------------------------------------------- */
+  .footer {
+    padding: var(--space-16) var(--space-6) var(--space-10);
+  }
+
+  .footer__top {
+    gap: var(--space-10);
+  }
+
+  .footer-links {
+    gap: var(--space-8);
+  }
+
+  /* --------------------------------------------------------------------------
+     Stat Strip — Tighten
+     -------------------------------------------------------------------------- */
+  .stat-strip {
+    gap: var(--space-8);
+  }
+
+  .stat-strip__value {
+    font-size: var(--size-2xl);
+  }
+}
+
+
+/* ==========================================================================
+   TABLET PORTRAIT — max-width: 768px
+   Major layout shift: hamburger nav, single-column cards, stacked layouts
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* --------------------------------------------------------------------------
+     Typography Scale Down Further
+     -------------------------------------------------------------------------- */
+  h1 {
+    font-size: var(--size-2xl);
+  }
+
+  h2 {
+    font-size: var(--size-xl);
+  }
+
+  h3 {
+    font-size: var(--size-lg);
+  }
+
+  .hero__title {
+    font-size: var(--size-2xl);
+  }
+
+  .page-home .hero__title {
+    font-size: var(--size-2xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-base);
+  }
+
+  .text-lead {
+    font-size: var(--size-base);
+  }
+
+  /* Section header smaller */
+  .section-header__title {
+    font-size: var(--size-xl);
+  }
+
+  .section-header__subtitle {
+    font-size: var(--size-base);
+  }
+
+  /* --------------------------------------------------------------------------
+     Navigation — Hamburger Mode
+     -------------------------------------------------------------------------- */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-fixed {
+    height: 56px;
+    padding: 0 var(--space-5);
+  }
+
+  /* --------------------------------------------------------------------------
+     Sections — Reduce padding further
+     -------------------------------------------------------------------------- */
+  .section {
+    padding: var(--space-12) var(--space-5);
+  }
+
+  .section--tight {
+    padding: var(--space-10) var(--space-5);
+  }
+
+  .section--generous {
+    padding: var(--space-16) var(--space-5);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+
+  .container,
+  .container--narrow,
+  .container--wide {
+    padding: 0;
+  }
+
+  /* --------------------------------------------------------------------------
+     Hero — Reduce height
+     -------------------------------------------------------------------------- */
+  .hero {
+    min-height: 60vh;
+    padding: calc(56px + var(--space-12)) var(--space-5) var(--space-12);
+  }
+
+  .page-home .hero {
+    min-height: 70vh;
+    padding-top: calc(56px + var(--space-12));
+  }
+
+  .page-home .hero::after {
+    height: 80px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* --------------------------------------------------------------------------
+     Card Grid — Single column
+     -------------------------------------------------------------------------- */
+  .card-grid,
+  .card-grid--3,
+  .page-operations__features,
+  .page-operations__metrics,
+  .page-operations__integrations,
+  .page-community__segments,
+  .page-home__features,
+  .page-home__use-cases,
+  .page-skills__catalog,
+  .page-community__contribute-grid,
+  .page-pricing__plans {
+    grid-template-columns: 1fr;
+  }
+
+  /* Home page split — stack vertically */
+  .page-home__split {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .page-home__philosophy {
+    position: static;
+  }
+
+  /* Home steps — compact */
+  .page-home__step {
+    grid-template-columns: 48px 1fr;
+    gap: var(--space-4);
+  }
+
+  .page-home__step-number {
+    font-size: var(--size-2xl);
+  }
+
+  /* Home CTA card — reduce padding */
+  .page-home__cta-card {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Stat Strip — Wrap to 2x2
+     -------------------------------------------------------------------------- */
+  .stat-strip {
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .stat-strip__item {
+    min-width: calc(50% - var(--space-6));
+  }
+
+  .stat-strip__value {
+    font-size: var(--size-xl);
+  }
+
+  /* --------------------------------------------------------------------------
+     Sub Tabs — Compact horizontal scroll
+     -------------------------------------------------------------------------- */
+  .nav-sub {
+    padding: var(--space-2) 0;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .nav-sub__item {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Architecture Page — Full stack
+     -------------------------------------------------------------------------- */
+  .page-architecture__overview,
+  .page-architecture__flow {
+    grid-template-columns: 1fr;
+  }
+
+  .page-architecture__flow-visual {
+    min-height: 280px;
+  }
+
+  /* --------------------------------------------------------------------------
+     Workflow Page — Stack phase detail
+     -------------------------------------------------------------------------- */
+  .page-workflow__phase-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .page-workflow__phase-sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-4);
+    scrollbar-width: none;
+  }
+
+  .page-workflow__phase-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-workflow__segments {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .page-workflow__segments::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-workflow__segment {
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+
+  /* --------------------------------------------------------------------------
+     Community Page — Single column
+     -------------------------------------------------------------------------- */
+  .page-community__update-item {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .page-community__update-date {
+    min-width: auto;
+  }
+
+  /* --------------------------------------------------------------------------
+     Demo Page — Stack vertically
+     -------------------------------------------------------------------------- */
+  .page-demo__layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  .page-demo__sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--color-navy-border);
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-4);
+    gap: var(--space-2);
+    max-height: 200px;
+    scrollbar-width: none;
+  }
+
+  .page-demo__sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-demo__sidebar-header {
+    display: none;
+  }
+
+  .page-demo__sidebar .demo-phase {
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+
+  .page-demo__main {
+    padding: var(--space-6);
+    min-height: 60vh;
+  }
+
+  .page-demo__controls {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .page-demo__progress-bar {
+    width: 140px;
+  }
+
+  /* --------------------------------------------------------------------------
+     Docs Page — Stack sidebar above content
+     -------------------------------------------------------------------------- */
+  .page-docs__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .page-docs__sidebar {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-6);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--color-fog-mid);
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-6);
+    scrollbar-width: none;
+  }
+
+  .page-docs__sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-docs__nav-group {
+    min-width: max-content;
+    margin-bottom: 0;
+  }
+
+  .page-docs__nav-heading {
+    margin-bottom: var(--space-2);
+  }
+
+  .page-docs__nav-item {
+    white-space: nowrap;
+  }
+
+  /* --------------------------------------------------------------------------
+     Changelog — Stack date above content
+     -------------------------------------------------------------------------- */
+  .page-changelog__entry {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .page-changelog__date {
+    min-width: auto;
+  }
+
+  /* --------------------------------------------------------------------------
+     Pricing — Single column, constrained width
+     -------------------------------------------------------------------------- */
+  .page-pricing__plans {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* --------------------------------------------------------------------------
+     Footer — Stack
+     -------------------------------------------------------------------------- */
+  .footer {
+    padding: var(--space-8) var(--space-5) var(--space-6);
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .footer__brand {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
+
+  .footer-links__group {
+    min-width: calc(50% - var(--space-4));
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-4);
+  }
+
+  .footer__bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* --------------------------------------------------------------------------
+     Search Filter — Stack
+     -------------------------------------------------------------------------- */
+  .search-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-filter__tags {
+    justify-content: flex-start;
+  }
+
+  /* --------------------------------------------------------------------------
+     Org Chart — Stack vertically
+     -------------------------------------------------------------------------- */
+  .org-chart__level {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .org-chart__node {
+    min-width: 110px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .org-chart__node-name {
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Breadcrumb
+     -------------------------------------------------------------------------- */
+  .breadcrumb {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .breadcrumb__current {
+    width: 100%;
+    text-align: center;
+    order: -1;
+    margin-bottom: var(--space-2);
+  }
+
+  /* --------------------------------------------------------------------------
+     Lead Capture — Stack
+     -------------------------------------------------------------------------- */
+  .lead-capture {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .lead-capture__input {
+    width: 100%;
+  }
+
+  .lead-capture__submit {
+    width: 100%;
+  }
+
+  .lead-capture__submit .btn {
+    width: 100%;
+  }
+
+  /* --------------------------------------------------------------------------
+     Prose pages
+     -------------------------------------------------------------------------- */
+  .page-prose {
+    padding-top: calc(56px + var(--space-10));
+  }
+
+  .page-prose__title {
+    font-size: var(--size-2xl);
+  }
+
+  .page-prose__header {
+    margin-bottom: var(--space-10);
+    padding-bottom: var(--space-8);
+  }
+
+  .page-letter .page-prose__body p {
+    font-size: var(--size-base);
+    margin-bottom: var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Config block
+     -------------------------------------------------------------------------- */
+  .config-block__body pre {
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Timeline
+     -------------------------------------------------------------------------- */
+  .timeline {
+    padding-left: var(--space-8);
+  }
+
+  .timeline__dot {
+    left: calc(-1 * var(--space-8) + 6px);
+    width: 10px;
+    height: 10px;
+  }
+
+  /* --------------------------------------------------------------------------
+     Page spacer for shorter mobile nav
+     -------------------------------------------------------------------------- */
+  .page-spacer {
+    height: 56px;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE — max-width: 480px
+   Single column everything, smaller type, hide non-essential elements
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+  /* --------------------------------------------------------------------------
+     Typography — Final scale down
+     -------------------------------------------------------------------------- */
+  h1 {
+    font-size: var(--size-xl);
+  }
+
+  h2 {
+    font-size: var(--size-lg);
+  }
+
+  h3 {
+    font-size: var(--size-md);
+  }
+
+  .hero__title {
+    font-size: var(--size-xl);
+  }
+
+  .page-home .hero__title {
+    font-size: var(--size-xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-sm);
+  }
+
+  .section-header__title {
+    font-size: var(--size-lg);
+  }
+
+  body {
+    font-size: var(--size-sm);
+  }
+
+  /* --------------------------------------------------------------------------
+     Navigation — Tighter
+     -------------------------------------------------------------------------- */
+  .nav-fixed {
+    padding: 0 var(--space-4);
+  }
+
+  .nav-brand__text {
+    font-size: var(--size-base);
+  }
+
+  .nav-brand__logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-mobile {
+    top: 56px;
+    padding: var(--space-6);
+  }
+
+  .nav-mobile__item {
+    font-size: var(--size-base);
+    padding: var(--space-3) var(--space-3);
+  }
+
+  /* --------------------------------------------------------------------------
+     Sections — Minimum padding
+     -------------------------------------------------------------------------- */
+  .section {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .section--tight {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .section--generous {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+
+  /* --------------------------------------------------------------------------
+     Hero — Compact
+     -------------------------------------------------------------------------- */
+  .hero {
+    min-height: 50vh;
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .page-home .hero {
+    min-height: 60vh;
+    padding-top: calc(56px + var(--space-10));
+  }
+
+  .hero__eyebrow {
+    font-size: 0.625rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* --------------------------------------------------------------------------
+     Cards — Compact padding
+     -------------------------------------------------------------------------- */
+  .card {
+    padding: var(--space-6);
+  }
+
+  .feature-card {
+    padding: var(--space-6) var(--space-6) var(--space-6) var(--space-8);
+  }
+
+  .use-case-card {
+    padding: var(--space-6);
+  }
+
+  .phase-card {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* --------------------------------------------------------------------------
+     Stat Strip — Stack fully vertical
+     -------------------------------------------------------------------------- */
+  .stat-strip {
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .stat-strip__item {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .stat-strip__value {
+    font-size: var(--size-lg);
+  }
+
+  .stat-strip__label {
+    font-size: 0.625rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     Hide Non-Essential Elements
+     -------------------------------------------------------------------------- */
+  .hero__eyebrow .badge {
+    display: none;
+  }
+
+  .illustration-frame__caption {
+    display: none;
+  }
+
+  /* Hide secondary footer links on mobile */
+  .footer__bottom-links {
+    display: none;
+  }
+
+  /* Org chart — minimal */
+  .org-chart__connector {
+    height: var(--space-4);
+  }
+
+  .org-chart__node {
+    min-width: 90px;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .org-chart__node-role {
+    display: none;
+  }
+
+  /* --------------------------------------------------------------------------
+     Demo Page — Minimal
+     -------------------------------------------------------------------------- */
+  .page-demo__sidebar {
+    padding: var(--space-3);
+  }
+
+  .page-demo__sidebar .demo-phase {
+    min-width: 130px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .page-demo__main {
+    padding: var(--space-4);
+  }
+
+  .page-demo__controls {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .page-demo__progress-bar {
+    width: 100px;
+  }
+
+  /* --------------------------------------------------------------------------
+     Config Block — Compact
+     -------------------------------------------------------------------------- */
+  .config-block__header {
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .config-block__body {
+    padding: var(--space-4);
+  }
+
+  .config-block__body pre {
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Footer — Compact
+     -------------------------------------------------------------------------- */
+  .footer {
+    padding: var(--space-6) var(--space-4) var(--space-4);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .footer-links__group {
+    min-width: 100%;
+  }
+
+  .footer__bottom {
+    padding-top: var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Buttons — Full width on mobile
+     -------------------------------------------------------------------------- */
+  .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --------------------------------------------------------------------------
+     Prose Pages — Compact
+     -------------------------------------------------------------------------- */
+  .page-prose__title {
+    font-size: var(--size-xl);
+  }
+
+  .page-prose__body h2 {
+    font-size: var(--size-lg);
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+  }
+
+  .page-prose__body h3 {
+    font-size: var(--size-md);
+    margin-top: var(--space-6);
+  }
+
+  /* --------------------------------------------------------------------------
+     Pricing — Extra compact
+     -------------------------------------------------------------------------- */
+  .page-pricing__plan {
+    padding: var(--space-6);
+  }
+
+  .page-pricing__plan-price {
+    font-size: var(--size-2xl);
+  }
+
+  /* --------------------------------------------------------------------------
+     Changelog — Compact
+     -------------------------------------------------------------------------- */
+  .page-changelog__entry {
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+
+  .page-changelog__title {
+    font-size: var(--size-base);
+  }
+
+  /* --------------------------------------------------------------------------
+     Timeline — Tighter
+     -------------------------------------------------------------------------- */
+  .timeline {
+    padding-left: var(--space-8);
+  }
+
+  .timeline::before {
+    left: 11px;
+  }
+
+  .timeline__dot {
+    left: calc(-1 * var(--space-8) + 4px);
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline__item {
+    padding-bottom: var(--space-8);
+  }
+
+  .timeline__title {
+    font-size: var(--size-base);
+  }
+
+  /* --------------------------------------------------------------------------
+     Nav Sub — Scrollable, smaller items
+     -------------------------------------------------------------------------- */
+  .nav-sub__item {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--size-xs);
+  }
+
+  /* --------------------------------------------------------------------------
+     Disclaimer — Even smaller
+     -------------------------------------------------------------------------- */
+  .disclaimer {
+    font-size: 0.625rem;
+    padding: var(--space-4) 0;
+    margin-top: var(--space-8);
+  }
+}
+
+
+/* ==========================================================================
+   ULTRA-NARROW — max-width: 360px
+   Edge case: very small phones
+   ========================================================================== */
+
+@media (max-width: 360px) {
+
+  .hero__title {
+    font-size: var(--size-lg);
+  }
+
+  .page-home .hero__title {
+    font-size: var(--size-lg);
+  }
+
+  .hero {
+    min-height: 45vh;
+    padding: var(--space-12) var(--space-3);
+  }
+
+  .section {
+    padding: var(--space-8) var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
+
+  .feature-card {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6);
+  }
+
+  .nav-fixed {
+    padding: 0 var(--space-3);
+  }
+
+  .footer {
+    padding: var(--space-4) var(--space-3) var(--space-3);
+  }
+
+  .stat-strip__value {
+    font-size: var(--size-md);
+  }
+}
+
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+
+  /* Hide interactive elements */
+  .nav-fixed,
+  .nav-mobile,
+  .nav-hamburger,
+  .nav-sub,
+  .btn,
+  .lead-capture,
+  .search-filter,
+  .demo-container,
+  .page-demo__sidebar,
+  .page-demo__controls,
+  .breadcrumb,
+  .footer {
+    display: none !important;
+  }
+
+  /* Reset backgrounds */
+  body {
+    background: white;
+    color: black;
+  }
+
+  .section--navy,
+  .section--orange-strip,
+  .section--rose {
+    background: white !important;
+    color: black !important;
+  }
+
+  .section--navy h1,
+  .section--navy h2,
+  .section--navy h3,
+  .section--navy h4,
+  .section--navy h5,
+  .section--navy h6 {
+    color: black !important;
+  }
+
+  .section--navy p,
+  .section--navy .text-lead {
+    color: #333 !important;
+  }
+
+  /* Remove shadows and transforms */
+  * {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  /* Full-width layout */
+  .container,
+  .container--narrow {
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  /* Ensure links show URLs */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript"]::after {
+    content: "";
+  }
+
+  /* Page breaks */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

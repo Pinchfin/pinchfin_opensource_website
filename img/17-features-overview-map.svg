@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" font-family="Inter, sans-serif">
+  <title>System Features Overview — 18 Cross-Cutting Capabilities</title>
+  <desc>Visual map of 18 system features organized by category: Workflow Controls, Credit Logic, Data Management, Quality Assurance, Formatting and Style, Business Rules. pinchfin dark theme.</desc>
+
+  <defs>
+    <filter id="shadow-sm" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="shadow-md" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C44B68" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C44B68" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a039" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d4a039" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B85A30" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#B85A30" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c44a4a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#c44a4a" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="grad-teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a8a8a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3a8a8a" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- BACKGROUND -->
+  <!-- ============================================ -->
+  <rect width="1200" height="920" rx="16" fill="#070B1A"/>
+
+  <!-- ============================================ -->
+  <!-- TITLE BLOCK -->
+  <!-- ============================================ -->
+  <text x="600" y="38" text-anchor="middle" font-weight="300" font-size="28" fill="#e2e2e6" letter-spacing="0.5">System Features Overview</text>
+  <text x="600" y="60" text-anchor="middle" font-weight="400" font-size="13" fill="#a0a0a8">18 cross-cutting capabilities embedded across the underwriting platform</text>
+
+  <!-- Thin divider -->
+  <line x1="200" y1="74" x2="1000" y2="74" stroke="#2a2a30" stroke-width="0.5"/>
+
+  <!-- ============================================ -->
+  <!-- ROW 1: WORKFLOW CONTROLS (5) + CREDIT LOGIC (3) -->
+  <!-- ============================================ -->
+
+  <!-- WORKFLOW CONTROLS — Category Card -->
+  <g filter="url(#shadow-md)">
+    <rect x="24" y="90" width="700" height="244" rx="12" fill="#0D1229" stroke="#2a5a99" stroke-width="0.6"/>
+  </g>
+  <!-- Category header bar -->
+  <rect x="24" y="90" width="700" height="32" rx="12" fill="url(#grad-blue)"/>
+  <rect x="24" y="110" width="700" height="12" fill="url(#grad-blue)"/>
+  <rect x="28" y="94" width="3" height="24" rx="1.5" fill="#B8CCDB"/>
+  <text x="42" y="111" font-weight="400" font-size="13" fill="#B8CCDB" letter-spacing="1">WORKFLOW CONTROLS</text>
+  <text x="692" y="111" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" opacity="0.7">5 features</text>
+
+  <!-- Feature 1: Operator Context Brief -->
+  <rect x="38" y="134" width="210" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="50" y="153" font-weight="400" font-size="11" fill="#e2e2e6">Operator Context Brief</text>
+  <text x="50" y="168" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">Phase -1</text>
+  <text x="50" y="184" font-weight="400" font-size="9.5" fill="#7c7f94">Captures deal narrative,</text>
+  <text x="50" y="196" font-weight="400" font-size="9.5" fill="#7c7f94">nuance flags, scope before</text>
+  <text x="50" y="208" font-weight="400" font-size="9.5" fill="#7c7f94">any analysis begins</text>
+
+  <!-- Feature 2: Dual Scenario Requirement -->
+  <rect x="260" y="134" width="210" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="272" y="153" font-weight="400" font-size="11" fill="#e2e2e6">Dual Scenario Requirement</text>
+  <text x="272" y="168" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a">Blocking Gate — Phase 10</text>
+  <text x="272" y="184" font-weight="400" font-size="9.5" fill="#7c7f94">Every cash flow produces</text>
+  <text x="272" y="196" font-weight="400" font-size="9.5" fill="#7c7f94">Sponsor Proforma + Lender</text>
+  <text x="272" y="208" font-weight="400" font-size="9.5" fill="#7c7f94">Underwrite. Sizing uses Lender.</text>
+
+  <!-- Feature 3: Phased Execution (4-Segment) -->
+  <rect x="482" y="134" width="228" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="494" y="153" font-weight="400" font-size="11" fill="#e2e2e6">Phased Execution Model</text>
+  <text x="494" y="168" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B8CCDB">4 Segments</text>
+  <text x="494" y="184" font-weight="400" font-size="9.5" fill="#7c7f94">Foundation → Analysis →</text>
+  <text x="494" y="196" font-weight="400" font-size="9.5" fill="#7c7f94">Synthesis → Decision. State files</text>
+  <text x="494" y="208" font-weight="400" font-size="9.5" fill="#7c7f94">per segment for multi-session.</text>
+
+  <!-- Feature 4: 8-Document Model -->
+  <rect x="38" y="234" width="210" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="50" y="253" font-weight="400" font-size="11" fill="#e2e2e6">8-Document Model</text>
+  <text x="50" y="268" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">Per-Deal Output Standard</text>
+  <text x="50" y="284" font-weight="400" font-size="9.5" fill="#7c7f94">7 analytical docs + 1 IC Memo.</text>
+  <text x="50" y="296" font-weight="400" font-size="9.5" fill="#7c7f94">JSON = intermediate state,</text>
+  <text x="50" y="308" font-weight="400" font-size="9.5" fill="#7c7f94">DOCX = deliverable.</text>
+
+  <!-- Feature 5: Lender Rent Derivation Gate -->
+  <rect x="260" y="234" width="210" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="272" y="253" font-weight="400" font-size="11" fill="#e2e2e6">Lender Rent Derivation</text>
+  <text x="272" y="268" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a">Blocking Gate — Phase 6A</text>
+  <text x="272" y="284" font-weight="400" font-size="9.5" fill="#7c7f94">Independent lender rent before</text>
+  <text x="272" y="296" font-weight="400" font-size="9.5" fill="#7c7f94">cash flow. Never accept broker</text>
+  <text x="272" y="308" font-weight="400" font-size="9.5" fill="#7c7f94">rents. Variance thresholds.</text>
+
+  <!-- ============================================ -->
+  <!-- CREDIT LOGIC — Category Card -->
+  <!-- ============================================ -->
+  <g filter="url(#shadow-md)">
+    <rect x="740" y="90" width="436" height="244" rx="12" fill="#0D1229" stroke="#5a3020" stroke-width="0.6"/>
+  </g>
+  <rect x="740" y="90" width="436" height="32" rx="12" fill="url(#grad-red)"/>
+  <rect x="740" y="110" width="436" height="12" fill="url(#grad-red)"/>
+  <rect x="744" y="94" width="3" height="24" rx="1.5" fill="#c44a4a"/>
+  <text x="758" y="111" font-weight="400" font-size="13" fill="#c44a4a" letter-spacing="1">CREDIT LOGIC</text>
+  <text x="1144" y="111" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#c44a4a" opacity="0.7">3 features</text>
+
+  <!-- Feature 6: 6-Constraint Sizing Waterfall -->
+  <rect x="754" y="134" width="208" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="766" y="153" font-weight="400" font-size="11" fill="#e2e2e6">6-Constraint Waterfall</text>
+  <text x="766" y="168" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a">Authoritative — Never Override</text>
+  <text x="766" y="184" font-weight="400" font-size="9.5" fill="#7c7f94">LTV ≤75%, DSCR ≥1.05x,</text>
+  <text x="766" y="196" font-weight="400" font-size="9.5" fill="#7c7f94">DY ≥7%, LTC ≤80%, Max $100M.</text>
+  <text x="766" y="208" font-weight="400" font-size="9.5" fill="#7c7f94">MIN governs. Always run all.</text>
+
+  <!-- Feature 7: Nuance Gate System -->
+  <rect x="754" y="234" width="208" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="766" y="253" font-weight="400" font-size="11" fill="#e2e2e6">Nuance Gate System</text>
+  <text x="766" y="268" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039">Conditional — Phase 9</text>
+  <text x="766" y="284" font-weight="400" font-size="9.5" fill="#7c7f94">Classifies nuances as GATE-</text>
+  <text x="766" y="296" font-weight="400" font-size="9.5" fill="#7c7f94">KEEPING or CONTAINED.</text>
+  <text x="766" y="308" font-weight="400" font-size="9.5" fill="#7c7f94">Rent control, ground lease, etc.</text>
+
+  <!-- Feature 8: Sponsor Analysis Gate -->
+  <rect x="974" y="134" width="188" height="190" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="986" y="153" font-weight="400" font-size="11" fill="#e2e2e6">Sponsor Analysis Gate</text>
+  <text x="986" y="168" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#c44a4a">Blocking Gate — Phase 3</text>
+  <text x="986" y="184" font-weight="400" font-size="9.5" fill="#7c7f94">Sponsor A/B/C/D tier.</text>
+  <text x="986" y="196" font-weight="400" font-size="9.5" fill="#7c7f94">NO-GO = stop entire</text>
+  <text x="986" y="208" font-weight="400" font-size="9.5" fill="#7c7f94">workflow immediately.</text>
+  <!-- Mini gate icon -->
+  <rect x="1008" y="226" width="60" height="22" rx="4" fill="none" stroke="#c44a4a" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="1038" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a">GO / NO-GO</text>
+
+  <!-- ============================================ -->
+  <!-- ROW 2: DATA MANAGEMENT (4) + QUALITY ASSURANCE (3) -->
+  <!-- ============================================ -->
+
+  <!-- DATA MANAGEMENT — Category Card -->
+  <g filter="url(#shadow-md)">
+    <rect x="24" y="350" width="580" height="244" rx="12" fill="#0D1229" stroke="#2a5a3a" stroke-width="0.6"/>
+  </g>
+  <rect x="24" y="350" width="580" height="32" rx="12" fill="url(#grad-green)"/>
+  <rect x="24" y="370" width="580" height="12" fill="url(#grad-green)"/>
+  <rect x="28" y="354" width="3" height="24" rx="1.5" fill="#C44B68"/>
+  <text x="42" y="371" font-weight="400" font-size="13" fill="#C44B68" letter-spacing="1">DATA MANAGEMENT</text>
+  <text x="572" y="371" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#C44B68" opacity="0.7">4 features</text>
+
+  <!-- Feature 9: Read-Before-Research -->
+  <rect x="38" y="394" width="268" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="50" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Read-Before-Research Protocol</text>
+  <text x="50" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">Master Repo → Then Perplexity</text>
+  <text x="50" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">Check master_repo BEFORE external</text>
+  <text x="50" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">research. Load existing data as baseline.</text>
+  <text x="50" y="468" font-weight="400" font-size="9.5" fill="#7c7f94">Write back after analysis.</text>
+
+  <!-- Feature 10: Deal Data Record -->
+  <rect x="318" y="394" width="272" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="330" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Deal Data Record System</text>
+  <text x="330" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">VUL-YYYY-NNN Schema</text>
+  <text x="330" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">Standardized JSON + MD per deal.</text>
+  <text x="330" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">Stored in deal folder AND</text>
+  <text x="330" y="468" font-weight="400" font-size="9.5" fill="#7c7f94">master_repo/deal_records/.</text>
+
+  <!-- Feature 11: Freshness Rules -->
+  <rect x="38" y="494" width="268" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="50" y="513" font-weight="400" font-size="11" fill="#e2e2e6">Freshness Rules (Shelf Life)</text>
+  <text x="50" y="528" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">Data Expiration Enforcement</text>
+  <text x="50" y="544" font-weight="400" font-size="9.5" fill="#7c7f94">Markets: 60d | Rent Comps: 90d</text>
+  <text x="50" y="556" font-weight="400" font-size="9.5" fill="#7c7f94">Sale Comps: 180d | Expenses: 365d</text>
+  <text x="50" y="568" font-weight="400" font-size="9.5" fill="#7c7f94">Deal Records: permanent</text>
+
+  <!-- Feature 12: Data Services (MCP) -->
+  <rect x="318" y="494" width="272" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="330" y="513" font-weight="400" font-size="11" fill="#e2e2e6">Data Infrastructure (MCP)</text>
+  <text x="330" y="528" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">Phase 2 — 11 Live Tools</text>
+  <text x="330" y="544" font-weight="400" font-size="9.5" fill="#7c7f94">FRED, Census, BLS, FEMA, HUD,</text>
+  <text x="330" y="556" font-weight="400" font-size="9.5" fill="#7c7f94">EPA, Walk Score, Google Maps.</text>
+  <text x="330" y="568" font-weight="400" font-size="9.5" fill="#7c7f94">Fires BEFORE Deal Book creation.</text>
+
+  <!-- ============================================ -->
+  <!-- QUALITY ASSURANCE — Category Card -->
+  <!-- ============================================ -->
+  <g filter="url(#shadow-md)">
+    <rect x="620" y="350" width="556" height="244" rx="12" fill="#0D1229" stroke="#4a3a80" stroke-width="0.6"/>
+  </g>
+  <rect x="620" y="350" width="556" height="32" rx="12" fill="url(#grad-purple)"/>
+  <rect x="620" y="370" width="556" height="12" fill="url(#grad-purple)"/>
+  <rect x="624" y="354" width="3" height="24" rx="1.5" fill="#B85A30"/>
+  <text x="638" y="371" font-weight="400" font-size="13" fill="#B85A30" letter-spacing="1">QUALITY ASSURANCE</text>
+  <text x="1144" y="371" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B85A30" opacity="0.7">3 features</text>
+
+  <!-- Feature 13: Triple-Agent QA -->
+  <rect x="634" y="394" width="170" height="190" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="646" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Triple-Agent QA</text>
+  <text x="646" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30">Producer → Checker → Resolver</text>
+  <text x="646" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">Three-agent review</text>
+  <text x="646" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">on every deliverable.</text>
+  <text x="646" y="472" font-weight="400" font-size="9.5" fill="#7c7f94">Improvement loop:</text>
+  <text x="646" y="484" font-weight="400" font-size="9.5" fill="#7c7f94">last 5 errors read</text>
+  <text x="646" y="496" font-weight="400" font-size="9.5" fill="#7c7f94">before each deal.</text>
+
+  <!-- Feature 14: Skill Chain Audit -->
+  <rect x="816" y="394" width="170" height="190" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="828" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Skill Chain Audit</text>
+  <text x="828" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30">Mandatory Execution Log</text>
+  <text x="828" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">Every skill run logged:</text>
+  <text x="828" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">phase, skill, timestamp,</text>
+  <text x="828" y="468" font-weight="400" font-size="9.5" fill="#7c7f94">status, output file,</text>
+  <text x="828" y="480" font-weight="400" font-size="9.5" fill="#7c7f94">duration. Saved to deal</text>
+  <text x="828" y="492" font-weight="400" font-size="9.5" fill="#7c7f94">folder + central log.</text>
+
+  <!-- Feature 15: Security Checklist -->
+  <rect x="998" y="394" width="164" height="190" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="1010" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Security Checklist</text>
+  <text x="1010" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#B85A30">Pre-Commit Gate</text>
+  <text x="1010" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">No hardcoded creds,</text>
+  <text x="1010" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">parameterized queries,</text>
+  <text x="1010" y="468" font-weight="400" font-size="9.5" fill="#7c7f94">no shell injection,</text>
+  <text x="1010" y="480" font-weight="400" font-size="9.5" fill="#7c7f94">Decimal for money.</text>
+  <text x="1010" y="496" font-weight="400" font-size="9.5" fill="#7c7f94">mypy + ruff + pytest</text>
+
+  <!-- ============================================ -->
+  <!-- ROW 3: FORMATTING & STYLE (3) + BUSINESS RULES (1) -->
+  <!-- ============================================ -->
+
+  <!-- FORMATTING & STYLE — Category Card -->
+  <g filter="url(#shadow-md)">
+    <rect x="24" y="610" width="860" height="148" rx="12" fill="#0D1229" stroke="#5a4a20" stroke-width="0.6"/>
+  </g>
+  <rect x="24" y="610" width="860" height="32" rx="12" fill="url(#grad-amber)"/>
+  <rect x="24" y="630" width="860" height="12" fill="url(#grad-amber)"/>
+  <rect x="28" y="614" width="3" height="24" rx="1.5" fill="#d4a039"/>
+  <text x="42" y="631" font-weight="400" font-size="13" fill="#d4a039" letter-spacing="1">FORMATTING &amp; STYLE</text>
+  <text x="852" y="631" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#d4a039" opacity="0.7">3 features</text>
+
+  <!-- Feature 16: Format Enforcer v2.0 -->
+  <rect x="38" y="654" width="268" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="50" y="673" font-weight="400" font-size="11" fill="#e2e2e6">Format Enforcer v2.0</text>
+  <text x="50" y="688" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039">Pre-Flight Checklist</text>
+  <text x="50" y="704" font-weight="400" font-size="9.5" fill="#7c7f94">Dollar formatting, credit metrics,</text>
+  <text x="50" y="716" font-weight="400" font-size="9.5" fill="#7c7f94">sensitivity tables, conditional color,</text>
+  <text x="50" y="728" font-weight="400" font-size="9.5" fill="#7c7f94">status indicators, structure lock.</text>
+
+  <!-- Feature 17: V3.1 Elevated Design System -->
+  <rect x="318" y="654" width="268" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="330" y="673" font-weight="400" font-size="11" fill="#e2e2e6">V3.1 Elevated Design System</text>
+  <text x="330" y="688" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039">Mandatory for All Documents</text>
+  <text x="330" y="704" font-weight="400" font-size="9.5" fill="#7c7f94">Carbon Slate + Aether palette.</text>
+  <text x="330" y="716" font-weight="400" font-size="9.5" fill="#7c7f94">Calibri ONLY. No colored headers.</text>
+  <text x="330" y="728" font-weight="400" font-size="9.5" fill="#7c7f94">No vertical borders. Steel Grey dividers.</text>
+
+  <!-- Feature 18: Title Page Standard -->
+  <rect x="598" y="654" width="272" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="610" y="673" font-weight="400" font-size="11" fill="#e2e2e6">Title Page Standard</text>
+  <text x="610" y="688" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#d4a039">4 Elements Only</text>
+  <text x="610" y="704" font-weight="400" font-size="9.5" fill="#7c7f94">Document Title, Property Name,</text>
+  <text x="610" y="716" font-weight="400" font-size="9.5" fill="#7c7f94">Address, Unit Count. No dates,</text>
+  <text x="610" y="728" font-weight="400" font-size="9.5" fill="#7c7f94">versions, sponsors, or loan amounts.</text>
+
+  <!-- ============================================ -->
+  <!-- BUSINESS RULES — Category Card -->
+  <!-- ============================================ -->
+  <g filter="url(#shadow-md)">
+    <rect x="900" y="610" width="276" height="148" rx="12" fill="#0D1229" stroke="#3a5a5a" stroke-width="0.6"/>
+  </g>
+  <rect x="900" y="610" width="276" height="32" rx="12" fill="url(#grad-teal)"/>
+  <rect x="900" y="630" width="276" height="12" fill="url(#grad-teal)"/>
+  <rect x="904" y="614" width="3" height="24" rx="1.5" fill="#3a8a8a"/>
+  <text x="918" y="631" font-weight="400" font-size="13" fill="#3a8a8a" letter-spacing="1">BUSINESS RULES</text>
+  <text x="1144" y="631" text-anchor="end" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#3a8a8a" opacity="0.7">1 feature</text>
+
+  <!-- Feature: Broker Request Cap -->
+  <rect x="914" y="654" width="248" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+  <text x="926" y="673" font-weight="400" font-size="11" fill="#e2e2e6">Broker Request Cap</text>
+  <text x="926" y="688" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#3a8a8a">Cardinal Rule</text>
+  <text x="926" y="704" font-weight="400" font-size="9.5" fill="#7c7f94">NEVER recommend a loan</text>
+  <text x="926" y="716" font-weight="400" font-size="9.5" fill="#7c7f94">amount exceeding the</text>
+  <text x="926" y="728" font-weight="400" font-size="9.5" fill="#7c7f94">broker's original request.</text>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM SUMMARY BAR -->
+  <!-- ============================================ -->
+  <rect x="24" y="778" width="1152" height="50" rx="10" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
+
+  <!-- Badge: Total Features -->
+  <rect x="52" y="790" width="90" height="26" rx="6" fill="#0D1229" stroke="#B8CCDB" stroke-width="0.6"/>
+  <text x="97" y="808" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB">18 Features</text>
+
+  <!-- Badge: Categories -->
+  <rect x="162" y="790" width="90" height="26" rx="6" fill="#0D1229" stroke="#C44B68" stroke-width="0.6"/>
+  <text x="207" y="808" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68">6 Categories</text>
+
+  <!-- Badge: Blocking Gates -->
+  <rect x="272" y="790" width="100" height="26" rx="6" fill="#0D1229" stroke="#c44a4a" stroke-width="0.6"/>
+  <text x="322" y="808" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a">4 Blocking Gates</text>
+
+  <!-- Badge: Cross-Cutting -->
+  <rect x="392" y="790" width="102" height="26" rx="6" fill="#0D1229" stroke="#B85A30" stroke-width="0.6"/>
+  <text x="443" y="808" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B85A30">Cross-Cutting</text>
+
+  <!-- Descriptive text -->
+  <text x="1152" y="800" text-anchor="end" font-weight="400" font-size="10" fill="#7c7f94">Features are not standalone modules — they are behavioral patterns</text>
+  <text x="1152" y="814" text-anchor="end" font-weight="400" font-size="10" fill="#7c7f94">embedded across modules, skills, and system configuration</text>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <text x="600" y="860" text-anchor="middle" font-weight="400" font-size="10" fill="#3a3a42">pinchfin — System Features Overview — 18 Cross-Cutting Capabilities</text>
+  <text x="600" y="878" text-anchor="middle" font-weight="400" font-size="9" fill="#2a2a30">Embedded in CLAUDE.md v3.0 + WORKFLOW_ORCHESTRATOR.md v2.0 + credit_box_config.json v3.0</text>
+
+  <!-- ============================================ -->
+  <!-- CONNECTING LINES (subtle cross-references) -->
+  <!-- ============================================ -->
+  <!-- Dual Scenario → Lender Rent Gate connection -->
+  <line x1="377" y1="234" x2="377" y2="227" stroke="#B8CCDB" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+  <line x1="377" y1="227" x2="340" y2="227" stroke="#B8CCDB" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+
+</svg>

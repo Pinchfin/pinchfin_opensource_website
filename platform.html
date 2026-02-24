@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta -->
+  <title>Platform | pinchfin</title>
+  <meta name="description" content="pinchfin is an AI-native credit operating system for commercial real estate. Modular skills, deterministic engines, explicit configuration, open infrastructure.">
+  <meta name="keywords" content="commercial real estate, CRE, underwriting, open source, DSCR, loan sizing, credit analysis, real estate technology, fintech, bridge lending, multifamily">
+  <meta name="author" content="Veleta Capital Holdings">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pinchfin.com/platform.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pinchfin.com/platform.html">
+  <meta property="og:title" content="Platform &mdash; pinchfin">
+  <meta property="og:description" content="AI-native CRE credit operating system. Modular skills, deterministic engines, explicit configuration, open infrastructure. MIT licensed.">
+  <meta property="og:image" content="https://pinchfin.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="pinchfin">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@toplender">
+  <meta name="twitter:creator" content="@toplender">
+  <meta name="twitter:title" content="Platform &mdash; pinchfin">
+  <meta name="twitter:description" content="AI-native CRE credit operating system. Modular skills, deterministic engines, explicit configuration, open infrastructure. MIT licensed.">
+  <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scoped platform-specific styles -->
+  <style>
+    /* Module grid — 3-column layout for modules tab */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+      align-items: stretch;
+    }
+    .module-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      transition: border-color var(--duration-base) var(--ease-in-out),
+                  box-shadow var(--duration-base) var(--ease-in-out);
+      display: flex;
+      flex-direction: column;
+    }
+    .module-card:hover {
+      border-color: var(--color-fog-deep);
+      box-shadow: var(--shadow-md);
+    }
+    .module-card__title {
+      font-size: var(--size-base);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-tight);
+      margin-bottom: var(--space-2);
+      line-height: 1.3;
+      color: var(--color-charcoal);
+    }
+    .module-card__desc {
+      font-size: var(--size-sm);
+      line-height: var(--leading-normal);
+      color: var(--color-graphite);
+      flex: 1;
+    }
+    .module-card .badge { align-self: flex-start; margin-top: var(--space-3); }
+    /* Sub-tab sticky wrapper */
+    .platform-tabs {
+      position: sticky;
+      top: 64px;
+      z-index: var(--z-sticky);
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-fog-mid);
+      padding: 0 var(--space-8);
+    }
+    .platform-tabs .nav-sub { border-bottom: none; }
+    /* Credit Soul left-aligned header override */
+    .credit-soul-header { text-align: left; margin-left: 0; max-width: none; }
+    .credit-soul-header .section-header__eyebrow { text-align: left; }
+    .credit-soul-header .section-header__title { text-align: left; }
+    @media (max-width: 768px) {
+      .module-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+      .platform-tabs { top: 56px; padding: 0 var(--space-5); }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "pinchfin",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "AI-native commercial real estate credit operating system with modular skills, deterministic engines, explicit configuration, and open infrastructure.",
+    "url": "https://pinchfin.com/platform.html",
+    "author": {
+      "@type": "Organization",
+      "name": "Veleta Capital Holdings",
+      "url": "https://veletacapital.com"
+    },
+    "license": "https://opensource.org/licenses/MIT",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "codeRepository": "https://github.com/pinchfin/pinchfin",
+    "programmingLanguage": ["Python", "TypeScript"],
+    "keywords": "commercial real estate, CRE, underwriting, open source, DSCR, loan sizing, credit analysis"
+  }
+  </script>
+</head>
+
+<body class="page-platform">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="u-sr-only" style="position:absolute;top:-40px;left:0;background:var(--color-navy);color:var(--color-white);padding:8px 16px;z-index:1200;font-size:14px;">Skip to content</a>
+
+  <!-- ════════════════ NAVIGATION ════════════════ -->
+  <nav class="nav-fixed" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand__text"><strong>pinch</strong>fin</span>
+      </a>
+      <div class="nav-links">
+        <a href="platform.html" class="nav-links__item nav-links__item--active" aria-current="page">Platform</a>
+        <a href="architecture.html" class="nav-links__item">Architecture</a>
+        <a href="workflow.html" class="nav-links__item">Workflow</a>
+        <a href="operations.html" class="nav-links__item">Operations</a>
+        <a href="community.html" class="nav-links__item">Community</a>
+        <a href="https://github.com/pinchfin/pinchfin" class="nav-links__cta" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Toggle navigation" data-mobile-toggle>
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" data-mobile-nav aria-hidden="true">
+    <a href="platform.html" class="nav-mobile__item">Platform</a>
+    <a href="architecture.html" class="nav-mobile__item">Architecture</a>
+    <a href="workflow.html" class="nav-mobile__item">Workflow</a>
+    <a href="operations.html" class="nav-mobile__item">Operations</a>
+    <a href="community.html" class="nav-mobile__item">Community</a>
+    <a href="https://github.com/pinchfin/pinchfin" class="nav-mobile__item" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <!-- ════════════════ MAIN CONTENT ════════════════ -->
+  <main id="main-content">
+
+    <!-- Page spacer for fixed nav -->
+    <div class="page-spacer"></div>
+
+    <!-- Sub-Tabs -->
+    <div class="platform-tabs">
+      <div class="container">
+        <nav class="nav-sub" role="tablist" aria-label="Platform sections">
+          <button class="nav-sub__item nav-sub__item--active" data-tab="overview" role="tab" aria-selected="true" tabindex="0">Overview</button>
+          <button class="nav-sub__item" data-tab="modules" role="tab" aria-selected="false" tabindex="-1">Modules</button>
+          <button class="nav-sub__item" data-tab="credit-soul" role="tab" aria-selected="false" tabindex="-1">Credit Soul</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ═══════════ TAB: OVERVIEW ═══════════ -->
+    <div class="tab-panel tab-panel--active" data-panel="overview">
+
+      <!-- Hero — Navy -->
+      <section class="section section--navy hero" aria-labelledby="platform-hero-title">
+        <div class="container" style="text-align: center;">
+          <p class="hero__eyebrow">Open Source CRE Intelligence</p>
+          <h1 class="hero__title" id="platform-hero-title">AI-Native CRE Operating System</h1>
+          <p class="hero__subtitle">pinchfin separates deterministic calculation from artificial inference, enforces sequence discipline through a multi-phase execution framework with enterprise nodes, and documents every constraint, threshold, and assumption in explicit configuration. 200+ sequentially developed skills execute structured analysis across 23+ modules.</p>
+        </div>
+      </section>
+
+      <!-- Stats — Fog -->
+      <section class="section section--fog section--tight">
+        <div class="container">
+          <div class="stat-strip" role="list" aria-label="Platform statistics">
+            <div class="stat-strip__item" role="listitem">
+              <span class="stat-strip__value">200+</span>
+              <span class="stat-strip__label">Skills</span>
+            </div>
+            <div class="stat-strip__item" role="listitem">
+              <span class="stat-strip__value">23</span>
+              <span class="stat-strip__label">Modules</span>
+            </div>
+            <div class="stat-strip__item" role="listitem">
+              <span class="stat-strip__value">80+</span>
+              <span class="stat-strip__label">Nodes</span>
+            </div>
+            <div class="stat-strip__item" role="listitem">
+              <span class="stat-strip__value">5,900+</span>
+              <span class="stat-strip__label">RAG Docs</span>
+            </div>
+            <div class="stat-strip__item" role="listitem">
+              <span class="stat-strip__value">192k+</span>
+              <span class="stat-strip__label">Lines</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Four Foundational Pillars — White -->
+      <section class="section section--white" aria-labelledby="pillars-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">What Is Pinchfin</p>
+            <h2 class="section-header__title" id="pillars-title">Four Foundational Pillars</h2>
+            <p class="section-header__subtitle">Every component in pinchfin reflects a deliberate design choice. Modularity, determinism, explicit configuration, and open, flexible infrastructure are architectural requirements given the nature of the technology constraints.</p>
+          </div>
+          <div class="card-grid">
+            <div class="feature-card">
+              <h3 class="feature-card__title">Modular Skills</h3>
+              <p class="feature-card__text">Each analytical capability is packaged as an independent, deployable unit with documented inputs, logic, and outputs. Adopt one module or the full orchestration layer. Skills compose into workflows without hidden dependencies.</p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-card__title">Deterministic Engines</h3>
+              <p class="feature-card__text">Core financial calculations &mdash; DSCR, sizing, cash flow, waterfalls &mdash; run in pure computation. No generative logic. Same inputs, same outputs. Auditable and testable. The math should not drift.</p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-card__title">Explicit Configuration</h3>
+              <p class="feature-card__text">Credit box constraints, policy thresholds, and sizing parameters live in centralized configuration files. No hardcoded assumptions. Adjustable, versioned, auditable. Every number has a source.</p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-card__title">Open Infrastructure</h3>
+              <p class="feature-card__text">The full repository &mdash; skills, engines, prompts, templates, and corpus &mdash; is open for inspection. Review the architecture. Fork it. Challenge the assumptions. Build on it. MIT licensed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Asset Coverage — Fog -->
+      <section class="section section--fog" aria-labelledby="coverage-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Asset Coverage</p>
+            <h2 class="section-header__title" id="coverage-title">Built for the people who do the work.</h2>
+            <p class="section-header__subtitle">The system is designed for underwriters, analysts, sponsors, and advisors who work in commercial real estate credit. Every module reflects workflows from actual bridge lending, transitional lending, and multifamily finance operations.</p>
+          </div>
+          <div class="card-grid card-grid--3">
+            <div class="card">
+              <p class="card__meta">For Lenders</p>
+              <h3 class="card__title">Standardized credit analysis at origination velocity.</h3>
+              <p class="card__description">Screen inbound transactions against your credit box in minutes. Surface constraint violations, sizing limitations, and due diligence flags before committing origination resources. Configure institutional screening templates, run constraint waterfall sizing, and generate committee-ready packages that enforce consistent underwriting standards across your entire origination pipeline.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">For Sponsors</p>
+              <h3 class="card__title">Institutional-grade pre-submission analysis.</h3>
+              <p class="card__description">Run the same analytical framework lenders apply to your transaction. Submit your deal package and receive independent loan sizing, cash flow underwriting, and sensitivity analysis against institutional credit parameters. Identify constraint limitations, occupancy exposure, and lease expiration concentration before engaging with capital sources. Anticipate due diligence requirements and closing conditions from the lender's perspective.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">For Advisors &amp; Brokers</p>
+              <h3 class="card__title">Structured lender logic for capital markets execution.</h3>
+              <p class="card__description">Deliver institutional-quality analysis to clients and lending counterparties. Pressure-test sponsor business plans, validate pro forma assumptions, and run sensitivity analysis against market-derived parameters before circulating a transaction. Anticipate lender credit questions, identify structural negotiation points, and position transactions for efficient execution using the same constraint waterfall and sizing methodology applied by institutional balance sheet lenders.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who This Is For — White -->
+      <section class="section section--white" aria-labelledby="who-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Who This Is For</p>
+            <h2 class="section-header__title" id="who-title">From analysts to investment committees.</h2>
+          </div>
+          <div class="card-grid">
+            <div class="feature-card">
+              <p class="section-header__eyebrow" style="margin-bottom: var(--space-2); color: var(--color-orange);">Analyst</p>
+              <h3 class="feature-card__title">Speed without shortcuts.</h3>
+              <p class="feature-card__text">Run initial screens in minutes instead of days. Let the framework handle data gathering and constraint checking while you focus on nuance, narrative, and risk interpretation. Every output is transparent &mdash; you can see and override every assumption.</p>
+            </div>
+            <div class="feature-card">
+              <p class="section-header__eyebrow" style="margin-bottom: var(--space-2); color: var(--color-orange);">Underwriter</p>
+              <h3 class="feature-card__title">Consistency at scale.</h3>
+              <p class="feature-card__text">Apply your credit box uniformly across every deal. Identify binding constraints automatically. Generate IC-ready deliverables with deterministic calculations and structured narratives. Reduce rework. Increase throughput.</p>
+            </div>
+            <div class="feature-card">
+              <p class="section-header__eyebrow" style="margin-bottom: var(--space-2); color: var(--color-orange);">Technical Founder</p>
+              <h3 class="feature-card__title">A real architecture to build on.</h3>
+              <p class="feature-card__text">This is not a demo or a chatbot wrapper. It is a production-grade framework with 200+ skills, deterministic engines, a RAG corpus, and explicit configuration. Fork it. Extend it. Build a product on it. MIT licensed.</p>
+            </div>
+            <div class="feature-card">
+              <p class="section-header__eyebrow" style="margin-bottom: var(--space-2); color: var(--color-orange);">IC / Leadership</p>
+              <h3 class="feature-card__title">Audit trail from intake to decision.</h3>
+              <p class="feature-card__text">Every phase produces documented outputs. Credit box configurations are explicit. Constraint waterfalls show the binding factor. The system does not hide assumptions behind a black box. Decision-makers see the full chain.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automated Outputs — Fog -->
+      <section class="section section--fog" aria-labelledby="outputs-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Automated Outputs</p>
+            <h2 class="section-header__title" id="outputs-title">Institutional-grade deliverables.</h2>
+            <p class="section-header__subtitle">The system generates production-ready documents that reflect structured analysis, not summaries. Every output is traceable to its source data and configuration.</p>
+          </div>
+          <div class="card-grid card-grid--3">
+            <div class="card">
+              <h3 class="card__title">IC Memoranda</h3>
+              <p class="card__description">Comprehensive investment committee memoranda with sponsor analysis, market context, risk register, cash flow projections, sizing waterfall, and credit recommendation. 20+ pages of structured analysis.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Excel Models</h3>
+              <p class="card__description">Deterministic Excel workbooks with cash flow projections, sensitivity tables, sizing waterfalls, and return analysis. Formulae-driven, auditable, and production-ready.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Risk Registers</h3>
+              <p class="card__description">Structured risk identification with severity ratings, mitigant mapping, and red flag detection across sponsor, market, property, and financial dimensions.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Credit Summaries</h3>
+              <p class="card__description">One-page deal snapshots with key metrics, constraint waterfall results, and credit highlights. Designed for quick review and pipeline triage.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Market Appendices</h3>
+              <p class="card__description">30+ page market analysis documents with submarket demographics, employment data, rent trends, supply pipeline, and comparable property analysis.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Term Sheets</h3>
+              <p class="card__description">Structured term sheet generation reflecting sized loan parameters, interest rate assumptions, reserve requirements, and covenant packages derived from the credit box configuration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /overview panel -->
+
+    <!-- ═══════════ TAB: MODULES ═══════════ -->
+    <div class="tab-panel" data-panel="modules" aria-hidden="true">
+
+      <section class="section section--fog section--tight" aria-labelledby="modules-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">System Modules</p>
+            <h2 class="section-header__title" id="modules-title">23+ modules. Fully documented.</h2>
+            <p class="section-header__subtitle">Each module encapsulates a specific analytical domain. Modules compose into the execution framework and can be adopted independently or as a complete system.</p>
+          </div>
+          <p style="text-align: center; color: var(--color-graphite); margin-bottom: var(--space-10); font-size: var(--size-sm);">
+            For full module architecture, skill mappings, and execution diagrams, see the
+            <a href="docs.html" style="color: var(--color-charcoal); font-weight: var(--weight-medium); border-bottom: 1px solid var(--color-fog-mid);">Architecture Reference</a>.
+          </p>
+
+          <div class="module-grid">
+            <!-- 18 READY modules -->
+            <div class="module-card">
+              <h3 class="module-card__title">Intake &amp; Context</h3>
+              <p class="module-card__desc">Deal intake processing, operator context briefs, scope definition, and initial data normalization.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Sponsor Analysis</h3>
+              <p class="module-card__desc">Track record evaluation, entity structure review, net worth/liquidity analysis, background verification, and GO/NO-GO gating.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Market &amp; Submarket</h3>
+              <p class="module-card__desc">Demographics, employment, supply pipeline, absorption, rent trends, and market risk scoring with RAG-augmented research.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Rent Roll Analysis</h3>
+              <p class="module-card__desc">Unit-level rent roll normalization, loss-to-lease calculation, concession analysis, occupancy trending, and lease expiration profiling.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Comparable Analysis</h3>
+              <p class="module-card__desc">Rent comps, sale comps, and market positioning with distance-weighted adjustments and data source attribution.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Lender Rent Determination</h3>
+              <p class="module-card__desc">Blocking gate module: establishes lender-approved rent basis from rent roll, comps, and market data before expense analysis.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">T12 Expense Analysis</h3>
+              <p class="module-card__desc">Trailing twelve-month expense parsing, category normalization, per-unit benchmarking, trend analysis, and expense baseline establishment.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Business Plan</h3>
+              <p class="module-card__desc">Renovation scope analysis, budget validation, timeline feasibility, and value-add strategy assessment against market conditions.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Nuance &amp; Red Flags</h3>
+              <p class="module-card__desc">Cross-phase anomaly detection, contextual risk identification (L1-L4), and deal-specific nuance capture from operator context.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Cash Flow Underwriting</h3>
+              <p class="module-card__desc">Dual-scenario cash flow projection, NOI build, debt service calculation, and multi-year pro forma generation with sensitivity analysis.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Valuation</h3>
+              <p class="module-card__desc">As-is and as-stabilized valuation using income approach, direct capitalization, and market-derived cap rates with triangulation.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Sizing &amp; Structuring</h3>
+              <p class="module-card__desc">Five-constraint waterfall (LTV, DSCR, DY, LTC, Max Loan), reserve sizing, holdback structuring, and rate sensitivity.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Risk Assessment</h3>
+              <p class="module-card__desc">Integrated risk register with severity scoring, mitigant mapping, and executive risk summary across all analytical dimensions.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Credit Decision</h3>
+              <p class="module-card__desc">Final credit recommendation synthesis, IC memo generation, and decision documentation with full audit trail.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Due Diligence &amp; Closing</h3>
+              <p class="module-card__desc">Closing checklist management, third-party report tracking, and condition satisfaction monitoring.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Data Services</h3>
+              <p class="module-card__desc">Integrated API layer: Google Maps, Census, BLS, FRED, FEMA, EPA, HUD, Walk Score. 11 tools, 10 external services.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Quality Assurance</h3>
+              <p class="module-card__desc">Three-agent QA system (Producer/Checker/Resolver), arithmetic verification, audit trail, and improvement logging.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Report Generation</h3>
+              <p class="module-card__desc">Eight-document model per deal: Sponsor, Market, Comparable, Rent Roll, Expense, Business Plan, Cash Flow, and IC Memo.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+
+            <!-- Existing modules with updated badges -->
+            <div class="module-card">
+              <h3 class="module-card__title">Marketing &amp; Communications</h3>
+              <p class="module-card__desc">Investor communications, deal marketing materials, and portfolio reporting templates.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Portfolio Monitoring</h3>
+              <p class="module-card__desc">Post-closing asset management, covenant compliance tracking, and portfolio-level analytics.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Investor Reporting</h3>
+              <p class="module-card__desc">Standardized investor reporting packages with waterfall distributions and performance attribution.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+
+            <!-- 8 system-wide modules -->
+            <div class="module-card">
+              <h3 class="module-card__title">Portals &mdash; Borrower, Broker, Investor</h3>
+              <p class="module-card__desc">Dedicated portal interfaces for borrowers, brokers, and investors providing role-appropriate access to deal data, status tracking, and document exchange.</p>
+              <span class="badge badge--blue">Independent Workflows</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Comp Engine</h3>
+              <p class="module-card__desc">Automated comparable property analysis using multiple data sources, adjustment methodologies, and market-derived valuation triangulation.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Document Library / RAG</h3>
+              <p class="module-card__desc">Retrieval-augmented generation backed by 5,900+ curated documents from CREFC, CCIM, OCC, HUD, FNMA, MBA, MAI, and institutional source material. Continuously expanding.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Data &amp; Analytics</h3>
+              <p class="module-card__desc">Centralized data layer integrating external APIs, internal deal history, market indicators, and analytical outputs across all modules.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Capital Markets</h3>
+              <p class="module-card__desc">Loan trading, warehouse facility management, secondary markets, and forward flow logic. Term sheet generation across bridge, agency, CMBS, bank, and life company execution.</p>
+              <span class="badge badge--blue">Independent Workflows</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">Red Flag and Compliance</h3>
+              <p class="module-card__desc">Cross-phase anomaly detection with contextual risk identification across four severity levels (L1-L4). Automated escalation, mitigant mapping, and deal-specific nuance capture.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">In-House Counsel</h3>
+              <p class="module-card__desc">AI legal review automation for loan documents, opinion letters, entity structure validation, and closing condition verification. Cross-phase advisory layer with access to all deal data.</p>
+              <span class="badge badge--positive">Ready</span>
+            </div>
+            <div class="module-card">
+              <h3 class="module-card__title">CRM</h3>
+              <p class="module-card__desc">Contact management, deal pipeline tracking, and relationship intelligence. Integrates with portal logic for borrower, broker, and investor engagement workflows.</p>
+              <span class="badge badge--blue">Independent Workflows</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div><!-- /modules panel -->
+
+    <!-- ═══════════ TAB: CREDIT SOUL ═══════════ -->
+    <div class="tab-panel" data-panel="credit-soul" aria-hidden="true">
+
+      <section class="section section--white section--tight" aria-labelledby="credit-soul-title">
+        <div class="container container--narrow">
+          <div class="section-header credit-soul-header">
+            <p class="section-header__eyebrow">Credit Soul</p>
+            <h2 class="section-header__title" id="credit-soul-title">The system reflects your credit judgment &mdash; not a generic model.</h2>
+          </div>
+
+          <div style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+            <p style="margin-bottom: var(--space-6);">
+              Every lender has a credit philosophy. It shapes how they view risk, which deals they pursue, what metrics they prioritize, and where they draw hard lines. In most AI systems, this philosophy is invisible &mdash; buried in training data or abstracted away by a model that has never sat in a credit committee.
+            </p>
+            <p>
+              pinchfin introduces the concept of a <strong style="color: var(--color-charcoal); font-weight: var(--weight-medium);">Credit Soul</strong>: an explicit, configurable representation of your firm's credit judgment. It is not a prompt. It is a structured configuration layer that governs how the system evaluates deals, weights risks, applies constraints, and generates recommendations.
+            </p>
+          </div>
+
+          <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-8); font-size: var(--size-2xl); font-weight: var(--weight-light);">The Transcript Exercise</h3>
+          <p style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-10);">
+            To build your Credit Soul, pinchfin uses a structured transcript exercise. This is a guided conversation where you articulate your firm's credit philosophy through concrete scenarios and real decisions. The system captures your responses and translates them into configuration parameters.
+          </p>
+
+          <div class="card-grid" style="margin-bottom: var(--space-16);">
+            <div class="card">
+              <p class="card__meta">Step 1</p>
+              <h3 class="card__title">Define Your Risk Appetite</h3>
+              <p class="card__description">What DSCR floor do you use? What LTV ceilings? How do you think about going-in versus stabilized metrics? The system asks concrete questions and maps your answers to constraint waterfall parameters.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">Step 2</p>
+              <h3 class="card__title">Articulate Your Philosophy</h3>
+              <p class="card__description">How do you view lease-up risk? What is your position on interest-only periods? How do you evaluate sponsor strength versus collateral quality? These preferences shape analytical weighting across every module.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">Step 3</p>
+              <h3 class="card__title">Set Your Boundaries</h3>
+              <p class="card__description">Define hard stops: maximum loan size, geographic restrictions, property type exclusions, minimum sponsor experience. These become non-negotiable gates in the execution framework.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">Step 4</p>
+              <h3 class="card__title">Validate Against Real Deals</h3>
+              <p class="card__description">Run your Credit Soul against historical deals. Compare system recommendations to actual committee decisions. Calibrate until the system reflects your judgment with fidelity.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-8); font-size: var(--size-2xl); font-weight: var(--weight-light);">How to Configure</h3>
+          <p style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-6);">
+            Your Credit Soul lives in <code style="font-family: var(--font-mono); font-size: 0.9em; background: var(--color-fog); padding: 0.15em 0.4em; border-radius: 4px;">credit_box_config.json</code>. It controls constraint thresholds, sizing parameters, risk weights, and analytical priorities. Changes propagate instantly across all modules. No redeployment required.
+          </p>
+          <p style="color: var(--color-graphite); line-height: var(--leading-relaxed);">
+            The Credit Soul is not static. As your firm's credit philosophy evolves, the configuration evolves with it. Version control tracks every change. Audit trails document every decision. Your credit judgment is preserved and reproducible.
+          </p>
+        </div>
+      </section>
+    </div><!-- /credit-soul panel -->
+
+  </main>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);">
+          <p class="footer__brand-name"><strong>pinch</strong>fin</p>
+          <p class="footer__brand-desc">Open source credit operating system for commercial real estate. Built by a lender who needed better tools.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Platform</p>
+            <a href="platform.html" class="footer-links__item">Overview</a>
+            <a href="architecture.html" class="footer-links__item">Architecture</a>
+            <a href="workflow.html" class="footer-links__item">Workflow</a>
+            <a href="operations.html" class="footer-links__item">Operations</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Resources</p>
+            <a href="community.html" class="footer-links__item">Community</a>
+            <a href="letter.html" class="footer-links__item">Builder's Note</a>
+            <a href="manual.html" class="footer-links__item">User Manual</a>
+            <a href="docs.html" class="footer-links__item">Documentation</a>
+            <a href="changelog.html" class="footer-links__item">Changelog</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Legal</p>
+            <a href="terms.html" class="footer-links__item">Terms of Service</a>
+            <a href="conduct.html" class="footer-links__item">Code of Conduct</a>
+            <a href="https://github.com/pinchfin/pinchfin" class="footer-links__item" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. Released under MIT License.</p>
+        <div class="footer__bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="conduct.html">Conduct</a>
+          <a href="mailto:bmurphy@veletacapital.com">Contact</a>
+          <a href="https://x.com/toplender" target="_blank" rel="noopener noreferrer">@toplender</a>
+        </div>
+      </div>
+      <p class="disclaimer" style="margin-top: var(--space-6);">
+        pinchfin is an analytical framework, not financial advice. All outputs require independent verification by qualified professionals. Credit decisions remain the sole responsibility of the operator. Past analytical performance does not guarantee future accuracy. No representation is made regarding the completeness or reliability of any output.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+
+</body>
+</html>

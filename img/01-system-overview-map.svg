@@ -1,0 +1,492 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" fill="none">
+  <title>pinchfin System Overview Map</title>
+  <desc>Complete system architecture showing the canonical underwriting workflow phases as a connected spine with module clusters, infrastructure, and platform applications.</desc>
+  <defs>
+    <linearGradient id="glow-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="spine-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8CCDB" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#B8CCDB" stop-opacity="0.10"/>
+      <stop offset="85%" stop-color="#B8CCDB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#B8CCDB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1229"/>
+      <stop offset="100%" stop-color="#070B1A"/>
+    </linearGradient>
+    <filter id="shadow-sm">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow-accent">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#B8CCDB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow-spine">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#B8CCDB" flood-opacity="0.20"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#B8CCDB"/>
+    </marker>
+    <marker id="arrow-dim" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="7" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#1C2345"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="920" rx="16" fill="#070B1A"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.03">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="0" y1="800" x2="1200" y2="800" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="920" stroke="#B8CCDB" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="52" font-family="Inter, sans-serif" font-weight="300" font-size="30" fill="#e2e2e6" text-anchor="middle" letter-spacing="1">System Overview Map</text>
+  <text x="600" y="76" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#7c7f94" text-anchor="middle" letter-spacing="2">PINCHFIN UNDERWRITING PLATFORM</text>
+
+  <!-- Stat badges -->
+  <g transform="translate(40, 38)">
+    <rect width="90" height="30" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="45" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">206 Skills</text>
+  </g>
+  <g transform="translate(140, 38)">
+    <rect width="82" height="30" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="41" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">60 Nodes</text>
+  </g>
+  <g transform="translate(232, 38)">
+    <rect width="100" height="30" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1"/>
+    <text x="50" y="15" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">24 Modules</text>
+  </g>
+
+  <!-- Category Legend -->
+  <g transform="translate(870, 96)">
+    <circle cx="0" cy="0" r="4" fill="#B8CCDB"/>
+    <text x="10" y="4" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Analytical</text>
+    <circle cx="80" cy="0" r="4" fill="#6adada"/>
+    <text x="90" y="4" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Platform</text>
+    <circle cx="148" cy="0" r="4" fill="#6a9aaa"/>
+    <text x="158" y="4" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Infrastructure</text>
+    <circle cx="248" cy="0" r="4" fill="#9a9aba"/>
+    <text x="258" y="4" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="#7c7f94">Enterprise</text>
+  </g>
+
+  <!-- ====== SPINE GLOW BACKGROUND ====== -->
+  <rect x="40" y="430" width="1120" height="60" rx="30" fill="url(#spine-glow)"/>
+
+  <!-- Spine connecting line -->
+  <line x1="70" y1="460" x2="1130" y2="460" stroke="#1C2345" stroke-width="2" filter="url(#glow-spine)"/>
+
+  <!-- ====== MAIN SPINE — Canonical Workflow Phases ====== -->
+
+  <!-- Phase -1: Operator Context Brief -->
+  <g>
+    <circle cx="70" cy="460" r="18" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5" filter="url(#glow-accent)"/>
+    <text x="70" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="10" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">-1</text>
+    <text x="70" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Context</text>
+    <text x="70" y="502" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Brief</text>
+  </g>
+
+  <!-- Phase 1: Document Intake & Registry -->
+  <g>
+    <circle cx="138" cy="460" r="18" fill="#0D1229" stroke="#6a9aaa" stroke-width="1.5"/>
+    <text x="138" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#6a9aaa" text-anchor="middle" dominant-baseline="central">1</text>
+    <text x="138" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Intake</text>
+  </g>
+
+  <!-- Phase 2: Data Infrastructure Pull & Deal Book -->
+  <g>
+    <circle cx="206" cy="460" r="18" fill="#0D1229" stroke="#9a9aba" stroke-width="1.5"/>
+    <text x="206" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#9a9aba" text-anchor="middle" dominant-baseline="central">2</text>
+    <text x="206" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Data Pull</text>
+  </g>
+
+  <!-- Phase 3: Sponsor & Counterparty Analysis (GATE) -->
+  <g>
+    <circle cx="274" cy="460" r="18" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5"/>
+    <text x="274" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">3</text>
+    <text x="274" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Sponsor</text>
+    <!-- GATE indicator -->
+    <rect x="259" y="500" width="30" height="12" rx="3" fill="#4a1a1a"/>
+    <text x="274" y="509" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle">GATE</text>
+  </g>
+
+  <!-- Phase 4: Market & Submarket Analysis -->
+  <g>
+    <circle cx="342" cy="460" r="18" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5"/>
+    <text x="342" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">4</text>
+    <text x="342" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Market</text>
+  </g>
+
+  <!-- Phase 5: Rent Roll Analysis -->
+  <g>
+    <circle cx="410" cy="460" r="18" fill="#0D1229" stroke="#C44B68" stroke-width="1.5"/>
+    <text x="410" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68" text-anchor="middle" dominant-baseline="central">5</text>
+    <text x="410" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Rent Roll</text>
+  </g>
+
+  <!-- Phase 6: Comparable Analysis & Synthesis -->
+  <g>
+    <circle cx="478" cy="460" r="18" fill="#0D1229" stroke="#d4a039" stroke-width="1.5"/>
+    <text x="478" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">6</text>
+    <text x="478" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Comps</text>
+  </g>
+
+  <!-- Phase 6A: Lender Underwritten Rent (half-step, CRITICAL GATE) -->
+  <g>
+    <circle cx="522" cy="460" r="12" fill="#0D1229" stroke="#c44a4a" stroke-width="1.5"/>
+    <text x="522" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="8" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">6A</text>
+    <text x="522" y="484" font-family="Inter, sans-serif" font-weight="400" font-size="7" fill="#7c7f94" text-anchor="middle">Lndr Rent</text>
+    <rect x="509" y="492" width="26" height="10" rx="3" fill="#4a1a1a"/>
+    <text x="522" y="500" font-family="JetBrains Mono, monospace" font-weight="400" font-size="6" fill="#c44a4a" text-anchor="middle">GATE</text>
+  </g>
+
+  <!-- Phase 7: Expense Normalization Analysis (GATE) -->
+  <g>
+    <circle cx="566" cy="460" r="18" fill="#0D1229" stroke="#d4a039" stroke-width="1.5"/>
+    <text x="566" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">7</text>
+    <text x="566" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Expense</text>
+    <!-- GATE indicator -->
+    <rect x="551" y="500" width="30" height="12" rx="3" fill="#4a1a1a"/>
+    <text x="566" y="509" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle">GATE</text>
+  </g>
+
+  <!-- Phase 8: Business Plan / Capex (Conditional) -->
+  <g>
+    <circle cx="634" cy="460" r="18" fill="#0D1229" stroke="#d4a039" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="634" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#d4a039" text-anchor="middle" dominant-baseline="central">8</text>
+    <text x="634" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Biz Plan</text>
+  </g>
+
+  <!-- Phase 9: Nuance Gates (Conditional) -->
+  <g>
+    <circle cx="702" cy="460" r="18" fill="#0D1229" stroke="#B85A30" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="702" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B85A30" text-anchor="middle" dominant-baseline="central">9</text>
+    <text x="702" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Nuance</text>
+  </g>
+
+  <!-- Phase 10: Cash Flow Underwriting -->
+  <g>
+    <circle cx="770" cy="460" r="18" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5"/>
+    <text x="770" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">10</text>
+    <text x="770" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Cash Flow</text>
+  </g>
+
+  <!-- Phase 11: Valuation & Third-Party Reviews -->
+  <g>
+    <circle cx="838" cy="460" r="18" fill="#0D1229" stroke="#B85A30" stroke-width="1.5"/>
+    <text x="838" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B85A30" text-anchor="middle" dominant-baseline="central">11</text>
+    <text x="838" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Valuation</text>
+  </g>
+
+  <!-- Phase 12: Loan Sizing & Deal Structuring (GATE) -->
+  <g>
+    <circle cx="906" cy="460" r="18" fill="#0D1229" stroke="#4adaaa" stroke-width="1.5"/>
+    <text x="906" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#4adaaa" text-anchor="middle" dominant-baseline="central">12</text>
+    <text x="906" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Sizing</text>
+    <!-- GATE indicator -->
+    <rect x="891" y="500" width="30" height="12" rx="3" fill="#4a1a1a"/>
+    <text x="906" y="509" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle">GATE</text>
+  </g>
+
+  <!-- Phase 13: Risk Analysis & Sensitivities -->
+  <g>
+    <circle cx="974" cy="460" r="18" fill="#0D1229" stroke="#c44a4a" stroke-width="1.5"/>
+    <text x="974" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#c44a4a" text-anchor="middle" dominant-baseline="central">13</text>
+    <text x="974" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Risk</text>
+  </g>
+
+  <!-- Phase 14: Credit Decision & Recommendation Memo -->
+  <g>
+    <circle cx="1042" cy="460" r="18" fill="#0D1229" stroke="#B8CCDB" stroke-width="1.5" filter="url(#glow-accent)"/>
+    <text x="1042" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#B8CCDB" text-anchor="middle" dominant-baseline="central">14</text>
+    <text x="1042" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">IC Memo</text>
+  </g>
+
+  <!-- Phase 15: Due Diligence & Closing -->
+  <g>
+    <circle cx="1110" cy="460" r="18" fill="#0D1229" stroke="#C44B68" stroke-width="1.5" filter="url(#glow-accent)"/>
+    <text x="1110" y="460" font-family="JetBrains Mono, monospace" font-weight="400" font-size="11" fill="#C44B68" text-anchor="middle" dominant-baseline="central">15</text>
+    <text x="1110" y="492" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8" text-anchor="middle">Closing</text>
+  </g>
+
+  <!-- ====== ROW 1: ANALYTICAL ENGINE MODULES (8 modules) ====== -->
+
+  <!-- Sponsor Analysis (Phase 3) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="48" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#2a5a99" stroke-width="1"/>
+    <rect x="48" y="120" width="4" height="56" rx="2" fill="#B8CCDB"/>
+    <text x="62" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Sponsor Analysis</text>
+    <text x="62" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">5 skills</text>
+  </g>
+  <line x1="110" y1="176" x2="274" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Market Research (Phase 4) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="182" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#2a5a99" stroke-width="1"/>
+    <rect x="182" y="120" width="4" height="56" rx="2" fill="#B8CCDB"/>
+    <text x="196" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Market Research</text>
+    <text x="196" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">2 skills</text>
+  </g>
+  <line x1="244" y1="176" x2="342" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Comp Analysis (Phase 6) — CRITICAL MODULE -->
+  <g filter="url(#shadow-sm)">
+    <rect x="316" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#5a4420" stroke-width="1"/>
+    <rect x="316" y="120" width="4" height="56" rx="2" fill="#d4a039"/>
+    <text x="330" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Comp Analysis</text>
+    <text x="330" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">1 skill</text>
+  </g>
+  <line x1="378" y1="176" x2="478" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Rent Roll Analysis (Phase 5) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="450" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#1a4a2c" stroke-width="1"/>
+    <rect x="450" y="120" width="4" height="56" rx="2" fill="#C44B68"/>
+    <text x="464" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Rent Roll Analysis</text>
+    <text x="464" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">8 req + 3 cond</text>
+  </g>
+  <line x1="512" y1="176" x2="410" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Expense Normalization (Phase 7) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="584" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#5a4420" stroke-width="1"/>
+    <rect x="584" y="120" width="4" height="56" rx="2" fill="#d4a039"/>
+    <text x="598" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Expense Analysis</text>
+    <text x="598" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">8 skills</text>
+  </g>
+  <line x1="646" y1="176" x2="566" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Cash Flow Engine (Phase 10) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="718" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#2a5a99" stroke-width="1"/>
+    <rect x="718" y="120" width="4" height="56" rx="2" fill="#B8CCDB"/>
+    <text x="732" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Cash Flow Engine</text>
+    <text x="732" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">4 skills</text>
+  </g>
+  <line x1="780" y1="176" x2="770" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Risk & Sensitivity (Phase 13) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="852" y="120" width="124" height="56" rx="8" fill="url(#card-grad)" stroke="#4a1a1a" stroke-width="1"/>
+    <rect x="852" y="120" width="4" height="56" rx="2" fill="#c44a4a"/>
+    <text x="866" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Risk &amp; Sensitivity</text>
+    <text x="866" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">4 skills</text>
+  </g>
+  <line x1="914" y1="176" x2="974" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Loan Sizing & Structuring (Phase 12) -->
+  <g filter="url(#shadow-sm)">
+    <rect x="986" y="120" width="148" height="56" rx="8" fill="url(#card-grad)" stroke="#1a4a3c" stroke-width="1"/>
+    <rect x="986" y="120" width="4" height="56" rx="2" fill="#4adaaa"/>
+    <text x="1000" y="142" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Loan Sizing &amp; Structuring</text>
+    <text x="1000" y="160" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">2 req + 6 cond</text>
+  </g>
+  <line x1="1060" y1="176" x2="906" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- ====== ROW 2: PLATFORM APPLICATIONS ====== -->
+
+  <!-- CRM / Pipeline -->
+  <g filter="url(#shadow-sm)">
+    <rect x="48" y="220" width="132" height="50" rx="8" fill="url(#card-grad)" stroke="#2a4a4a" stroke-width="1"/>
+    <rect x="48" y="220" width="4" height="50" rx="2" fill="#6adada"/>
+    <text x="62" y="242" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">CRM / Pipeline</text>
+    <text x="62" y="258" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">8 skills</text>
+    <rect x="140" y="222" width="36" height="14" rx="4" fill="#1a4a2c"/>
+    <text x="158" y="232" font-family="Inter, sans-serif" font-weight="500" font-size="7" fill="#C44B68" text-anchor="middle">START</text>
+  </g>
+
+  <!-- Investor Portal -->
+  <g filter="url(#shadow-sm)">
+    <rect x="200" y="290" width="132" height="44" rx="8" fill="url(#card-grad)" stroke="#2a4a4a" stroke-width="1"/>
+    <rect x="200" y="290" width="4" height="44" rx="2" fill="#da6ada"/>
+    <text x="214" y="310" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Investor Portal</text>
+    <text x="214" y="326" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">6 skills</text>
+  </g>
+
+  <!-- Capital Markets -->
+  <g filter="url(#shadow-sm)">
+    <rect x="440" y="290" width="136" height="44" rx="8" fill="url(#card-grad)" stroke="#2a4a4a" stroke-width="1"/>
+    <rect x="440" y="290" width="4" height="44" rx="2" fill="#6adada"/>
+    <text x="454" y="310" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Capital Markets</text>
+    <text x="454" y="326" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">10 skills</text>
+  </g>
+
+  <!-- LOS / Origination -->
+  <g filter="url(#shadow-sm)">
+    <rect x="690" y="290" width="136" height="44" rx="8" fill="url(#card-grad)" stroke="#2a4a4a" stroke-width="1"/>
+    <rect x="690" y="290" width="4" height="44" rx="2" fill="#6a9aaa"/>
+    <text x="704" y="310" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">LOS / Origination</text>
+    <text x="704" y="326" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">8 skills</text>
+  </g>
+
+  <!-- Due Diligence -->
+  <g filter="url(#shadow-sm)">
+    <rect x="350" y="348" width="130" height="44" rx="8" fill="url(#card-grad)" stroke="#3a2a66" stroke-width="1"/>
+    <rect x="350" y="348" width="4" height="44" rx="2" fill="#B85A30"/>
+    <text x="364" y="368" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Due Diligence</text>
+    <text x="364" y="384" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">9 cond skills</text>
+  </g>
+  <line x1="415" y1="392" x2="838" y2="442" stroke="#1C2345" stroke-width="1" marker-end="url(#arrow-dim)"/>
+
+  <!-- Portfolio Mgmt -->
+  <g filter="url(#shadow-sm)">
+    <rect x="940" y="290" width="142" height="44" rx="8" fill="url(#card-grad)" stroke="#4a2a1a" stroke-width="1"/>
+    <rect x="940" y="290" width="4" height="44" rx="2" fill="#da6a4a"/>
+    <text x="954" y="310" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#e2e2e6">Portfolio Mgmt</text>
+    <text x="954" y="326" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">13 skills</text>
+  </g>
+
+  <!-- Connection lines from platform apps to spine -->
+  <line x1="114" y1="270" x2="100" y2="442" stroke="#2a2a32" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+  <line x1="266" y1="334" x2="274" y2="442" stroke="#2a2a32" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="508" y1="334" x2="770" y2="442" stroke="#2a2a32" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="758" y1="334" x2="906" y2="442" stroke="#2a2a32" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="1011" y1="334" x2="1110" y2="442" stroke="#2a2a32" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- ====== BELOW SPINE: INFRASTRUCTURE ====== -->
+  <text x="600" y="540" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle" letter-spacing="3">INFRASTRUCTURE</text>
+  <line x1="200" y1="546" x2="1000" y2="546" stroke="#2a2a32" stroke-width="0.5"/>
+
+  <!-- Data Services -->
+  <g filter="url(#shadow-sm)">
+    <rect x="48" y="565" width="175" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="48" y="565" width="4" height="68" rx="2" fill="#6a9aaa"/>
+    <text x="62" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Data Services</text>
+    <text x="62" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">11 MCP tools</text>
+    <text x="62" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">Census, FRED, BLS, FEMA, HUD</text>
+  </g>
+  <line x1="136" y1="565" x2="206" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- QA System -->
+  <g filter="url(#shadow-sm)">
+    <rect x="240" y="565" width="165" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="240" y="565" width="4" height="68" rx="2" fill="#9a9aba"/>
+    <text x="254" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">QA System</text>
+    <text x="254" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Triple-Agent</text>
+    <text x="254" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">Producer / Checker / Resolver</text>
+  </g>
+  <line x1="322" y1="565" x2="322" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- Master Repository -->
+  <g filter="url(#shadow-sm)">
+    <rect x="422" y="565" width="165" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="422" y="565" width="4" height="68" rx="2" fill="#9a9aba"/>
+    <text x="436" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Master Repository</text>
+    <text x="436" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">5 databases</text>
+    <text x="436" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">Markets, Comps, Expenses</text>
+  </g>
+  <line x1="504" y1="565" x2="504" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- Calculations Library -->
+  <g filter="url(#shadow-sm)">
+    <rect x="604" y="565" width="165" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="604" y="565" width="4" height="68" rx="2" fill="#6a9aaa"/>
+    <text x="618" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Calculations Library</text>
+    <text x="618" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">credit_box_config</text>
+    <text x="618" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">Waterfall, DSCR, DY, LTV</text>
+  </g>
+  <line x1="686" y1="565" x2="686" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- Report Generator -->
+  <g filter="url(#shadow-sm)">
+    <rect x="786" y="565" width="165" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="786" y="565" width="4" height="68" rx="2" fill="#6a9aaa"/>
+    <text x="800" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Report Generator</text>
+    <text x="800" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">V3.1 Elevated</text>
+    <text x="800" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">8-document model</text>
+  </g>
+  <line x1="868" y1="565" x2="868" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- Format Enforcer -->
+  <g filter="url(#shadow-sm)">
+    <rect x="968" y="565" width="155" height="68" rx="8" fill="url(#card-grad)" stroke="#2a2a32" stroke-width="1"/>
+    <rect x="968" y="565" width="4" height="68" rx="2" fill="#9a9aba"/>
+    <text x="982" y="586" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#e2e2e6">Format Enforcer</text>
+    <text x="982" y="602" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">System-wide</text>
+    <text x="982" y="618" font-family="Inter, sans-serif" font-weight="400" font-size="8" fill="#a0a0a8">Style, layout, branding</text>
+  </g>
+  <line x1="1045" y1="565" x2="1045" y2="478" stroke="#1C2345" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- ====== EXECUTION SEGMENTS ====== -->
+  <text x="600" y="680" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle" letter-spacing="3">EXECUTION SEGMENTS</text>
+  <line x1="200" y1="686" x2="1000" y2="686" stroke="#2a2a32" stroke-width="0.5"/>
+
+  <!-- Segment 1: Foundation & Research (Phases -1 through 4) -->
+  <g>
+    <rect x="48" y="700" width="268" height="52" rx="8" fill="#0D1229" stroke="#2a5a99" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="64" y="720" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#B8CCDB">Segment 1</text>
+    <text x="165" y="720" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Foundation &amp; Research</text>
+    <text x="64" y="738" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Phases -1 through 4</text>
+  </g>
+
+  <!-- Segment 2: Analysis & Synthesis (Phases 5 through 9) -->
+  <g>
+    <rect x="332" y="700" width="268" height="52" rx="8" fill="#0D1229" stroke="#1a4a2c" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="348" y="720" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#C44B68">Segment 2</text>
+    <text x="446" y="720" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Analysis &amp; Synthesis</text>
+    <text x="348" y="738" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Phases 5 through 9</text>
+  </g>
+
+  <!-- Segment 3: Cash Flow & Sizing (Phases 10 through 12) -->
+  <g>
+    <rect x="616" y="700" width="248" height="52" rx="8" fill="#0D1229" stroke="#5a4420" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="632" y="720" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#d4a039">Segment 3</text>
+    <text x="732" y="720" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Cash Flow &amp; Sizing</text>
+    <text x="632" y="738" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Phases 10 through 12</text>
+  </g>
+
+  <!-- Segment 4: Decision & Closing (Phases 13 through 15) -->
+  <g>
+    <rect x="880" y="700" width="268" height="52" rx="8" fill="#0D1229" stroke="#4a1a1a" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="896" y="720" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#c44a4a">Segment 4</text>
+    <text x="994" y="720" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#a0a0a8">Decision &amp; Closing</text>
+    <text x="896" y="738" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#7c7f94">Phases 13 through 15</text>
+  </g>
+
+  <!-- Segment arrows -->
+  <line x1="316" y1="726" x2="332" y2="726" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="726" x2="616" y2="726" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="864" y1="726" x2="880" y2="726" stroke="#1C2345" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ====== BOTTOM BAR ====== -->
+  <rect x="48" y="776" width="1104" height="40" rx="8" fill="#0D1229" stroke="#2a2a32" stroke-width="1"/>
+  <text x="600" y="800" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#7c7f94" text-anchor="middle" letter-spacing="1">Canonical Workflow — Phase 6A shown as half-step — Dashed borders = conditional</text>
+
+  <!-- Half-step legend -->
+  <g transform="translate(48, 830)">
+    <circle cx="10" cy="10" r="8" fill="none" stroke="#B8CCDB" stroke-width="1.5"/>
+    <text x="24" y="14" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Main phase</text>
+    <circle cx="110" cy="10" r="6" fill="none" stroke="#c44a4a" stroke-width="1.5"/>
+    <text x="122" y="14" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Half-step (6A)</text>
+    <rect x="190" y="2" width="30" height="14" rx="3" fill="#4a1a1a"/>
+    <text x="205" y="13" font-family="JetBrains Mono, monospace" font-weight="400" font-size="7" fill="#c44a4a" text-anchor="middle">GATE</text>
+    <text x="228" y="14" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Blocking gate</text>
+    <circle cx="320" cy="10" r="8" fill="none" stroke="#d4a039" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="334" y="14" font-family="Inter, sans-serif" font-weight="400" font-size="9" fill="#7c7f94">Conditional</text>
+  </g>
+
+  <!-- Corner branding -->
+  <text x="1156" y="900" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#1C2345" text-anchor="end">pinchfin.com</text>
+</svg>
