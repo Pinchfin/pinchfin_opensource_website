@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta -->
+  <title>Nuance Gate &mdash; pinchfin</title>
+  <meta name="description" content="The Nuance Gate Module captures, researches, and operationalizes every deal-specific complexity across every counterparty channel. Three-agent architecture, 10-phase deep research engine, 16 analytical skills.">
+  <meta name="keywords" content="commercial real estate, CRE, nuance, deal complexity, rent control, ground leases, tax abatements, underwriting, AI, institutional intelligence">
+  <meta name="author" content="Veleta Capital Holdings">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pinchfin.com/nuance-gate.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pinchfin.com/nuance-gate.html">
+  <meta property="og:title" content="Nuance Gate &mdash; pinchfin">
+  <meta property="og:description" content="The cross-cutting intelligence module that captures, researches, and operationalizes every deal-specific complexity. Three-agent architecture, 16 analytical skills, 10-phase deep research engine.">
+  <meta property="og:image" content="https://pinchfin.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="pinchfin">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@toplender">
+  <meta name="twitter:creator" content="@toplender">
+  <meta name="twitter:title" content="Nuance Gate &mdash; pinchfin">
+  <meta name="twitter:description" content="The cross-cutting intelligence module that captures, researches, and operationalizes every deal-specific complexity. Three-agent architecture, 16 analytical skills, 10-phase deep research engine.">
+  <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scoped nuance-gate-specific styles -->
+  <style>
+    /* ======================================================================
+       NUANCE GATE PAGE — Scoped Styles
+       ====================================================================== */
+
+    /* --- Hero ------------------------------------------------------------ */
+    .page-nuance-gate .hero {
+      min-height: 70vh;
+      padding-top: calc(64px + var(--space-16));
+    }
+
+    .page-nuance-gate .hero__title {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-nuance-gate .hero__subtitle {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Nuance Tag Cloud ------------------------------------------------ */
+    .nuance-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      justify-content: center;
+      max-width: 880px;
+      margin: var(--space-10) auto 0;
+    }
+
+    .nuance-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-2) var(--space-4);
+      font-family: var(--font-primary);
+      font-size: var(--size-sm);
+      font-weight: var(--weight-regular);
+      color: var(--color-graphite);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-full);
+      transition: border-color var(--duration-fast) var(--ease-in-out),
+                  color var(--duration-fast) var(--ease-in-out);
+    }
+
+    .nuance-tag:hover {
+      border-color: var(--color-orange);
+      color: var(--color-orange);
+    }
+
+    .nuance-tag--highlight {
+      border-color: var(--color-fog-deep);
+      color: var(--color-charcoal);
+      font-weight: var(--weight-medium);
+    }
+
+    .nuance-tag--highlight:hover {
+      border-color: var(--color-orange);
+      color: var(--color-orange);
+    }
+
+    /* --- Three-Agent Pipeline -------------------------------------------- */
+    .agent-pipeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .agent-card {
+      flex: 1;
+      padding: var(--space-8);
+      background-color: var(--color-navy-mid);
+      border: 1px solid var(--color-navy-border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .agent-card:hover {
+      border-color: var(--color-navy-dim);
+      box-shadow: var(--shadow-navy);
+    }
+
+    .agent-card__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      font-family: var(--font-mono);
+      font-size: var(--size-base);
+      font-weight: var(--weight-medium);
+      color: var(--color-orange);
+      border: 1px solid var(--color-orange);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+      flex-shrink: 0;
+    }
+
+    .agent-card__role {
+      font-family: var(--font-mono);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      color: var(--color-orange);
+      margin-bottom: var(--space-3);
+    }
+
+    .agent-card__title {
+      font-size: var(--size-lg);
+      font-weight: var(--weight-regular);
+      color: var(--color-white);
+      margin-bottom: var(--space-4);
+    }
+
+    .agent-card__text {
+      font-size: var(--size-sm);
+      color: var(--color-navy-text);
+      line-height: var(--leading-normal);
+      flex-grow: 1;
+      margin-bottom: var(--space-6);
+    }
+
+    .agent-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .agent-card__tag {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-1) var(--space-3);
+      font-family: var(--font-mono);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-regular);
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-navy-text);
+      background-color: var(--color-navy-light);
+      border-radius: var(--radius-full);
+    }
+
+    .agent-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 48px;
+      font-family: var(--font-mono);
+      font-size: var(--size-xl);
+      color: var(--color-navy-dim);
+    }
+
+    /* --- Phase Grid (5x2) ------------------------------------------------ */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-5);
+    }
+
+    .phase-tile {
+      padding: var(--space-6);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--duration-base) var(--ease-in-out),
+                  box-shadow var(--duration-base) var(--ease-in-out),
+                  transform var(--duration-fast) var(--ease-out);
+    }
+
+    .phase-tile:hover {
+      border-color: var(--color-fog-deep);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .phase-tile__number {
+      font-family: var(--font-mono);
+      font-size: var(--size-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-orange);
+      margin-bottom: var(--space-2);
+    }
+
+    .phase-tile__name {
+      font-size: var(--size-base);
+      font-weight: var(--weight-medium);
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-2);
+    }
+
+    .phase-tile__desc {
+      font-size: var(--size-sm);
+      color: var(--color-graphite);
+      line-height: var(--leading-normal);
+    }
+
+    /* --- Counterparty Grid (4x2) ---------------------------------------- */
+    .counterparty-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
+    }
+
+    .counterparty-card {
+      padding: var(--space-6);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--duration-base) var(--ease-in-out),
+                  box-shadow var(--duration-base) var(--ease-in-out);
+    }
+
+    .counterparty-card:hover {
+      border-color: var(--color-fog-deep);
+      box-shadow: var(--shadow-md);
+    }
+
+    .counterparty-card__title {
+      font-size: var(--size-base);
+      font-weight: var(--weight-medium);
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-3);
+    }
+
+    .counterparty-card__text {
+      font-size: var(--size-sm);
+      color: var(--color-graphite);
+      line-height: var(--leading-normal);
+    }
+
+    /* --- Flywheel Layout ------------------------------------------------- */
+    .flywheel-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    .flywheel-item {
+      padding-left: var(--space-6);
+      border-left: 3px solid var(--color-orange);
+      margin-bottom: var(--space-6);
+    }
+
+    .flywheel-item:nth-child(even) {
+      border-left-color: var(--color-rl-blue-deep);
+    }
+
+    .flywheel-item__label {
+      font-size: var(--size-base);
+      font-weight: var(--weight-medium);
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-2);
+    }
+
+    .flywheel-item__text {
+      font-size: var(--size-sm);
+      color: var(--color-graphite);
+      line-height: var(--leading-normal);
+    }
+
+    .flywheel-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-10);
+    }
+
+    .flywheel-ring {
+      position: relative;
+      width: 320px;
+      height: 320px;
+    }
+
+    .flywheel-ring__circle {
+      position: absolute;
+      inset: 0;
+      border: 2px solid var(--color-fog-mid);
+      border-radius: 50%;
+    }
+
+    .flywheel-ring__circle--inner {
+      inset: 40px;
+      border-color: var(--color-fog-deep);
+    }
+
+    .flywheel-ring__step {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-lg);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-medium);
+      color: var(--color-charcoal);
+      text-align: center;
+      line-height: 1.3;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .flywheel-ring__step--top {
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-color: var(--color-orange);
+      color: var(--color-orange);
+    }
+
+    .flywheel-ring__step--right {
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+    }
+
+    .flywheel-ring__step--bottom {
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .flywheel-ring__step--left {
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+    }
+
+    .flywheel-ring__center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-mono);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      color: var(--color-slate);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Curved arrows between steps */
+    .flywheel-ring__arrow {
+      position: absolute;
+      color: var(--color-fog-deep);
+      font-size: var(--size-lg);
+    }
+
+    .flywheel-ring__arrow--tr {
+      top: 22%;
+      right: 18%;
+      transform: rotate(45deg);
+    }
+
+    .flywheel-ring__arrow--br {
+      bottom: 22%;
+      right: 18%;
+      transform: rotate(135deg);
+    }
+
+    .flywheel-ring__arrow--bl {
+      bottom: 22%;
+      left: 18%;
+      transform: rotate(225deg);
+    }
+
+    .flywheel-ring__arrow--tl {
+      top: 22%;
+      left: 18%;
+      transform: rotate(315deg);
+    }
+
+    /* --- Skills Category Cards ------------------------------------------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+    }
+
+    .skill-category-card {
+      padding: var(--space-8);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-fog-mid);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--duration-base) var(--ease-in-out),
+                  box-shadow var(--duration-base) var(--ease-in-out);
+    }
+
+    .skill-category-card:hover {
+      border-color: var(--color-fog-deep);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skill-category-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--color-fog-mid);
+    }
+
+    .skill-category-card__name {
+      font-size: var(--size-md);
+      font-weight: var(--weight-medium);
+      color: var(--color-charcoal);
+    }
+
+    .skill-category-card__count {
+      font-family: var(--font-mono);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      color: var(--color-slate);
+    }
+
+    .skill-category-card__list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .skill-entry {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-3);
+    }
+
+    .skill-entry__id {
+      font-family: var(--font-mono);
+      font-size: var(--size-xs);
+      font-weight: var(--weight-regular);
+      color: var(--color-orange);
+      white-space: nowrap;
+      min-width: 72px;
+    }
+
+    .skill-entry__name {
+      font-size: var(--size-sm);
+      color: var(--color-graphite);
+    }
+
+    /* --- Responsive Overrides -------------------------------------------- */
+    @media (max-width: 1024px) {
+      .phase-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .counterparty-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .agent-pipeline {
+        gap: 0;
+      }
+
+      .agent-arrow {
+        width: 32px;
+        font-size: var(--size-lg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-nuance-gate .hero {
+        min-height: 60vh;
+        padding-top: calc(56px + var(--space-12));
+      }
+
+      .agent-pipeline {
+        flex-direction: column;
+        gap: var(--space-4);
+      }
+
+      .agent-arrow {
+        width: auto;
+        height: 32px;
+        transform: rotate(90deg);
+      }
+
+      .phase-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .counterparty-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flywheel-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .flywheel-visual {
+        order: -1;
+      }
+
+      .flywheel-ring {
+        width: 260px;
+        height: 260px;
+      }
+
+      .flywheel-ring__step {
+        width: 68px;
+        height: 68px;
+        font-size: 0.625rem;
+      }
+
+      .flywheel-ring__circle--inner {
+        inset: 32px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nuance-tags {
+        gap: var(--space-2);
+      }
+
+      .nuance-tag {
+        font-size: var(--size-xs);
+        padding: var(--space-1) var(--space-3);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .phase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flywheel-ring {
+        width: 220px;
+        height: 220px;
+      }
+
+      .flywheel-ring__step {
+        width: 60px;
+        height: 60px;
+      }
+
+      .flywheel-ring__circle--inner {
+        inset: 28px;
+      }
+
+      .agent-card {
+        padding: var(--space-6);
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "pinchfin — Nuance Gate Module",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "The cross-cutting intelligence module that captures, researches, and operationalizes every deal-specific complexity across every counterparty channel. Three-agent architecture, 16 analytical skills, 10-phase deep research engine.",
+    "url": "https://pinchfin.com/nuance-gate.html",
+    "author": {
+      "@type": "Organization",
+      "name": "Veleta Capital Holdings",
+      "url": "https://veletacapital.com"
+    },
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+</head>
+
+<body class="page-nuance-gate">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="u-sr-only" style="position:absolute;top:-40px;left:0;background:var(--color-navy);color:var(--color-white);padding:8px 16px;z-index:1200;font-size:14px;">Skip to content</a>
+
+  <!-- ════════════════ NAVIGATION ════════════════ -->
+  <nav class="nav-fixed" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem">
+        <span class="nav-brand__text"><strong>pinch</strong>fin</span>
+      </a>
+      <div class="nav-links">
+        <a href="platform.html" class="nav-links__item">Platform</a>
+        <a href="architecture.html" class="nav-links__item">Architecture</a>
+        <a href="workflow.html" class="nav-links__item">Workflow</a>
+        <a href="operations.html" class="nav-links__item">Operations</a>
+        <a href="nuance-gate.html" class="nav-links__item nav-links__item--active">Nuance Gate</a>
+        <a href="community.html" class="nav-links__item">Community</a>
+        <a href="https://github.com/pinchfin/pinchfin" class="nav-links__cta" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Toggle navigation" data-mobile-toggle>
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" data-mobile-nav aria-hidden="true">
+    <a href="platform.html" class="nav-mobile__item">Platform</a>
+    <a href="architecture.html" class="nav-mobile__item">Architecture</a>
+    <a href="workflow.html" class="nav-mobile__item">Workflow</a>
+    <a href="operations.html" class="nav-mobile__item">Operations</a>
+    <a href="nuance-gate.html" class="nav-mobile__item">Nuance Gate</a>
+    <a href="community.html" class="nav-mobile__item">Community</a>
+    <a href="https://github.com/pinchfin/pinchfin" class="nav-mobile__item" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+
+  <main id="main-content">
+
+    <!-- ==================================================================
+         SECTION 1: HERO
+         ================================================================== -->
+    <section class="section section--white hero" id="hero" aria-labelledby="ng-hero-headline">
+      <div class="container" style="text-align: center;">
+
+        <p class="hero__eyebrow">Module 24 &mdash; Nuance Gate</p>
+
+        <h1 class="hero__title" id="ng-hero-headline">Every loan has a story.<br>We make sure nothing gets lost.</h1>
+
+        <p class="hero__subtitle">The cross-cutting intelligence module that captures, researches, and operationalizes every deal-specific complexity across every counterparty channel. Rent control, ground leases, tax abatements, title exceptions &mdash; if it&rsquo;s in the deal, it&rsquo;s in the system.</p>
+
+        <!-- Stat Strip -->
+        <div class="stat-strip" role="list" aria-label="Nuance Gate statistics">
+          <div class="stat-strip__item" role="listitem">
+            <span class="stat-strip__value">3</span>
+            <span class="stat-strip__label">Agents</span>
+          </div>
+          <div class="stat-strip__item" role="listitem">
+            <span class="stat-strip__value">16</span>
+            <span class="stat-strip__label">Skills</span>
+          </div>
+          <div class="stat-strip__item" role="listitem">
+            <span class="stat-strip__value">10</span>
+            <span class="stat-strip__label">Research Phases</span>
+          </div>
+          <div class="stat-strip__item" role="listitem">
+            <span class="stat-strip__value">8+</span>
+            <span class="stat-strip__label">Counterparty Channels</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 2: THE PROBLEM
+         ================================================================== -->
+    <section class="section section--fog" id="why-this-exists" aria-labelledby="problem-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">Why This Exists</p>
+          <h2 class="section-header__title" id="problem-headline">These nuances don&rsquo;t come up on every deal. That&rsquo;s exactly the problem.</h2>
+          <p class="section-header__subtitle">Some things you run into all the time. Some things you see once or twice in a career. If you&rsquo;re an agency lender, you live in affordability covenants and ground leases. If you&rsquo;re a transitional lender, some deals are just market rate &mdash; until they&rsquo;re not. The knowledge to handle these complexities lives in the experience of individual practitioners, scattered across emails, calls, and institutional memory that walks out the door when people leave. The Nuance Gate Module turns episodic, experience-dependent knowledge into systematic, compounding organizational intelligence.</p>
+        </div>
+
+        <!-- Nuance Tag Cloud -->
+        <div class="nuance-tags" role="list" aria-label="Nuance categories">
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Rent Control</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Tax Abatement</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Affordability Covenants</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Ground Leases</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Title Exceptions</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Zoning Variances</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Environmental Phase II</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Condo Regime</span>
+          <span class="nuance-tag nuance-tag--highlight" role="listitem">Sponsor Litigation</span>
+          <span class="nuance-tag" role="listitem">Vacancy Decontrol</span>
+          <span class="nuance-tag" role="listitem">421-a</span>
+          <span class="nuance-tag" role="listitem">J-51</span>
+          <span class="nuance-tag" role="listitem">PILOT</span>
+          <span class="nuance-tag" role="listitem">LIHTC</span>
+          <span class="nuance-tag" role="listitem">HAP Contracts</span>
+          <span class="nuance-tag" role="listitem">Master Leases</span>
+          <span class="nuance-tag" role="listitem">TIC Financing</span>
+          <span class="nuance-tag" role="listitem">Survey Encroachments</span>
+          <span class="nuance-tag" role="listitem">Easements</span>
+          <span class="nuance-tag" role="listitem">Nonconforming Use</span>
+          <span class="nuance-tag" role="listitem">CC&amp;Rs</span>
+          <span class="nuance-tag" role="listitem">Conservation Easements</span>
+          <span class="nuance-tag" role="listitem">Vapor Intrusion</span>
+          <span class="nuance-tag" role="listitem">Flood Zone</span>
+          <span class="nuance-tag" role="listitem">Historic Preservation</span>
+          <span class="nuance-tag" role="listitem">Mechanics Liens</span>
+          <span class="nuance-tag" role="listitem">Lis Pendens</span>
+          <span class="nuance-tag" role="listitem">Boundary Disputes</span>
+          <span class="nuance-tag" role="listitem">Entity Complexity</span>
+          <span class="nuance-tag" role="listitem">Insurance Conditions</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 3: THREE-AGENT ARCHITECTURE
+         ================================================================== -->
+    <section class="section section--navy" id="architecture" aria-labelledby="arch-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow" style="color: var(--color-orange);">Architecture</p>
+          <h2 class="section-header__title" id="arch-headline">Three agents. Produce. Review. Resolve.</h2>
+          <p class="section-header__subtitle">Every nuance passes through independent production, validation, and adjudication. The same institutional quality control framework used by the platform&rsquo;s core underwriting engine, applied to the complexity layer that most systems ignore entirely.</p>
+        </div>
+
+        <!-- Agent Pipeline -->
+        <div class="agent-pipeline">
+
+          <!-- Agent 1: Producer -->
+          <div class="agent-card">
+            <span class="agent-card__number">1</span>
+            <p class="agent-card__role">Deep-Dive Synthesis</p>
+            <h3 class="agent-card__title">Producer</h3>
+            <p class="agent-card__text">Monitors every counterparty channel. Ingests emails, transcripts, documents, and broker narratives. Executes continuous nuance scanning across regulatory, structural, physical, and operational dimensions. Generates preliminary nuance briefs with classification, source attribution, and initial impact assessment.</p>
+            <div class="agent-card__tags">
+              <span class="agent-card__tag">Nuance Briefs</span>
+              <span class="agent-card__tag">Classifications</span>
+              <span class="agent-card__tag">Source Maps</span>
+              <span class="agent-card__tag">Impact Flags</span>
+            </div>
+          </div>
+
+          <span class="agent-arrow" aria-hidden="true">&rarr;</span>
+
+          <!-- Agent 2: Reviewer -->
+          <div class="agent-card">
+            <span class="agent-card__number">2</span>
+            <p class="agent-card__role">Zero-Trust Validation</p>
+            <h3 class="agent-card__title">Reviewer</h3>
+            <p class="agent-card__text">Independently validates every nuance brief against the RAG corpus, regulatory databases, credit box constraints, and historical deal precedent. Confirms classification accuracy, verifies source reliability, assesses completeness. Every claim must be independently substantiated.</p>
+            <div class="agent-card__tags">
+              <span class="agent-card__tag">Validation Reports</span>
+              <span class="agent-card__tag">Accuracy Scores</span>
+              <span class="agent-card__tag">Conflict Flags</span>
+              <span class="agent-card__tag">Source Verification</span>
+            </div>
+          </div>
+
+          <span class="agent-arrow" aria-hidden="true">&rarr;</span>
+
+          <!-- Agent 3: Resolver -->
+          <div class="agent-card">
+            <span class="agent-card__number">3</span>
+            <p class="agent-card__role">Reconciliation &amp; Publication</p>
+            <h3 class="agent-card__title">Resolver</h3>
+            <p class="agent-card__text">Reconciles discrepancies between Producer and Reviewer. Executes targeted research to adjudicate conflicts. Publishes resolved nuance records to the deal record and institutional knowledge base. Maintains the master context narrative. Escalates to human review when confidence thresholds are not met.</p>
+            <div class="agent-card__tags">
+              <span class="agent-card__tag">Resolved Records</span>
+              <span class="agent-card__tag">Master Narrative</span>
+              <span class="agent-card__tag">Escalation Tickets</span>
+              <span class="agent-card__tag">Knowledge Index</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 4: DEEP RESEARCH ENGINE
+         ================================================================== -->
+    <section class="section section--white" id="research-engine" aria-labelledby="research-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">Deep Research Engine</p>
+          <h2 class="section-header__title" id="research-headline">Unfamiliar nuance detected. Research cycle initiated.</h2>
+          <p class="section-header__subtitle">When the system encounters a nuance it hasn&rsquo;t previously underwritten, it doesn&rsquo;t guess and it doesn&rsquo;t skip it. It initiates an autonomous ten-phase research cycle that investigates the regulatory framework, market precedent, and multi-stakeholder impact &mdash; then returns a complete dossier to the deal record and indexes the findings permanently.</p>
+        </div>
+
+        <!-- 10 Phase Grid -->
+        <div class="phase-grid">
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">01</p>
+            <p class="phase-tile__name">Detection</p>
+            <p class="phase-tile__desc">Producer identifies nuance not matching any existing template</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">02</p>
+            <p class="phase-tile__name">Corpus Query</p>
+            <p class="phase-tile__desc">Deep search across 5,900+ RAG documents for relevant sources</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">03</p>
+            <p class="phase-tile__name">Regulatory Map</p>
+            <p class="phase-tile__desc">Federal, state, and local regulation identification and compliance mapping</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">04</p>
+            <p class="phase-tile__name">Market Analysis</p>
+            <p class="phase-tile__desc">Prevalence, geographic concentration, and market treatment assessment</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">05</p>
+            <p class="phase-tile__name">Stakeholder Impact</p>
+            <p class="phase-tile__desc">Lender, sponsor, asset, and investor impact modeling</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">06</p>
+            <p class="phase-tile__name">Structural Analysis</p>
+            <p class="phase-tile__desc">Loan structuring, covenants, reserves, and exit strategy implications</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">07</p>
+            <p class="phase-tile__name">Precedent Review</p>
+            <p class="phase-tile__desc">Historical transaction search for analogous encounters and outcomes</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">08</p>
+            <p class="phase-tile__name">Accuracy Screen</p>
+            <p class="phase-tile__desc">Tiered source validation with primary source cross-reference</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">09</p>
+            <p class="phase-tile__name">Synthesis</p>
+            <p class="phase-tile__desc">Final dossier with recommended underwriting approach and risk assessment</p>
+          </div>
+
+          <div class="phase-tile">
+            <p class="phase-tile__number">10</p>
+            <p class="phase-tile__name">Template Creation</p>
+            <p class="phase-tile__desc">Permanent nuance template indexed for future encounter acceleration</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 5: COMMUNICATION CAPTURE
+         ================================================================== -->
+    <section class="section section--fog" id="communication-capture" aria-labelledby="capture-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">Communication Capture</p>
+          <h2 class="section-header__title" id="capture-headline">Every channel. Every counterparty. Every word.</h2>
+          <p class="section-header__subtitle">All communication and input between the firm and counterparties is captured, recorded, analyzed, summarized, and used throughout the business.</p>
+        </div>
+
+        <!-- 8 Counterparty Cards -->
+        <div class="counterparty-grid">
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Sponsors &amp; Borrowers</h3>
+            <p class="counterparty-card__text">Applications, financial statements, business plans, construction budgets, operating histories, and all correspondence</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Brokers</h3>
+            <p class="counterparty-card__text">Deal packages, market comparables, pricing guidance, competitive intelligence, relationship context, and timeline pressures</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Third-Party Providers</h3>
+            <p class="counterparty-card__text">Appraisals, environmental reports, property condition assessments, seismic studies, market studies, and engineering reports</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Title &amp; Escrow</h3>
+            <p class="counterparty-card__text">Title commitments, exception schedules, survey reviews, closing conditions, escrow instructions, and lien searches</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Investors &amp; Capital</h3>
+            <p class="counterparty-card__text">Investment memoranda, subscription agreements, quarterly reports, capital calls, and distribution communications</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Construction &amp; Contractors</h3>
+            <p class="counterparty-card__text">Scope of work, draw requests, change orders, inspection reports, completion certs, and lien waivers</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Property Managers</h3>
+            <p class="counterparty-card__text">Operating reports, rent rolls, maintenance logs, tenant communications, capital improvement tracking, and budgets</p>
+          </div>
+
+          <div class="counterparty-card">
+            <h3 class="counterparty-card__title">Legal Counsel</h3>
+            <p class="counterparty-card__text">Loan document drafts, legal opinions, regulatory analysis, entity structure memoranda, and litigation disclosures</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 6: THE FLYWHEEL
+         ================================================================== -->
+    <section class="section section--white" id="flywheel" aria-labelledby="flywheel-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">Institutional Intelligence</p>
+          <h2 class="section-header__title" id="flywheel-headline">The more deals you run, the smarter the system gets.</h2>
+          <p class="section-header__subtitle">Each transaction adds nuance records, research dossiers, precedent cases, and performance data to the institutional knowledge base. Nuances that once required hours of manual research are recognized and processed in seconds.</p>
+        </div>
+
+        <div class="flywheel-layout">
+
+          <!-- Left column: Impact list -->
+          <div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Underwriting</p>
+              <p class="flywheel-item__text">Faster nuance identification. Deterministic impact modeling. Comprehensive risk assessment informed by precedent and portfolio analytics.</p>
+            </div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Origination</p>
+              <p class="flywheel-item__text">Enhanced market intelligence. Faster sponsor response with informed nuance handling. Competitive positioning through demonstrated expertise.</p>
+            </div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Compliance</p>
+              <p class="flywheel-item__text">Automated regulatory mapping. Continuous monitoring. Audit-ready documentation of nuance identification and resolution.</p>
+            </div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Product</p>
+              <p class="flywheel-item__text">Data-driven identification of market needs. Nuance frequency analysis revealing underserved complexity niches.</p>
+            </div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Portfolio</p>
+              <p class="flywheel-item__text">Concentration monitoring. Performance correlation analysis. Early warning indicators from nuance pattern recognition.</p>
+            </div>
+
+            <div class="flywheel-item">
+              <p class="flywheel-item__label">Investor Relations</p>
+              <p class="flywheel-item__text">Institutional-quality deal narratives. Comprehensive risk disclosure. Demonstrated analytical rigor.</p>
+            </div>
+
+          </div>
+
+          <!-- Right column: Flywheel visual -->
+          <div class="flywheel-visual">
+            <div class="flywheel-ring">
+              <div class="flywheel-ring__circle"></div>
+              <div class="flywheel-ring__circle flywheel-ring__circle--inner"></div>
+
+              <div class="flywheel-ring__step flywheel-ring__step--top">Capture</div>
+              <div class="flywheel-ring__step flywheel-ring__step--right">Research</div>
+              <div class="flywheel-ring__step flywheel-ring__step--bottom">Analyze</div>
+              <div class="flywheel-ring__step flywheel-ring__step--left">Learn</div>
+
+              <span class="flywheel-ring__arrow flywheel-ring__arrow--tr" aria-hidden="true">&rarr;</span>
+              <span class="flywheel-ring__arrow flywheel-ring__arrow--br" aria-hidden="true">&rarr;</span>
+              <span class="flywheel-ring__arrow flywheel-ring__arrow--bl" aria-hidden="true">&rarr;</span>
+              <span class="flywheel-ring__arrow flywheel-ring__arrow--tl" aria-hidden="true">&rarr;</span>
+
+              <div class="flywheel-ring__center">Institutional<br>Intelligence</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 7: SKILLS LIBRARY
+         ================================================================== -->
+    <section class="section section--fog" id="skills-library" aria-labelledby="skills-headline">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">Skills Library</p>
+          <h2 class="section-header__title" id="skills-headline">16 analytical skills. Four functional categories.</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Communication Capture -->
+          <div class="skill-category-card">
+            <div class="skill-category-card__header">
+              <h3 class="skill-category-card__name">Communication Capture</h3>
+              <span class="skill-category-card__count">4 Skills</span>
+            </div>
+            <div class="skill-category-card__list">
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S001</span>
+                <span class="skill-entry__name">Email Thread Ingestion</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S002</span>
+                <span class="skill-entry__name">Call Transcript Processing</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S003</span>
+                <span class="skill-entry__name">Document Intelligence Extraction</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S004</span>
+                <span class="skill-entry__name">Counterparty Communication Registry</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nuance Research -->
+          <div class="skill-category-card">
+            <div class="skill-category-card__header">
+              <h3 class="skill-category-card__name">Nuance Research</h3>
+              <span class="skill-category-card__count">4 Skills</span>
+            </div>
+            <div class="skill-category-card__list">
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S005</span>
+                <span class="skill-entry__name">Autonomous Deep Research Engine</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S006</span>
+                <span class="skill-entry__name">Regulatory Framework Analyzer</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S007</span>
+                <span class="skill-entry__name">Historical Precedent Scanner</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S008</span>
+                <span class="skill-entry__name">Stakeholder Impact Modeler</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthesis & Analysis -->
+          <div class="skill-category-card">
+            <div class="skill-category-card__header">
+              <h3 class="skill-category-card__name">Synthesis &amp; Analysis</h3>
+              <span class="skill-category-card__count">4 Skills</span>
+            </div>
+            <div class="skill-category-card__list">
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S009</span>
+                <span class="skill-entry__name">Master Context Narrative Generator</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S010</span>
+                <span class="skill-entry__name">Nuance Interaction Analyzer</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S011</span>
+                <span class="skill-entry__name">Credit Box Nuance Mapper</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S012</span>
+                <span class="skill-entry__name">Nuance Risk Scoring</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Institutional Learning -->
+          <div class="skill-category-card">
+            <div class="skill-category-card__header">
+              <h3 class="skill-category-card__name">Institutional Learning</h3>
+              <span class="skill-category-card__count">4 Skills</span>
+            </div>
+            <div class="skill-category-card__list">
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S013</span>
+                <span class="skill-entry__name">Nuance Template Builder</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S014</span>
+                <span class="skill-entry__name">Portfolio Nuance Analytics</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S015</span>
+                <span class="skill-entry__name">Compliance &amp; Performance Feedback Loop</span>
+              </div>
+              <div class="skill-entry">
+                <span class="skill-entry__id">NGM-S016</span>
+                <span class="skill-entry__name">Knowledge Base Curator</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SECTION 8: CTA STRIP
+         ================================================================== -->
+    <section class="section section--navy" id="cta-section" aria-labelledby="cta-headline">
+      <div class="container container--narrow u-text-center">
+        <h2 id="cta-headline" style="margin-bottom: var(--space-6);">The nuances define the deal. The system captures them all.</h2>
+        <p style="color: var(--color-navy-dim); font-size: var(--size-md); line-height: var(--leading-relaxed); margin-bottom: var(--space-10);">Module 24 of the pinchfin platform. Cross-cutting intelligence across all 15 canonical phases. One of 24+ modules, 81+ governing nodes, and 216+ analytical skills.</p>
+        <a href="architecture.html" class="btn btn--primary btn--lg">Explore the Architecture <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);">
+          <p class="footer__brand-name"><strong>pinch</strong>fin</p>
+          <p class="footer__brand-desc">Open source credit operating system for commercial real estate. MIT licensed.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Platform</p>
+            <a href="platform.html" class="footer-links__item">Overview</a>
+            <a href="architecture.html" class="footer-links__item">Architecture</a>
+            <a href="workflow.html" class="footer-links__item">Workflow</a>
+            <a href="operations.html" class="footer-links__item">Operations</a>
+            <a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Resources</p>
+            <a href="community.html" class="footer-links__item">Community</a>
+            <a href="letter.html" class="footer-links__item">Builder's Note</a>
+            <a href="manual.html" class="footer-links__item">User Manual</a>
+            <a href="docs.html" class="footer-links__item">Documentation</a>
+            <a href="changelog.html" class="footer-links__item">Changelog</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Legal</p>
+            <a href="terms.html" class="footer-links__item">Terms of Service</a>
+            <a href="conduct.html" class="footer-links__item">Code of Conduct</a>
+            <a href="https://github.com/pinchfin/pinchfin" class="footer-links__item" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. Released under MIT License.</p>
+        <div class="footer__bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="conduct.html">Conduct</a>
+          <a href="mailto:bmurphy@veletacapital.com">Contact</a>
+        </div>
+      </div>
+      <p class="disclaimer" style="margin-top: var(--space-6);">
+        pinchfin is an analytical framework, not financial advice. All outputs require independent verification by qualified professionals. Credit decisions remain the sole responsibility of the operator. Past analytical performance does not guarantee future accuracy. No representation is made regarding the completeness or reliability of any output.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+
+</body>
+</html>
