@@ -471,6 +471,8 @@
   letter-spacing: -0.03em;
   line-height: var(--leading-tight);
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--space-8);
 }
 
@@ -480,6 +482,8 @@
   line-height: var(--leading-relaxed);
   color: var(--color-graphite);
   max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--space-10);
 }
 
