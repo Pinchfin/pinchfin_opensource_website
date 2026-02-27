@@ -2,7 +2,7 @@
   "name": "pinchfin",
   "short_name": "pinchfin",
   "description": "Open Source CRE Credit Operating System — AI-native commercial real estate credit intelligence with 200+ skills, 23+ modules, and 80+ governing nodes.",
-  "start_url": "/",
+  "start_url": "/pf27/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#070B1A",

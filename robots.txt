@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pinchfin.com/sitemap.xml
+Sitemap: https://pinchfin.github.io/pf27/sitemap.xml
