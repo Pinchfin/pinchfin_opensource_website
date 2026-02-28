@@ -3,909 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Manual | pinchfin</title>
-  <meta name="description" content="Complete user manual for pinchfin. Setup, architecture, workflows, API integrations, calculation layer, RAG corpus, and troubleshooting.">
+  <title>pinchfin &mdash; Getting Started with MCP</title>
+  <meta name="description" content="Getting started with pinchfin MCP. Connect the MCP server to your Claude environment and access institutional-grade CRE credit intelligence.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pinchfin.com/manual.html">
-  <meta property="og:title" content="User Manual">
-  <meta property="og:description" content="Complete user manual for pinchfin. Setup, architecture, workflows, API integrations, calculation layer, RAG corpus, and troubleshooting.">
+  <meta property="og:title" content="Getting Started with pinchfin MCP">
+  <meta property="og:description" content="Getting started with pinchfin MCP. Connect the MCP server to your Claude environment and access institutional-grade CRE credit intelligence.">
   <meta property="og:image" content="https://pinchfin.com/img/og-image.png">
   <meta property="og:site_name" content="pinchfin">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="User Manual">
-  <meta name="twitter:description" content="Complete user manual for pinchfin. Setup, architecture, workflows, API integrations, calculation layer, RAG corpus, and troubleshooting.">
+  <meta name="twitter:title" content="Getting Started with pinchfin MCP">
+  <meta name="twitter:description" content="Getting started with pinchfin MCP. Connect the MCP server to your Claude environment and access institutional-grade CRE credit intelligence.">
   <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <style>
-/* ==========================================================================
-   PINCHFIN USER MANUAL — SCOPED STYLES
-   Grey fog, institutional, Cormorant Garamond + Inter + JetBrains Mono
-   ========================================================================== */
-
-.manual-page {
-  --bg-page: #e8e8ec;
-  --bg-card: #f0f0f3;
-  --bg-elevated: #f6f6f8;
-  --bg-inset: #dddde0;
-  --bg-navy: #1a2a3a;
-  --bg-dark: #2f363c;
-  --text-primary: #1a1a1e;
-  --text-body: #3a3a42;
-  --text-mid: #5a5a66;
-  --text-dim: #8a8a96;
-  --text-ghost: #a8a8b4;
-  --accent: #2d4a2d;
-  --accent-soft: rgba(45,74,45,0.08);
-  --accent-border: rgba(45,74,45,0.20);
-  --accent-hover: #3d6a3d;
-  --green-live: #1a5c1a;
-  --green-glow: rgba(26,92,26,0.12);
-  --manual-border: rgba(0,0,0,0.08);
-  --manual-border-strong: rgba(0,0,0,0.14);
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
-  --manual-radius: 10px;
-  --manual-radius-sm: 6px;
-  --sidebar-width: 280px;
-  --nav-height: 64px;
-  --warn-bg: #fdf6ec;
-  --warn-border: #d4a94a;
-  --warn-text: #6b4e1f;
-}
-
-.manual-page {
-  background: var(--bg-page);
-  color: var(--text-body);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Typography */
-.manual-page h1, .manual-page h2, .manual-page h3, .manual-page h4, .manual-page h5 {
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
-  color: var(--text-primary);
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.manual-page h1 { font-size: 52px; font-weight: 600; letter-spacing: -1.5px; margin-bottom: 16px; }
-.manual-page h2 { font-size: 36px; letter-spacing: -0.8px; margin-bottom: 12px; padding-top: 8px; }
-.manual-page h3 { font-size: 26px; letter-spacing: -0.4px; margin-top: 48px; margin-bottom: 12px; }
-.manual-page h4 { font-size: 20px; margin-top: 32px; margin-bottom: 8px; }
-.manual-page h5 { font-size: 17px; margin-top: 24px; margin-bottom: 6px; }
-.manual-page p { margin-bottom: 16px; }
-
-.manual-page .content-inner a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent-border);
-  transition: color 0.2s, border-color 0.2s;
-}
-.manual-page .content-inner a:hover {
-  color: var(--accent-hover);
-  border-bottom-color: var(--accent-hover);
-}
-
-.manual-page strong { font-weight: 600; color: var(--text-primary); }
-
-/* Layout */
-.manual-wrapper { display: flex; min-height: calc(100vh - var(--nav-height)); margin-top: var(--nav-height); }
-
-/* Sidebar */
-.manual-sidebar {
-  position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  width: var(--sidebar-width);
-  height: calc(100vh - var(--nav-height));
-  background: var(--bg-card);
-  border-right: 1px solid var(--manual-border);
-  overflow-y: auto;
-  padding: 32px 0;
-  z-index: 50;
-}
-
-.manual-sidebar-brand { padding: 0 28px 24px; border-bottom: 1px solid var(--manual-border); margin-bottom: 20px; }
-.manual-sidebar-brand .brand-name { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 300; letter-spacing: -0.3px; color: var(--text-primary); }
-.manual-sidebar-brand .brand-name span { font-weight: 600; }
-.manual-sidebar-brand .brand-sub { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-ghost); margin-top: 4px; }
-
-.manual-toc-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-ghost); padding: 16px 28px 8px; }
-.manual-toc-list { list-style: none; padding: 0 12px; margin: 0; }
-.manual-toc-list li { margin: 0; }
-.manual-toc-list a { display: block; padding: 6px 16px; font-size: 13px; font-weight: 400; color: var(--text-mid); text-decoration: none; border: none; border-radius: var(--manual-radius-sm); transition: all 0.15s; line-height: 1.5; }
-.manual-toc-list a:hover { color: var(--text-primary); background: var(--accent-soft); border: none; }
-.manual-toc-list a.active { color: var(--accent); background: var(--accent-soft); font-weight: 500; }
-.manual-toc-divider { height: 1px; background: var(--manual-border); margin: 12px 28px; }
-
-/* Main content area */
-.manual-main { margin-left: var(--sidebar-width); flex: 1; min-width: 0; }
-.manual-content-inner { max-width: 820px; margin: 0 auto; padding: 48px 48px 120px; }
-
-/* Header */
-.manual-header { padding-bottom: 48px; border-bottom: 1px solid var(--manual-border); margin-bottom: 56px; }
-.manual-header .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--green-live); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-.manual-header .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green-live); box-shadow: 0 0 8px var(--green-glow); }
-.manual-header .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--text-mid); letter-spacing: -0.3px; margin-bottom: 24px; font-style: italic; }
-.manual-header .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.3px; }
-
-/* Sections */
-.manual-section { margin-bottom: 64px; }
-.manual-section > h2:first-child { padding-bottom: 12px; border-bottom: 1px solid var(--manual-border); margin-bottom: 24px; }
-
-/* Code */
-.manual-page code { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--bg-inset); padding: 2px 7px; border-radius: 4px; color: var(--text-primary); }
-.manual-page pre { background: var(--bg-navy); border-radius: var(--manual-radius); padding: 28px 32px; overflow-x: auto; margin: 20px 0 24px; line-height: 1.7; }
-.manual-page pre code { background: none; padding: 0; border-radius: 0; color: rgba(255,255,255,0.82); font-size: 13px; }
-.manual-page pre .comment { color: rgba(255,255,255,0.32); font-style: italic; }
-.manual-page pre .prompt { color: #7dae7d; user-select: none; }
-
-/* Callouts */
-.manual-callout { border-radius: var(--manual-radius); padding: 24px 28px; margin: 24px 0; }
-.manual-callout-warning { background: var(--warn-bg); border: 1px solid var(--warn-border); color: var(--warn-text); }
-.manual-callout-warning strong { color: var(--warn-text); }
-.manual-callout-info { background: var(--accent-soft); border: 1px solid var(--accent-border); color: var(--text-body); }
-.manual-callout-note { background: var(--bg-card); border: 1px solid var(--manual-border-strong); border-left: 3px solid var(--accent); color: var(--text-body); }
-.manual-callout-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; display: block; }
-
-/* Tables */
-.manual-page table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
-.manual-page thead th { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); text-align: left; padding: 12px 16px; border-bottom: 2px solid var(--manual-border-strong); font-weight: 500; }
-.manual-page tbody td { padding: 12px 16px; border-bottom: 1px solid var(--manual-border); vertical-align: top; }
-.manual-page tbody tr:hover { background: var(--accent-soft); }
-.manual-page tbody td:first-child { font-weight: 500; color: var(--text-primary); }
-
-/* Lists */
-.manual-page .manual-content-inner ul, .manual-page .manual-content-inner ol { margin: 12px 0 20px 24px; }
-.manual-page .manual-content-inner li { margin-bottom: 6px; }
-.manual-page .manual-content-inner li > ul, .manual-page .manual-content-inner li > ol { margin-top: 6px; margin-bottom: 6px; }
-
-/* Module grid */
-.manual-module-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 32px; }
-.manual-module-card { background: var(--bg-card); border: 1px solid var(--manual-border); border-radius: var(--manual-radius); padding: 20px 24px; transition: box-shadow 0.2s, border-color 0.2s; }
-.manual-module-card:hover { box-shadow: var(--shadow-elevated); border-color: var(--manual-border-strong); }
-.manual-module-card .module-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--text-ghost); margin-bottom: 6px; }
-.manual-module-card h5 { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text-primary); margin: 0 0 6px; }
-.manual-module-card p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin: 0; }
-
-/* Phase flow */
-.manual-phase-flow { display: flex; flex-direction: column; gap: 0; margin: 24px 0 32px; }
-.manual-phase-step { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--manual-border); }
-.manual-phase-step:last-child { border-bottom: none; }
-.manual-phase-marker { flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #e8e8ec; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; }
-.manual-phase-content h5 { margin-top: 0; font-size: 18px; }
-.manual-phase-content p { font-size: 14px; margin-bottom: 0; }
-
-/* Troubleshooting */
-.manual-trouble-item { background: var(--bg-card); border: 1px solid var(--manual-border); border-radius: var(--manual-radius); padding: 20px 24px; margin-bottom: 16px; }
-.manual-trouble-item .trouble-q { font-weight: 600; color: var(--text-primary); margin-bottom: 8px; font-size: 15px; }
-.manual-trouble-item .trouble-a { font-size: 14px; color: var(--text-body); margin-bottom: 0; }
-.manual-trouble-item .trouble-a code { font-size: 12px; }
-
-/* Disclaimer */
-.manual-disclaimer { background: var(--bg-navy); color: rgba(255,255,255,0.7); padding: 32px 36px; border-radius: var(--manual-radius); margin: 24px 0 32px; font-size: 14px; line-height: 1.7; }
-.manual-disclaimer strong { color: rgba(255,255,255,0.95); }
-.manual-disclaimer ul { margin-left: 20px; }
-.manual-disclaimer li { margin-bottom: 4px; }
-
-/* Mobile sidebar toggle */
-.manual-mobile-header {
-  display: none;
-  position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  z-index: 60;
-  padding: 14px 20px;
-  background: rgba(232,232,236,0.92);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--manual-border);
-  align-items: center;
-  justify-content: space-between;
-}
-.manual-mobile-header .brand-name { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 300; color: var(--text-primary); }
-.manual-mobile-header .brand-name span { font-weight: 600; }
-.manual-menu-toggle { background: none; border: 1px solid var(--manual-border-strong); border-radius: var(--manual-radius-sm); padding: 6px 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-mid); cursor: pointer; transition: all 0.2s; }
-.manual-menu-toggle:hover { background: var(--bg-card); border-color: var(--text-dim); }
-
-.manual-sidebar-overlay { display: none; position: fixed; inset: 0; top: var(--nav-height); background: rgba(0,0,0,0.3); z-index: 49; }
-
-/* Sidebar scrollbar */
-.manual-sidebar::-webkit-scrollbar { width: 4px; }
-.manual-sidebar::-webkit-scrollbar-track { background: transparent; }
-.manual-sidebar::-webkit-scrollbar-thumb { background: var(--bg-inset); border-radius: 2px; }
-
-/* Responsive */
-@media (max-width: 900px) {
-  .manual-mobile-header { display: flex; }
-  .manual-sidebar { transform: translateX(-100%); transition: transform 0.3s ease; z-index: 70; }
-  .manual-sidebar.open { transform: translateX(0); }
-  .manual-sidebar-overlay.open { display: block; }
-  .manual-main { margin-left: 0; }
-  .manual-content-inner { padding: 80px 20px 100px; }
-  .manual-page h1 { font-size: 36px; }
-  .manual-page h2 { font-size: 28px; }
-  .manual-page h3 { font-size: 22px; }
-  .manual-module-grid { grid-template-columns: 1fr; }
-  .manual-header .subtitle { font-size: 18px; }
-  .manual-page table { font-size: 12px; }
-  .manual-page thead th, .manual-page tbody td { padding: 8px 10px; }
-  .manual-page pre { padding: 20px; }
-  .manual-page pre code { font-size: 12px; }
-}
-
-@media (max-width: 480px) {
-  .manual-content-inner { padding: 72px 16px 80px; }
-  .manual-page h1 { font-size: 30px; }
-  .manual-phase-step { flex-direction: column; gap: 12px; }
-  .manual-page table { display: block; overflow-x: auto; }
-}
-
-@media print {
-  .manual-sidebar, .manual-mobile-header, .manual-sidebar-overlay, .nav-fixed, .nav-mobile { display: none !important; }
-  .manual-main { margin-left: 0; }
-  .manual-content-inner { max-width: 100%; padding: 20px; }
-  .manual-page pre { background: #f5f5f5 !important; color: #333 !important; border: 1px solid #ccc; }
-  .manual-page pre code { color: #333 !important; }
-}
-  </style>
 </head>
-<body class="manual-page">
+<body class="page-prose">
   <a href="#main-content" class="u-sr-only">Skip to content</a>
   <nav class="nav-fixed" role="navigation" aria-label="Main navigation"><div class="nav-inner"><a href="index.html" class="nav-brand"><span class="nav-brand__text"><strong>pinch</strong>fin</span></a><div class="nav-links"><a href="platform.html" class="nav-links__item">Platform</a><a href="architecture.html" class="nav-links__item">Architecture</a><a href="workflow.html" class="nav-links__item">Workflow</a><a href="operations.html" class="nav-links__item">Operations</a><a href="nuance-gate.html" class="nav-links__item">Nuance Gate</a><a href="community.html" class="nav-links__item">Solutions</a><a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a></div><button class="nav-hamburger" aria-label="Toggle navigation" data-mobile-toggle><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span></button></div></nav>
   <div class="nav-mobile" data-mobile-nav aria-hidden="true"><a href="platform.html" class="nav-mobile__item">Platform</a><a href="architecture.html" class="nav-mobile__item">Architecture</a><a href="workflow.html" class="nav-mobile__item">Workflow</a><a href="operations.html" class="nav-mobile__item">Operations</a><a href="nuance-gate.html" class="nav-mobile__item">Nuance Gate</a><a href="community.html" class="nav-mobile__item">Solutions</a><a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a></div>
 
-  <!-- Manual mobile header -->
-  <div class="manual-mobile-header">
-    <div class="brand-name"><span>pinch</span>fin</div>
-    <button class="manual-menu-toggle" onclick="toggleManualSidebar()" aria-label="Toggle contents">Contents</button>
-  </div>
+  <main id="main-content">
+    <div class="container container--narrow" style="padding: 0 var(--space-8);">
+      <div class="page-prose__header">
+        <p style="font-family: var(--font-mono); font-size: var(--size-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-orange); margin-bottom: var(--space-4);">MCP Integration Guide</p>
+        <h1 class="page-prose__title">Getting Started with pinchfin MCP</h1>
+      </div>
 
-  <!-- Sidebar overlay -->
-  <div class="manual-sidebar-overlay" id="manualOverlay" onclick="toggleManualSidebar()"></div>
+      <div class="page-prose__body">
+        <h2>Overview</h2>
 
-  <!-- Sidebar TOC -->
-  <nav class="manual-sidebar" id="manualSidebar">
-    <div class="manual-sidebar-brand">
-      <div class="brand-name"><span>pinch</span>fin</div>
-      <div class="brand-sub">User Manual</div>
-    </div>
+        <p>pinchfin is delivered as an MCP (Model Context Protocol) server that integrates directly into Claude-native analytical environments. The MCP provides access to the complete pinchfin credit operating system &mdash; 24 modules, 229+ analytical skills, 81+ governance nodes, and the full 17-phase underwriting pipeline &mdash; without requiring local installation or system configuration.</p>
 
-    <div class="manual-toc-label">Overview</div>
-    <ul class="manual-toc-list">
-      <li><a href="#what-pinchfin-is">What pinchfin Is</a></li>
-      <li><a href="#what-pinchfin-is-not">What pinchfin Is Not</a></li>
-      <li><a href="#system-requirements">System Requirements</a></li>
-    </ul>
+        <h2>What You Need</h2>
 
-    <div class="manual-toc-divider"></div>
-    <div class="manual-toc-label">Setup</div>
-    <ul class="manual-toc-list">
-      <li><a href="#getting-started">Getting Started</a></li>
-    </ul>
+        <ul>
+          <li>A Claude Pro, Team, or Enterprise account with MCP support enabled</li>
+          <li>An active pinchfin access subscription</li>
+          <li>Your pinchfin API credentials (provided upon registration)</li>
+        </ul>
 
-    <div class="manual-toc-divider"></div>
-    <div class="manual-toc-label">Architecture</div>
-    <ul class="manual-toc-list">
-      <li><a href="#module-overview">Module Overview</a></li>
-      <li><a href="#how-to-run-a-workflow">Running a Workflow</a></li>
-      <li><a href="#understanding-the-output">Understanding Output</a></li>
-    </ul>
+        <h2>Quick Start</h2>
 
-    <div class="manual-toc-divider"></div>
-    <div class="manual-toc-label">Technical</div>
-    <ul class="manual-toc-list">
-      <li><a href="#calculation-layer">Calculation Layer</a></li>
-      <li><a href="#rag-corpus">RAG Corpus</a></li>
-      <li><a href="#api-integrations">API Integrations</a></li>
-    </ul>
+        <h3>Step 1: Register for Access</h3>
 
-    <div class="manual-toc-divider"></div>
-    <div class="manual-toc-label">Reference</div>
-    <ul class="manual-toc-list">
-      <li><a href="#troubleshooting">Troubleshooting</a></li>
-      <li><a href="#known-limitations">Known Limitations</a></li>
-      <li><a href="#where-to-get-help">Getting Help</a></li>
-    </ul>
-  </nav>
+        <p>Contact <a href="mailto:bmurphy@veletacapital.com">bmurphy@veletacapital.com</a> to request access. Upon registration, you will receive:</p>
 
-  <!-- Main content -->
-  <div class="manual-wrapper">
-    <main id="main-content" class="manual-main">
-      <div class="manual-content-inner content-inner">
+        <ul>
+          <li>Your pinchfin MCP server endpoint</li>
+          <li>API authentication credentials</li>
+          <li>Your default credit configuration profile</li>
+        </ul>
 
-        <!-- Header -->
-        <header class="manual-header">
-          <div class="eyebrow">CRE Credit Intelligence</div>
-          <h1>pinchfin User Manual</h1>
-          <p class="subtitle">CRE Underwriting Intelligence Platform</p>
-          <p class="meta">v1.0 &mdash; February 2026 &mdash; pinchfin.com</p>
-        </header>
+        <h3>Step 2: Connect the MCP Server</h3>
 
-        <!-- Section 1: What pinchfin Is -->
-        <section class="manual-section" id="what-pinchfin-is">
-          <h2>1. What pinchfin Is</h2>
+        <p>Add the pinchfin MCP server to your Claude environment:</p>
 
-          <p>pinchfin is a proprietary commercial real estate underwriting intelligence system. It is a collection of skills, deterministic calculation engines, a regulatory RAG corpus, and workflow templates designed to support institutional-quality credit analysis.</p>
+        <p><strong>Claude Desktop (claude_desktop_config.json):</strong></p>
 
-          <p>It was built by a lender for actual lending operations. Over two years of development alongside real underwriting workflows, running against 60+ detailed loan analyses, 38+ live loans, and ongoing analysis campaigns across 1,700+ pipeline loans. It was not built in a lab. It was built on a couch, mostly at night, and refined every time something broke on a real deal.</p>
-
-          <p>At its core, pinchfin provides:</p>
-
-          <ul>
-            <li><strong>216+ individual skills</strong> for CRE underwriting tasks, each with its own documentation, expected inputs, outputs, and examples</li>
-            <li><strong>24+ modules</strong> that chain related skills into structured analysis sequences</li>
-            <li><strong>Deterministic Python calculation engines</strong> for loan sizing, DSCR, debt yield, LTV, cash flow analysis, and waterfall constraints</li>
-            <li><strong>5,900+ RAG documents</strong> sourced from OCC, FDIC, FNMA, Freddie Mac, HUD, CREFC, SIFMA, and other regulatory and trade bodies</li>
-            <li><strong>API integrations</strong> with Census Bureau, BLS, FRED, FEMA, Walk Score, and Google Maps</li>
-            <li><strong>A three-agent quality system</strong> (Producer, Checker, Resolver) modeled after institutional credit committee processes</li>
-            <li><strong>Phased context management</strong> designed around the practical constraints of large language model context windows</li>
-          </ul>
-
-          <p>pinchfin is designed to run inside <strong>Claude Code</strong>, Anthropic's agentic coding environment. It is not a standalone application. It is not a SaaS product. It is a toolkit &mdash; a structured, documented, battle-tested collection of components that you can use whole, in parts, or as a reference for building your own systems.</p>
-
-          <div class="manual-callout manual-callout-note">
-            <span class="manual-callout-label">What this means in practice</span>
-            You configure your API keys. You open a terminal. You tell the system what you want to analyze. It runs through a structured sequence of research, calculation, and synthesis steps, and it produces institutional-quality output. The math is deterministic. The analysis is grounded in regulatory source material. The output is formatted for committee consumption.
-          </div>
-        </section>
-
-        <!-- Section 2: What pinchfin Is Not -->
-        <section class="manual-section" id="what-pinchfin-is-not">
-          <h2>2. What pinchfin Is Not</h2>
-
-          <div class="manual-disclaimer">
-            <strong>Use at Your Own Risk</strong>
-            <p style="margin-top:12px; margin-bottom:12px;">pinchfin is a proprietary platform. It is not a regulated financial tool and does not constitute investment, legal, tax, or accounting advice. The following statements are non-negotiable terms of use.</p>
-            <ul>
-              <li><strong>Not investment advice.</strong> Nothing produced by this system should be construed as a recommendation to make or refrain from making any investment decision.</li>
-              <li><strong>Not a replacement for human judgment.</strong> Commercial real estate underwriting is contextual and judgment-driven. This system assists the underwriting process. It does not replace it. A human-in-the-loop is required at every stage.</li>
-              <li><strong>Not production-hardened enterprise software.</strong> There is no enterprise security stack, no SOC 2 compliance, no dedicated infrastructure team, and no SLA.</li>
-              <li><strong>Not a regulated financial tool.</strong> pinchfin has no regulatory certification, no compliance attestation, and no fiduciary status.</li>
-              <li><strong>Outputs must always be independently verified.</strong> The AI model may hallucinate. API data may be stale or inaccurate. Calculations depend on input quality. Every output should be validated against independent sources before being relied upon for any business decision.</li>
-              <li><strong>API dependencies may fail or return inaccurate results.</strong> Third-party data sources change their schemas, rate-limit requests, and occasionally go offline. This is normal. Plan for it.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Section 3: System Requirements -->
-        <section class="manual-section" id="system-requirements">
-          <h2>3. System Requirements</h2>
-
-          <h4>Hardware</h4>
-          <p>A computer with terminal access. Mac Terminal, Windows PowerShell or WSL (Windows Subsystem for Linux), or any Linux terminal. No special hardware is required.</p>
-
-          <h4>Software</h4>
-          <table>
-            <thead><tr><th>Requirement</th><th>Version</th><th>Notes</th></tr></thead>
-            <tbody>
-              <tr><td>Claude Code</td><td>Latest</td><td>Anthropic's agentic coding environment. This is the runtime for all pinchfin workflows.</td></tr>
-              <tr><td>Node.js</td><td>18+</td><td>Required by Claude Code. Install from nodejs.org.</td></tr>
-              <tr><td>Python</td><td>3.9+</td><td>Required for the deterministic calculation engines (loan sizing, DSCR, cash flow).</td></tr>
-              <tr><td>Git</td><td>Any recent</td><td>Required for cloning the repository.</td></tr>
-              <tr><td>pip</td><td>Bundled with Python</td><td>Python package manager used to install dependencies.</td></tr>
-            </tbody>
-          </table>
-
-          <h4>API Keys</h4>
-          <p>pinchfin integrates with multiple external data services. Each requires its own API key. Some are free, some are not. You do not need all of them to get started &mdash; configure what you need and add more later.</p>
-
-          <table>
-            <thead><tr><th>Service</th><th>Required</th><th>Free Tier</th><th>Where to Get It</th></tr></thead>
-            <tbody>
-              <tr><td>Anthropic</td><td>Yes</td><td>No</td><td>console.anthropic.com</td></tr>
-              <tr><td>Perplexity</td><td>Optional</td><td>No</td><td>perplexity.ai</td></tr>
-              <tr><td>Google Maps</td><td>Yes</td><td>Limited</td><td>console.cloud.google.com</td></tr>
-              <tr><td>Census Bureau</td><td>Yes</td><td>Yes</td><td>api.census.gov/data/key_signup.html</td></tr>
-              <tr><td>BLS</td><td>Yes</td><td>Yes</td><td>bls.gov/developers</td></tr>
-              <tr><td>FRED</td><td>Yes</td><td>Yes</td><td>fred.stlouisfed.org/docs/api</td></tr>
-              <tr><td>FEMA</td><td>Yes</td><td>Yes</td><td>msc.fema.gov</td></tr>
-              <tr><td>Walk Score</td><td>Optional</td><td>Limited</td><td>walkscore.com/professional/api.php</td></tr>
-            </tbody>
-          </table>
-
-          <div class="manual-callout manual-callout-info">
-            <span class="manual-callout-label">Start with the free ones</span>
-            Census Bureau, BLS, FRED, and FEMA all offer free API keys with generous rate limits. These cover market analysis, economic indicators, employment data, and flood zone lookups. You can run meaningful analyses with just these four plus your Anthropic key.
-          </div>
-        </section>
-
-        <!-- Section 4: Getting Started -->
-        <section class="manual-section" id="getting-started">
-          <h2>4. Getting Started</h2>
-
-          <p>This section walks you through the complete setup process from a fresh machine to a working pinchfin installation. Each step is sequential. Do not skip ahead.</p>
-
-          <h4>Step 1: Install Prerequisites</h4>
-          <p>Before cloning pinchfin, confirm that Node.js, Python, and Git are installed on your system.</p>
-
-<pre><code><span class="comment"># Check Node.js (need 18+)</span>
-<span class="prompt">$</span> node --version
-
-<span class="comment"># Check Python (need 3.10+)</span>
-<span class="prompt">$</span> python --version
-
-<span class="comment"># Check Git</span>
-<span class="prompt">$</span> git --version</code></pre>
-
-          <p>If any of these are missing, install them from their respective official sources: <strong>nodejs.org</strong>, <strong>python.org</strong>, <strong>git-scm.com</strong>.</p>
-
-          <h4>Step 2: Install Claude Code</h4>
-          <p>Claude Code is Anthropic's terminal-based AI development environment. It is the runtime that executes pinchfin's skills and workflows.</p>
-
-<pre><code><span class="comment"># Install Claude Code globally via npm</span>
-<span class="prompt">$</span> npm install -g @anthropic-ai/claude-code</code></pre>
-
-          <p>After installation, verify it works by running <code>claude</code> in your terminal. You will need an Anthropic API key configured &mdash; Claude Code will prompt you for this on first launch.</p>
-
-          <h4>Step 3: Request Access</h4>
-
-          <p>Contact <a href="mailto:bmurphy@veletacapital.com">bmurphy@veletacapital.com</a> for MCP integration access. Once provisioned, you will receive setup instructions and credentials.</p>
-
-          <h4>Step 4: Install Python Dependencies</h4>
-
-<pre><code><span class="comment"># Install required Python packages</span>
-<span class="prompt">$</span> pip install -r requirements.txt</code></pre>
-
-          <p>This installs the packages required by the deterministic calculation engines and data service integrations.</p>
-
-          <h4>Step 5: Configure API Keys</h4>
-
-<pre><code><span class="comment"># Copy the example environment file</span>
-<span class="prompt">$</span> cp .env.example .env
-
-<span class="comment"># Open .env in your preferred editor and add your API keys</span>
-<span class="comment"># Each key is labeled with the service it belongs to</span></code></pre>
-
-          <p>The <code>.env</code> file contains clearly labeled placeholders for each API key. Fill in the ones you have. Leave the others blank &mdash; the system will skip integrations for missing keys and tell you what data it could not retrieve.</p>
-
-          <div class="manual-callout manual-callout-warning">
-            <span class="manual-callout-label">Security</span>
-            Never commit your <code>.env</code> file to version control. The <code>.gitignore</code> is pre-configured to exclude it, but verify this before pushing any changes. API keys are credentials. Treat them accordingly.
-          </div>
-
-          <h4>Step 6: Verify Installation</h4>
-
-<pre><code><span class="comment"># Run the verification script to confirm everything is configured</span>
-<span class="prompt">$</span> python engines/verify_setup.py</code></pre>
-
-          <p>This script checks that Python dependencies are installed, API keys are present, and the calculation engines can execute.</p>
-
-          <h4>Step 7: Launch and Load</h4>
-
-<pre><code><span class="comment"># Start Claude Code</span>
-<span class="prompt">$</span> claude
-
-<span class="comment"># Once inside Claude Code, load pinchfin</span>
-<span class="prompt">&gt;</span> /load pinchfin</code></pre>
-
-          <p>The <code>/load pinchfin</code> command initializes the system, loads the credit framework, makes the skills and calculation engines available, and prepares the context management system. You are now ready to run analyses.</p>
-
-          <div class="manual-callout manual-callout-note">
-            <span class="manual-callout-label">First run suggestion</span>
-            Start with something small. Try running a single skill like the DSCR calculator or the FRED rate puller to confirm your setup works end to end. Do not attempt a full underwriting workflow on your first session.
-          </div>
-        </section>
-
-        <!-- Section 5: Module Overview -->
-        <section class="manual-section" id="module-overview">
-          <h2>5. Module Overview</h2>
-
-          <p>pinchfin is organized into 24+ modules. Each module groups related skills into a logical analysis domain. Skills within a module are designed to chain together in a specific sequence, with the output of one feeding the input of the next.</p>
-
-          <div class="manual-module-grid">
-            <div class="manual-module-card"><div class="module-num">01</div><h5>Sponsor Analysis</h5><p>Entity structure mapping, financial strength scoring, track record analysis, guarantor assessment, and key principal evaluation.</p></div>
-            <div class="manual-module-card"><div class="module-num">02</div><h5>Market Analysis</h5><p>MSA economic profiles, submarket fundamentals, supply pipeline tracking, demand drivers, and demographic trend analysis.</p></div>
-            <div class="manual-module-card"><div class="module-num">03</div><h5>Comparable Analysis</h5><p>Rent comp collection and normalization, sale comp analysis, comp synthesis, and lender-underwritten rent recommendations.</p></div>
-            <div class="manual-module-card"><div class="module-num">04</div><h5>Core Underwriting</h5><p>DSCR analysis, debt yield calculation, cash flow underwriting, expense normalization, and income verification.</p></div>
-            <div class="manual-module-card"><div class="module-num">05</div><h5>Loan Sizing</h5><p>Waterfall constraint engine applying DSCR, LTV, debt yield, maximum loan amount, and IO coverage constraints in sequence.</p></div>
-            <div class="manual-module-card"><div class="module-num">06</div><h5>Risk Analysis</h5><p>Concentration scoring, stress testing across rate and vacancy scenarios, red flag detection, and risk-adjusted return analysis.</p></div>
-            <div class="manual-module-card"><div class="module-num">07</div><h5>Document Assembly</h5><p>Investment committee memo generation, term sheet drafting, committee package compilation with standardized formatting.</p></div>
-            <div class="manual-module-card"><div class="module-num">08</div><h5>Data Services</h5><p>FRED rate retrieval, Census demographic pulls, BLS employment data, FEMA flood zone lookups, Walk Score, and geocoding.</p></div>
-            <div class="manual-module-card"><div class="module-num">09</div><h5>Cash Flow</h5><p>Trailing 12-month analysis, expense normalization across categories, forward projections, and revenue bridge calculations.</p></div>
-            <div class="manual-module-card"><div class="module-num">10</div><h5>Due Diligence</h5><p>Environmental review checklists, title analysis frameworks, insurance requirement validation, and survey assessment.</p></div>
-            <div class="manual-module-card"><div class="module-num">11</div><h5>Portfolio Management</h5><p>Portfolio-level roll-ups, performance tracking across metrics, concentration reporting, and vintage analysis.</p></div>
-            <div class="manual-module-card"><div class="module-num">12</div><h5>Investor Reporting</h5><p>Distribution waterfall calculations, quarterly reporting templates, investor communication frameworks, and NAV tracking.</p></div>
-            <div class="manual-module-card"><div class="module-num">13</div><h5>Deal Pipeline</h5><p>CRM-style deal tracking, pipeline stage management, probability-weighted volume projections, and conversion analytics.</p></div>
-            <div class="manual-module-card"><div class="module-num">14</div><h5>Credit Framework</h5><p>The soul document defining lending philosophy, credit box parameters, deal-breaker conditions, and risk appetite boundaries.</p></div>
-            <div class="manual-module-card"><div class="module-num">15</div><h5>Quality Assurance</h5><p>Three-agent review system (Producer, Checker, Resolver), validation gates between workflow phases, and output quality scoring.</p></div>
-            <div class="manual-module-card"><div class="module-num">16</div><h5>Context Management</h5><p>Phased context loading, artifact carry-forward between phases, memory optimization, and context window utilization tracking.</p></div>
-            <div class="manual-module-card"><div class="module-num">17</div><h5>Template System</h5><p>Document formatting standards, section templates, table designs, metric callout styles, and institutional design guidelines.</p></div>
-            <div class="manual-module-card"><div class="module-num">18</div><h5>Integration Layer</h5><p>API connection management, data normalization pipelines, rate limiting, error handling, and fallback procedures.</p></div>
-          </div>
-        </section>
-
-        <!-- Section 6: How to Run a Workflow -->
-        <section class="manual-section" id="how-to-run-a-workflow">
-          <h2>6. How to Run a Workflow</h2>
-
-          <p>pinchfin workflows follow a phased approach. Each phase has entry requirements, a defined sequence of skills, and exit criteria that must be met before advancing. The system cannot skip phases. This is intentional &mdash; upstream analysis quality directly determines downstream output quality.</p>
-
-          <div class="manual-phase-flow">
-            <div class="manual-phase-step">
-              <div class="manual-phase-marker">1</div>
-              <div class="manual-phase-content">
-                <h5>Load Deal Context</h5>
-                <p>Upload deal documents (rent roll, T12 operating statement, organizational documents, appraisal, prior analyses). The system reads and indexes these files, extracts key data points, and establishes the factual foundation for everything that follows. The credit framework is loaded automatically.</p>
-              </div>
-            </div>
-            <div class="manual-phase-step">
-              <div class="manual-phase-marker">2</div>
-              <div class="manual-phase-content">
-                <h5>Run Core Analysis Skills</h5>
-                <p>Execute the relevant module sequence. For a standard multifamily deal, this typically means: Sponsor Analysis, Market Analysis, Comparable Analysis, Core Underwriting, Cash Flow, and Loan Sizing. Each module runs its constituent skills in order. Each skill produces a structured artifact that feeds the next.</p>
-              </div>
-            </div>
-            <div class="manual-phase-step">
-              <div class="manual-phase-marker">3</div>
-              <div class="manual-phase-content">
-                <h5>Risk Assessment and Synthesis</h5>
-                <p>The Risk Analysis module aggregates all upstream outputs, runs stress scenarios, identifies concentration issues, flags deal-specific risk factors, and produces a synthesized risk assessment with a recommendation.</p>
-              </div>
-            </div>
-            <div class="manual-phase-step">
-              <div class="manual-phase-marker">4</div>
-              <div class="manual-phase-content">
-                <h5>Document Assembly</h5>
-                <p>The Document Assembly module compiles all analysis into formatted committee-ready output: the IC memo, term sheet, and supporting exhibits. The Quality Assurance system reviews the final package before delivery.</p>
-              </div>
-            </div>
-          </div>
-
-          <h4>Example: Running a Market Analysis</h4>
-          <p>Once pinchfin is loaded, you interact with it through natural language in Claude Code.</p>
-
-<pre><code><span class="comment"># After loading pinchfin, request a market analysis</span>
-<span class="prompt">&gt;</span> Run a market analysis for the Phoenix MSA. Pull Census demographics,
-  BLS employment data, and FRED economic indicators. Include the
-  multifamily supply pipeline and vacancy trends.
-
-<span class="comment"># The system will:</span>
-<span class="comment"># 1. Call Census API for demographic data (population, income, housing)</span>
-<span class="comment"># 2. Call BLS API for employment and labor force data</span>
-<span class="comment"># 3. Call FRED API for economic indicators (rates, CPI, permits)</span>
-<span class="comment"># 4. Synthesize into a structured market profile</span>
-<span class="comment"># 5. Flag any concerning trends or data gaps</span>
-<span class="comment"># 6. Output a formatted Market Analysis artifact</span></code></pre>
-
-          <h4>Example: Running the Loan Sizing Engine</h4>
-
-<pre><code><span class="comment"># Run the waterfall constraint engine with specific parameters</span>
-<span class="prompt">&gt;</span> Size this loan using the following assumptions:
-  - NOI: $1,250,000
-  - Cap rate: 5.75%
-  - Interest rate: 6.50%
-  - Amortization: 30 years
-  - Max LTV: 75%
-  - Min DSCR: 1.25x
-  - Min debt yield: 8.0%
-
-<span class="comment"># The Python engine runs all five constraints:</span>
-<span class="comment"># DSCR constraint, LTV constraint, debt yield constraint,</span>
-<span class="comment"># max loan amount, IO coverage</span>
-<span class="comment"># The binding constraint determines max proceeds</span></code></pre>
-
-          <div class="manual-callout manual-callout-note">
-            <span class="manual-callout-label">What to expect</span>
-            Analyses take time. A full market analysis with multiple API calls might take 30 to 90 seconds. A complete deal underwriting across all phases can take several minutes. This is normal. The system is making real API calls, running real calculations, and producing structured output &mdash; not generating plausible-sounding text.
-          </div>
-        </section>
-
-        <!-- Section 7: Understanding the Output -->
-        <section class="manual-section" id="understanding-the-output">
-          <h2>7. Understanding the Output</h2>
-
-          <h4>Reading a Generated IC Memo</h4>
-          <p>The investment committee memo follows a standardized structure designed for institutional consumption. Each section traces to upstream analysis artifacts.</p>
-
-          <ul>
-            <li><strong>Executive Summary</strong> &mdash; One-page deal overview with the recommendation, key metrics (DSCR, LTV, debt yield), and critical risk factors</li>
-            <li><strong>Sponsor Overview</strong> &mdash; Entity structure, financial strength assessment, and track record analysis with source citations</li>
-            <li><strong>Market Analysis</strong> &mdash; MSA and submarket profile with demographic, employment, and supply/demand data sourced from government APIs</li>
-            <li><strong>Property Analysis</strong> &mdash; Physical description, condition assessment, comparable rent and sale analysis</li>
-            <li><strong>Financial Analysis</strong> &mdash; T12 normalization, cash flow projections, sensitivity tables</li>
-            <li><strong>Loan Structure</strong> &mdash; Sizing waterfall results, proposed terms, constraint analysis</li>
-            <li><strong>Risk Assessment</strong> &mdash; Identified risks with mitigants, stress test results, concentration analysis</li>
-          </ul>
-
-          <h4>Interpreting Risk Flags</h4>
-          <p>The system generates risk flags at multiple severity levels.</p>
-          <table>
-            <thead><tr><th>Level</th><th>Meaning</th><th>Required Action</th></tr></thead>
-            <tbody>
-              <tr><td><code>CRITICAL</code></td><td>Deal-breaker condition per the credit framework</td><td>Stop. Review the condition manually. The system will not advance past this flag without explicit override.</td></tr>
-              <tr><td><code>WARNING</code></td><td>Outside standard parameters but not disqualifying</td><td>Review and document. The analysis continues but the flag appears in the final output for committee attention.</td></tr>
-              <tr><td><code>INFO</code></td><td>Notable data point or deviation from expectations</td><td>Awareness only. Included in supporting documentation for context.</td></tr>
-            </tbody>
-          </table>
-
-          <h4>Validating Calculation Results</h4>
-          <p>Every calculation produced by the Python engines includes a full audit trail. The output shows each input variable, the formula applied, intermediate steps, and the final result. To validate manually:</p>
-          <ol>
-            <li>Check the input values against your source documents</li>
-            <li>Run the same calculation in a spreadsheet or financial calculator</li>
-            <li>Compare the intermediate steps, not just the final answer</li>
-            <li>Verify that the binding constraint in the loan sizing waterfall matches your independent analysis</li>
-          </ol>
-
-          <h4>Where Logs Are Stored</h4>
-          <p>All analysis sessions produce logs in the <code>logs/</code> directory within the pinchfin project folder. Each session creates a timestamped log file containing API calls made, data received, calculations performed, and any errors encountered. These logs are essential for audit trails and debugging.</p>
-
-          <h4>Comparing Versions</h4>
-          <p>When you re-run an analysis with updated assumptions or new data, the system generates a new artifact alongside the previous version. You can compare versions by reviewing the artifacts in the <code>output/</code> directory, where each is timestamped and labeled with the deal identifier and analysis phase.</p>
-        </section>
-
-        <!-- Section 8: The Calculation Layer -->
-        <section class="manual-section" id="calculation-layer">
-          <h2>8. The Calculation Layer</h2>
-
-          <h4>Why Math Is in Python, Not AI</h4>
-          <p>Large language models approximate. They round things they should not round. They skip steps in calculations and fill in the gap with something plausible. In lending, plausible is not good enough.</p>
-
-          <p>The entire math layer runs in deterministic Python, completely separated from the AI reasoning layer. The calculation engines are hardcoded, tested, and produce the same output for the same input every time. The AI handles research, synthesis, and narrative. Python handles numbers. There is no overlap.</p>
-
-          <h4>The Credit Box Configuration</h4>
-          <p>All calculation parameters are defined in <code>engines/credit_box_config.json</code>. This is the single source of truth for your lending parameters.</p>
-
-<pre><code><span class="comment">// Example structure of credit_box_config.json</span>
-{
-  "dscr_minimum": 1.25,
-  "ltv_maximum": 0.75,
-  "debt_yield_minimum": 0.08,
-  "io_dscr_minimum": 1.50,
-  "max_loan_amount": 25000000,
-  "amortization_years": 30,
-  "interest_rate_floor": 0.05,
-  "stress_rate_buffer": 0.02,
-  "vacancy_assumption": 0.05,
-  "management_fee_pct": 0.04,
-  "replacement_reserves_per_unit": 300
+        <pre style="background: var(--color-fog); padding: var(--space-6); border-radius: var(--radius-md); overflow-x: auto; font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.6;"><code>{
+  "mcpServers": {
+    "pinchfin": {
+      "url": "https://mcp.pinchfin.com/sse",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_KEY"
+      }
+    }
+  }
 }</code></pre>
 
-          <p>To modify your credit parameters, edit this file directly. Changes take effect on the next calculation run. No code changes are required.</p>
+        <p><strong>Claude Code:</strong></p>
 
-          <h4>Running Standalone Calculations</h4>
-          <p>The calculation engines can be run independently of the full pinchfin system. This is useful for quick sizing checks or spreadsheet validation.</p>
+        <pre style="background: var(--color-fog); padding: var(--space-6); border-radius: var(--radius-md); overflow-x: auto; font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.6;"><code>claude mcp add pinchfin --transport sse https://mcp.pinchfin.com/sse</code></pre>
 
-<pre><code><span class="comment"># Run the loan sizing engine directly</span>
-<span class="prompt">$</span> python engines/loan_sizer.py --noi 1250000 --rate 0.065 --cap 0.0575
+        <h3>Step 3: Verify Connection</h3>
 
-<span class="comment"># Run the cash flow engine</span>
-<span class="prompt">$</span> python engines/cash_flow_engine.py --input data/sample_t12.json</code></pre>
+        <p>Once connected, verify the integration by asking Claude:</p>
 
-          <h4>Validating Against Manual Calculations</h4>
-          <p>The engines output full intermediate steps. For a DSCR calculation, you will see the annual debt service computation (principal + interest on the amortization schedule), the NOI used, and the resulting ratio. Compare each step against your own calculator or spreadsheet, not just the final number.</p>
-        </section>
+        <blockquote>&ldquo;What pinchfin tools are available?&rdquo;</blockquote>
 
-        <!-- Section 9: The RAG Corpus -->
-        <section class="manual-section" id="rag-corpus">
-          <h2>9. The RAG Corpus</h2>
+        <p>Claude should return the full catalog of available analytical skills and modules.</p>
 
-          <h4>What Is Included</h4>
-          <p>The RAG (Retrieval-Augmented Generation) corpus contains 5,900+ documents that ground every analysis in actual regulatory and market frameworks. Without this corpus, the AI model would generate analysis based on its training data &mdash; which may be outdated, incomplete, or wrong. The corpus ensures that when the system references lending guidelines, it is citing real documents, not hallucinating policies.</p>
+        <h3>Step 4: Run Your First Analysis</h3>
 
-          <p>Sources include:</p>
+        <p>Upload a rent roll and trailing twelve-month operating statement, then instruct Claude:</p>
 
-          <table>
-            <thead><tr><th>Category</th><th>Sources</th><th>Coverage</th></tr></thead>
-            <tbody>
-              <tr><td>Banking Regulators</td><td>OCC, Federal Reserve, FDIC</td><td>CRE lending guidance, examination handbooks, risk management bulletins, supervisory letters</td></tr>
-              <tr><td>GSEs</td><td>FNMA, Freddie Mac</td><td>Multifamily lending guides, eligibility requirements, underwriting standards, seller/servicer guides</td></tr>
-              <tr><td>Government</td><td>HUD, FHA</td><td>MAP Guide, affordable housing requirements, fair market rents, income limits</td></tr>
-              <tr><td>Trade Associations</td><td>CREFC, SIFMA, MBA, IREM, CCIM</td><td>Reporting standards, market conventions, best practices, industry definitions</td></tr>
-            </tbody>
-          </table>
+        <blockquote>&ldquo;Run a pinchfin underwriting analysis on these documents.&rdquo;</blockquote>
 
-          <h4>How It Grounds Analysis</h4>
-          <p>When the system analyzes a deal, it retrieves relevant sections from the corpus based on the property type, loan program, jurisdiction, and risk factors involved. For example, when underwriting an FNMA multifamily loan, the system pulls the specific eligibility and underwriting requirements from the current DUS Guide rather than relying on the model's general knowledge of agency lending.</p>
+        <p>The platform will initiate the 17-phase pipeline, processing your transaction through data infrastructure, sponsor due diligence, cash flow underwriting, constraint waterfall sizing, and deliverable generation.</p>
 
-          <h4>How to Add Your Own Documents</h4>
-          <p>The corpus is extensible. To add your own documents:</p>
-          <ol>
-            <li>Place document files (PDF, TXT, DOCX) in the appropriate subdirectory under <code>rag-corpus/</code></li>
-            <li>Follow the existing naming conventions: <code>source-organization_document-title_version.ext</code></li>
-            <li>Run the indexing script to process and chunk the new documents: <code>python rag-corpus/index.py</code></li>
-            <li>New documents become available to the system on the next session load</li>
-          </ol>
+        <h2>What&rsquo;s Included</h2>
 
-          <h4>Chunking and Indexing</h4>
-          <p>Documents are split into semantically meaningful chunks designed to fit within the retrieval context window while maintaining coherence. The chunking strategy varies by document type: regulatory documents are chunked by section and subsection; guidelines are chunked by topic; reference materials are chunked by definition or entry. Each chunk retains metadata about its source, section, and publication date for citation purposes.</p>
-        </section>
+        <h3>Standard Access</h3>
 
-        <!-- Section 10: API Integrations -->
-        <section class="manual-section" id="api-integrations">
-          <h2>10. API Integrations</h2>
+        <ul>
+          <li>Full 17-phase underwriting pipeline</li>
+          <li>All 24 analytical modules</li>
+          <li>229+ sequential execution skills</li>
+          <li>Industry-standard credit configuration &mdash; market-calibrated DSCR, LTV, debt yield, and LTC constraints for institutional multifamily bridge lending</li>
+          <li>Five-constraint waterfall sizing engine</li>
+          <li>Three-agent quality assurance (Producer &rarr; Checker &rarr; Resolver)</li>
+          <li>Eight institutional-grade deliverables per transaction</li>
+          <li>Structured Excel workbook generation</li>
+          <li>Deterministic computation engine &mdash; identical inputs produce identical outputs</li>
+        </ul>
 
-          <p>pinchfin connects to multiple external data services to pull real-time and near-real-time data into analyses. Each integration has its own authentication method, rate limits, and failure modes.</p>
+        <h3>Full Membership</h3>
 
-          <table>
-            <thead><tr><th>API</th><th>Purpose</th><th>Free Tier</th><th>Key Location</th></tr></thead>
-            <tbody>
-              <tr><td>Anthropic</td><td>Claude Code AI runtime. Powers all reasoning, synthesis, research, and natural language operations.</td><td>No</td><td>console.anthropic.com</td></tr>
-              <tr><td>Census Bureau</td><td>Demographics: population, median household income, housing units, vacancy rates, age distribution, poverty rates at tract and county level.</td><td>Yes</td><td>api.census.gov</td></tr>
-              <tr><td>BLS</td><td>Employment data: unemployment rate, labor force size, employed/unemployed counts, QCEW industry employment by county.</td><td>Yes</td><td>bls.gov/developers</td></tr>
-              <tr><td>FRED</td><td>Economic indicators: SOFR, Treasury yields (2Y, 5Y, 10Y), Fed Funds rate, CPI year-over-year, 30-year mortgage rate, building permits.</td><td>Yes</td><td>fred.stlouisfed.org</td></tr>
-              <tr><td>FEMA</td><td>Flood zone designations and Special Flood Hazard Area (SFHA) status for property addresses.</td><td>Yes</td><td>msc.fema.gov</td></tr>
-              <tr><td>Walk Score</td><td>Walk Score, Transit Score, and Bike Score for property addresses. Useful for location quality assessment.</td><td>Limited</td><td>walkscore.com</td></tr>
-              <tr><td>Google Maps</td><td>Geocoding (address to coordinates), reverse geocoding, and location validation.</td><td>Limited</td><td>console.cloud.google.com</td></tr>
-              <tr><td>Perplexity</td><td>AI-powered research for market narratives, recent news, development pipeline data, and qualitative market intelligence.</td><td>No</td><td>perplexity.ai</td></tr>
-            </tbody>
-          </table>
+        <p>Everything in Standard Access, plus:</p>
 
-          <div class="manual-callout manual-callout-note">
-            <span class="manual-callout-label">Rate Limits</span>
-            Each API has its own rate limiting policy. The Census Bureau and BLS are generous. Google Maps and Walk Score have tighter limits on free tiers. The Integration Layer handles rate limiting automatically, spacing out requests and queuing retries when limits are hit.
-          </div>
-        </section>
+        <p><strong>Credit Soul Development</strong></p>
 
-        <!-- Section 11: Troubleshooting -->
-        <section class="manual-section" id="troubleshooting">
-          <h2>11. Troubleshooting</h2>
+        <p>pinchfin&rsquo;s proprietary deal analysis and synthesis module processes your transaction history, credit decisions, and committee feedback to identify your firm&rsquo;s actual lending patterns &mdash; building a credit identity profile that reflects how your institution makes decisions in practice.</p>
 
-          <p>This section covers the most common issues and their resolutions.</p>
+        <p><strong>Custom Credit Box Implementation</strong></p>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">API Key Errors</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> Authentication failures, 401/403 responses, or "API key not found" messages in logs.</p>
-              <p><strong>Fix:</strong> Open your <code>.env</code> file and verify the key for the failing service. Keys expire, get rotated, or are sometimes entered with trailing whitespace. Copy the key fresh from the provider's dashboard. Run <code>python engines/verify_setup.py</code> to test all keys at once.</p>
-            </div>
-          </div>
+        <p>Your constraint hierarchies, underwriting assumptions, and policy overlays &mdash; configured and maintained within the platform. Every analysis produces outputs calibrated to your firm&rsquo;s credit heartbeat:</p>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Context Window Exceeded</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> The system stops mid-analysis with a context length error, or outputs become truncated.</p>
-              <p><strong>Fix:</strong> Break your analysis into smaller phases. Load fewer documents at a time. Run individual modules rather than the full workflow in a single session.</p>
-            </div>
-          </div>
+        <ul>
+          <li>Custom DSCR floors and LTV ceilings</li>
+          <li>Firm-specific debt yield minimums</li>
+          <li>Geographic and property type preferences</li>
+          <li>Sponsor tier classifications</li>
+          <li>Custom risk rating frameworks</li>
+          <li>Policy overlay rules and exception protocols</li>
+        </ul>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Calculation Mismatches</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> The DSCR, LTV, or loan amount from the Python engine does not match your spreadsheet.</p>
-              <p><strong>Fix:</strong> Check <code>credit_box_config.json</code> to confirm the parameters match your assumptions exactly. Common mismatches include: amortization period (years vs. months), interest rate (annual vs. monthly), and NOI definition (before or after reserves). The engine output shows all intermediate steps &mdash; compare each one to find where the divergence occurs.</p>
-            </div>
-          </div>
+        <p><strong>Ongoing Configuration Support</strong></p>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Missing Dependencies</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> <code>ModuleNotFoundError</code> or <code>ImportError</code> when running Python scripts.</p>
-              <p><strong>Fix:</strong> Run <code>pip install -r requirements.txt</code> again. If you are using a virtual environment, make sure it is activated.</p>
-            </div>
-          </div>
+        <p>As your credit standards evolve &mdash; market shifts, committee directives, strategic pivots &mdash; pinchfin updates your configuration through natural language policy directives. Adjust the DSCR floor, recalibrate LTV ceilings, impose geographic restrictions &mdash; and every downstream analysis recalibrates automatically.</p>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Rate Limiting</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> 429 responses from APIs, or data fields returning as null/empty when they should have values.</p>
-              <p><strong>Fix:</strong> Wait 60 seconds and retry. Census and BLS allow around 500 requests per day on free keys. Google Maps has per-second and per-day limits.</p>
-            </div>
-          </div>
+        <h2>Platform Documentation</h2>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Stale or Missing Data</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> Demographic data looks outdated, or certain fields return as unavailable.</p>
-              <p><strong>Fix:</strong> Government APIs (Census, BLS) update on their own schedule, often with a lag of several months to a year. The system uses the most recent available data. Check the source API documentation for coverage details.</p>
-            </div>
-          </div>
+        <ul>
+          <li><a href="platform.html">Platform Overview</a> &mdash; System capabilities and module descriptions</li>
+          <li><a href="architecture.html">Architecture</a> &mdash; Technical architecture and governance framework</li>
+          <li><a href="workflow.html">Workflow</a> &mdash; 17-phase pipeline documentation</li>
+          <li><a href="operations.html">Operations</a> &mdash; Operational methodology</li>
+          <li><a href="nuance-gate.html">Nuance Gate</a> &mdash; Advanced analytical governance</li>
+        </ul>
 
-          <div class="manual-trouble-item">
-            <div class="trouble-q">Model Hallucinations</div>
-            <div class="trouble-a">
-              <p><strong>Symptom:</strong> The AI states a specific number, statistic, or fact that does not match any source data or API output.</p>
-              <p><strong>Fix:</strong> This is expected behavior with language models. The RAG corpus and calculation engines minimize this, but it cannot be eliminated entirely. Every quantitative output should be validated against the calculation engine logs or API response data. If the AI generates a number that did not come from the Python engine or an API call, do not trust it.</p>
-            </div>
-          </div>
-        </section>
+        <h2>Support</h2>
 
-        <!-- Section 12: Known Limitations -->
-        <section class="manual-section" id="known-limitations">
-          <h2>12. Known Limitations</h2>
+        <p>For technical support, access inquiries, or membership upgrades:</p>
 
-          <p>Honesty about what this system cannot do is as important as explaining what it can. These limitations are documented not as excuses but as facts that should inform how you use and rely on pinchfin.</p>
-
-          <ul>
-            <li><strong>Single-user system.</strong> pinchfin has no multi-user support, no user authentication, no role-based access control, and no concurrent session management. It is designed for one person running one analysis at a time.</li>
-            <li><strong>No enterprise security stack.</strong> There is no encryption at rest beyond what your operating system provides, no audit logging beyond session logs, no intrusion detection, and no vulnerability scanning infrastructure.</li>
-            <li><strong>No SOC 2 compliance.</strong> This system has not undergone any third-party security audit or compliance certification.</li>
-            <li><strong>Context window constraints.</strong> Very large deal packages (hundreds of pages of documents) cannot be processed in a single pass. The phased context management system mitigates this but does not eliminate the limitation.</li>
-            <li><strong>API rate limits.</strong> Free-tier API keys have request limits. Paid API tiers offer higher limits.</li>
-            <li><strong>Not optimized for high concurrency.</strong> Running multiple instances simultaneously may cause API rate-limit conflicts, file-locking issues, or context corruption.</li>
-            <li><strong>The model may hallucinate.</strong> Despite the RAG corpus, calculation engines, and quality gates, the underlying language model can and will occasionally generate information that is not grounded in source data. Always verify.</li>
-            <li><strong>No real-time data.</strong> API data has inherent lag. Census data can be 1 to 2 years old. BLS data updates monthly. FRED data varies by series.</li>
-            <li><strong>Limited property type coverage.</strong> The system was primarily developed for multifamily lending. Coverage for office, retail, industrial, and hospitality varies by module.</li>
-          </ul>
-        </section>
-
-        <!-- Section 13: Where to Get Help -->
-        <section class="manual-section" id="where-to-get-help">
-          <h2>13. Where to Get Help</h2>
-
-          <h4>Self-Service Resources</h4>
-          <ul>
-            <li><strong>Skill-level READMEs</strong> &mdash; Every skill folder contains a README with a description of what it does, expected inputs and outputs, configuration options, and a worked example.</li>
-            <li><strong>Module-level READMEs</strong> &mdash; Each of the 24+ modules has a README explaining how its constituent skills chain together, the sequencing rationale, and common failure modes.</li>
-            <li><strong>Repository README</strong> &mdash; The top-level README provides setup instructions, architecture overview, and quick-start guidance.</li>
-            <li><strong>This manual</strong> &mdash; You are reading it.</li>
-          </ul>
-
-          <h4>Support</h4>
-          <ul>
-            <li><strong>Email Support</strong> &mdash; <a href="mailto:bmurphy@veletacapital.com">bmurphy@veletacapital.com</a>. Report bugs, request features, or ask questions.</li>
-          </ul>
-
-          <h4>Feedback</h4>
-          <p>If you find a bug or have a feature request, contact <a href="mailto:bmurphy@veletacapital.com">bmurphy@veletacapital.com</a> with details.</p>
-
-          <div class="manual-callout manual-callout-info">
-            <span class="manual-callout-label">A note on expectations</span>
-            This is a platform maintained by one lender. It is not a commercial product with a support desk. Issues will be addressed as time permits. Provide context, include logs, and describe what you expected versus what happened.
-          </div>
-        </section>
-
+        <p><strong>Email:</strong> <a href="mailto:bmurphy@veletacapital.com">bmurphy@veletacapital.com</a></p>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 
-  <!-- Site footer -->
-  <footer class="footer" role="contentinfo"><div class="footer__inner"><div class="footer__top"><div class="footer__brand"><img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);"><p class="footer__brand-name"><strong>pinch</strong>fin</p><p class="footer__brand-desc">Proprietary credit operating system for commercial real estate.</p></div><div class="footer-links"><div class="footer-links__group"><p class="footer-links__heading">Platform</p><a href="platform.html" class="footer-links__item">Overview</a><a href="operations.html" class="footer-links__item">Operations</a><a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a><a href="docs.html" class="footer-links__item">Documentation</a></div><div class="footer-links__group"><p class="footer-links__heading">Solutions</p><a href="community.html" class="footer-links__item">Use Cases</a><a href="letter.html" class="footer-links__item">Letter from Builder</a><a href="changelog.html" class="footer-links__item">Changelog</a></div><div class="footer-links__group"><p class="footer-links__heading">Legal</p><a href="terms.html" class="footer-links__item">Terms of Service</a><a href="privacy.html" class="footer-links__item">Privacy Policy</a></div></div></div><div class="footer__bottom"><p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. All rights reserved.</p><div class="footer__bottom-links"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="changelog.html">Changelog</a></div></div><p style="font-size: var(--size-xs); color: var(--color-navy-dim); line-height: 1.7; margin-top: var(--space-6); opacity: 0.7;">pinchfin is an analytical tool and does not constitute financial advice. All outputs require independent verification by qualified professionals. No warranty is provided, express or implied. Users assume full responsibility for any decisions made using this software.</p></div></footer>
+  <footer class="footer" role="contentinfo"><div class="footer__inner"><div class="footer__top"><div class="footer__brand"><img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);"><p class="footer__brand-name"><strong>pinch</strong>fin</p><p class="footer__brand-desc">Proprietary credit operating system for commercial real estate.</p></div><div class="footer-links"><div class="footer-links__group"><p class="footer-links__heading">Platform</p><a href="platform.html" class="footer-links__item">Overview</a><a href="architecture.html" class="footer-links__item">Architecture</a><a href="workflow.html" class="footer-links__item">Workflow</a><a href="operations.html" class="footer-links__item">Operations</a><a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a></div><div class="footer-links__group"><p class="footer-links__heading">Resources</p><a href="community.html" class="footer-links__item">Solutions</a><a href="letter.html" class="footer-links__item">Builder's Note</a><a href="manual.html" class="footer-links__item">MCP Guide</a><a href="docs.html" class="footer-links__item">Documentation</a><a href="changelog.html" class="footer-links__item">Changelog</a></div><div class="footer-links__group"><p class="footer-links__heading">Legal</p><a href="terms.html" class="footer-links__item">Terms of Service</a><a href="privacy.html" class="footer-links__item">Privacy Policy</a></div></div></div><div class="footer__bottom"><p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. All rights reserved.</p><div class="footer__bottom-links"><a href="terms.html">Terms</a><a href="mailto:bmurphy@veletacapital.com">Contact</a></div></div><p class="disclaimer" style="margin-top: var(--space-6);">pinchfin is an analytical framework, not financial advice. All outputs require independent verification by qualified professionals. Credit decisions remain the sole responsibility of the operator. Past analytical performance does not guarantee future accuracy. No representation is made regarding the completeness or reliability of any output.</p></div></footer>
 
   <script src="js/navigation.js" defer></script>
   <script src="js/interactions.js" defer></script>
   <script src="js/lightbox.js" defer></script>
   <script src="js/analytics.js" defer></script>
-  <script>
-  // Manual sidebar toggle
-  function toggleManualSidebar() {
-    document.getElementById('manualSidebar').classList.toggle('open');
-    document.getElementById('manualOverlay').classList.toggle('open');
-  }
-
-  // Active TOC tracking
-  (function() {
-    var tocLinks = document.querySelectorAll('.manual-toc-list a');
-    var sections = [];
-    tocLinks.forEach(function(link) {
-      var href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        var section = document.getElementById(href.substring(1));
-        if (section) sections.push({ el: section, link: link });
-      }
-    });
-    function updateActive() {
-      var current = null;
-      var scrollTop = window.scrollY || document.documentElement.scrollTop;
-      for (var i = sections.length - 1; i >= 0; i--) {
-        if (sections[i].el.offsetTop - 140 <= scrollTop) { current = sections[i]; break; }
-      }
-      tocLinks.forEach(function(l) { l.classList.remove('active'); });
-      if (current) current.link.classList.add('active');
-    }
-    window.addEventListener('scroll', updateActive, { passive: true });
-    updateActive();
-  })();
-
-  // Close sidebar on mobile TOC click
-  document.querySelectorAll('.manual-toc-list a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      if (window.innerWidth <= 900) {
-        document.getElementById('manualSidebar').classList.remove('open');
-        document.getElementById('manualOverlay').classList.remove('open');
-      }
-    });
-  });
-  </script>
 </body>
 </html>
