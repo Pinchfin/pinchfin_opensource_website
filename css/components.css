@@ -157,6 +157,26 @@
 }
 
 /* --------------------------------------------------------------------------
+   .nav-logo-mark — Logo mark in nav (replaces GitHub link)
+   -------------------------------------------------------------------------- */
+.nav-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--space-4);
+}
+
+.nav-logo-mark img {
+  height: 28px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logo-mark:hover img {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
    .nav-hamburger — Mobile menu toggle
    -------------------------------------------------------------------------- */
 .nav-hamburger {
