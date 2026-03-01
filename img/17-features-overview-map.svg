@@ -168,7 +168,7 @@
   <!-- Feature 10: Deal Data Record -->
   <rect x="318" y="394" width="272" height="90" rx="8" fill="#0D1229" stroke="#2a2a30" stroke-width="0.5"/>
   <text x="330" y="413" font-weight="400" font-size="11" fill="#e2e2e6">Deal Data Record System</text>
-  <text x="330" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">VUL-YYYY-NNN Schema</text>
+  <text x="330" y="428" font-family="JetBrains Mono, monospace" font-weight="400" font-size="9" fill="#C44B68">PF-YYYY-NNN Schema</text>
   <text x="330" y="444" font-weight="400" font-size="9.5" fill="#7c7f94">Standardized JSON + MD per deal.</text>
   <text x="330" y="456" font-weight="400" font-size="9.5" fill="#7c7f94">Stored in deal folder AND</text>
   <text x="330" y="468" font-weight="400" font-size="9.5" fill="#7c7f94">master_repo/deal_records/.</text>

@@ -15,6 +15,12 @@
   <meta name="twitter:title" content="Getting Started with pinchfin MCP">
   <meta name="twitter:description" content="Getting started with pinchfin MCP. Connect the MCP server to your Claude environment and access institutional-grade CRE credit intelligence.">
   <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+  <meta name="twitter:site" content="@toplender">
+  <meta name="twitter:creator" content="@toplender">
+  <meta name="keywords" content="commercial real estate, CRE, MCP, getting started, integration guide, credit box, underwriting">
+  <meta name="author" content="Veleta Capital Holdings">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pinchfin.com/manual.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -46,6 +52,18 @@
           <li>A Claude Pro, Team, or Enterprise account with MCP support enabled</li>
           <li>An active pinchfin access subscription</li>
           <li>Your pinchfin API credentials (provided upon registration)</li>
+        </ul>
+
+        <h2>User Responsibilities</h2>
+
+        <p>pinchfin is a tool, not a substitute for professional judgment. Users are responsible for:</p>
+
+        <ul>
+          <li><strong>Data Accuracy</strong> &mdash; All source documents (rent rolls, T-12 statements, appraisals) must be verified before upload. The system processes what you provide; garbage in produces garbage out.</li>
+          <li><strong>Confidentiality</strong> &mdash; Deal data, sponsor information, and financial records are sensitive. Users must handle all inputs and outputs in accordance with their firm's confidentiality policies and any applicable NDA obligations.</li>
+          <li><strong>API Key Management</strong> &mdash; Protect your pinchfin API credentials and any third-party service keys (FRED, Census, Walk Score). Do not share credentials or embed them in shared repositories.</li>
+          <li><strong>Output Verification</strong> &mdash; All analytical outputs require independent verification by qualified credit professionals. The platform assists analysis; it does not replace the human credit decision.</li>
+          <li><strong>Regulatory Compliance</strong> &mdash; Users must ensure that their use of the platform complies with all applicable lending regulations, fair lending requirements, and supervisory guidance in their jurisdiction.</li>
         </ul>
 
         <h2>Quick Start</h2>
@@ -96,6 +114,27 @@
         <blockquote>&ldquo;Run a pinchfin underwriting analysis on these documents.&rdquo;</blockquote>
 
         <p>The platform will initiate the 17-phase pipeline, processing your transaction through data infrastructure, sponsor due diligence, cash flow underwriting, constraint waterfall sizing, and deliverable generation.</p>
+
+        <h2>Uploading Comparable Sales</h2>
+
+        <p>Comparable sale and lease data can be uploaded to enhance the underwriting rent determination and valuation analysis.</p>
+
+        <h3>Upload Format</h3>
+
+        <p>Provide comparable data as structured CSV or JSON with the following fields:</p>
+
+        <ul>
+          <li><strong>Required:</strong> Property address, sale or lease date, price or rent per unit/SF, unit count, property type, data source</li>
+          <li><strong>Optional:</strong> Cap rate, occupancy at sale, buyer/seller identity, year built, renovation status</li>
+        </ul>
+
+        <h3>How Comps Are Processed</h3>
+
+        <p>Uploaded comps are geocoded, validated against assessor records where available, and normalized to per-unit and per-SF metrics. The system applies distance-weighted matching (proximity to subject), vintage adjustments (time since transaction), and property class alignment scoring. Duplicates are flagged automatically.</p>
+
+        <h3>Integration with Analysis</h3>
+
+        <p>Validated comps flow into the comparable analysis report and the lender rent determination module (Phase 6A). All comp selections are documented with rationale, and vintage adjustments are applied based on submarket trend data from the proprietary data services layer.</p>
 
         <h2>What&rsquo;s Included</h2>
 

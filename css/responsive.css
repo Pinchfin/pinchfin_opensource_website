@@ -215,6 +215,24 @@
   .stat-strip__value {
     font-size: var(--size-2xl);
   }
+
+  /* --- Nuance Gate -------------------------------------------------------- */
+  .phase-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .counterparty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agent-pipeline {
+    gap: 0;
+  }
+
+  .agent-arrow {
+    width: 32px;
+    font-size: var(--size-lg);
+  }
 }
 
 
@@ -722,6 +740,67 @@
   .page-spacer {
     height: 56px;
   }
+
+  /* --- Nuance Gate -------------------------------------------------------- */
+  .page-nuance-gate .hero {
+    min-height: 60vh;
+    padding-top: calc(56px + var(--space-12));
+  }
+
+  .agent-pipeline {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .agent-arrow {
+    width: auto;
+    height: 32px;
+    transform: rotate(90deg);
+  }
+
+  .phase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterparty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flywheel-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .flywheel-visual {
+    order: -1;
+  }
+
+  .flywheel-ring {
+    width: 260px;
+    height: 260px;
+  }
+
+  .flywheel-ring__step {
+    width: 68px;
+    height: 68px;
+    font-size: 0.625rem;
+  }
+
+  .flywheel-ring__circle--inner {
+    inset: 32px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nuance-tags {
+    gap: var(--space-2);
+  }
+
+  .nuance-tag {
+    font-size: var(--size-xs);
+    padding: var(--space-1) var(--space-3);
+  }
 }
 
 
@@ -848,7 +927,7 @@
   }
 
   .feature-card {
-    padding: var(--space-6) var(--space-6) var(--space-6) var(--space-8);
+    padding: var(--space-6);
   }
 
   .use-case-card {
@@ -1060,6 +1139,29 @@
     padding: var(--space-4) 0;
     margin-top: var(--space-8);
   }
+
+  /* --- Nuance Gate -------------------------------------------------------- */
+  .phase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flywheel-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .flywheel-ring__step {
+    width: 60px;
+    height: 60px;
+  }
+
+  .flywheel-ring__circle--inner {
+    inset: 28px;
+  }
+
+  .agent-card {
+    padding: var(--space-6);
+  }
 }
 
 
@@ -1092,7 +1194,7 @@
   }
 
   .feature-card {
-    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6);
+    padding: var(--space-4);
   }
 
   .nav-fixed {

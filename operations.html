@@ -15,6 +15,12 @@
   <meta name="twitter:title" content="Operations">
   <meta name="twitter:description" content="pinchfin operational capabilities: document processing, analytical engines, knowledge retrieval, workflow automation, quality assurance, and deployment.">
   <meta name="twitter:image" content="https://pinchfin.com/img/og-image.png">
+  <meta name="twitter:site" content="@toplender">
+  <meta name="twitter:creator" content="@toplender">
+  <meta name="keywords" content="commercial real estate, CRE, operations, analytical engines, quality assurance, deployment, MCP, underwriting">
+  <meta name="author" content="Veleta Capital Holdings">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pinchfin.com/operations.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -107,13 +113,13 @@
           <p class="section-header__eyebrow">Knowledge &amp; Retrieval</p>
           <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">5,900+ documents. Structured retrieval.</h2>
           <div class="card-grid">
-            <div class="feature-card"><h3 class="feature-card__title">RAG Corpus</h3><p class="feature-card__text">14-source knowledge base covering market data, regulatory guidance, industry reports, comparable transactions, and institutional research.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">RAG Corpus</h3><p class="feature-card__text">14-source knowledge base structured through proprietary data services. Covers market data, regulatory guidance, industry reports, comparable transactions, and institutional research &mdash; all indexed and maintained internally.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Market Intelligence</h3><p class="feature-card__text">Submarket-level data retrieval: demographics, employment trends, supply pipeline, absorption rates, and rent growth trajectories.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Comp Database</h3><p class="feature-card__text">Comparable property database with distance-weighted matching, vintage adjustments, and data source attribution.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Regulatory Reference</h3><p class="feature-card__text">Indexed regulatory guidance from FDIC, OCC, NCUA, and state-level lending authorities for compliance context.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Master Repository</h3><p class="feature-card__text">Centralized data store for markets, comps, expenses, deal records, and benchmarking indexes with 60-day shelf life enforcement.</p></div>
           </div>
-          <p class="section-footnote">All companies maintain their own internal knowledge base. Supplement it with best-in-class industry resources and education. All industry-related RAG content is collected through regular-way business, sourced directly, and handled with appropriate care.</p>
+          <p class="section-footnote">pinchfin uses its own proprietary data services layer for all market, economic, and regulatory data retrieval. No third-party vendor APIs are resold or repackaged. All knowledge base content is collected through regular-way business, sourced directly from institutional providers, and maintained with appropriate data governance.</p>
         </div>
       </section>
 
@@ -124,7 +130,7 @@
           <h2 style="font-size: var(--size-2xl); margin-bottom: var(--space-8);">Phase-gated execution with blocking controls.</h2>
           <div class="card-grid">
             <div class="feature-card"><h3 class="feature-card__title">Execution Framework</h3><p class="feature-card__text">17-phase execution sequence from Context Brief through Due Diligence &amp; Closing, with 4 blocking gates and cross-phase dependency enforcement.</p></div>
-            <div class="feature-card"><h3 class="feature-card__title">Skill Chain Orchestration</h3><p class="feature-card__text">206 skills mapped to execution points with parallel/serial execution, conditional branching, and mandatory logging at every step.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Skill Chain Orchestration</h3><p class="feature-card__text">229 skills mapped to execution points with parallel/serial execution, conditional branching, and mandatory logging at every step.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">State Management</h3><p class="feature-card__text">Multi-session execution support with segment output files, workflow state persistence, and cross-segment handoff validation.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Blocking Gates</h3><p class="feature-card__text">Four mandatory checkpoints: Sponsor GO/NO-GO, Lender Rent determination, Expense Baseline establishment, and Sizing Waterfall completion.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Audit Trail</h3><p class="feature-card__text">Every skill execution is logged with inputs, outputs, timestamp, and configuration state. Full reproducibility from intake to credit decision.</p></div>
@@ -155,7 +161,7 @@
           <div class="card-grid">
             <div class="feature-card"><h3 class="feature-card__title">Pipeline Dashboard</h3><p class="feature-card__text">Visual pipeline tracking with deal status, phase progression, and key metric summaries across the active deal book.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Borrower Profiles</h3><p class="feature-card__text">Sponsor relationship management with track record history, entity structure mapping, and cross-deal performance tracking.</p></div>
-            <div class="feature-card"><h3 class="feature-card__title">Deal Records</h3><p class="feature-card__text">Standardized JSON+MD deal records with unique identifiers (VUL-YYYY-NNN), structured metadata, and full document linkage.</p></div>
+            <div class="feature-card"><h3 class="feature-card__title">Deal Records</h3><p class="feature-card__text">Standardized JSON+MD deal records with unique identifiers (PF-YYYY-NNN), structured metadata, and full document linkage.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Quick Review</h3><p class="feature-card__text">10-phase, approximately 10-minute screening process that produces a one-page credit memo for rapid deal triage.</p></div>
             <div class="feature-card"><h3 class="feature-card__title">Notification System</h3><p class="feature-card__text">Event-driven notifications for gate completions, constraint binding changes, QA findings, and workflow state transitions.</p></div>
           </div>
@@ -220,7 +226,48 @@ Total                      5,900+</code></pre>
           </div>
 
           <h3 style="margin-bottom: var(--space-6);">Retrieval Methodology</h3>
-          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Documents are retrieved using semantic similarity with metadata filtering. Each retrieval is logged with source attribution, relevance score, and citation context. The system prioritizes recency (60-day shelf life for market data) and source authority.</p>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Documents are retrieved using semantic similarity with metadata filtering. Each retrieval is logged with source attribution, relevance score, and citation context.</p>
+
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <h3 class="card__title">Semantic Similarity + Metadata Filtering</h3>
+              <p class="card__description">Queries are matched against the corpus using embedding-based semantic search, then filtered by document type, publication date, geographic relevance, and source tier. Results are ranked by composite relevance score.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Source Authority Hierarchy</h3>
+              <p class="card__description"><strong>Tier 1 (Primary):</strong> CBRE, JLL, Newmark, C&amp;W, CoStar, RealPage, Yardi Matrix, REIS/Moody's, Trepp, county assessor/recorder, Census/BLS via proprietary data services. <strong>Tier 2 (Cross-reference):</strong> Apartments.com, RentCafe, Zumper, Zillow, Redfin &mdash; validation only, never sole source. <strong>Tier 3 (Never cite):</strong> SEO blogs, content marketing, crowd-sourced reviews.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Data Freshness Management</h3>
+              <p class="card__description">Market data enforces a 60-day shelf life. Stale data triggers automatic re-retrieval before downstream consumption. Economic indicators (SOFR, Treasuries, unemployment) are pulled live via MCP data services at deal initiation.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Citation Requirements</h3>
+              <p class="card__description">Every analytical claim must trace to a specific source with publication date and access method. Unsourced assertions are flagged by the Checker agent. Citation format follows institutional research standards &mdash; no footnotes without provenance.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-6);">Comparable Sales Upload Workflow</h3>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Operators upload comparable sale and lease data for integration with the underwriting rent determination and valuation modules.</p>
+
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <h3 class="card__title">Upload Format</h3>
+              <p class="card__description">Structured CSV or JSON with required fields: property address, sale/lease date, price or rent per unit/SF, unit count, property type, and data source. Optional fields include cap rate, occupancy at sale, and buyer/seller identity.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Processing &amp; Normalization</h3>
+              <p class="card__description">Uploaded comps are geocoded, validated against county assessor records where available, and normalized to per-unit and per-SF metrics. Duplicate detection flags properties already in the comp database.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Distance-Weighted Matching</h3>
+              <p class="card__description">Comps are scored by proximity to the subject property, vintage (time since transaction), size similarity, and property class alignment. Closer, more recent, and more similar comps receive higher weighting in the analysis.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Underwriting Integration</h3>
+              <p class="card__description">Validated comps flow into the rent determination module (Phase 6A) and the comparable analysis report. Vintage adjustments are applied automatically based on market trend data. All comp selections are documented with rationale.</p>
+            </div>
+          </div>
 
           <h3 style="margin-bottom: var(--space-6);">Red Flag Detection (L1-L4)</h3>
           <div class="card-grid" style="margin-bottom: var(--space-8);">
@@ -282,10 +329,51 @@ Total                      5,900+</code></pre>
           </div>
 
           <h3 style="margin-bottom: var(--space-6);">Quality Gates</h3>
-          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Every phase output passes through quality gates before downstream consumption. Gates verify: arithmetic correctness (recalculation from raw inputs), internal consistency (cross-reference between sections), source attribution (every claim traced to data), and constraint compliance (no policy violations).</p>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-8);">Every phase output passes through four validation gates before downstream consumption.</p>
+
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <h3 class="card__title">Arithmetic Correctness</h3>
+              <p class="card__description">Independent recalculation of all numerical outputs from raw inputs. Debt service, coverage ratios, yield metrics, and amortization schedules are verified against deterministic computation. Tolerance: zero &mdash; any discrepancy triggers rejection.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Internal Consistency</h3>
+              <p class="card__description">Cross-reference between document sections: NOI in the cash flow must match NOI in the sizing waterfall. Rent roll totals must reconcile with revenue projections. Unit counts, square footage, and occupancy figures must be consistent across all deliverables.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Source Attribution</h3>
+              <p class="card__description">Every factual claim and market assertion must trace to a specific data source with publication date. Unsourced statements are flagged. Tier 3 sources trigger automatic rejection. Source freshness is validated against the 60-day shelf life policy.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Constraint Compliance</h3>
+              <p class="card__description">All sizing outputs are validated against the credit box configuration. LTV, DSCR, debt yield, LTC, and maximum proceeds are checked against their respective thresholds. Any constraint violation blocks the output from advancing to the next phase.</p>
+            </div>
+          </div>
 
           <h3 style="margin-bottom: var(--space-6);">Audit Trail</h3>
-          <p style="color: var(--color-graphite);">The skill chain audit system produces a mandatory execution log for every run. Logs capture: skill name, execution timestamp, input parameters, output summary, QA findings, and resolution status. Logs are stored in <code>/skill_chain_logs/</code> and are immutable once written.</p>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-6);">The skill chain audit system produces a mandatory execution log for every run. Logs are stored in <code>/skill_chain_logs/</code> and are immutable once written.</p>
+
+          <div class="config-block">
+            <div class="config-block__header">
+              <span class="config-block__filename">skill_chain_log_entry</span>
+              <span class="config-block__language">Structure</span>
+            </div>
+            <div class="config-block__body">
+              <pre><code>Field                  Description
+------------------------------------------------------
+skill_name             Canonical skill identifier
+execution_timestamp    ISO 8601 UTC timestamp
+phase                  Execution phase (00-15)
+input_parameters       Structured input hash
+output_summary         Key metrics and findings
+qa_level               SINGLE / DOUBLE / TRIPLE
+checker_findings       List of flagged items (if any)
+resolver_decision      ACCEPT / REMEDIATE / ESCALATE
+resolution_notes       Free-text resolution detail
+config_hash            Credit box config version hash
+duration_ms            Execution time in milliseconds</code></pre>
+            </div>
+          </div>
         </div>
       </section>
     </div><!-- /qa panel -->
@@ -308,37 +396,37 @@ Total                      5,900+</code></pre>
             <li style="list-style: disc; color: var(--color-graphite); margin-bottom: var(--space-2);">Windows, macOS, or Linux</li>
           </ul>
 
-          <h3 style="margin-bottom: var(--space-6);">Installation Steps</h3>
+          <h3 style="margin-bottom: var(--space-6);">Setup Steps</h3>
           <div class="timeline" style="margin-bottom: var(--space-12);">
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <p class="timeline__label">STEP 1</p>
-              <p class="timeline__title">Clone the repository</p>
-              <p class="timeline__text">Clone from GitHub and install dependencies. The repo includes all skills, engines, templates, and configuration files.</p>
+              <p class="timeline__title">Connect MCP Server</p>
+              <p class="timeline__text">Register the pinchfin MCP server in your Claude Code configuration. The server provisions all skills, analytical engines, data services, and configuration files through a managed integration.</p>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <p class="timeline__label">STEP 2</p>
-              <p class="timeline__title">Configure API keys</p>
-              <p class="timeline__text">Set up your <code>.env</code> file with API keys for data services: Google Maps, Census, FRED, BLS, HUD, and Walk Score.</p>
+              <p class="timeline__title">Configure data service credentials</p>
+              <p class="timeline__text">Provide API keys for integrated data services: Google Maps, Census, FRED, BLS, HUD, and Walk Score. Keys are stored locally and never transmitted beyond the configured API endpoints.</p>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <p class="timeline__label">STEP 3</p>
               <p class="timeline__title">Initialize your credit box</p>
-              <p class="timeline__text">Edit <code>credit_box_config.json</code> to reflect your firm's constraint thresholds, sizing parameters, and credit philosophy.</p>
+              <p class="timeline__text">Edit <code>credit_box_config.json</code> to reflect your firm's constraint thresholds, sizing parameters, and credit philosophy. The credit box is yours &mdash; it encodes your institutional standards.</p>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <p class="timeline__label">STEP 4</p>
-              <p class="timeline__title">Register MCP server</p>
-              <p class="timeline__text">Register the valeri-data MCP server in your Claude configuration for integrated data service access during analysis.</p>
+              <p class="timeline__title">Verify MCP connectivity</p>
+              <p class="timeline__text">Run the system validation check to confirm MCP server connectivity, data service availability, and configuration integrity. All 11 data tools across 10 services should report healthy.</p>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <p class="timeline__label">STEP 5</p>
               <p class="timeline__title">Run your first deal</p>
-              <p class="timeline__text">Start with the Context Brief (Phase -1) and progress through the execution framework. The system guides you through each phase.</p>
+              <p class="timeline__text">Start with the Context Brief (Phase -1) and progress through the execution framework. The system guides you through each phase with structured handoffs and blocking gate enforcement.</p>
             </div>
           </div>
 
@@ -370,8 +458,8 @@ Total                      5,900+</code></pre>
           </div>
 
           <h3 style="margin-bottom: var(--space-6);">Environment Considerations</h3>
-          <p style="color: var(--color-graphite); margin-bottom: var(--space-4);">pinchfin is designed for local execution. All data processing occurs on your machine. No deal data is transmitted to external servers beyond the API calls you configure. The system operates with full data sovereignty.</p>
-          <p style="color: var(--color-graphite);">For production deployment at scale, consider: API rate limiting configuration, concurrent session management, storage allocation for deal records and generated documents, and backup procedures for the master repository.</p>
+          <p style="color: var(--color-graphite); margin-bottom: var(--space-4);">pinchfin operates through a managed MCP integration. Analytical computation executes within your Claude Code environment. Deal data remains under your control &mdash; no proprietary information is stored on pinchfin servers beyond the MCP session context.</p>
+          <p style="color: var(--color-graphite);">For production deployment at scale, consider: API rate limiting configuration for data services, concurrent session management across analysts, storage allocation for deal records and generated documents, and backup procedures for the master repository and credit box configuration.</p>
         </div>
       </section>
     </div><!-- /deployment panel -->
@@ -382,18 +470,45 @@ Total                      5,900+</code></pre>
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__top">
-        <div class="footer__brand"><img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);"><p class="footer__brand-name"><strong>pinch</strong>fin</p><p class="footer__brand-desc">Proprietary credit operating system for commercial real estate.</p></div>
+        <div class="footer__brand">
+          <img src="img/pinchfin-logo-mark.svg" alt="" class="nav-brand__emblem" style="width: 32px; height: 32px; margin-bottom: var(--space-2);">
+          <p class="footer__brand-name"><strong>pinch</strong>fin</p>
+          <p class="footer__brand-desc">Proprietary credit operating system for commercial real estate.</p>
+        </div>
         <div class="footer-links">
-          <div class="footer-links__group"><p class="footer-links__heading">Platform</p><a href="platform.html" class="footer-links__item">Overview</a><a href="platform.html#modules" class="footer-links__item">Modules</a><a href="operations.html" class="footer-links__item">Operations</a><a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a><a href="docs.html" class="footer-links__item">Documentation</a></div>
-          <div class="footer-links__group"><p class="footer-links__heading">Solutions</p><a href="community.html" class="footer-links__item">Use Cases</a><a href="letter.html" class="footer-links__item">Letter from Builder</a><a href="manual.html" class="footer-links__item">MCP Guide</a><a href="changelog.html" class="footer-links__item">Changelog</a></div>
-          <div class="footer-links__group"><p class="footer-links__heading">Legal</p><a href="terms.html" class="footer-links__item">Terms of Service</a><a href="privacy.html" class="footer-links__item">Privacy Policy</a></div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Platform</p>
+            <a href="platform.html" class="footer-links__item">Overview</a>
+            <a href="architecture.html" class="footer-links__item">Architecture</a>
+            <a href="workflow.html" class="footer-links__item">Workflow</a>
+            <a href="operations.html" class="footer-links__item">Operations</a>
+            <a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Resources</p>
+            <a href="community.html" class="footer-links__item">Solutions</a>
+            <a href="letter.html" class="footer-links__item">Builder's Note</a>
+            <a href="manual.html" class="footer-links__item">MCP Guide</a>
+            <a href="docs.html" class="footer-links__item">Documentation</a>
+            <a href="changelog.html" class="footer-links__item">Changelog</a>
+          </div>
+          <div class="footer-links__group">
+            <p class="footer-links__heading">Legal</p>
+            <a href="terms.html" class="footer-links__item">Terms of Service</a>
+            <a href="privacy.html" class="footer-links__item">Privacy Policy</a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 Veleta Capital Holdings. All rights reserved.</p>
-        <div class="footer__bottom-links"><a href="terms.html">Terms</a><a href="changelog.html">Changelog</a></div>
+        <div class="footer__bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="mailto:bmurphy@veletacapital.com">Contact</a>
+        </div>
       </div>
-      <p style="font-size: var(--size-xs); color: var(--color-navy-dim); line-height: 1.7; margin-top: var(--space-6); opacity: 0.7;">pinchfin is an analytical tool and does not constitute financial advice. All outputs require independent verification by qualified professionals. No warranty is provided, express or implied. Users assume full responsibility for any decisions made using this software.</p>
+      <p class="disclaimer" style="margin-top: var(--space-6);">
+        pinchfin is an analytical framework, not financial advice. All outputs require independent verification by qualified professionals. Credit decisions remain the sole responsibility of the operator. Past analytical performance does not guarantee future accuracy. No representation is made regarding the completeness or reliability of any output.
+      </p>
     </div>
   </footer>
 
