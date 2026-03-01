@@ -501,7 +501,6 @@
         <a href="architecture.html" class="nav-links__item">Architecture</a>
         <a href="workflow.html" class="nav-links__item nav-links__item--active" aria-current="page">Workflow</a>
         <a href="operations.html" class="nav-links__item">Operations</a>
-        <a href="nuance-gate.html" class="nav-links__item">Nuance Gate</a>
         <a href="community.html" class="nav-links__item">Solutions</a>
         <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
       </div>
@@ -517,7 +516,6 @@
     <a href="architecture.html" class="nav-mobile__item">Architecture</a>
     <a href="workflow.html" class="nav-mobile__item" aria-current="page">Workflow</a>
     <a href="operations.html" class="nav-mobile__item">Operations</a>
-    <a href="nuance-gate.html" class="nav-mobile__item">Nuance Gate</a>
     <a href="community.html" class="nav-mobile__item">Solutions</a>
     <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
   </div>
@@ -535,7 +533,6 @@
         <nav class="nav-sub" role="tablist" aria-label="Workflow sections">
           <button class="nav-sub__item nav-sub__item--active" data-tab="overview" role="tab" aria-selected="true" tabindex="0">17-Phase Overview</button>
           <button class="nav-sub__item" data-tab="demo" role="tab" aria-selected="false" tabindex="-1">Interactive Demo</button>
-          <button class="nav-sub__item" data-tab="deep-dives" role="tab" aria-selected="false" tabindex="-1">Phase Deep-Dives</button>
         </nav>
       </div>
     </div>
@@ -606,16 +603,16 @@
                 <span class="badge badge--segment">Foundation</span>
                 <h6>Data Sources</h6>
                 <ul>
-                  <li>Google Maps (geocoding, place context)</li>
-                  <li>Census ACS (demographics, housing)</li>
-                  <li>BLS (employment, labor force)</li>
-                  <li>FRED (macro indicators, rates)</li>
-                  <li>FEMA NFHL (flood zone)</li>
-                  <li>EPA ECHO (environmental)</li>
-                  <li>HUD FMR (fair market rents)</li>
-                  <li>Walk Score (walkability, transit)</li>
-                  <li>FCC (county FIPS resolution)</li>
-                  <li>USPS (address validation)</li>
+                  <li>Geocoding and place context services</li>
+                  <li>Demographic and housing intelligence</li>
+                  <li>Employment and labor force data</li>
+                  <li>Macro indicators and rate services</li>
+                  <li>Flood zone determination</li>
+                  <li>Environmental compliance databases</li>
+                  <li>Fair market rent references</li>
+                  <li>Walkability and transit scoring</li>
+                  <li>Geographic resolution services</li>
+                  <li>Address validation</li>
                 </ul>
               </div>
             </div>
@@ -856,7 +853,7 @@
                   <li>Max Loan Amount: $100M hard ceiling</li>
                 </ul>
                 <h6>Skills (25+)</h6>
-                <p style="font-size: var(--size-sm); color: var(--color-graphite);">Rate pull (exact SOFR from FRED), spread application, debt service calculation, constraint-by-constraint max loan computation, binding constraint identification, term sheet structuring, reserve sizing, holdback and earnout modeling, extension conditions, and cash management waterfall.</p>
+                <p style="font-size: var(--size-sm); color: var(--color-graphite);">Live rate pull (exact SOFR from economic data services), spread application, debt service calculation, constraint-by-constraint max loan computation, binding constraint identification, term sheet structuring, reserve sizing, holdback and earnout modeling, extension conditions, and cash management waterfall.</p>
               </div>
             </div>
 
@@ -1021,95 +1018,6 @@
     </div><!-- /data-panel="demo" -->
 
 
-    <!-- ================================================================
-         TAB 3C: PHASE DEEP-DIVES (placeholder)
-         ================================================================ -->
-    <div data-panel="deep-dives" role="tabpanel" aria-hidden="true">
-
-      <section class="section section--white">
-        <div class="container">
-          <p class="section-label">Reference</p>
-          <h2 style="font-size: var(--size-2xl); font-weight: var(--weight-light); letter-spacing: -0.02em; margin-bottom: var(--space-6);">Each of the 17 phases below contains complete analytical specifications.</h2>
-          <p class="text-lead" style="max-width: 640px;">
-            Phase deep-dives document every skill invocation, input schema, output schema, QA checkpoint, and dependency requirement.
-          </p>
-
-          <ol class="deep-dives-list">
-            <li>
-              <span class="dd-phase">Phase 01</span>
-              <span class="dd-name">Data Infrastructure</span>
-              <span class="dd-desc">10 API sources, unified data layer</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 02</span>
-              <span class="dd-name">Deal Book Assembly</span>
-              <span class="dd-desc">OM extraction, deal record creation</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 03</span>
-              <span class="dd-name">Sponsor &amp; Entity Analysis</span>
-              <span class="dd-desc">GO/NO-GO gate, 10 skills</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 04</span>
-              <span class="dd-name">Market Intelligence</span>
-              <span class="dd-desc">Submarket fundamentals, supply pipeline</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 05</span>
-              <span class="dd-name">Comparable Analysis</span>
-              <span class="dd-desc">Rent and sale comps, adjustment methodology</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 06</span>
-              <span class="dd-name">Rent Roll Analysis</span>
-              <span class="dd-desc">Unit-level parsing, 12 skills</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 07</span>
-              <span class="dd-name">Revenue Underwriting</span>
-              <span class="dd-desc">Lender rent gate, dependency chain</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 08</span>
-              <span class="dd-name">Expense Normalization</span>
-              <span class="dd-desc">Expense baseline gate, 14 skills</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 09</span>
-              <span class="dd-name">Cash Flow &amp; Valuation</span>
-              <span class="dd-desc">Dual scenario proforma, DCF</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 10</span>
-              <span class="dd-name">Loan Sizing &amp; Structuring</span>
-              <span class="dd-desc">5-constraint waterfall, 25+ skills</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 12</span>
-              <span class="dd-name">Credit Memorandum</span>
-              <span class="dd-desc">45+ page capstone IC memo</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 13</span>
-              <span class="dd-name">Quality Assurance</span>
-              <span class="dd-desc">Triple-agent QA framework</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 14</span>
-              <span class="dd-name">Sensitivity Analysis</span>
-              <span class="dd-desc">Rate stress +200bps, break-even</span>
-            </li>
-            <li>
-              <span class="dd-phase">Phase 15</span>
-              <span class="dd-name">Final Deliverables</span>
-              <span class="dd-desc">IC package, distribution, archival</span>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-    </div><!-- /data-panel="deep-dives" -->
 
 
   </main>
@@ -1133,7 +1041,6 @@
             <a href="architecture.html" class="footer-links__item">Architecture</a>
             <a href="workflow.html" class="footer-links__item">Workflow</a>
             <a href="operations.html" class="footer-links__item">Operations</a>
-            <a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a>
           </div>
           <div class="footer-links__group">
             <p class="footer-links__heading">Resources</p>

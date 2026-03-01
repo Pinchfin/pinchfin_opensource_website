@@ -149,11 +149,17 @@
       font-size: var(--size-sm);
     }
 
-    /* --- Expandable Module Cards ----------------------------------------- */
+    /* --- Module Cards ------------------------------------------------------ */
     .module-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: var(--space-6);
+    }
+
+    @media (max-width: 1024px) {
+      .module-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -166,7 +172,6 @@
       background: var(--color-white);
       border: 1px solid var(--color-fog-mid);
       border-radius: var(--radius-lg);
-      overflow: hidden;
       transition: box-shadow var(--duration-base) var(--ease-in-out),
                   border-color var(--duration-base) var(--ease-in-out);
     }
@@ -174,22 +179,6 @@
     .module-card:hover {
       border-color: var(--color-fog-deep);
       box-shadow: var(--shadow-md);
-    }
-
-    .module-card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: var(--space-4);
-      padding: var(--space-6);
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .module-card-header:focus-visible {
-      outline: 2px solid var(--color-orange);
-      outline-offset: -2px;
-      border-radius: var(--radius-lg);
     }
 
     .module-card-title {
@@ -212,51 +201,6 @@
       color: var(--color-graphite);
       margin-top: var(--space-2);
       line-height: var(--leading-normal);
-    }
-
-    .module-card-chevron {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      color: var(--color-slate);
-      transition: transform var(--duration-base) var(--ease-out);
-      margin-top: 2px;
-    }
-
-    .module-card.expanded .module-card-chevron {
-      transform: rotate(180deg);
-    }
-
-    .module-card-body {
-      display: none;
-      padding: 0 var(--space-6) var(--space-6);
-      border-top: 1px solid var(--color-fog-mid);
-    }
-
-    .module-card.expanded .module-card-body {
-      display: block;
-    }
-
-    .module-card-body h6 {
-      font-size: var(--size-xs);
-      font-weight: var(--weight-semibold);
-      letter-spacing: var(--tracking-wider);
-      text-transform: uppercase;
-      color: var(--color-slate);
-      margin-top: var(--space-5);
-      margin-bottom: var(--space-2);
-    }
-
-    .module-card-body ul {
-      padding-left: var(--space-5);
-      list-style: disc;
-    }
-
-    .module-card-body li {
-      font-size: var(--size-sm);
-      color: var(--color-graphite);
-      line-height: var(--leading-normal);
-      margin-bottom: var(--space-1);
     }
 
     .badge {
@@ -503,7 +447,6 @@
         <a href="architecture.html" class="nav-links__item nav-links__item--active" aria-current="page">Architecture</a>
         <a href="workflow.html" class="nav-links__item">Workflow</a>
         <a href="operations.html" class="nav-links__item">Operations</a>
-        <a href="nuance-gate.html" class="nav-links__item">Nuance Gate</a>
         <a href="community.html" class="nav-links__item">Solutions</a>
         <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
       </div>
@@ -519,7 +462,6 @@
     <a href="architecture.html" class="nav-mobile__item" aria-current="page">Architecture</a>
     <a href="workflow.html" class="nav-mobile__item">Workflow</a>
     <a href="operations.html" class="nav-mobile__item">Operations</a>
-    <a href="nuance-gate.html" class="nav-mobile__item">Nuance Gate</a>
     <a href="community.html" class="nav-mobile__item">Solutions</a>
     <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
   </div>
@@ -650,7 +592,7 @@
 
               <p>The constraint hierarchy array defines the order in which limits are evaluated during the sizing waterfall. The system computes the maximum loan amount permitted by each constraint independently, then selects the minimum -- the most restrictive value governs. This means you never assume which constraint is binding. You always run the full waterfall and let the math decide.</p>
 
-              <p>Rate construction follows the same principle. The index and spread are defined here; the system pulls the current index value from FRED at execution time and adds the spread to compute the all-in rate. No manual rate entry. No stale assumptions.</p>
+              <p>Rate construction follows the same principle. The index and spread are defined here; the system pulls the current index value from economic data services at execution time and adds the spread to compute the all-in rate. No manual rate entry. No stale assumptions.</p>
 
               <p>Property types, loan structure, and recourse status are also centralized. When the platform expands to new asset classes, you add them to this configuration. Every module that filters by property type automatically picks up the change. This is how a system-wide update takes minutes, not days.</p>
             </div>
@@ -689,743 +631,240 @@
           <h3 class="category-header">Data &amp; Foundation</h3>
           <div class="module-grid">
 
-            <!-- Data Infrastructure -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Data Infrastructure</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 1-2</span> 11 MCP tools
-                  </div>
-                  <p class="module-card-desc">Unified data layer connecting 10 external services -- Census, FRED, BLS, FEMA, EPA, HUD, Google Maps, Walk Score, and more -- into a single property context object.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Data Infrastructure</h3>
+                <p class="module-card-desc">Core data services, API integrations, and analytical computation engines that power every upstream module. Proprietary data services layer connecting geographic, demographic, economic, and property-level intelligence into a single property context object.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>get_property_context</li>
-                  <li>validate_address</li>
-                  <li>geocode_address</li>
-                  <li>get_demographics</li>
-                  <li>get_employment</li>
-                  <li>get_macro_indicators</li>
-                  <li>get_flood_zone</li>
-                  <li>get_environmental</li>
-                  <li>get_hud_data</li>
-                  <li>get_walk_score</li>
-                  <li>resolve_geography</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal intake (address, property type)</li>
-                  <li>Downstream: Market Intelligence, Comp Analysis, Expense Normalization</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Deal Book Assembly -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Deal Book Assembly</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 2</span>
-                  </div>
-                  <p class="module-card-desc">Ingests raw deal documents -- offering memoranda, rent rolls, T-12 financials, appraisals -- and structures them into normalized data objects for downstream consumption.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Deal Book Assembly</h3>
+                <p class="module-card-desc">Deal intake processing, document parsing, rent roll normalization, T-12 financial extraction, and structured deal record initialization. The entry point for every transaction.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Document parsing and OCR extraction</li>
-                  <li>Rent roll normalization</li>
-                  <li>T-12 financial extraction</li>
-                  <li>Deal record initialization (PF-YYYY-NNN)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Raw document upload</li>
-                  <li>Downstream: All analytical modules</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Document Library & RAG -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Document Library &amp; RAG</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span> 5,900+ docs
-                  </div>
-                  <p class="module-card-desc">Retrieval-augmented generation layer indexing 5,900+ documents across markets, comps, expenses, and deal records. Skills query this library before external research.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Document Library &amp; RAG</h3>
+                <p class="module-card-desc">Retrieval-augmented generation corpus, document processing pipeline, source validation, and institutional knowledge management. 5,900+ curated documents indexed for precision retrieval.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Master repository search (markets, comps, expenses, deal_records, indexes)</li>
-                  <li>Document shelf-life validation (60-day expiry for market data)</li>
-                  <li>Read-before-research protocol enforcement</li>
-                  <li>RAG context assembly</li>
-                  <li>Institutional knowledge retrieval</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Master repository files</li>
-                  <li>Downstream: All phases -- skills check library before external queries</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Underwriting Core -->
           <h3 class="category-header">Underwriting Core</h3>
           <div class="module-grid">
 
-            <!-- Sponsor & Entity Analysis -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Sponsor &amp; Entity Analysis</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 3</span>
-                    <span class="badge badge--gate">Blocking Gate</span>
-                    10 skills
-                  </div>
-                  <p class="module-card-desc">Deep due diligence on borrower entities, key principals, track record, litigation, and organizational structure. Produces a GO/NO-GO recommendation that gates the entire workflow.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Sponsor Analysis</h3>
+                <p class="module-card-desc">Track record evaluation, entity structure review, net worth and liquidity analysis, background verification, and GO/NO-GO gating. Determines whether the sponsorship meets institutional lending standards before analytical resources are committed.</p>
+                <span class="badge badge--gate">Blocking Gate</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Entity structure mapping</li>
-                  <li>Key principal background analysis</li>
-                  <li>Track record evaluation (completions, performance)</li>
-                  <li>Litigation and bankruptcy search</li>
-                  <li>Net worth and liquidity assessment</li>
-                  <li>Guarantor analysis</li>
-                  <li>Related entity cross-reference</li>
-                  <li>Sponsor DD node (4 sub-nodes)</li>
-                  <li>GO/NO-GO gate evaluation</li>
-                  <li>Sponsor report generation (30+ pages)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal Book (borrower documents)</li>
-                  <li>Downstream: All subsequent phases (blocked on NO-GO)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Market Intelligence -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Market Intelligence</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 4</span> 3 skills
-                  </div>
-                  <p class="module-card-desc">Submarket-level analysis combining MCP data services, master repository research, and external sources. Covers supply pipeline, demand drivers, rent trends, and absorption.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Market &amp; Submarket</h3>
+                <p class="module-card-desc">Demographics, employment, supply pipeline, absorption, rent trends, and market risk scoring with RAG-augmented research. Establishes the macroeconomic and microeconomic context for every underwriting assumption.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Market-submarket analysis (demographics, employment, macro)</li>
-                  <li>Supply pipeline quantification</li>
-                  <li>Rent growth trend analysis</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Data Infrastructure (property context), Sponsor (geography)</li>
-                  <li>Downstream: Comparable Analysis, Expense Normalization, Risk Assessment</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Comparable Analysis -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Comparable Analysis</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 6</span> 2 skills
-                  </div>
-                  <p class="module-card-desc">Identifies and analyzes rent and sale comparables within the submarket. Produces adjustment grids, per-unit benchmarks, and market positioning analysis.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Comparable Analysis</h3>
+                <p class="module-card-desc">Rent comps, sale comps, and market positioning with distance-weighted adjustments and data source attribution. Cross-references multiple data sets to establish defensible market benchmarks.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Comp identification and selection</li>
-                  <li>Rent comp adjustment grid generation</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Rent Roll (unit mix), Market Intelligence (submarket bounds)</li>
-                  <li>Downstream: Revenue Underwriting (Lender Rent), Cash Flow</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Rent Roll Analysis -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Rent Roll Analysis</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 5</span> 12 skills
-                  </div>
-                  <p class="module-card-desc">Unit-level rent roll parsing, lease abstraction, occupancy trending, loss-to-lease calculation, concession analysis, and unit mix benchmarking.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Rent Roll Analysis</h3>
+                <p class="module-card-desc">Unit-level rent roll normalization, loss-to-lease calculation, concession analysis, occupancy trending, and lease expiration profiling. The foundation of the revenue underwriting.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Rent roll parsing and normalization</li>
-                  <li>Unit mix categorization</li>
-                  <li>Occupancy trend analysis</li>
-                  <li>Loss-to-lease computation</li>
-                  <li>Concession quantification</li>
-                  <li>Lease expiration schedule</li>
-                  <li>Rent per square foot analysis</li>
-                  <li>Unit renovation status tracking</li>
-                  <li>Market rent gap analysis</li>
-                  <li>Affordable unit compliance check</li>
-                  <li>Student housing bed-level analysis</li>
-                  <li>Rent roll report generation (15+ pages)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal Book (raw rent roll)</li>
-                  <li>Downstream: Comps (unit mix), Revenue UW, Cash Flow</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Financial Analysis -->
           <h3 class="category-header">Financial Analysis</h3>
           <div class="module-grid">
 
-            <!-- Revenue Underwriting -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Revenue Underwriting</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 6A</span>
-                    <span class="badge badge--gate">Blocking Gate</span>
-                  </div>
-                  <p class="module-card-desc">Establishes the Lender Rent -- the underwritten revenue baseline derived from rent roll actuals, comparable analysis, and market positioning. This figure governs all downstream cash flow.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Lender Rent Determination</h3>
+                <p class="module-card-desc">Blocking gate module: establishes lender-approved rent basis from rent roll, comps, and market data before expense analysis can proceed. No downstream sizing occurs until rents are locked.</p>
+                <span class="badge badge--gate">Blocking Gate</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Lender Rent derivation (min of: in-place, comps, proforma)</li>
-                  <li>Revenue growth assumption calibration</li>
-                  <li>Other income underwriting</li>
-                  <li>Vacancy and credit loss estimation</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Rent Roll (Phase 5), Comps (Phase 6)</li>
-                  <li>Downstream: Cash Flow, Valuation, Sizing (all blocked until set)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Expense Normalization -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Expense Normalization</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 7-8</span>
-                    <span class="badge badge--gate">Blocking Gate</span>
-                    14 skills
-                  </div>
-                  <p class="module-card-desc">T-12 expense analysis, line-item normalization, per-unit benchmarking against market data, and expense growth projection. Locks the cost structure for cash flow modeling.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">T12 Expense Analysis</h3>
+                <p class="module-card-desc">T-12 operating statement normalization, per-unit benchmarking, expense growth projection, and reserve sizing. Identifies management inefficiencies, one-time charges, and trending patterns.</p>
+                <span class="badge badge--gate">Blocking Gate</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>T-12 line-item extraction</li>
-                  <li>Expense normalization (non-recurring removal)</li>
-                  <li>Per-unit expense benchmarking</li>
-                  <li>Tax assessment analysis</li>
-                  <li>Insurance cost validation</li>
-                  <li>Utility expense normalization</li>
-                  <li>Management fee calculation</li>
-                  <li>Replacement reserve sizing</li>
-                  <li>Capital expenditure analysis</li>
-                  <li>Payroll and contract normalization</li>
-                  <li>Expense growth rate calibration</li>
-                  <li>Expense ratio analysis</li>
-                  <li>Market expense comparison</li>
-                  <li>T-12 expense report generation (15+ pages)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal Book (T-12 financials), Market Intelligence</li>
-                  <li>Downstream: Cash Flow, Valuation, Sizing (all blocked until baseline set)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Cash Flow & Valuation -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Cash Flow &amp; Valuation</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 9-10</span> Dual scenario
-                  </div>
-                  <p class="module-card-desc">Constructs multi-year cash flow projections under base and downside scenarios. Computes NOI, debt service coverage, and direct capitalization and DCF valuations.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Cash Flow &amp; NOI</h3>
+                <p class="module-card-desc">Net operating income derivation, cash flow waterfall construction, and debt service coverage analysis across multiple constraint scenarios.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Revenue projection (base + downside)</li>
-                  <li>Expense projection</li>
-                  <li>NOI waterfall construction</li>
-                  <li>Debt service computation</li>
-                  <li>DSCR / DY / LTV computation</li>
-                  <li>Direct cap valuation</li>
-                  <li>DCF valuation with terminal cap</li>
-                  <li>Business plan integration (capex, lease-up)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Revenue UW (Lender Rent), Expense Normalization, Business Plan</li>
-                  <li>Downstream: Loan Sizing, Sensitivity, Credit Memorandum</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Loan Sizing & Structuring -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Loan Sizing &amp; Structuring</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 10</span>
-                    <span class="badge badge--gate">Blocking Gate</span>
-                    25+ skills
-                  </div>
-                  <p class="module-card-desc">Runs the five-constraint sizing waterfall (LTV, DSCR, DY, LTC, max loan), determines the binding constraint, and structures the loan with IO period, amortization, extensions, and reserves.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Sizing &amp; Structuring</h3>
+                <p class="module-card-desc">Five-constraint waterfall engine: LTV, DSCR, debt yield, loan-to-cost, and maximum proceeds cap. Identifies the binding constraint and structures the loan to institutional parameters.</p>
+                <span class="badge badge--gate">Blocking Gate</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>LTV constraint computation (as-is + stabilized)</li>
-                  <li>DSCR constraint computation (1.05x floor)</li>
-                  <li>Debt yield constraint (7.00% floor)</li>
-                  <li>LTC constraint (80% ceiling)</li>
-                  <li>Max loan amount cap ($100M)</li>
-                  <li>Binding constraint identification (minimum governs)</li>
-                  <li>Rate construction (SOFR + spread from FRED)</li>
-                  <li>IO period structuring</li>
-                  <li>Amortization schedule</li>
-                  <li>Extension option structuring</li>
-                  <li>Reserve sizing (tax, insurance, capex, TI/LC)</li>
-                  <li>Holdback and earnout structuring</li>
-                  <li>Recourse determination</li>
-                  <li>Prepayment penalty structure</li>
-                  <li>Cash management (lockbox, sweep, trap triggers)</li>
-                  <li>25+ additional structuring and returns skills</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Cash Flow (NOI, valuations), credit_box_config.json</li>
-                  <li>Downstream: Credit Memorandum, Term Sheet, Sensitivity</li>
-                </ul>
+            </div>
+
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Valuation</h3>
+                <p class="module-card-desc">As-is and as-stabilized valuation using income approach, direct capitalization, and market-derived cap rates with triangulation.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Execution & Delivery -->
           <h3 class="category-header">Execution &amp; Delivery</h3>
           <div class="module-grid">
 
-            <!-- Capital Markets -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Capital Markets</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 11</span> 12 term sheet engines
-                  </div>
-                  <p class="module-card-desc">Term sheet generation, comparison, and review across multiple capital sources. Produces standardized term sheets and comparative analyses for credit committee.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Capital Markets</h3>
+                <p class="module-card-desc">Pricing analysis, execution strategy, exit financing assumptions, and market condition overlays. Contextualizes the transaction within the current lending environment.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>12 term sheet generation engines (by product type)</li>
-                  <li>Term sheet comparison node</li>
-                  <li>Term sheet review node</li>
-                  <li>Pricing analysis and market benchmarking</li>
-                  <li>Execution risk assessment</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Loan Sizing (structure, terms)</li>
-                  <li>Downstream: Credit Memorandum, Borrower Portal</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Credit Memorandum & IC Package -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Credit Memorandum &amp; IC Package</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 12</span> Capstone document
-                  </div>
-                  <p class="module-card-desc">Generates the 20+ page Investment Committee memorandum -- the capstone document that references all seven prior analytical reports and delivers the credit recommendation.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Credit Memorandum</h3>
+                <p class="module-card-desc">Investment committee-ready document generation with standardized formatting, narrative synthesis, and analytical exhibits. The final deliverable of the underwriting workflow.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>IC Memo node (governing prompt)</li>
-                  <li>Executive summary generation</li>
-                  <li>Cross-document reference assembly</li>
-                  <li>Risk matrix compilation</li>
-                  <li>Credit recommendation synthesis</li>
-                  <li>DOCX report generation (V3.1 Elevated)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: All 7 prior analytical documents</li>
-                  <li>Downstream: Credit decision, QA review</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Quality Assurance -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Quality Assurance</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 13</span> Triple-Agent system
-                  </div>
-                  <p class="module-card-desc">Three-agent QA system: Producer generates analysis, Checker validates against methodology and data, Resolver adjudicates conflicts. Maintains a persistent improvement log.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Quality Assurance</h3>
+                <p class="module-card-desc">Three-agent review system (Producer, Checker, Resolver) with deterministic validation, constraint compliance verification, and audit trail generation.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Producer execution (initial analysis)</li>
-                  <li>Checker validation (qa-checker)</li>
-                  <li>Resolver adjudication (qa-resolver)</li>
-                  <li>Improvement log maintenance (last 5 entries fed to Producer)</li>
-                  <li>Skill chain audit logging</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Any analytical output</li>
-                  <li>Downstream: Final deliverable approval</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Sensitivity Analysis -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Sensitivity Analysis</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 14</span>
-                  </div>
-                  <p class="module-card-desc">Stress-tests the cash flow model across key variables -- vacancy, rent growth, exit cap, interest rate, expense growth -- and quantifies downside exposure at the loan level.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Sensitivity Analysis</h3>
+                <p class="module-card-desc">Multi-variable stress testing across interest rates, cap rates, vacancy, rent growth, and expense escalation. Quantifies downside exposure under adverse scenarios.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Multi-variable sensitivity tables</li>
-                  <li>Break-even analysis (occupancy, rate, cap rate)</li>
-                  <li>Downside scenario construction</li>
-                  <li>DSCR / DY sensitivity mapping</li>
-                  <li>Monte Carlo simulation (optional)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Cash Flow model, Loan Sizing</li>
-                  <li>Downstream: Credit Memorandum (risk section), IC Package</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Operations -->
           <h3 class="category-header">Operations</h3>
           <div class="module-grid">
 
-            <!-- CRM & Pipeline -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">CRM &amp; Pipeline</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span> 102 routes
-                  </div>
-                  <p class="module-card-desc">Full-featured CRM and deal pipeline application with 102 routes, 30+ navigation items, contact management, task tracking, and deal status workflows.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">CRM &amp; Pipeline</h3>
+                <p class="module-card-desc">Deal tracking, pipeline management, and origination workflow coordination across the lending lifecycle.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Deal pipeline management and status tracking</li>
-                  <li>Contact and entity relationship management</li>
-                  <li>Task assignment and workflow automation</li>
-                  <li>Activity logging and communication history</li>
-                  <li>Dashboard analytics and reporting</li>
-                  <li>Demo mode for evaluation (VITE_DEMO_MODE=true)</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal intake</li>
-                  <li>Downstream: All workflow phases (deal status updates)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Loan Origination System -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Loan Origination System</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Phase 15+</span>
-                  </div>
-                  <p class="module-card-desc">Post-approval origination workflows: commitment letter generation, closing checklist management, third-party ordering, and funding coordination.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Loan Origination System</h3>
+                <p class="module-card-desc">End-to-end origination infrastructure: application processing, document collection, approval workflow, and closing coordination.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Commitment letter generation</li>
-                  <li>Closing checklist management</li>
-                  <li>Third-party report ordering (appraisal, environmental, PCA)</li>
-                  <li>Document collection and verification</li>
-                  <li>Funding authorization workflow</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Credit decision (Phase 14 approval)</li>
-                  <li>Downstream: Portfolio Surveillance</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Portfolio Surveillance -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Portfolio Surveillance</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Post-origination</span> 13 skills
-                  </div>
-                  <p class="module-card-desc">Ongoing monitoring of funded loans: covenant compliance testing, financial reporting analysis, watchlist management, and maturity tracking.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Portfolio Surveillance</h3>
+                <p class="module-card-desc">Post-closing monitoring, covenant compliance tracking, and portfolio-level risk assessment across the managed loan book.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>DSCR covenant testing</li>
-                  <li>Occupancy monitoring</li>
-                  <li>Financial statement analysis (quarterly/annual)</li>
-                  <li>Cash trap trigger evaluation</li>
-                  <li>Extension eligibility testing</li>
-                  <li>Holdback / earnout release evaluation</li>
-                  <li>Maturity and payoff tracking</li>
-                  <li>Watchlist scoring and escalation</li>
-                  <li>Property inspection tracking</li>
-                  <li>Insurance and tax compliance</li>
-                  <li>Reserve balance monitoring</li>
-                  <li>Wind-down planning</li>
-                  <li>Liquidity analysis</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Funded loan data, borrower reporting</li>
-                  <li>Downstream: Investor reporting, risk alerts</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Legal & Compliance -->
           <h3 class="category-header">Legal &amp; Compliance</h3>
           <div class="module-grid">
 
-            <!-- In-House Counsel -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">In-House Counsel</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span> 20 skills
-                  </div>
-                  <p class="module-card-desc">Legal analysis module covering loan document review, entity structure validation, regulatory compliance, opinion letter drafting, and closing document preparation.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">In-House Counsel</h3>
+                <p class="module-card-desc">Legal and regulatory compliance analysis, document review frameworks, and institutional policy enforcement.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Skills</h6>
-                <ul>
-                  <li>Loan agreement review and markup</li>
-                  <li>Entity formation document review</li>
-                  <li>Guaranty analysis</li>
-                  <li>Environmental indemnity review</li>
-                  <li>Title and survey analysis</li>
-                  <li>UCC filing preparation</li>
-                  <li>Regulatory compliance checking</li>
-                  <li>Opinion letter drafting</li>
-                  <li>Subordination and intercreditor review</li>
-                  <li>10 additional legal skills</li>
-                </ul>
-                <h6>Dependencies</h6>
-                <ul>
-                  <li>Upstream: Deal structure, loan documents</li>
-                  <li>Downstream: Closing, compliance reporting</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Portals -->
           <h3 class="category-header">Portals</h3>
           <div class="module-grid">
 
-            <!-- Borrower Portal -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Borrower Portal</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span>
-                  </div>
-                  <p class="module-card-desc">Self-service portal for borrowers to submit documents, track deal status, view term sheets, and communicate with the origination team.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Borrower Portal</h3>
+                <p class="module-card-desc">Self-service interface for borrowers to submit documents, track deal status, and communicate with the origination team.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Document upload and checklist tracking</li>
-                  <li>Deal status dashboard</li>
-                  <li>Term sheet review and acceptance</li>
-                  <li>Message threading with origination team</li>
-                  <li>Post-closing reporting portal</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Broker Portal -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Broker Portal</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span>
-                  </div>
-                  <p class="module-card-desc">Broker-facing interface for deal submission, pipeline visibility, commission tracking, and programmatic access to lending parameters.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Broker Portal</h3>
+                <p class="module-card-desc">Broker-facing interface for deal submission, pipeline visibility, and programmatic access to lending parameters.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Deal submission workflow</li>
-                  <li>Pipeline status tracking</li>
-                  <li>Commission and fee transparency</li>
-                  <li>Lending parameter lookup (property type, geography, leverage)</li>
-                  <li>Quick quote generation</li>
-                </ul>
-              </div>
-            </article>
+            </div>
 
-            <!-- Investor Portal -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Investor Portal</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span>
-                  </div>
-                  <p class="module-card-desc">Investor-facing reporting interface providing portfolio-level analytics, loan-level performance data, distribution tracking, and risk monitoring dashboards.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Investor Portal</h3>
+                <p class="module-card-desc">Portfolio-level analytics, loan-level performance data, distribution tracking, and risk monitoring dashboards.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Portfolio performance dashboards</li>
-                  <li>Loan-level reporting and drill-down</li>
-                  <li>Distribution tracking and history</li>
-                  <li>Risk heat maps and concentration analysis</li>
-                  <li>Document vault (IC memos, appraisals)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
           <!-- Category: Reporting -->
           <h3 class="category-header">Reporting</h3>
           <div class="module-grid">
 
-            <!-- Data & Analytics -->
-            <article class="module-card" data-expandable>
-              <div class="module-card-header" tabindex="0" role="button" aria-expanded="false">
-                <div>
-                  <div class="module-card-title">Data &amp; Analytics</div>
-                  <div class="module-card-meta">
-                    <span class="badge badge--phase">Cross-phase</span>
-                  </div>
-                  <p class="module-card-desc">Platform-wide analytics and reporting engine. Aggregates deal data, pipeline metrics, portfolio performance, and operational KPIs into configurable dashboards and exports.</p>
-                </div>
-                <svg class="module-card-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5L10 12.5L15 7.5"/></svg>
+            <div class="module-card">
+              <div style="padding: var(--space-6);">
+                <h3 class="module-card-title">Data &amp; Analytics</h3>
+                <p class="module-card-desc">Platform-wide analytics engine aggregating deal data, pipeline metrics, portfolio performance, and operational KPIs into configurable dashboards.</p>
+                <span class="badge badge--positive">Ready</span>
               </div>
-              <div class="module-card-body">
-                <h6>Capabilities</h6>
-                <ul>
-                  <li>Deal funnel analytics (submission to close)</li>
-                  <li>Pipeline velocity metrics</li>
-                  <li>Portfolio concentration reporting</li>
-                  <li>Operational throughput dashboards</li>
-                  <li>Custom report builder and export (PDF, XLSX, DOCX)</li>
-                </ul>
-              </div>
-            </article>
+            </div>
+
           </div>
 
         </div>
@@ -1693,7 +1132,7 @@
 
           <!-- Document-Review Prompts -->
           <h3 class="category-header">Document-Review Prompts</h3>
-          <div class="container--narrow">
+          <div>
             <p class="u-mb-6">29 specialized review prompts for analyzing third-party reports and borrower-submitted documents. Each prompt encodes the specific questions, red flags, and data extraction requirements for its document type.</p>
             <table class="node-table">
               <thead>
@@ -1838,7 +1277,7 @@
             <tbody>
               <tr data-category="mcp-data-tools" data-module="data-infrastructure" data-phase="1-2">
                 <td class="skill-cat">MCP Data Tools</td>
-                <td>External API integrations: Census, FRED, BLS, FEMA, EPA, HUD, Google Maps, Walk Score, FCC, USPS</td>
+                <td>Proprietary data services layer: geographic, demographic, economic, environmental, housing, walkability, and address intelligence</td>
                 <td>11</td>
               </tr>
               <tr data-category="document-ingestion" data-module="deal-book" data-phase="1-2">
@@ -1990,7 +1429,6 @@
             <a href="architecture.html" class="footer-links__item">Architecture</a>
             <a href="workflow.html" class="footer-links__item">Workflow</a>
             <a href="operations.html" class="footer-links__item">Operations</a>
-            <a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a>
           </div>
           <div class="footer-links__group">
             <p class="footer-links__heading">Resources</p>

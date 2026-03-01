@@ -51,42 +51,6 @@
 
   <!-- Scoped platform-specific styles -->
   <style>
-    /* Module grid — 3-column layout for modules tab */
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-5);
-      align-items: stretch;
-    }
-    .module-card {
-      background: var(--color-white);
-      border: 1px solid var(--color-fog-mid);
-      border-radius: var(--radius-lg);
-      padding: var(--space-6);
-      transition: border-color var(--duration-base) var(--ease-in-out),
-                  box-shadow var(--duration-base) var(--ease-in-out);
-      display: flex;
-      flex-direction: column;
-    }
-    .module-card:hover {
-      border-color: var(--color-fog-deep);
-      box-shadow: var(--shadow-md);
-    }
-    .module-card__title {
-      font-size: var(--size-base);
-      font-weight: var(--weight-medium);
-      letter-spacing: var(--tracking-tight);
-      margin-bottom: var(--space-2);
-      line-height: 1.3;
-      color: var(--color-charcoal);
-    }
-    .module-card__desc {
-      font-size: var(--size-sm);
-      line-height: var(--leading-normal);
-      color: var(--color-graphite);
-      flex: 1;
-    }
-    .module-card .badge { align-self: flex-start; margin-top: var(--space-3); }
     /* Sub-tab sticky wrapper */
     .platform-tabs {
       position: sticky;
@@ -102,7 +66,6 @@
     .credit-soul-header .section-header__eyebrow { text-align: left; }
     .credit-soul-header .section-header__title { text-align: left; }
     @media (max-width: 768px) {
-      .module-grid { grid-template-columns: 1fr; gap: var(--space-4); }
       .platform-tabs { top: 56px; padding: 0 var(--space-5); }
     }
   </style>
@@ -144,7 +107,6 @@
         <a href="architecture.html" class="nav-links__item">Architecture</a>
         <a href="workflow.html" class="nav-links__item">Workflow</a>
         <a href="operations.html" class="nav-links__item">Operations</a>
-        <a href="nuance-gate.html" class="nav-links__item">Nuance Gate</a>
         <a href="community.html" class="nav-links__item">Solutions</a>
         <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
       </div>
@@ -162,7 +124,6 @@
     <a href="architecture.html" class="nav-mobile__item">Architecture</a>
     <a href="workflow.html" class="nav-mobile__item">Workflow</a>
     <a href="operations.html" class="nav-mobile__item">Operations</a>
-    <a href="nuance-gate.html" class="nav-mobile__item">Nuance Gate</a>
     <a href="community.html" class="nav-mobile__item">Solutions</a>
     <a href="index.html" class="nav-logo-mark" aria-label="pinchfin home"><img src="img/pinchfin-logo-mark.svg" alt="pinchfin" /></a>
   </div>
@@ -173,19 +134,7 @@
     <!-- Page spacer for fixed nav -->
     <div class="page-spacer"></div>
 
-    <!-- Sub-Tabs -->
-    <div class="platform-tabs">
-      <div class="container">
-        <nav class="nav-sub" role="tablist" aria-label="Platform sections">
-          <button class="nav-sub__item nav-sub__item--active" data-tab="overview" role="tab" aria-selected="true" tabindex="0">Overview</button>
-          <button class="nav-sub__item" data-tab="modules" role="tab" aria-selected="false" tabindex="-1">Modules</button>
-          <button class="nav-sub__item" data-tab="credit-soul" role="tab" aria-selected="false" tabindex="-1">Credit Soul</button>
-        </nav>
-      </div>
-    </div>
-
-    <!-- ═══════════ TAB: OVERVIEW ═══════════ -->
-    <div class="tab-panel tab-panel--active" data-panel="overview">
+    <!-- ═══════════ PLATFORM OVERVIEW (non-tabbed) ═══════════ -->
 
       <!-- Hero — Navy -->
       <section class="section section--navy hero" aria-labelledby="platform-hero-title">
@@ -350,179 +299,144 @@
         </div>
       </section>
 
-    </div><!-- /overview panel -->
+    <!-- Sub-Tabs: Platform Intelligence -->
+    <div class="platform-tabs">
+      <div class="container">
+        <nav class="nav-sub" role="tablist" aria-label="Platform intelligence">
+          <button class="nav-sub__item nav-sub__item--active" data-tab="nuance-gate" role="tab" aria-selected="true" tabindex="0">Nuance Gate</button>
+          <button class="nav-sub__item" data-tab="three-agent-qa" role="tab" aria-selected="false" tabindex="-1">Three-Agent QA</button>
+          <button class="nav-sub__item" data-tab="credit-soul" role="tab" aria-selected="false" tabindex="-1">Credit Soul</button>
+        </nav>
+      </div>
+    </div>
 
-    <!-- ═══════════ TAB: MODULES ═══════════ -->
-    <div class="tab-panel" data-panel="modules" aria-hidden="true">
+    <!-- ═══════════ TAB: NUANCE GATE ═══════════ -->
+    <div class="tab-panel tab-panel--active" data-panel="nuance-gate">
 
-      <section class="section section--fog section--tight" aria-labelledby="modules-title">
+      <section class="section section--white" aria-labelledby="ng-title">
         <div class="container">
-          <div class="section-header">
-            <p class="section-header__eyebrow">System Modules</p>
-            <h2 class="section-header__title" id="modules-title">24+ modules. Fully documented.</h2>
-            <p class="section-header__subtitle">Each module encapsulates a specific analytical domain. Modules compose into the execution framework and can be adopted independently or as a complete system.</p>
+          <div class="section-header" style="text-align: left; max-width: none;">
+            <p class="section-header__eyebrow" style="text-align: left;">Analytical Governance</p>
+            <h2 class="section-header__title" style="text-align: left;" id="ng-title">81 enterprise nodes. Three specialized agents. Contextual credit judgment at scale.</h2>
           </div>
-          <p style="text-align: center; color: var(--color-graphite); margin-bottom: var(--space-10); font-size: var(--size-sm);">
-            For full module architecture, skill mappings, and execution diagrams, see the
-            <a href="docs.html" style="color: var(--color-charcoal); font-weight: var(--weight-medium); border-bottom: 1px solid var(--color-fog-mid);">Architecture Reference</a>.
-          </p>
 
-          <div class="module-grid">
-            <!-- 18 READY modules -->
-            <div class="module-card">
-              <h3 class="module-card__title">Intake &amp; Context</h3>
-              <p class="module-card__desc">Deal intake processing, operator context briefs, scope definition, and initial data normalization.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Sponsor Analysis</h3>
-              <p class="module-card__desc">Track record evaluation, entity structure review, net worth/liquidity analysis, background verification, and GO/NO-GO gating.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Market &amp; Submarket</h3>
-              <p class="module-card__desc">Demographics, employment, supply pipeline, absorption, rent trends, and market risk scoring with RAG-augmented research.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Rent Roll Analysis</h3>
-              <p class="module-card__desc">Unit-level rent roll normalization, loss-to-lease calculation, concession analysis, occupancy trending, and lease expiration profiling.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Comparable Analysis</h3>
-              <p class="module-card__desc">Rent comps, sale comps, and market positioning with distance-weighted adjustments and data source attribution.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Lender Rent Determination</h3>
-              <p class="module-card__desc">Blocking gate module: establishes lender-approved rent basis from rent roll, comps, and market data before expense analysis.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">T12 Expense Analysis</h3>
-              <p class="module-card__desc">Trailing twelve-month expense parsing, category normalization, per-unit benchmarking, trend analysis, and expense baseline establishment.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Business Plan</h3>
-              <p class="module-card__desc">Renovation scope analysis, budget validation, timeline feasibility, and value-add strategy assessment against market conditions.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Nuance &amp; Red Flags</h3>
-              <p class="module-card__desc">Cross-phase anomaly detection, contextual risk identification (L1-L4), and deal-specific nuance capture from operator context.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Cash Flow Underwriting</h3>
-              <p class="module-card__desc">Dual-scenario cash flow projection, NOI build, debt service calculation, and multi-year pro forma generation with sensitivity analysis.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Valuation</h3>
-              <p class="module-card__desc">As-is and as-stabilized valuation using income approach, direct capitalization, and market-derived cap rates with triangulation.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Sizing &amp; Structuring</h3>
-              <p class="module-card__desc">Five-constraint waterfall (LTV, DSCR, DY, LTC, Max Loan), reserve sizing, holdback structuring, and rate sensitivity.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Risk Assessment</h3>
-              <p class="module-card__desc">Integrated risk register with severity scoring, mitigant mapping, and executive risk summary across all analytical dimensions.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Credit Decision</h3>
-              <p class="module-card__desc">Final credit recommendation synthesis, IC memo generation, and decision documentation with full audit trail.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Due Diligence &amp; Closing</h3>
-              <p class="module-card__desc">Closing checklist management, third-party report tracking, and condition satisfaction monitoring.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Data Services</h3>
-              <p class="module-card__desc">Integrated API layer: Google Maps, Census, BLS, FRED, FEMA, EPA, HUD, Walk Score. 11 tools, 10 external services.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Quality Assurance</h3>
-              <p class="module-card__desc">Three-agent QA system (Producer/Checker/Resolver), arithmetic verification, audit trail, and improvement logging.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Report Generation</h3>
-              <p class="module-card__desc">Eight-document model per deal: Sponsor, Market, Comparable, Rent Roll, Expense, Business Plan, Cash Flow, and IC Memo.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
+          <div style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-12); max-width: var(--max-width-narrow);">
+            <p style="margin-bottom: var(--space-6);">
+              Every transaction carries complexities that standard underwriting frameworks miss. Rent control ordinances, ground lease structures, tax abatement expirations, title exceptions, environmental conditions, zoning variances, affordability covenants &mdash; these nuances determine whether a deal works, and they require contextual judgment that cannot be reduced to a formula.
+            </p>
+            <p>
+              The Nuance Gate is an analytical governance framework with 81 enterprise nodes that captures, researches, and operationalizes every deal-specific complexity. Three specialized agents route contextual credit judgment through institutional learning loops that compound analytical precision across every transaction.
+            </p>
+          </div>
 
-            <!-- Existing modules with updated badges -->
-            <div class="module-card">
-              <h3 class="module-card__title">Marketing &amp; Communications</h3>
-              <p class="module-card__desc">Investor communications, deal marketing materials, and portfolio reporting templates.</p>
-              <span class="badge badge--positive">Ready</span>
+          <h3 style="margin-bottom: var(--space-8); font-size: var(--size-2xl); font-weight: var(--weight-light);">Three-Agent Architecture</h3>
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <p class="card__meta">AGENT 1</p>
+              <h3 class="card__title">Research Agent</h3>
+              <p class="card__description">Monitors every counterparty channel &mdash; emails, transcripts, documents, broker narratives. Executes continuous nuance scanning across regulatory, structural, physical, and operational dimensions. Generates preliminary nuance briefs with classification, source attribution, and initial impact assessment.</p>
             </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Portfolio Monitoring</h3>
-              <p class="module-card__desc">Post-closing asset management, covenant compliance tracking, and portfolio-level analytics.</p>
-              <span class="badge badge--positive">Ready</span>
+            <div class="card">
+              <p class="card__meta">AGENT 2</p>
+              <h3 class="card__title">Framework Agent</h3>
+              <p class="card__description">Independently validates every nuance brief against the RAG corpus, regulatory databases, credit box constraints, and historical deal precedent. Confirms classification accuracy, verifies source reliability, assesses completeness. Every claim must be independently substantiated.</p>
             </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Investor Reporting</h3>
-              <p class="module-card__desc">Standardized investor reporting packages with waterfall distributions and performance attribution.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-
-            <!-- 8 system-wide modules -->
-            <div class="module-card">
-              <h3 class="module-card__title">Portals &mdash; Borrower, Broker, Investor</h3>
-              <p class="module-card__desc">Dedicated portal interfaces for borrowers, brokers, and investors providing role-appropriate access to deal data, status tracking, and document exchange.</p>
-              <span class="badge badge--blue">Independent Workflows</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Comp Engine</h3>
-              <p class="module-card__desc">Automated comparable property analysis using multiple data sources, adjustment methodologies, and market-derived valuation triangulation.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Document Library / RAG</h3>
-              <p class="module-card__desc">Retrieval-augmented generation backed by 5,900+ curated documents from CREFC, CCIM, OCC, HUD, FNMA, MBA, MAI, and institutional source material. Continuously expanding.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Data &amp; Analytics</h3>
-              <p class="module-card__desc">Centralized data layer integrating external APIs, internal deal history, market indicators, and analytical outputs across all modules.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Capital Markets</h3>
-              <p class="module-card__desc">Loan trading, warehouse facility management, secondary markets, and forward flow logic. Term sheet generation across bridge, agency, CMBS, bank, and life company execution.</p>
-              <span class="badge badge--blue">Independent Workflows</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">Red Flag and Compliance</h3>
-              <p class="module-card__desc">Cross-phase anomaly detection with contextual risk identification across four severity levels (L1-L4). Automated escalation, mitigant mapping, and deal-specific nuance capture.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">In-House Counsel</h3>
-              <p class="module-card__desc">AI legal review automation for loan documents, opinion letters, entity structure validation, and closing condition verification. Cross-phase advisory layer with access to all deal data.</p>
-              <span class="badge badge--positive">Ready</span>
-            </div>
-            <div class="module-card">
-              <h3 class="module-card__title">CRM</h3>
-              <p class="module-card__desc">Contact management, deal pipeline tracking, and relationship intelligence. Integrates with portal logic for borrower, broker, and investor engagement workflows.</p>
-              <span class="badge badge--blue">Independent Workflows</span>
+            <div class="card">
+              <p class="card__meta">AGENT 3</p>
+              <h3 class="card__title">Domain Agent</h3>
+              <p class="card__description">Reconciles discrepancies between Research and Framework agents. Executes targeted research to adjudicate conflicts. Publishes resolved nuance records to the deal record and institutional knowledge base. Escalates to human review when confidence thresholds are not met.</p>
             </div>
           </div>
 
+          <h3 style="margin-bottom: var(--space-8); font-size: var(--size-2xl); font-weight: var(--weight-light);">How Nuances Are Operationalized</h3>
+          <div class="card-grid" style="margin-bottom: var(--space-8);">
+            <div class="card">
+              <h3 class="card__title">Capture</h3>
+              <p class="card__description">Nuances are identified from every input channel &mdash; offering memoranda, broker commentary, sponsor disclosures, title reports, environmental assessments, zoning letters, and regulatory filings. Each nuance is classified by type, severity, and analytical impact.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Research</h3>
+              <p class="card__description">Each identified nuance triggers a structured research workflow. The system retrieves relevant precedent from the RAG corpus, checks regulatory databases, and cross-references historical deal outcomes. Research findings are documented with full source attribution.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Classify</h3>
+              <p class="card__description">Nuances are routed to the appropriate enterprise node based on type &mdash; regulatory, structural, environmental, financial, or operational. Nodes encode institutional knowledge about how each nuance category affects underwriting assumptions, sizing parameters, and risk assessment.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Operationalize</h3>
+              <p class="card__description">Resolved nuances propagate to downstream analytical modules. A rent control finding adjusts revenue underwriting. A ground lease triggers modified valuation methodology. A title exception routes to legal review. Every nuance has a defined operational pathway through the underwriting lifecycle.</p>
+            </div>
+          </div>
+
+          <div class="section__cta">
+            <a href="nuance-gate.html" class="link--arrow">Full Nuance Gate Documentation <span aria-hidden="true">&rarr;</span></a>
+          </div>
         </div>
       </section>
-    </div><!-- /modules panel -->
+
+    </div><!-- /nuance-gate panel -->
+
+    <!-- ═══════════ TAB: THREE-AGENT QA ═══════════ -->
+    <div class="tab-panel" data-panel="three-agent-qa" aria-hidden="true">
+
+      <section class="section section--white" aria-labelledby="qa-title">
+        <div class="container">
+          <div class="section-header" style="text-align: left; max-width: none;">
+            <p class="section-header__eyebrow" style="text-align: left;">Quality Assurance</p>
+            <h2 class="section-header__title" style="text-align: left;" id="qa-title">Every analytical output passes through a three-stage credit review loop.</h2>
+          </div>
+
+          <div style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-12); max-width: var(--max-width-narrow);">
+            <p style="margin-bottom: var(--space-6);">
+              The Producer-Checker-Resolver system enforces institutional quality control on every analytical output. No deliverable reaches a credit committee without independent validation. Every decision is logged. Every override is documented.
+            </p>
+          </div>
+
+          <div class="card-grid" style="margin-bottom: var(--space-12);">
+            <div class="card">
+              <p class="card__meta">STAGE 1</p>
+              <h3 class="card__title">Producer</h3>
+              <p class="card__description">Generates the analysis. Executes the analytical workflow, produces all calculations, narrative content, and structured outputs. Reads the last five QA improvement log entries before starting each deal to avoid known error patterns. The Producer operates with full analytical authority but no quality assurance authority.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">STAGE 2</p>
+              <h3 class="card__title">Checker</h3>
+              <p class="card__description">Validates against constraint parameters, data integrity, and institutional credit standards. Independent recalculation of all numerical outputs. Cross-references data sources, checks constraint waterfall logic, validates assumption consistency across deliverables, and flags discrepancies. Zero tolerance for arithmetic errors.</p>
+            </div>
+            <div class="card">
+              <p class="card__meta">STAGE 3</p>
+              <h3 class="card__title">Resolver</h3>
+              <p class="card__description">Exercises managing director authority &mdash; accepting, remediating, or escalating to committee. Arbitrates disputes between Producer and Checker. Makes final determinations on flagged items, documents resolutions, and updates the improvement log with learnings. The Resolver is the last line of defense before a deliverable is finalized.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: var(--space-8); font-size: var(--size-2xl); font-weight: var(--weight-light);">Audit Trail</h3>
+          <div style="color: var(--color-graphite); line-height: var(--leading-relaxed); margin-bottom: var(--space-8); max-width: var(--max-width-narrow);">
+            <p>Every skill execution is logged with inputs, outputs, timestamp, configuration state, QA level, checker findings, resolver decisions, and resolution notes. The audit trail is immutable once written. Full reproducibility from intake to credit decision &mdash; any output can be traced back to its exact inputs and the configuration that governed its production.</p>
+          </div>
+
+          <div class="card-grid">
+            <div class="card">
+              <h3 class="card__title">Arithmetic Correctness</h3>
+              <p class="card__description">Independent recalculation of all numerical outputs from raw inputs. Debt service, coverage ratios, yield metrics, and amortization schedules are verified. Tolerance: zero.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Internal Consistency</h3>
+              <p class="card__description">Cross-reference between document sections. NOI in cash flow must match sizing waterfall. Unit counts, occupancy, and revenue figures must reconcile across all deliverables.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Source Attribution</h3>
+              <p class="card__description">Every factual claim must trace to a specific data source with publication date. Unsourced statements are flagged. Source freshness validated against the 60-day shelf life policy.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Constraint Compliance</h3>
+              <p class="card__description">All sizing outputs validated against the credit box configuration. LTV, DSCR, debt yield, LTC, and maximum proceeds checked against thresholds. Any violation blocks advancement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /three-agent-qa panel -->
 
     <!-- ═══════════ TAB: CREDIT SOUL ═══════════ -->
     <div class="tab-panel" data-panel="credit-soul" aria-hidden="true">
@@ -600,7 +514,6 @@
             <a href="architecture.html" class="footer-links__item">Architecture</a>
             <a href="workflow.html" class="footer-links__item">Workflow</a>
             <a href="operations.html" class="footer-links__item">Operations</a>
-            <a href="nuance-gate.html" class="footer-links__item">Nuance Gate</a>
           </div>
           <div class="footer-links__group">
             <p class="footer-links__heading">Resources</p>
